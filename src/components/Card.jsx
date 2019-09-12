@@ -18,6 +18,23 @@ function Card() {
       class="container2"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
     >
+      <svg version="1.1" id="layer">
+        <defs>
+          <filter id="watercolor">
+            <feTurbulence
+              result="TURBULENCE"
+              baseFrequency=".59"
+              numOctaves="30"
+              seed="200"
+            />
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="TURBULENCE"
+              scale="120"
+            />
+          </filter>
+        </defs>
+      </svg>
       <animated.div
         class="blob"
         style={{ transform: props.xy.interpolate(trans1) }}
@@ -46,23 +63,6 @@ function Card() {
         ؅؄࿐
       </animated.div>
     </div>
-    <svg version="1.1" id="layer">
-    <defs>
-      <filter id="watercolor">
-        <feTurbulence
-          result="TURBULENCE"
-          baseFrequency=".59"
-          numOctaves="30"
-          seed="200"
-        />
-        <feDisplacementMap
-          in="SourceGraphic"
-          in2="TURBULENCE"
-          scale="120"
-        />
-      </filter>
-    </defs>
-  </svg>
   );
 }
 export default Card;
