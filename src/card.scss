@@ -1,19 +1,18 @@
 .blob {
   display: inline-block;
-  background: #edfcf9;
-  background: radial-gradient(ellipse at 60% 90%, #edfcf9 0%, #fff8f6 60%);
-  height: 10vw;
+  background: radial-gradient(ellipse at 60% 90%, #f3d89b 0%, #fff5f2 30%);
+  height: 7vw;
   width: 55vw;
   filter: url(#watercolor);
   font-size: 60px;
-  color: blue;
+  color: red;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   position: absolute;
   background-position: center center;
   background-repeat: no-repeat;
   will-change: transform;
   filter: url(#container2);
-  filter: blur(30px) contrast(2);
+  filter: blur(30px) contrast(1);
 }
 
 .blocky {
@@ -23,6 +22,7 @@
     rgba(255, 255, 0, 0.459) 0%,
     #e7fdd4 60%
   );
+
   font-family: "Segoe UI Emoji", sans-serif;
   color: #4f691e;
   text-align: right;
@@ -35,8 +35,8 @@
 .cloud {
   @extend .blob;
   z-index: 99;
-  background: lightsalmon;
-  color: salmon;
+  background: rgb(218, 171, 218);
+  color: indigo;
   height: 5vw;
   width: 15vw;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
