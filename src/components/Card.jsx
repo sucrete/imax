@@ -3,10 +3,10 @@ import { useSpring, animated } from "react-spring";
 import "../card.css";
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x / 20}px,${y / 20}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 13 + 35}px,${y / 13 - 75}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 12 - 175}px,${y / 12 - 55}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 11 + 200}px,${y / 11 + 35}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 25}px,${y / 25 - 20}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 20 + 25}px,${y / 20 - 55}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 8 - 195}px,${y / 8 - 55}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 6 + 100}px,${y / 6 + 35}px,0)`;
 
 function Card() {
   const [props, set] = useSpring(() => ({
@@ -39,14 +39,15 @@ function Card() {
         className="blob"
         style={{ transform: props.xy.interpolate(trans1) }}
       >
-        <span className="blobBaby">🀐㎇</span>㎭㎉╍╳⏧⚜⚜
+        <span className="blobBaby">🀐㎇</span>㎭㎉╍╳⏧
       </animated.div>
 
       <animated.div
         className="blocky"
         style={{ transform: props.xy.interpolate(trans2) }}
       >
-        ░▒▓▓▊▜
+        <span className="blockyBaby">▜▓</span>
+        ░▒▓
       </animated.div>
 
       <animated.div

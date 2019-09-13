@@ -1,52 +1,69 @@
 .blob, .blocky, .cloud, .scripty {
   display: inline-block;
-  background: radial-gradient(ellipse at 60% 90%, #fdf8eb 0%, #fffbf9 30%);
+  background: radial-gradient(ellipse at 20% 70%, #fdfcf9 0%, #fffbfa 30%);
   height: 7vw;
   width: 55vw;
   -webkit-filter: url(#watercolor);
           filter: url(#watercolor);
   font-size: 60px;
-  color: red;
+  color: #c6e7a89c;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   position: absolute;
   background-position: center center;
   background-repeat: no-repeat;
   will-change: transform;
-  padding-bottom: 25px;
+  padding-bottom: 35px;
+  -webkit-filter: blur(30px) contrast(1);
+          filter: blur(30px) contrast(1);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
 }
 
 .blobBaby {
-  color: indigo;
+  color: yellow;
 }
 
 .blocky {
-  background: radial-gradient(ellipse at 40% 10%, rgba(255, 255, 0, 0.459) 0%, #e7fdd4 60%);
+  background: -webkit-gradient(linear, left bottom, right top, from(transparent), to(#f7d2cd));
+  background: linear-gradient(to top right, transparent, #f7d2cd);
   font-family: "Segoe UI Emoji", sans-serif;
-  color: #4f691e;
+  color: #fda36ee3;
   text-align: right;
   font-size: 40px;
-  padding-left: 100px;
-  height: 5vw;
+  height: 2vw;
   width: 35vw;
   border-radius: 96px 72px 48px 24px/24px 48px 72px 96px;
+  padding-bottom: 15px;
+  -webkit-filter: blur(20px) contrast(1);
+          filter: blur(20px) contrast(1);
+}
+
+.blockyBaby {
+  padding-top: 10vw;
+  padding-right: 22vw;
+  color: blue;
 }
 
 .cloud {
   z-index: 99;
   background: #dcd0ff;
-  height: 5vw;
-  width: 15vw;
+  color: #8fe7c2;
+  height: 3vw;
+  width: 13vw;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
+  -webkit-filter: blur(22px) contrast(1.25) !important;
+          filter: blur(22px) contrast(1.25) !important;
+  opacity: 0.8;
 }
 
 .scripty {
-  color: #d6712d;
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #ff5e00;
+  font-size: 40px;
   background: transparent;
   text-align: right;
-  -webkit-filter: blur(2px) contrast(1.5);
-          filter: blur(2px) contrast(1.5);
+  -webkit-filter: blur(11px) contrast(1) !important;
+          filter: blur(11px) contrast(1) !important;
 }
 
 #root {
@@ -68,7 +85,5 @@
           justify-content: center;
   -webkit-filter: url(#container2);
           filter: url(#container2);
-  -webkit-filter: blur(30px) contrast(1);
-          filter: blur(30px) contrast(1);
 }
 /*# sourceMappingURL=card.css.map */
