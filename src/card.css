@@ -1,6 +1,6 @@
 .blob, .blocky, .cloud, .scripty {
   display: inline-block;
-  background: radial-gradient(ellipse at 60% 90%, #f3d89b 0%, #fff5f2 30%);
+  background: radial-gradient(ellipse at 60% 90%, #fdf8eb 0%, #fffbf9 30%);
   height: 7vw;
   width: 55vw;
   -webkit-filter: url(#watercolor);
@@ -12,8 +12,11 @@
   background-position: center center;
   background-repeat: no-repeat;
   will-change: transform;
-  -webkit-filter: blur(30px) contrast(1);
-          filter: blur(30px) contrast(1);
+  padding-bottom: 25px;
+}
+
+.blobBaby {
+  color: indigo;
 }
 
 .blocky {
@@ -30,11 +33,11 @@
 
 .cloud {
   z-index: 99;
-  background: #daabda;
-  color: indigo;
+  background: #dcd0ff;
   height: 5vw;
   width: 15vw;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  padding-bottom: 50px;
 }
 
 .scripty {
@@ -42,6 +45,8 @@
   font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: transparent;
   text-align: right;
+  -webkit-filter: blur(2px) contrast(1.5);
+          filter: blur(2px) contrast(1.5);
 }
 
 #root {
@@ -49,7 +54,7 @@
 }
 
 .container2 {
-  background-color: #fdf1ed;
+  background-color: transparent;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -61,5 +66,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-filter: url(#container2);
+          filter: url(#container2);
+  -webkit-filter: blur(30px) contrast(1);
+          filter: blur(30px) contrast(1);
 }
 /*# sourceMappingURL=card.css.map */

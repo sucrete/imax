@@ -4,8 +4,8 @@ import "../card.css";
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 20}px,${y / 20}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 18 + 35}px,${y / 18 - 75}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 15 - 175}px,${y / 15 - 55}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 13 + 35}px,${y / 13 - 75}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 12 - 175}px,${y / 12 - 55}px,0)`;
 const trans4 = (x, y) => `translate3d(${x / 11 + 200}px,${y / 11 + 35}px,0)`;
 
 function Card() {
@@ -15,7 +15,7 @@ function Card() {
   }));
   return (
     <div
-      class="container2"
+      className="container2"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
     >
       <svg version="1.1" id="layer">
@@ -25,7 +25,7 @@ function Card() {
               result="TURBULENCE"
               baseFrequency=".59"
               numOctaves="30"
-              seed="200"
+              seed="300"
             />
             <feDisplacementMap
               in="SourceGraphic"
@@ -36,28 +36,28 @@ function Card() {
         </defs>
       </svg>
       <animated.div
-        class="blob"
+        className="blob"
         style={{ transform: props.xy.interpolate(trans1) }}
       >
-        🀐㎇㎭㎉╍╳⏧⚜⚜
+        <span className="blobBaby">🀐㎇</span>㎭㎉╍╳⏧⚜⚜
       </animated.div>
 
       <animated.div
-        class="blocky"
+        className="blocky"
         style={{ transform: props.xy.interpolate(trans2) }}
       >
-        ░▒▓▓▉▊▜▔▀╏╻▍
+        ░▒▓▓▊▜
       </animated.div>
 
       <animated.div
-        class="cloud"
+        className="cloud"
         style={{ transform: props.xy.interpolate(trans3) }}
       >
         ✺
       </animated.div>
 
       <animated.div
-        class="scripty"
+        className="scripty"
         style={{ transform: props.xy.interpolate(trans4) }}
       >
         ؅؄࿐

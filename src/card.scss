@@ -1,6 +1,6 @@
 .blob {
   display: inline-block;
-  background: radial-gradient(ellipse at 60% 90%, #f3d89b 0%, #fff5f2 30%);
+  background: radial-gradient(ellipse at 60% 90%, #fdf8eb 0%, #fffbf9 30%);
   height: 7vw;
   width: 55vw;
   filter: url(#watercolor);
@@ -11,9 +11,11 @@
   background-position: center center;
   background-repeat: no-repeat;
   will-change: transform;
-  filter: blur(30px) contrast(1);
+  padding-bottom: 25px;
 }
-
+.blobBaby {
+  color: indigo;
+}
 .blocky {
   @extend .blob;
   background: radial-gradient(
@@ -21,7 +23,6 @@
     rgba(255, 255, 0, 0.459) 0%,
     #e7fdd4 60%
   );
-
   font-family: "Segoe UI Emoji", sans-serif;
   color: #4f691e;
   text-align: right;
@@ -34,11 +35,12 @@
 .cloud {
   @extend .blob;
   z-index: 99;
-  background: rgb(218, 171, 218);
-  color: indigo;
+  background: #dcd0ff;
+  // color: #dcd0ff;
   height: 5vw;
   width: 15vw;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  padding-bottom: 50px;
 }
 .scripty {
   @extend .blob;
@@ -47,15 +49,18 @@
     "Open Sans", "Helvetica Neue", sans-serif;
   background: transparent;
   text-align: right;
+  filter: blur(2px) contrast(1.5);
 }
 #root {
   overflow: hidden;
 }
 .container2 {
-  background-color: #fdf1ed;
+  background-color: transparent;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  filter: url(#container2);
+  filter: blur(30px) contrast(1);
 }
