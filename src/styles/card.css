@@ -1,7 +1,7 @@
 .blob, .blocky, .cloud, .scripty {
   display: inline-block;
-  background: radial-gradient(ellipse at 20% 70%, #fdfcf9 0%, #fffbfa 30%);
-  height: 7vw;
+  background: white;
+  height: 8vw;
   width: 55vw;
   -webkit-filter: url(#watercolor);
           filter: url(#watercolor);
@@ -24,8 +24,8 @@
 }
 
 .blocky {
-  background: -webkit-gradient(linear, left bottom, right top, from(transparent), to(#f7d2cd));
-  background: linear-gradient(to top right, transparent, #f7d2cd);
+  background: -webkit-gradient(linear, left bottom, right top, from(rgba(255, 226, 249, 0.767)), to(#f7d2cd));
+  background: linear-gradient(to top right, rgba(255, 226, 249, 0.767), #f7d2cd);
   font-family: "Segoe UI Emoji", sans-serif;
   color: #fda36ee3;
   text-align: right;
@@ -34,8 +34,8 @@
   width: 35vw;
   border-radius: 96px 72px 48px 24px/24px 48px 72px 96px;
   padding-bottom: 15px;
-  -webkit-filter: blur(20px) contrast(1);
-          filter: blur(20px) contrast(1);
+  -webkit-filter: blur(20px) contrast(1.1);
+          filter: blur(20px) contrast(1.1);
 }
 
 .blockyBaby {

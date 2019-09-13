@@ -1,12 +1,12 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-import "../card.css";
+import "../styles/card.css";
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x / 25}px,${y / 25 - 20}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 20 + 25}px,${y / 20 - 55}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 8 - 195}px,${y / 8 - 55}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 6 + 100}px,${y / 6 + 35}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 25}px,${y / 25 - 45}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 20 + 25}px,${y / 20 - 90}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 8 - 195}px,${y / 8 - 80}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 6 + 100}px,${y / 6 + 10}px,0)`;
 
 function Card() {
   const [props, set] = useSpring(() => ({
