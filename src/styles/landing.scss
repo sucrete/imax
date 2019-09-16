@@ -1,4 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Galdeano&display=swap");
 
+.headerWrapper {
+  position: absolute;
+  z-index: 298;
+  left: 30%;
+  top: 30%;
+  color: rgb(59, 43, 17);
+}
+.landingHeader {
+  font-family: "Galdeano", sans-serif;
+  font-size: 7.5vw;
+}
+.landingMax {
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+.landingRosen {
+  padding-left: 5vw;
+  letter-spacing: 0.07em;
+}
+
+// ============== the background mouseover effect below ===========
+.cardComponent {
+  position: absolute;
+}
 .blob {
   display: inline-block;
   background: white;
@@ -13,8 +38,9 @@
   background-repeat: no-repeat;
   will-change: transform;
   padding-bottom: 35px;
-  filter: blur(30px) contrast(1);
-  transform: rotate(-3deg);
+  filter: blur(30px) contrast(1.05);
+  transform: rotate(-5deg);
+  z-index: 66;
 }
 .blobBaby {
   color: yellow;
@@ -35,6 +61,7 @@
   border-radius: 96px 72px 48px 24px/24px 48px 72px 96px;
   padding-bottom: 15px;
   filter: blur(20px) contrast(1.1);
+  z-index: 77;
 }
 .blockyBaby {
   padding-top: 10vw;
@@ -43,27 +70,28 @@
 }
 .cloud {
   @extend .blob;
-  z-index: 99;
-  background: #dcd0ff;
+  z-index: 199;
+  background: #dcd0ffd8;
   color: #8fe7c2;
-  height: 3vw;
-  width: 13vw;
+  height: 1.5vw;
+  width: 10vw;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
-  filter: blur(22px) contrast(1.25) !important;
-  opacity: 0.8;
+  filter: blur(22px) contrast(1.5) !important;
+  opacity: 0.75;
 }
 .scripty {
+  z-index: 299;
   @extend .blob;
   color: #ff5e00;
   font-size: 40px;
   background: transparent;
   text-align: right;
-  filter: blur(11px) contrast(1) !important;
+  filter: blur(9px) contrast(15) !important;
 }
-#root {
-  overflow: hidden;
-}
+// #root {
+//   overflow: hidden;
+// }
 .container2 {
   background-color: transparent;
   width: 100vw;

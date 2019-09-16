@@ -1,12 +1,12 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-import "../styles/card.css";
+import "../styles/landing.css";
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x / 25}px,${y / 25 - 45}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 20 + 25}px,${y / 20 - 90}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 8 - 195}px,${y / 8 - 80}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 6 + 100}px,${y / 6 + 10}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 25}px,${y / 25 - 85}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 20 + 25}px,${y / 20 - 130}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 15 - 195}px,${y / 15 - 140}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 15 + 100}px,${y / 15 - 15}px,0)`;
 
 function Card() {
   const [props, set] = useSpring(() => ({
@@ -49,7 +49,12 @@ function Card() {
         <span className="blockyBaby">▜▓</span>
         ░▒▓
       </animated.div>
-
+      <div className="headerWrapper">
+        <header className="landingHeader">
+          <span className="landingMax">Max</span>
+          <span className="landingRosen">ROSEN</span>
+        </header>
+      </div>
       <animated.div
         className="cloud"
         style={{ transform: props.xy.interpolate(trans3) }}

@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Galdeano&display=swap");
+.headerWrapper {
+  position: absolute;
+  z-index: 298;
+  left: 30%;
+  top: 30%;
+  color: #3b2b11;
+}
+
+.landingHeader {
+  font-family: "Galdeano", sans-serif;
+  font-size: 7.5vw;
+}
+
+.landingMax {
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.landingRosen {
+  padding-left: 5vw;
+  letter-spacing: 0.07em;
+}
+
+.cardComponent {
+  position: absolute;
+}
+
 .blob, .blocky, .cloud, .scripty {
   display: inline-block;
   background: white;
@@ -13,10 +41,11 @@
   background-repeat: no-repeat;
   will-change: transform;
   padding-bottom: 35px;
-  -webkit-filter: blur(30px) contrast(1);
-          filter: blur(30px) contrast(1);
-  -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg);
+  -webkit-filter: blur(30px) contrast(1.05);
+          filter: blur(30px) contrast(1.05);
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  z-index: 66;
 }
 
 .blobBaby {
@@ -36,6 +65,7 @@
   padding-bottom: 15px;
   -webkit-filter: blur(20px) contrast(1.1);
           filter: blur(20px) contrast(1.1);
+  z-index: 77;
 }
 
 .blockyBaby {
@@ -45,29 +75,26 @@
 }
 
 .cloud {
-  z-index: 99;
-  background: #dcd0ff;
+  z-index: 199;
+  background: #dcd0ffd8;
   color: #8fe7c2;
-  height: 3vw;
-  width: 13vw;
+  height: 1.5vw;
+  width: 10vw;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
-  -webkit-filter: blur(22px) contrast(1.25) !important;
-          filter: blur(22px) contrast(1.25) !important;
-  opacity: 0.8;
+  -webkit-filter: blur(22px) contrast(1.5) !important;
+          filter: blur(22px) contrast(1.5) !important;
+  opacity: 0.75;
 }
 
 .scripty {
+  z-index: 299;
   color: #ff5e00;
   font-size: 40px;
   background: transparent;
   text-align: right;
-  -webkit-filter: blur(11px) contrast(1) !important;
-          filter: blur(11px) contrast(1) !important;
-}
-
-#root {
-  overflow: hidden;
+  -webkit-filter: blur(9px) contrast(15) !important;
+          filter: blur(9px) contrast(15) !important;
 }
 
 .container2 {
@@ -86,4 +113,4 @@
   -webkit-filter: url(#container2);
           filter: url(#container2);
 }
-/*# sourceMappingURL=card.css.map */
+/*# sourceMappingURL=landing.css.map */
