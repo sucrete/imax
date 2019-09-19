@@ -20,13 +20,13 @@
   letter-spacing: 0.07em;
 }
 
-// ============== the background mouseover effect below ===========
+// ============== the background mouseover effect element below ===========
 .cardComponent {
   position: absolute;
 }
 .blob {
   display: inline-block;
-  background: white;
+  background-image: linear-gradient(to right, transparent, white 90%);
   height: 8vw;
   width: 55vw;
   filter: url(#watercolor);
@@ -66,7 +66,7 @@
 .blockyBaby {
   padding-top: 10vw;
   padding-right: 22vw;
-  color: blue;
+  color: rgb(81, 81, 252);
 }
 .cloud {
   @extend .blob;
@@ -77,8 +77,8 @@
   width: 10vw;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
-  filter: blur(22px) contrast(1.5) !important;
-  opacity: 0.75;
+  filter: blur(15px) contrast(1.6) !important;
+  opacity: 1;
 }
 .scripty {
   z-index: 299;
@@ -87,7 +87,7 @@
   font-size: 40px;
   background: transparent;
   text-align: right;
-  filter: blur(9px) contrast(15) !important;
+  filter: blur(9px) contrast(10) !important;
 }
 // #root {
 //   overflow: hidden;

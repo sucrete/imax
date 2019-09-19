@@ -3,10 +3,10 @@ import { useSpring, animated } from "react-spring";
 import "../styles/landing.css";
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x / 25}px,${y / 25 - 85}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 20 + 25}px,${y / 20 - 130}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 15 - 195}px,${y / 15 - 140}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 15 + 100}px,${y / 15 - 15}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 50}px,${y / 50 - 85}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 45 + 25}px,${y / 45 - 130}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 40 - 195}px,${y / 40 - 140}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 40 + 98}px,${y / 40 - 10}px,0)`;
 
 function Card() {
   const [props, set] = useSpring(() => ({

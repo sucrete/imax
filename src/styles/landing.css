@@ -28,7 +28,8 @@
 
 .blob, .blocky, .cloud, .scripty {
   display: inline-block;
-  background: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(90%, white));
+  background-image: linear-gradient(to right, transparent, white 90%);
   height: 8vw;
   width: 55vw;
   -webkit-filter: url(#watercolor);
@@ -71,7 +72,7 @@
 .blockyBaby {
   padding-top: 10vw;
   padding-right: 22vw;
-  color: blue;
+  color: #5151fc;
 }
 
 .cloud {
@@ -82,9 +83,9 @@
   width: 10vw;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
-  -webkit-filter: blur(22px) contrast(1.5) !important;
-          filter: blur(22px) contrast(1.5) !important;
-  opacity: 0.75;
+  -webkit-filter: blur(15px) contrast(1.6) !important;
+          filter: blur(15px) contrast(1.6) !important;
+  opacity: 1;
 }
 
 .scripty {
@@ -93,8 +94,8 @@
   font-size: 40px;
   background: transparent;
   text-align: right;
-  -webkit-filter: blur(9px) contrast(15) !important;
-          filter: blur(9px) contrast(15) !important;
+  -webkit-filter: blur(9px) contrast(10) !important;
+          filter: blur(9px) contrast(10) !important;
 }
 
 .container2 {
