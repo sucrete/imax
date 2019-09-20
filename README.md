@@ -1,4 +1,4 @@
-### Max Rosen Portfolio
+### Max Rosen Portfolio v2
 
 Demo: [⬤](https://sucrete.github.io/imax/)
 

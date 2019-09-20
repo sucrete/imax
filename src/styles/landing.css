@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Galdeano&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Galdeano|Assistant&display=swap");
 .headerWrapper {
   position: absolute;
   z-index: 298;
@@ -29,14 +29,12 @@
   position: absolute;
 }
 
-.blob, .blocky, .cloud, .scripty {
+.blob {
   display: inline-block;
   background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(90%, white));
   background-image: linear-gradient(to right, transparent, white 90%);
   height: 8vw;
   width: 55vw;
-  -webkit-filter: url(#watercolor);
-          filter: url(#watercolor);
   font-size: 60px;
   color: #c6e7a89c;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -50,6 +48,8 @@
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
   z-index: 66;
+  -webkit-animation: opacityShift 3s;
+          animation: opacityShift 3s;
 }
 
 .blobBaby {
@@ -57,12 +57,17 @@
 }
 
 .blocky {
+  display: inline-block;
   background: -webkit-gradient(linear, left bottom, right top, from(rgba(255, 226, 249, 0.767)), to(#f7d2cd));
   background: linear-gradient(to top right, rgba(255, 226, 249, 0.767), #f7d2cd);
   font-family: "Segoe UI Emoji", sans-serif;
   color: #fda36ee3;
   text-align: right;
   font-size: 40px;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
   height: 2vw;
   width: 35vw;
   border-radius: 96px 72px 48px 24px/24px 48px 72px 96px;
@@ -70,35 +75,52 @@
   -webkit-filter: blur(20px) contrast(1.1);
           filter: blur(20px) contrast(1.1);
   z-index: 77;
+  -webkit-animation: opacityShift 4s;
+          animation: opacityShift 4s;
 }
 
 .blockyBaby {
   padding-top: 10vw;
   padding-right: 22vw;
-  color: #5151fc;
+  color: #d19adf;
 }
 
 .cloud {
+  display: inline-block;
   z-index: 199;
-  background: #dcd0ffd8;
+  background: #dcd0ffb6;
   color: #8fe7c2;
-  height: 1.5vw;
+  height: 1vw;
   width: 10vw;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
-  -webkit-filter: blur(15px) contrast(1.6) !important;
-          filter: blur(15px) contrast(1.6) !important;
-  opacity: 1;
+  -webkit-filter: blur(15px) contrast(1.3) !important;
+          filter: blur(15px) contrast(1.3) !important;
+  -webkit-animation: opacityShift 5s;
+          animation: opacityShift 5s;
 }
 
 .scripty {
   z-index: 299;
+  display: inline-block;
   color: #ff5e00;
   font-size: 40px;
+  height: 8vw;
+  width: 55vw;
   background: transparent;
   text-align: right;
-  -webkit-filter: blur(9px) contrast(10) !important;
-          filter: blur(9px) contrast(10) !important;
+  will-change: transform;
+  -webkit-filter: blur(9px) contrast(8) !important;
+          filter: blur(9px) contrast(8) !important;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  position: absolute;
+  padding-bottom: 35px;
+  -webkit-animation: opacityShift 7s;
+          animation: opacityShift 7s;
 }
 
 .container2 {
@@ -116,5 +138,23 @@
           justify-content: center;
   -webkit-filter: url(#container2);
           filter: url(#container2);
+}
+
+@-webkit-keyframes opacityShift {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityShift {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=landing.css.map */

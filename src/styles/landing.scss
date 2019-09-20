@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Galdeano&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Galdeano|Assistant&display=swap");
 
 .headerWrapper {
   position: absolute;
@@ -30,7 +30,6 @@
   background-image: linear-gradient(to right, transparent, white 90%);
   height: 8vw;
   width: 55vw;
-  filter: url(#watercolor);
   font-size: 60px;
   color: #c6e7a89c;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -42,12 +41,13 @@
   filter: blur(30px) contrast(1.05);
   transform: rotate(-5deg);
   z-index: 66;
+  animation: opacityShift 3s;
 }
 .blobBaby {
   color: yellow;
 }
 .blocky {
-  @extend .blob;
+  display: inline-block;
   background: linear-gradient(
     to top right,
     rgba(255, 226, 249, 0.767),
@@ -57,38 +57,54 @@
   color: #fda36ee3;
   text-align: right;
   font-size: 40px;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
   height: 2vw;
   width: 35vw;
   border-radius: 96px 72px 48px 24px/24px 48px 72px 96px;
   padding-bottom: 15px;
   filter: blur(20px) contrast(1.1);
   z-index: 77;
+  animation: opacityShift 4s;
 }
 .blockyBaby {
   padding-top: 10vw;
   padding-right: 22vw;
-  color: rgb(81, 81, 252);
+  color: rgb(209, 154, 223);
 }
 .cloud {
-  @extend .blob;
+  display: inline-block;
   z-index: 199;
-  background: #dcd0ffd8;
+  background: #dcd0ffb6;
   color: #8fe7c2;
-  height: 1.5vw;
+  height: 1vw;
   width: 10vw;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
-  filter: blur(15px) contrast(1.6) !important;
-  opacity: 1;
+  filter: blur(15px) contrast(1.3) !important;
+  animation: opacityShift 5s;
 }
 .scripty {
   z-index: 299;
-  @extend .blob;
+  display: inline-block;
   color: #ff5e00;
   font-size: 40px;
+  height: 8vw;
+  width: 55vw;
   background: transparent;
   text-align: right;
-  filter: blur(9px) contrast(10) !important;
+  will-change: transform;
+  filter: blur(9px) contrast(8) !important;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  position: absolute;
+  padding-bottom: 35px;
+  animation: opacityShift 7s;
 }
 // #root {
 //   overflow: hidden;
@@ -101,4 +117,13 @@
   align-items: center;
   justify-content: center;
   filter: url(#container2);
+}
+
+@keyframes opacityShift {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
