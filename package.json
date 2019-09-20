@@ -2,7 +2,7 @@
   "name": "imax",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/sucrete/imax/",
+  "homepage": "https://sucrete.github.io/imax/",
   "dependencies": {
     "react": "^16.9.0",
     "gh-pages": "^2.1.1",
