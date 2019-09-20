@@ -10,6 +10,9 @@
 .landingHeader {
   font-family: "Galdeano", sans-serif;
   font-size: 7.5vw;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .landingMax {
@@ -17,7 +20,7 @@
   letter-spacing: 0.14em;
 }
 
-.landingRosen {
+.landingROSEN {
   padding-left: 5vw;
   letter-spacing: 0.07em;
 }
