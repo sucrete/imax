@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Galdeano|Assistant&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Galdeano|Work+Sans|Assistant&display=swap");
 .headerWrapper {
   position: absolute;
   z-index: 298;
-  left: 30%;
-  top: 30%;
+  left: 25%;
+  top: 25%;
   color: #3b2b11;
 }
 
 .landingHeader {
   font-family: "Galdeano", sans-serif;
-  font-size: 7.5vw;
+  font-size: 9vw;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -20,9 +20,39 @@
   letter-spacing: 0.14em;
 }
 
+.informationalContainer {
+  height: 100%;
+}
+
 .landingROSEN {
   padding-left: 5vw;
   letter-spacing: 0.07em;
+}
+
+.maxLocationContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  float: left;
+}
+
+.maxLocation0, .maxLocation1 {
+  color: #3b2b11;
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.85em;
+  -webkit-padding-start: 0.5em;
+          padding-inline-start: 0.5em;
+}
+
+.maxLocation1 {
+  -webkit-padding-start: 3vw;
+          padding-inline-start: 3vw;
 }
 
 .cardComponent {
@@ -31,9 +61,9 @@
 
 .blob {
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(90%, white));
-  background-image: linear-gradient(to right, transparent, white 90%);
-  height: 8vw;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fdf1ed), color-stop(90%, white));
+  background-image: linear-gradient(to right, #fdf1ed, white 90%);
+  height: 12vw;
   width: 55vw;
   font-size: 60px;
   color: #c6e7a89c;
@@ -98,10 +128,10 @@
   will-change: transform;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
-  -webkit-filter: blur(15px) contrast(1.3) !important;
-          filter: blur(15px) contrast(1.3) !important;
-  -webkit-animation: opacityShift 5s;
-          animation: opacityShift 5s;
+  -webkit-animation: opacityPartialShift 3s, contrastShift 5s;
+          animation: opacityPartialShift 3s, contrastShift 5s;
+  -webkit-filter: blur(9px) contrast(1.6);
+          filter: blur(9px) contrast(1.6);
 }
 
 .scripty {
@@ -119,8 +149,8 @@
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   position: absolute;
   padding-bottom: 35px;
-  -webkit-animation: opacityShift 7s;
-          animation: opacityShift 7s;
+  -webkit-animation: opacityShift 5s;
+          animation: opacityShift 5s;
 }
 
 .container2 {
@@ -136,8 +166,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-filter: url(#container2);
-          filter: url(#container2);
 }
 
 @-webkit-keyframes opacityShift {
@@ -155,6 +183,46 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes opacityPartialShift {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+@keyframes opacityPartialShift {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+@-webkit-keyframes contrastShift {
+  from {
+    -webkit-filter: blur(9px) contrast(1.05);
+            filter: blur(9px) contrast(1.05);
+  }
+  to {
+    -webkit-filter: blur(9px) contrast(1.5);
+            filter: blur(9px) contrast(1.5);
+  }
+}
+
+@keyframes contrastShift {
+  from {
+    -webkit-filter: blur(9px) contrast(1.05);
+            filter: blur(9px) contrast(1.05);
+  }
+  to {
+    -webkit-filter: blur(9px) contrast(1.5);
+            filter: blur(9px) contrast(1.5);
   }
 }
 /*# sourceMappingURL=landing.css.map */

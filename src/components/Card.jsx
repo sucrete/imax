@@ -3,11 +3,19 @@ import { useTrail, useSpring, animated } from "react-spring";
 import "../styles/landing.css";
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
-const trans1 = (x, y) => `translate3d(${x / 50}px,${y / 50 - 85}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 45 + 25}px,${y / 45 - 130}px,0)`;
-const trans3 = (x, y) => `translate3d(${x / 29 - 195}px,${y / 29 - 140}px,0)`;
-const trans4 = (x, y) => `translate3d(${x / 40 + 88}px,${y / 40 - 19}px,0)`;
+const trans1 = (x, y) => `translate3d(${x / 50}px,${y / 50 - 95}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 45 + 25}px,${y / 45 - 140}px,0)`;
+const trans3 = (x, y) => `translate3d(${x / 29 - 195}px,${y / 29 - 150}px,0)`;
+const trans4 = (x, y) => `translate3d(${x / 40 + 88}px,${y / 40 - 29}px,0)`;
 const items = ["Max", "ROSEN"];
+const locationItems = ["new york,", "new york"];
+const rosenIpsum = [
+  "I shall see the face of Mars, anyhow,",
+  "and that will be a rare experience. It seems",
+  "to me that a view of the heavenly bodies",
+  "through a fine telescope, as well as a tour",
+  "round the world, should form a part of a liberal education."
+];
 const config = { mass: 5, tension: 3000, friction: 700 };
 function Card() {
   const [props, set] = useSpring(() => ({
@@ -17,6 +25,20 @@ function Card() {
   const trail = useTrail(items.length, {
     config,
     delay: 500,
+    opacity: 1,
+    yy: 0,
+    from: { opacity: 0, yy: 20 }
+  });
+  const trail2 = useTrail(locationItems.length, {
+    config,
+    delay: 1500,
+    opacity: 1,
+    yy: 0,
+    from: { opacity: 0, yy: 20 }
+  });
+  const trail3 = useTrail(rosenIpsum.length, {
+    config,
+    delay: 1000,
     opacity: 1,
     yy: 0,
     from: { opacity: 0, yy: 20 }
@@ -38,6 +60,34 @@ function Card() {
             </animated.div>
           ))}
         </header>
+        <div className="informationalContainer">
+          <div className="maxLocationContainer">
+            {trail2.map(({ yy, ...rest }, index) => (
+              <animated.div
+                key={locationItems[index]}
+                className={"maxLocation" + index}
+                style={{
+                  ...rest,
+                  transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
+                }}
+              >
+                <animated.div>{locationItems[index]}</animated.div>
+              </animated.div>
+            ))}
+          </div>
+          {trail3.map(({ yy, ...rest }, index) => (
+            <animated.div
+              key={rosenIpsum[index]}
+              className={"rosenIpsum" + index}
+              style={{
+                ...rest,
+                transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
+              }}
+            >
+              <animated.div>{rosenIpsum[index]}</animated.div>
+            </animated.div>
+          ))}
+        </div>
       </div>
       <div className="container2">
         <animated.div
