@@ -78,7 +78,7 @@ function Card() {
           {trail3.map(({ yy, ...rest }, index) => (
             <animated.div
               key={rosenIpsum[index]}
-              className={"rosenIpsum" + index}
+              className={"rosenIpsum"}
               style={{
                 ...rest,
                 transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)

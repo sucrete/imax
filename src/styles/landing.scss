@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Galdeano|Work+Sans|Assistant&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Galdeano|Work+Sans|Assistant|Libre+Caslon+Display&display=swap");
 
 .headerWrapper {
   position: absolute;
@@ -18,18 +18,27 @@
 }
 .informationalContainer {
   height: 100%;
+  color: rgb(59, 43, 17);
 }
 .landingROSEN {
   padding-left: 5vw;
   letter-spacing: 0.07em;
 }
+.rosenIpsum {
+  font-family: "Assistant", serif;
+  font-size: 2em;
+  line-height: 110%;
+}
+.rosenIpsum:first-of-type {
+  background-color: black;
+}
 .maxLocationContainer {
   display: flex;
   flex-direction: column;
   float: left;
+  padding-right: 1vw;
 }
 .maxLocation0 {
-  color: rgb(59, 43, 17);
   text-transform: uppercase;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
