@@ -1,15 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Galdeano|Work+Sans|Assistant|Libre+Caslon+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Galdeano|Libre+Caslon+Display|Pragati+Narrow:400,700&display=swap");
 
 .headerWrapper {
   position: absolute;
   z-index: 298;
-  left: 25%;
-  top: 25%;
-  color: rgb(59, 43, 17);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(85, 61, 22);
 }
 .landingHeader {
   font-family: "Galdeano", sans-serif;
-  font-size: 9vw;
+  font-size: 7.5em;
   display: inline-flex;
 }
 .landingMax {
@@ -21,33 +22,94 @@
   color: rgb(59, 43, 17);
 }
 .landingROSEN {
-  padding-left: 5vw;
+  padding-left: 0.6em;
   letter-spacing: 0.07em;
 }
 .rosenIpsum {
-  font-family: "Assistant", serif;
-  font-size: 2em;
-  line-height: 110%;
+  position: relative;
+  font-family: "Pragati Narrow", serif;
+  font-size: 1.8em;
+  line-height: 128%;
+  font-weight: 400;
+  top: -4px;
+  padding-left: 0.2em;
+  color: rgb(121, 93, 48);
+  visibility: hidden;
 }
-.rosenIpsum:first-of-type {
-  background-color: black;
+.informationalContainer {
+  .rosenIpsum:nth-child(3) {
+    letter-spacing: 0.07em;
+  }
+  .rosenIpsum:nth-child(4) {
+    letter-spacing: 0.035em;
+  }
+  .rosenIpsum:nth-child(5) {
+    letter-spacing: 0.115em;
+  }
+  .rosenIpsum:nth-child(6) {
+    letter-spacing: 0.045em;
+  }
+  .rosenIpsum:nth-child(7) {
+    letter-spacing: 0.039em;
+  }
+  .rosenIpsum:nth-child(8) {
+    letter-spacing: 0.043em;
+  }
+}
+span.spacer {
+  flex: 1;
+  // background-color: blue;
+  // &:before {
+  //   content: " ";
+  //   display: block;
+  //   position: absolute;
+  //   height: 2px;
+  //   background-color: rgba(255, 99, 71, 0.8);
+  //   bottom: 0px;
+  //   width: 100%;
+  // }
+}
+
+.locationAndYear {
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 99%;
 }
 .maxLocationContainer {
   display: flex;
+  flex: initial;
   flex-direction: column;
-  float: left;
-  padding-right: 1vw;
+  padding-right: 1.3em;
+  color: rgb(121, 93, 48);
 }
 .maxLocation0 {
   text-transform: uppercase;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 400;
-  font-size: 0.85em;
-  padding-inline-start: 0.5em;
+  font-weight: 700;
+  font-size: 0.8em;
+  padding-inline-start: 0.2em;
+  line-height: 110%;
 }
 .maxLocation1 {
   @extend .maxLocation0;
-  padding-inline-start: 3vw;
+  padding-inline-start: 1em;
+}
+.yearContainer {
+  flex: initial;
+  display: flex;
+  flex-direction: column;
+  color: rgb(121, 93, 48);
+}
+.year0 {
+  font-weight: 700;
+  font-size: 0.8em;
+  padding-inline-start: 0.2em;
+  line-height: 110%;
+}
+.year1 {
+  @extend .year0;
+  padding-inline-start: 0.8em;
 }
 
 // ============== the background mouseover effect element below ===========
@@ -161,7 +223,7 @@
     opacity: 0;
   }
   to {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 }
 @keyframes contrastShift {
