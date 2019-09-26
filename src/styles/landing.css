@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Galdeano|Libre+Caslon+Display|Pragati+Narrow:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Assistant|Galdeano|Fira+Mono|Libre+Caslon+Display|Pragati+Narrow:400,700|Roboto|Space+Mono|Work+Sans|Yatra+One&display=swap");
 .headerWrapper {
   position: absolute;
   z-index: 298;
@@ -23,8 +23,9 @@
 }
 
 .informationalContainer {
-  height: 100%;
-  color: #3b2b11;
+  height: 15em;
+  width: 100%;
+  color: #553d16;
 }
 
 .landingROSEN {
@@ -34,44 +35,27 @@
 
 .rosenIpsum {
   position: relative;
-  font-family: "Pragati Narrow", serif;
-  font-size: 1.8em;
-  line-height: 128%;
-  font-weight: 400;
-  top: -4px;
-  padding-left: 0.2em;
-  color: #795d30;
-  visibility: hidden;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2.7em;
+  line-height: 90%;
+  padding-left: 0.15em;
+}
+
+.informationalContainer .rosenIpsum:nth-child(1) {
+  padding-top: 0.08em;
+  font-size: 5.5em;
+  left: -0.1em;
+}
+
+.informationalContainer .rosenIpsum:nth-child(2) {
+  font-size: 3.98em;
+  left: -0.05em;
 }
 
 .informationalContainer .rosenIpsum:nth-child(3) {
-  letter-spacing: 0.07em;
-}
-
-.informationalContainer .rosenIpsum:nth-child(4) {
-  letter-spacing: 0.035em;
-}
-
-.informationalContainer .rosenIpsum:nth-child(5) {
-  letter-spacing: 0.115em;
-}
-
-.informationalContainer .rosenIpsum:nth-child(6) {
-  letter-spacing: 0.045em;
-}
-
-.informationalContainer .rosenIpsum:nth-child(7) {
-  letter-spacing: 0.039em;
-}
-
-.informationalContainer .rosenIpsum:nth-child(8) {
-  letter-spacing: 0.043em;
-}
-
-span.spacer {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  font-size: 2em;
+  left: 0.1em;
+  line-height: 120%;
 }
 
 .locationAndYear {
@@ -79,14 +63,17 @@ span.spacer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 99%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 97%;
+  margin: 0 auto;
+  bottom: 0px;
 }
 
 .maxLocationContainer {
@@ -100,8 +87,7 @@ span.spacer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-right: 1.3em;
-  color: #795d30;
+  padding-right: 0.5em;
 }
 
 .maxLocation0, .maxLocation1 {
@@ -118,6 +104,25 @@ span.spacer {
           padding-inline-start: 1em;
 }
 
+div.spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+div.spacer:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: #795d30;
+  left: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 100%;
+}
+
 .yearContainer {
   -webkit-box-flex: initial;
       -ms-flex: initial;
@@ -129,7 +134,7 @@ span.spacer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #795d30;
+  padding-left: 0.5em;
 }
 
 .year0, .year1 {
@@ -149,10 +154,31 @@ span.spacer {
   position: absolute;
 }
 
+.glob {
+  width: 20em;
+  height: 20em;
+  border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation: opacityPartialShift2 5s;
+          animation: opacityPartialShift2 5s;
+  border: 1px solid #ffffff8f;
+  -webkit-box-shadow: inset 0 0 250px #ffffff3a;
+          box-shadow: inset 0 0 250px #ffffff3a;
+  -webkit-filter: blur(2px) contrast(1.2);
+          filter: blur(2px) contrast(1.2);
+  z-index: 299;
+}
+
 .blob {
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#fdf1ed), color-stop(90%, white));
-  background-image: linear-gradient(to right, #fdf1ed, white 90%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#faecde), color-stop(90%, #fdf9f4));
+  background-image: linear-gradient(to right, #faecde, #fdf9f4 90%);
   height: 12vw;
   width: 55vw;
   font-size: 60px;
@@ -195,21 +221,20 @@ span.spacer {
   -webkit-filter: blur(20px) contrast(1.1);
           filter: blur(20px) contrast(1.1);
   z-index: 77;
-  -webkit-animation: opacityShift 4s;
-          animation: opacityShift 4s;
+  -webkit-animation: opacityPartialShift 4s;
+          animation: opacityPartialShift 4s;
 }
 
 .blockyBaby {
   padding-top: 10vw;
   padding-right: 22vw;
-  color: #d19adf;
+  color: #ff5e00;
 }
 
 .cloud {
   display: inline-block;
   z-index: 199;
   background: #dcd0ffb6;
-  color: #8fe7c2;
   height: 1vw;
   width: 10vw;
   position: absolute;
@@ -218,10 +243,12 @@ span.spacer {
   will-change: transform;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
-  -webkit-animation: opacityPartialShift 3s, contrastShift 5s;
-          animation: opacityPartialShift 3s, contrastShift 5s;
-  -webkit-filter: blur(9px) contrast(1.6);
-          filter: blur(9px) contrast(1.6);
+  -webkit-filter: blur(9px) contrast(1.25);
+          filter: blur(9px) contrast(1.25);
+  -webkit-transition: opacity;
+  transition: opacity;
+  -webkit-animation: contrastShift 6s;
+          animation: contrastShift 6s;
 }
 
 .scripty {
@@ -239,8 +266,11 @@ span.spacer {
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   position: absolute;
   padding-bottom: 35px;
-  -webkit-animation: opacityShift 5s;
-          animation: opacityShift 5s;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-animation: opacityPartialShift 3s;
+          animation: opacityPartialShift 3s;
+  visibility: hidden;
 }
 
 .container2 {
@@ -294,25 +324,119 @@ span.spacer {
   }
 }
 
-@-webkit-keyframes contrastShift {
+@-webkit-keyframes opacityPartialShift2 {
   from {
-    -webkit-filter: blur(9px) contrast(1.05);
-            filter: blur(9px) contrast(1.05);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.35;
   }
   to {
-    -webkit-filter: blur(9px) contrast(1.5);
-            filter: blur(9px) contrast(1.5);
+    opacity: 0.7;
+  }
+}
+
+@keyframes opacityPartialShift2 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@-webkit-keyframes opacityPartialShift3 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes opacityPartialShift3 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes contrastShift {
+  from {
+    opacity: 0;
+    -webkit-filter: blur(9px) contrast(1);
+            filter: blur(9px) contrast(1);
+  }
+  35% {
+    opacity: 0.3;
+  }
+  50% {
+    -webkit-filter: blur(9px) contrast(1);
+            filter: blur(9px) contrast(1);
+  }
+  75% {
+    -webkit-filter: blur(9px) contrast(1.1);
+            filter: blur(9px) contrast(1.1);
+  }
+  to {
+    -webkit-filter: blur(9px) contrast(1.2);
+            filter: blur(9px) contrast(1.2);
   }
 }
 
 @keyframes contrastShift {
   from {
-    -webkit-filter: blur(9px) contrast(1.05);
-            filter: blur(9px) contrast(1.05);
+    opacity: 0;
+    -webkit-filter: blur(9px) contrast(1);
+            filter: blur(9px) contrast(1);
+  }
+  35% {
+    opacity: 0.3;
+  }
+  50% {
+    -webkit-filter: blur(9px) contrast(1);
+            filter: blur(9px) contrast(1);
+  }
+  75% {
+    -webkit-filter: blur(9px) contrast(1.1);
+            filter: blur(9px) contrast(1.1);
   }
   to {
-    -webkit-filter: blur(9px) contrast(1.5);
-            filter: blur(9px) contrast(1.5);
+    -webkit-filter: blur(9px) contrast(1.2);
+            filter: blur(9px) contrast(1.2);
+  }
+}
+
+@-webkit-keyframes contrastShift2 {
+  from {
+    -webkit-filter: blur(2px) contrast(1);
+            filter: blur(2px) contrast(1);
+  }
+  to {
+    -webkit-filter: blur(2px) contrast(1.3);
+            filter: blur(2px) contrast(1.3);
+  }
+}
+
+@keyframes contrastShift2 {
+  from {
+    -webkit-filter: blur(2px) contrast(1);
+            filter: blur(2px) contrast(1);
+  }
+  to {
+    -webkit-filter: blur(2px) contrast(1.3);
+            filter: blur(2px) contrast(1.3);
   }
 }
 /*# sourceMappingURL=landing.css.map */

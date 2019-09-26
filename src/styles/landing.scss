@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Galdeano|Libre+Caslon+Display|Pragati+Narrow:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Assistant|Galdeano|Fira+Mono|Libre+Caslon+Display|Pragati+Narrow:400,700|Roboto|Space+Mono|Work+Sans|Yatra+One&display=swap");
 
 .headerWrapper {
   position: absolute;
@@ -18,8 +18,9 @@
   letter-spacing: 0.14em;
 }
 .informationalContainer {
-  height: 100%;
-  color: rgb(59, 43, 17);
+  height: 15em;
+  width: 100%;
+  color: rgb(85, 61, 22);
 }
 .landingROSEN {
   padding-left: 0.6em;
@@ -27,62 +28,44 @@
 }
 .rosenIpsum {
   position: relative;
-  font-family: "Pragati Narrow", serif;
-  font-size: 1.8em;
-  line-height: 128%;
-  font-weight: 400;
-  top: -4px;
-  padding-left: 0.2em;
-  color: rgb(121, 93, 48);
-  visibility: hidden;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2.7em;
+  // font-weight: 700;
+  line-height: 90%;
+  padding-left: 0.15em;
 }
 .informationalContainer {
+  .rosenIpsum:nth-child(1) {
+    padding-top: 0.08em;
+    font-size: 5.5em;
+    left: -0.1em;
+  }
+  .rosenIpsum:nth-child(2) {
+    font-size: 3.98em;
+    left: -0.05em;
+  }
   .rosenIpsum:nth-child(3) {
-    letter-spacing: 0.07em;
-  }
-  .rosenIpsum:nth-child(4) {
-    letter-spacing: 0.035em;
-  }
-  .rosenIpsum:nth-child(5) {
-    letter-spacing: 0.115em;
-  }
-  .rosenIpsum:nth-child(6) {
-    letter-spacing: 0.045em;
-  }
-  .rosenIpsum:nth-child(7) {
-    letter-spacing: 0.039em;
-  }
-  .rosenIpsum:nth-child(8) {
-    letter-spacing: 0.043em;
+    font-size: 2em;
+    left: 0.1em;
+    line-height: 120%;
   }
 }
-span.spacer {
-  flex: 1;
-  // background-color: blue;
-  // &:before {
-  //   content: " ";
-  //   display: block;
-  //   position: absolute;
-  //   height: 2px;
-  //   background-color: rgba(255, 99, 71, 0.8);
-  //   bottom: 0px;
-  //   width: 100%;
-  // }
-}
-
 .locationAndYear {
   font-family: "Helvetica Neue", sans-serif;
   display: flex;
+  position: absolute;
   flex-direction: row;
-  align-items: center;
-  width: 99%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 97%;
+  margin: 0 auto;
+  bottom: 0px;
 }
 .maxLocationContainer {
   display: flex;
   flex: initial;
   flex-direction: column;
-  padding-right: 1.3em;
-  color: rgb(121, 93, 48);
+  padding-right: 0.5em;
 }
 .maxLocation0 {
   text-transform: uppercase;
@@ -95,11 +78,25 @@ span.spacer {
   @extend .maxLocation0;
   padding-inline-start: 1em;
 }
+div.spacer {
+  flex: 1;
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 1px;
+    background-color: rgb(121, 93, 48);
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+  }
+}
 .yearContainer {
   flex: initial;
   display: flex;
   flex-direction: column;
-  color: rgb(121, 93, 48);
+  padding-left: 0.5em;
 }
 .year0 {
   font-weight: 700;
@@ -116,9 +113,26 @@ span.spacer {
 .cardComponent {
   position: absolute;
 }
+.glob {
+  width: 20em;
+  height: 20em;
+  border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  animation-delay: 1s;
+  // background-color: rgba(255, 255, 255, 0.1);
+  animation: opacityPartialShift2 5s;
+  border: 1px solid #ffffff8f;
+  box-shadow: inset 0 0 250px #ffffff3a;
+  filter: blur(2px) contrast(1.2);
+  z-index: 299;
+}
 .blob {
   display: inline-block;
-  background-image: linear-gradient(to right, #fdf1ed, white 90%);
+  background-image: linear-gradient(to right, #faecde, #fdf9f4 90%);
   height: 12vw;
   width: 55vw;
   font-size: 60px;
@@ -158,18 +172,18 @@ span.spacer {
   padding-bottom: 15px;
   filter: blur(20px) contrast(1.1);
   z-index: 77;
-  animation: opacityShift 4s;
+  animation: opacityPartialShift 4s;
 }
 .blockyBaby {
   padding-top: 10vw;
   padding-right: 22vw;
-  color: rgb(209, 154, 223);
+  color: #ff5e00;
 }
 .cloud {
   display: inline-block;
   z-index: 199;
   background: #dcd0ffb6;
-  color: #8fe7c2;
+  // color: #8fe7c2;
   height: 1vw;
   width: 10vw;
   position: absolute;
@@ -178,9 +192,10 @@ span.spacer {
   will-change: transform;
   border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   padding-bottom: 50px;
-
-  animation: opacityPartialShift 3s, contrastShift 5s;
-  filter: blur(9px) contrast(1.6);
+  filter: blur(9px) contrast(1.25);
+  transition: opacity;
+  animation: contrastShift 6s;
+  // visibility: hidden;
 }
 .scripty {
   z-index: 299;
@@ -196,7 +211,9 @@ span.spacer {
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   position: absolute;
   padding-bottom: 35px;
-  animation: opacityShift 5s;
+  transition: all;
+  animation: opacityPartialShift 3s;
+  visibility: hidden;
 }
 // #root {
 //   overflow: hidden;
@@ -226,11 +243,51 @@ span.spacer {
     opacity: 0.8;
   }
 }
-@keyframes contrastShift {
+@keyframes opacityPartialShift2 {
   from {
-    filter: blur(9px) contrast(1.05);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.35;
   }
   to {
-    filter: blur(9px) contrast(1.5);
+    opacity: 0.7;
+  }
+}
+@keyframes opacityPartialShift3 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+@keyframes contrastShift {
+  from {
+    opacity: 0;
+    filter: blur(9px) contrast(1);
+  }
+  35% {
+    opacity: 0.3;
+  }
+  50% {
+    filter: blur(9px) contrast(1);
+  }
+  75% {
+    filter: blur(9px) contrast(1.1);
+  }
+  to {
+    filter: blur(9px) contrast(1.2);
+  }
+}
+@keyframes contrastShift2 {
+  from {
+    filter: blur(2px) contrast(1);
+  }
+  to {
+    filter: blur(2px) contrast(1.3);
   }
 }
