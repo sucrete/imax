@@ -10,108 +10,166 @@
 }
 .landingHeader {
   font-family: "Galdeano", sans-serif;
-  font-size: 7.5em;
+  font-size: 9em;
   display: inline-flex;
 }
 .landingMax {
   font-weight: 900;
   letter-spacing: 0.14em;
 }
-.informationalContainer {
-  height: 15em;
-  width: 100%;
-  color: rgb(85, 61, 22);
-}
 .landingROSEN {
+  font-weight: default;
   padding-left: 0.6em;
   letter-spacing: 0.07em;
 }
-.rosenIpsum {
-  position: relative;
-  font-family: "Archivo Black", sans-serif;
-  font-size: 2.7em;
-  // font-weight: 700;
-  line-height: 90%;
-  padding-left: 0.15em;
-}
+
 .informationalContainer {
+  min-height: 14.5em;
+  width: 100%;
+  color: rgb(85, 61, 22);
+  .centerContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-right: 1.5em;
+  }
+  .rosenIpsum {
+    position: relative;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 2.7em;
+    // font-weight: 700;
+    padding-left: 0.13em;
+    color: #ffffff;
+  }
   .rosenIpsum:nth-child(1) {
-    padding-top: 0.08em;
-    font-size: 5.5em;
-    left: -0.1em;
+    padding-top: 0.15em;
+    font-size: 1.99em;
+    left: 0.1em;
+    line-height: 98%;
+    // color: #8a8d54;
   }
   .rosenIpsum:nth-child(2) {
     font-size: 3.98em;
     left: -0.05em;
+    line-height: 98%;
+    // top: 0px;
+    // color: #f6ae4c;
   }
   .rosenIpsum:nth-child(3) {
-    font-size: 2em;
-    left: 0.1em;
-    line-height: 120%;
+    font-size: 5.55em;
+    left: -0.1em;
+    // color: #f07f6a;
+    line-height: 83%;
+  }
+  .whereToContainer {
+    font-family: "Galdeano", sans-serif;
+    font-size: 2.1em;
+    text-align: right;
+    div {
+      div {
+        a.whereToLink {
+          cursor: pointer;
+          &::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            height: 2px;
+            background-color: rgba(255, 99, 71, 0.8);
+            bottom: 0px;
+            width: 100%;
+            transform: scaleX(0);
+            left: 0;
+            margin: 0 auto;
+            transform-origin: right;
+            transition-timing-function: ease-in-out;
+            transition: all 0.3s;
+            z-index: -1;
+          }
+          &:hover::before {
+            transform: scaleX(1);
+            background-color: #3d200d;
+            left: 0%;
+            bottom: 0px;
+            transform-origin: right;
+          }
+        }
+      }
+    }
   }
 }
+
 .locationAndYear {
   font-family: "Helvetica Neue", sans-serif;
   display: flex;
   position: absolute;
   flex-direction: row;
+  // font-weight: 700;
+  font-size: 0.9em;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 97%;
+  width: 98%;
   margin: 0 auto;
   bottom: 0px;
-}
-.maxLocationContainer {
-  display: flex;
-  flex: initial;
-  flex-direction: column;
-  padding-right: 0.5em;
-}
-.maxLocation0 {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.8em;
-  padding-inline-start: 0.2em;
-  line-height: 110%;
-}
-.maxLocation1 {
-  @extend .maxLocation0;
-  padding-inline-start: 1em;
-}
-div.spacer {
-  flex: 1;
-  &:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    height: 1px;
-    background-color: rgb(121, 93, 48);
-    left: 50%;
-    bottom: 50%;
-    transform: translate(-50%, 0%);
-    width: 100%;
+  // visibility: hidden;
+  .maxLocationContainer {
+    display: flex;
+    flex: initial;
+    flex-direction: column;
+    padding-right: 0.5em;
   }
-}
-.yearContainer {
-  flex: initial;
-  display: flex;
-  flex-direction: column;
-  padding-left: 0.5em;
-}
-.year0 {
-  font-weight: 700;
-  font-size: 0.8em;
-  padding-inline-start: 0.2em;
-  line-height: 110%;
-}
-.year1 {
-  @extend .year0;
-  padding-inline-start: 0.8em;
+  .maxLocation0 {
+    text-transform: uppercase;
+
+    padding-inline-start: 0.2em;
+    line-height: 110%;
+  }
+  .maxLocation1 {
+    @extend .maxLocation0;
+    padding-inline-start: 1em;
+  }
+  div.spacer {
+    flex: 1;
+    &:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      height: 1px;
+      background-color: rgb(121, 93, 48);
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%, 0%);
+      width: 100%;
+    }
+  }
+  .yearContainer {
+    flex: initial;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5em;
+  }
+  .year0 {
+    padding-inline-start: 0.2em;
+    line-height: 110%;
+  }
+  .year1 {
+    @extend .year0;
+    padding-inline-start: 0.8em;
+  }
 }
 
 // ============== the background mouseover effect element below ===========
 .cardComponent {
   position: absolute;
+}
+.container2 {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // visibility: hidden;
 }
 .glob {
   width: 20em;
@@ -129,6 +187,7 @@ div.spacer {
   box-shadow: inset 0 0 250px #ffffff3a;
   filter: blur(2px) contrast(1.2);
   z-index: 299;
+  visibility: hidden;
 }
 .blob {
   display: inline-block;
@@ -218,14 +277,6 @@ div.spacer {
 // #root {
 //   overflow: hidden;
 // }
-.container2 {
-  background-color: transparent;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 @keyframes opacityShift {
   from {

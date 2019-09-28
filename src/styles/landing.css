@@ -11,7 +11,7 @@
 
 .landingHeader {
   font-family: "Galdeano", sans-serif;
-  font-size: 7.5em;
+  font-size: 9em;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -22,40 +22,99 @@
   letter-spacing: 0.14em;
 }
 
-.informationalContainer {
-  height: 15em;
-  width: 100%;
-  color: #553d16;
-}
-
 .landingROSEN {
+  font-weight: default;
   padding-left: 0.6em;
   letter-spacing: 0.07em;
 }
 
-.rosenIpsum {
+.informationalContainer {
+  min-height: 14.5em;
+  width: 100%;
+  color: #553d16;
+}
+
+.informationalContainer .centerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 1.5em;
+}
+
+.informationalContainer .rosenIpsum {
   position: relative;
   font-family: "Archivo Black", sans-serif;
   font-size: 2.7em;
-  line-height: 90%;
-  padding-left: 0.15em;
+  padding-left: 0.13em;
+  color: #ffffff;
 }
 
 .informationalContainer .rosenIpsum:nth-child(1) {
-  padding-top: 0.08em;
-  font-size: 5.5em;
-  left: -0.1em;
+  padding-top: 0.15em;
+  font-size: 1.99em;
+  left: 0.1em;
+  line-height: 98%;
 }
 
 .informationalContainer .rosenIpsum:nth-child(2) {
   font-size: 3.98em;
   left: -0.05em;
+  line-height: 98%;
 }
 
 .informationalContainer .rosenIpsum:nth-child(3) {
-  font-size: 2em;
-  left: 0.1em;
-  line-height: 120%;
+  font-size: 5.55em;
+  left: -0.1em;
+  line-height: 83%;
+}
+
+.informationalContainer .whereToContainer {
+  font-family: "Galdeano", sans-serif;
+  font-size: 2.1em;
+  text-align: right;
+}
+
+.informationalContainer .whereToContainer div div a.whereToLink {
+  cursor: pointer;
+}
+
+.informationalContainer .whereToContainer div div a.whereToLink::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background-color: rgba(255, 99, 71, 0.8);
+  bottom: 0px;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  left: 0;
+  margin: 0 auto;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.informationalContainer .whereToContainer div div a.whereToLink:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  background-color: #3d200d;
+  left: 0%;
+  bottom: 0px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .locationAndYear {
@@ -68,15 +127,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-size: 0.9em;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  width: 97%;
+  width: 98%;
   margin: 0 auto;
   bottom: 0px;
 }
 
-.maxLocationContainer {
+.locationAndYear .maxLocationContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,27 +150,25 @@
   padding-right: 0.5em;
 }
 
-.maxLocation0, .maxLocation1 {
+.locationAndYear .maxLocation0, .locationAndYear .maxLocation1 {
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.8em;
   -webkit-padding-start: 0.2em;
           padding-inline-start: 0.2em;
   line-height: 110%;
 }
 
-.maxLocation1 {
+.locationAndYear .maxLocation1 {
   -webkit-padding-start: 1em;
           padding-inline-start: 1em;
 }
 
-div.spacer {
+.locationAndYear div.spacer {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-div.spacer:before {
+.locationAndYear div.spacer:before {
   content: " ";
   display: block;
   position: absolute;
@@ -123,7 +181,7 @@ div.spacer:before {
   width: 100%;
 }
 
-.yearContainer {
+.locationAndYear .yearContainer {
   -webkit-box-flex: initial;
       -ms-flex: initial;
           flex: initial;
@@ -137,21 +195,34 @@ div.spacer:before {
   padding-left: 0.5em;
 }
 
-.year0, .year1 {
-  font-weight: 700;
-  font-size: 0.8em;
+.locationAndYear .year0, .locationAndYear .year1 {
   -webkit-padding-start: 0.2em;
           padding-inline-start: 0.2em;
   line-height: 110%;
 }
 
-.year1 {
+.locationAndYear .year1 {
   -webkit-padding-start: 0.8em;
           padding-inline-start: 0.8em;
 }
 
 .cardComponent {
   position: absolute;
+}
+
+.container2 {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .glob {
@@ -173,6 +244,7 @@ div.spacer:before {
   -webkit-filter: blur(2px) contrast(1.2);
           filter: blur(2px) contrast(1.2);
   z-index: 299;
+  visibility: hidden;
 }
 
 .blob {
@@ -271,21 +343,6 @@ div.spacer:before {
   -webkit-animation: opacityPartialShift 3s;
           animation: opacityPartialShift 3s;
   visibility: hidden;
-}
-
-.container2 {
-  background-color: transparent;
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 @-webkit-keyframes opacityShift {
