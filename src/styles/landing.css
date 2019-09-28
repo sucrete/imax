@@ -84,6 +84,8 @@
 
 .informationalContainer .whereToContainer div div a.whereToLink {
   cursor: pointer;
+  text-decoration: none;
+  position: relative;
 }
 
 .informationalContainer .whereToContainer div div a.whereToLink::before {
@@ -91,13 +93,13 @@
   display: block;
   position: absolute;
   height: 2px;
-  background-color: rgba(255, 99, 71, 0.8);
   bottom: 0px;
   width: 100%;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  left: 0;
+  right: 0%;
   margin: 0 auto;
+  background-color: #3d200d;
   -webkit-transform-origin: right;
           transform-origin: right;
   -webkit-transition-timing-function: ease-in-out;
@@ -110,11 +112,7 @@
 .informationalContainer .whereToContainer div div a.whereToLink:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-  background-color: #3d200d;
-  left: 0%;
-  bottom: 0px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  height: 2px;
 }
 
 .locationAndYear {

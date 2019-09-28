@@ -70,17 +70,19 @@
       div {
         a.whereToLink {
           cursor: pointer;
+          text-decoration: none;
+          position: relative;
           &::before {
             content: " ";
             display: block;
             position: absolute;
             height: 2px;
-            background-color: rgba(255, 99, 71, 0.8);
             bottom: 0px;
             width: 100%;
             transform: scaleX(0);
-            left: 0;
+            right: 0%;
             margin: 0 auto;
+            background-color: #3d200d;
             transform-origin: right;
             transition-timing-function: ease-in-out;
             transition: all 0.3s;
@@ -88,10 +90,9 @@
           }
           &:hover::before {
             transform: scaleX(1);
-            background-color: #3d200d;
-            left: 0%;
-            bottom: 0px;
-            transform-origin: right;
+            height: 2px;
+            // right: 0%;
+            // bottom: -4px;
           }
         }
       }
