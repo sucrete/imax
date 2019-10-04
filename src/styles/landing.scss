@@ -1,38 +1,52 @@
-@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Assistant|Galdeano|Fira+Mono|Libre+Caslon+Display|Pragati+Narrow:400,700|Roboto|Space+Mono|Work+Sans|Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Vidaloka|Assistant|Galdeano|Francois+One|Fira+Mono|Libre+Caslon+Display|Pragati+Narrow:400,700|Roboto|Space+Mono|Work+Sans|Yatra+One&display=swap");
 
 .headerWrapper {
   position: absolute;
+  min-width: 900px;
+  min-height: 400px;
   z-index: 298;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(85, 61, 22);
+  color: #64320f;
+  background-color: #faecde;
+  animation-delay: 500ms;
+  animation: opacityShift 1s;
+  overflow: hidden;
 }
 .landingHeader {
   font-family: "Galdeano", sans-serif;
-  font-size: 9em;
-  display: inline-flex;
+  font-size: 10em;
+  display: flex;
+  height: 130px;
+  justify-content: center;
+  padding: 16px;
+  overflow: hidden;
 }
-.landingMax {
-  font-weight: 900;
-  letter-spacing: 0.14em;
-}
-.landingROSEN {
+.landingRosen {
   font-weight: default;
   padding-left: 0.6em;
-  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  // letter-spacing: 0.07em;
 }
 
 .informationalContainer {
-  min-height: 14.5em;
-  width: 100%;
-  color: rgb(85, 61, 22);
+  min-height: 12em;
+  // width: 100%;
   .centerContainer {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
     justify-content: space-between;
-    padding-right: 1.5em;
+    padding-right: 3.7em;
+  }
+  .ipsumContainer {
+    height: 10em;
+    background-color: #d8d8d8;
+    width: 40em;
+    margin-left: 3.6em;
+    margin-top: 1.6em;
+    animation: opacityShift 1s 5s;
   }
   .rosenIpsum {
     position: relative;
@@ -40,66 +54,65 @@
     font-size: 2.7em;
     // font-weight: 700;
     padding-left: 0.13em;
-    color: #ffffff;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(85, 61, 22);
   }
   .rosenIpsum:nth-child(1) {
     padding-top: 0.15em;
-    font-size: 1.99em;
-    left: 0.1em;
+    font-size: 3em;
+    // left: 0.05em;
     line-height: 98%;
+    // letter-spacing: 0.014em;
     // color: #8a8d54;
   }
   .rosenIpsum:nth-child(2) {
     font-size: 3.98em;
     left: -0.05em;
     line-height: 98%;
+    letter-spacing: 0.41em;
     // top: 0px;
     // color: #f6ae4c;
   }
   .rosenIpsum:nth-child(3) {
     font-size: 5.55em;
     left: -0.1em;
-    // color: #f07f6a;
+    // color: #f07f6a; from OKDRUGS!!! (don't delete just yet)
     line-height: 83%;
+    letter-spacing: 0.41em;
   }
   .whereToContainer {
-    font-family: "Galdeano", sans-serif;
-    font-size: 2.1em;
+    font-family: "Pragati Narrow", sans-serif;
+    font-size: 1.7em;
     text-align: right;
-    div {
+    line-height: 115%;
+    font-weight: 700;
+    position: relative;
+    top: 25px;
+    div.whereTo {
+      overflow: hidden;
+      position: relative;
       div {
+        overflow: hidden;
+        position: relative;
+        line-height: 32px;
+        height: 32px;
         a.whereToLink {
           cursor: pointer;
+          color: #64320f;
           text-decoration: none;
-          position: relative;
-          &::before {
-            content: " ";
-            display: block;
-            position: absolute;
-            height: 2px;
-            bottom: 0px;
-            width: 100%;
-            transform: scaleX(0);
-            right: 0%;
-            margin: 0 auto;
-            background-color: #3d200d;
-            transform-origin: right;
-            transition-timing-function: ease-in-out;
-            transition: all 0.3s;
-            z-index: -1;
-          }
-          &:hover::before {
-            transform: scaleX(1);
-            height: 2px;
-            // right: 0%;
-            // bottom: -4px;
+          line-height: 32px;
+          height: 32px;
+          // transition: all 0.1s linear;
+          overflow: hidden;
+          &:hover {
+            color: rgb(206, 47, 20);
           }
         }
       }
     }
   }
 }
-
 .locationAndYear {
   font-family: "Helvetica Neue", sans-serif;
   display: flex;
@@ -164,7 +177,8 @@
   position: absolute;
 }
 .container2 {
-  background-color: transparent;
+  background: #f3e5d7;
+  // background: linear-gradient(0deg, rgb(253, 238, 224) 35%, #fce0c5 100%);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -172,52 +186,34 @@
   justify-content: center;
   // visibility: hidden;
 }
-.glob {
-  width: 20em;
-  height: 20em;
-  border-radius: 2px;
-  display: inline-block;
-  position: absolute;
-  background-position: center center;
-  background-repeat: no-repeat;
-  will-change: transform;
-  animation-delay: 1s;
-  // background-color: rgba(255, 255, 255, 0.1);
-  animation: opacityPartialShift2 5s;
-  border: 1px solid #ffffff8f;
-  box-shadow: inset 0 0 250px #ffffff3a;
-  filter: blur(2px) contrast(1.2);
-  z-index: 299;
-  visibility: hidden;
-}
+
 .blob {
-  display: inline-block;
-  background-image: linear-gradient(to right, #faecde, #fdf9f4 90%);
-  height: 12vw;
-  width: 55vw;
-  font-size: 60px;
-  color: #c6e7a89c;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  position: absolute;
-  background-position: center center;
-  background-repeat: no-repeat;
-  will-change: transform;
-  padding-bottom: 35px;
-  filter: blur(30px) contrast(1.05);
-  transform: rotate(-5deg);
-  z-index: 66;
-  animation: opacityShift 3s;
-}
-.blobBaby {
-  color: yellow;
-}
-.blocky {
   display: inline-block;
   background: linear-gradient(
     to top right,
     rgba(255, 226, 249, 0.767),
     #f7d2cd
   );
+  height: 3vw;
+  width: 10vw;
+  font-size: 60px;
+  // color: #c6e7a89c;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  padding-bottom: 35px;
+  // filter: blur(30px) contrast(1.05);
+  transform: translate3d(1.88px, -103.28px, 0px);
+  z-index: 66;
+  animation: opacityShift 3s;
+  visibility: hidden;
+}
+
+.blocky {
+  display: inline-block;
+
   font-family: "Segoe UI Emoji", sans-serif;
   color: #fda36ee3;
   text-align: right;
@@ -230,116 +226,16 @@
   width: 35vw;
   border-radius: 96px 72px 48px 24px/24px 48px 72px 96px;
   padding-bottom: 15px;
-  filter: blur(20px) contrast(1.1);
+  // filter: blur(20px) contrast(1.1);
   z-index: 77;
-  animation: opacityPartialShift 4s;
-}
-.blockyBaby {
-  padding-top: 10vw;
-  padding-right: 22vw;
-  color: #ff5e00;
-}
-.cloud {
-  display: inline-block;
-  z-index: 199;
-  background: #dcd0ffb6;
-  // color: #8fe7c2;
-  height: 1vw;
-  width: 10vw;
-  position: absolute;
-  background-position: center center;
-  background-repeat: no-repeat;
-  will-change: transform;
-  border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
-  padding-bottom: 50px;
-  filter: blur(9px) contrast(1.25);
-  transition: opacity;
-  animation: contrastShift 6s;
-  // visibility: hidden;
-}
-.scripty {
-  z-index: 299;
-  display: inline-block;
-  color: #ff5e00;
-  font-size: 40px;
-  height: 8vw;
-  width: 55vw;
-  background: transparent;
-  text-align: right;
-  will-change: transform;
-  filter: blur(9px) contrast(8) !important;
-  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  position: absolute;
-  padding-bottom: 35px;
-  transition: all;
-  animation: opacityPartialShift 3s;
+  transform: translate3d(25.3778px, -144.311px, 0px);
   visibility: hidden;
 }
-// #root {
-//   overflow: hidden;
-// }
-
 @keyframes opacityShift {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
-  }
-}
-@keyframes opacityPartialShift {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.8;
-  }
-}
-@keyframes opacityPartialShift2 {
-  from {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.35;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
-@keyframes opacityPartialShift3 {
-  from {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.15;
-  }
-  to {
-    opacity: 0.3;
-  }
-}
-@keyframes contrastShift {
-  from {
-    opacity: 0;
-    filter: blur(9px) contrast(1);
-  }
-  35% {
-    opacity: 0.3;
-  }
-  50% {
-    filter: blur(9px) contrast(1);
-  }
-  75% {
-    filter: blur(9px) contrast(1.1);
-  }
-  to {
-    filter: blur(9px) contrast(1.2);
-  }
-}
-@keyframes contrastShift2 {
-  from {
-    filter: blur(2px) contrast(1);
-  }
-  to {
-    filter: blur(2px) contrast(1.3);
   }
 }
