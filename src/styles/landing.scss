@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Vidaloka|Assistant|Galdeano|Francois+One|Fira+Mono|Libre+Caslon+Display|Pragati+Narrow:400,700|Roboto|Space+Mono|Work+Sans|Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
 
 .headerWrapper {
   position: absolute;
@@ -8,166 +8,112 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: #64320f;
+  color: #533119;
   background-color: #faecde;
   animation-delay: 500ms;
   animation: opacityShift 1s;
   overflow: hidden;
-}
-.landingHeader {
-  font-family: "Galdeano", sans-serif;
-  font-size: 10em;
-  display: flex;
-  height: 130px;
-  justify-content: center;
-  padding: 16px;
-  overflow: hidden;
-}
-.landingRosen {
-  font-weight: default;
-  padding-left: 0.6em;
-  text-transform: uppercase;
-  // letter-spacing: 0.07em;
-}
-
-.informationalContainer {
-  min-height: 12em;
-  // width: 100%;
-  .centerContainer {
+  padding-top: 3em;
+  padding-bottom: 2.5em;
+  .landingHeader {
+    font-size: 7.5em;
     display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding-right: 3.7em;
+    height: 130px;
+    justify-content: center;
+    padding: 16px;
+    overflow: hidden;
   }
-  .ipsumContainer {
-    height: 10em;
+  .landingMax {
+    font-family: "RosenFont Bold";
+  }
+  .landingRosen {
+    font-weight: default;
+    font-family: RosenFont, "Arial", sans-serif;
+    padding-left: 0.6em;
+    text-transform: uppercase;
+    // letter-spacing: 0.07em;
+  }
 
-    background-color: #fcf4ed;
-    width: 40em;
-    margin-left: 3.6em;
-    margin-top: 1.6em;
-    animation: opacityShift 1s;
-    animation-delay: 2s;
-  }
-  .rosenIpsum {
-    position: relative;
-    font-family: "Archivo Black", sans-serif;
-    font-size: 2.7em;
-    // font-weight: 700;
-    color: #aab1b3;
-    padding: 26px;
-  }
-  .rosenIpsum:nth-child(1) {
-    font-size: 3em;
-    // left: 0.05em;
-    line-height: 98%;
-    // letter-spacing: 0.014em;
-    // color: #8a8d54;
-  }
-  .rosenIpsum:nth-child(2) {
-    font-size: 3.98em;
-    left: -0.05em;
-    line-height: 98%;
-    letter-spacing: 0.41em;
-    // top: 0px;
-    // color: #f6ae4c;
-  }
-  .rosenIpsum:nth-child(3) {
-    font-size: 5.55em;
-    left: -0.1em;
-    // color: #f07f6a; from OKDRUGS!!! (don't delete just yet)
-    line-height: 83%;
-    letter-spacing: 0.41em;
-  }
-  .whereToContainer {
-    font-family: "Pragati Narrow", sans-serif;
-    font-size: 1.7em;
-    text-align: right;
-    line-height: 115%;
-    font-weight: 700;
-    position: relative;
-    top: 25px;
-    div.whereTo {
-      overflow: hidden;
+  .informationalContainer {
+    min-height: 12em;
+    // width: 100%;
+    .centerContainer {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding-right: 8em;
+    }
+    .ipsumContainer {
+      height: 10em;
+      background-color: #fcf4ed;
+      width: 40em;
+      margin-left: 3.6em;
+      margin-top: 1.6em;
+      animation: opacityShift 1s;
+      animation-delay: 2s;
+      visibility: hidden;
+    }
+    .rosenIpsum {
       position: relative;
-      div {
+      font-size: 2.7em;
+      // font-weight: 700;
+      color: #aab1b3;
+      padding: 26px;
+    }
+    .rosenIpsum:nth-child(1) {
+      font-size: 3em;
+      // left: 0.05em;
+      line-height: 98%;
+      // letter-spacing: 0.014em;
+      // color: #8a8d54;
+    }
+    .rosenIpsum:nth-child(2) {
+      font-size: 3.98em;
+      left: -0.05em;
+      line-height: 98%;
+      letter-spacing: 0.41em;
+      // top: 0px;
+      // color: #f6ae4c;
+    }
+    .rosenIpsum:nth-child(3) {
+      font-size: 5.55em;
+      left: -0.1em;
+      // color: #f07f6a; from OKDRUGS!!! (don't delete just yet)
+      line-height: 83%;
+      letter-spacing: 0.41em;
+    }
+    .whereToContainer {
+      font-family: "RosenFont", sans-serif;
+      font-size: 1.5em;
+      text-align: right;
+      line-height: 115%;
+      font-weight: 400;
+      position: relative;
+      top: 25px;
+      div.whereTo {
         overflow: hidden;
         position: relative;
-        line-height: 32px;
-        height: 32px;
-        a.whereToLink {
-          cursor: pointer;
-          color: #64320f;
-          text-decoration: none;
+        div {
+          overflow: hidden;
+          position: relative;
           line-height: 32px;
           height: 32px;
-          // transition: all 0.1s linear;
-          overflow: hidden;
-          &:hover {
-            color: rgb(206, 47, 20);
+          a.whereToLink {
+            cursor: pointer;
+            color: #2b1e14;
+            text-decoration: none;
+            line-height: 32px;
+            height: 32px;
+            // transition: all 0.1s linear;
+            overflow: hidden;
+            &:hover {
+              color: rgb(206, 47, 20);
+            }
           }
         }
       }
     }
-  }
-}
-.locationAndYear {
-  font-family: "Helvetica Neue", sans-serif;
-  display: flex;
-  position: absolute;
-  flex-direction: row;
-  // font-weight: 700;
-  font-size: 0.9em;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 98%;
-  margin: 0 auto;
-  bottom: 0px;
-  // visibility: hidden;
-  .maxLocationContainer {
-    display: flex;
-    flex: initial;
-    flex-direction: column;
-    padding-right: 0.5em;
-  }
-  .maxLocation0 {
-    text-transform: uppercase;
-
-    padding-inline-start: 0.2em;
-    line-height: 110%;
-  }
-  .maxLocation1 {
-    @extend .maxLocation0;
-    padding-inline-start: 1em;
-  }
-  div.spacer {
-    flex: 1;
-    &:before {
-      content: " ";
-      display: block;
-      position: absolute;
-      height: 1px;
-      background-color: rgb(121, 93, 48);
-      left: 50%;
-      bottom: 50%;
-      transform: translate(-50%, 0%);
-      width: 100%;
-    }
-  }
-  .yearContainer {
-    flex: initial;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0.5em;
-  }
-  .year0 {
-    padding-inline-start: 0.2em;
-    line-height: 110%;
-  }
-  .year1 {
-    @extend .year0;
-    padding-inline-start: 0.8em;
   }
 }
 

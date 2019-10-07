@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Vidaloka|Assistant|Galdeano|Francois+One|Fira+Mono|Libre+Caslon+Display|Pragati+Narrow:400,700|Roboto|Space+Mono|Work+Sans|Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
 .headerWrapper {
   position: absolute;
   min-width: 900px;
@@ -8,18 +8,19 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #64320f;
+  color: #533119;
   background-color: #faecde;
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
   -webkit-animation: opacityShift 1s;
           animation: opacityShift 1s;
   overflow: hidden;
+  padding-top: 3em;
+  padding-bottom: 2.5em;
 }
 
-.landingHeader {
-  font-family: "Galdeano", sans-serif;
-  font-size: 10em;
+.headerWrapper .landingHeader {
+  font-size: 7.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,17 +32,22 @@
   overflow: hidden;
 }
 
-.landingRosen {
+.headerWrapper .landingMax {
+  font-family: "RosenFont Bold";
+}
+
+.headerWrapper .landingRosen {
   font-weight: default;
+  font-family: RosenFont, "Arial", sans-serif;
   padding-left: 0.6em;
   text-transform: uppercase;
 }
 
-.informationalContainer {
+.headerWrapper .informationalContainer {
   min-height: 12em;
 }
 
-.informationalContainer .centerContainer {
+.headerWrapper .informationalContainer .centerContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,10 +59,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-right: 3.7em;
+  padding-right: 8em;
 }
 
-.informationalContainer .ipsumContainer {
+.headerWrapper .informationalContainer .ipsumContainer {
   height: 10em;
   background-color: #fcf4ed;
   width: 40em;
@@ -66,157 +72,68 @@
           animation: opacityShift 1s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+  visibility: hidden;
 }
 
-.informationalContainer .rosenIpsum {
+.headerWrapper .informationalContainer .rosenIpsum {
   position: relative;
-  font-family: "Archivo Black", sans-serif;
   font-size: 2.7em;
   color: #aab1b3;
   padding: 26px;
 }
 
-.informationalContainer .rosenIpsum:nth-child(1) {
+.headerWrapper .informationalContainer .rosenIpsum:nth-child(1) {
   font-size: 3em;
   line-height: 98%;
 }
 
-.informationalContainer .rosenIpsum:nth-child(2) {
+.headerWrapper .informationalContainer .rosenIpsum:nth-child(2) {
   font-size: 3.98em;
   left: -0.05em;
   line-height: 98%;
   letter-spacing: 0.41em;
 }
 
-.informationalContainer .rosenIpsum:nth-child(3) {
+.headerWrapper .informationalContainer .rosenIpsum:nth-child(3) {
   font-size: 5.55em;
   left: -0.1em;
   line-height: 83%;
   letter-spacing: 0.41em;
 }
 
-.informationalContainer .whereToContainer {
-  font-family: "Pragati Narrow", sans-serif;
-  font-size: 1.7em;
+.headerWrapper .informationalContainer .whereToContainer {
+  font-family: "RosenFont", sans-serif;
+  font-size: 1.5em;
   text-align: right;
   line-height: 115%;
-  font-weight: 700;
+  font-weight: 400;
   position: relative;
   top: 25px;
 }
 
-.informationalContainer .whereToContainer div.whereTo {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo {
   overflow: hidden;
   position: relative;
 }
 
-.informationalContainer .whereToContainer div.whereTo div {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div {
   overflow: hidden;
   position: relative;
   line-height: 32px;
   height: 32px;
 }
 
-.informationalContainer .whereToContainer div.whereTo div a.whereToLink {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink {
   cursor: pointer;
-  color: #64320f;
+  color: #2b1e14;
   text-decoration: none;
   line-height: 32px;
   height: 32px;
   overflow: hidden;
 }
 
-.informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover {
   color: #ce2f14;
-}
-
-.locationAndYear {
-  font-family: "Helvetica Neue", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-size: 0.9em;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
-  width: 98%;
-  margin: 0 auto;
-  bottom: 0px;
-}
-
-.locationAndYear .maxLocationContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: initial;
-      -ms-flex: initial;
-          flex: initial;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-right: 0.5em;
-}
-
-.locationAndYear .maxLocation0, .locationAndYear .maxLocation1 {
-  text-transform: uppercase;
-  -webkit-padding-start: 0.2em;
-          padding-inline-start: 0.2em;
-  line-height: 110%;
-}
-
-.locationAndYear .maxLocation1 {
-  -webkit-padding-start: 1em;
-          padding-inline-start: 1em;
-}
-
-.locationAndYear div.spacer {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.locationAndYear div.spacer:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  height: 1px;
-  background-color: #795d30;
-  left: 50%;
-  bottom: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
-  width: 100%;
-}
-
-.locationAndYear .yearContainer {
-  -webkit-box-flex: initial;
-      -ms-flex: initial;
-          flex: initial;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-left: 0.5em;
-}
-
-.locationAndYear .year0, .locationAndYear .year1 {
-  -webkit-padding-start: 0.2em;
-          padding-inline-start: 0.2em;
-  line-height: 110%;
-}
-
-.locationAndYear .year1 {
-  -webkit-padding-start: 0.8em;
-          padding-inline-start: 0.8em;
 }
 
 .cardComponent {

@@ -11,3 +11,23 @@ body {
   width: 100%;
   height: 100%;
 }
+@font-face {
+  font-family: "RosenFont ExtraBlack";
+  src: url("assets/RosenFont/RosenFont-ExtraBlack.woff") format("woff");
+}
+@font-face {
+  font-family: "RosenFont Bold";
+  src: url("assets/RosenFont/RosenFont-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "RosenFont Italic";
+  src: url("assets/RosenFont/RosenFont-Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "RosenFont";
+  src: url("assets/RosenFont/RosenFont-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "RosenFont BoldItalic";
+  src: url("assets/RosenFont/RosenFont-BoldItalic.woff") format("woff");
+}

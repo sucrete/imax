@@ -3,7 +3,7 @@ import { useTrail, animated } from "react-spring";
 import "../styles/landing.css";
 
 const items = ["Max", "Rosen"];
-const whereTo = ["video", "photo", "design", "collage", "gooftown"];
+const whereTo = ["Video", "Photo", "Design", "Collage", "Gooftown"];
 
 const config = { mass: 5, tension: 3100, friction: 400 };
 
