@@ -10,12 +10,12 @@
   transform: translate(-50%, -50%);
   // border: solid 1px #e0d3c6;
   background-color: #faecde;
-  animation-delay: 500ms;
+  animation-delay: 750ms;
   animation: opacityShift 1s;
   overflow: hidden;
   padding-top: 3em;
   padding-bottom: 2.5em;
-  // border-bottom: solid 10px #cad2d4;
+
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.03), 0 15px 12px rgba(0, 0, 0, 0.01);
   .landingHeader {
     font-size: 7.6em;
@@ -29,13 +29,13 @@
   .landingmax {
     font-family: "RosenFont ExtraBlack";
     text-transform: capitalize;
+    cursor: pointer;
   }
   .landingrosen {
     font-weight: default;
     font-family: RosenFont, "Arial", sans-serif;
     padding-left: 0.6em;
     text-transform: uppercase;
-    // letter-spacing: 0.07em;
   }
 
   .informationalContainer {
@@ -89,26 +89,26 @@
     }
     .whereToContainer {
       font-family: "RosenFont", sans-serif;
-      font-size: 1.5em;
+      font-size: 1.4em;
       text-align: right;
       font-weight: 400;
       position: relative;
       top: 25px;
       div.whereTo {
         overflow: hidden;
-        position: relative;
         div {
           overflow: hidden;
           position: relative;
           a.whereToLink {
             cursor: pointer;
-            color: #2b1e14;
+            color: #64320f;
             text-decoration: none;
             line-height: 35px;
             height: 35px;
             display: block;
             // transition: all 0.1s linear;
             overflow: hidden;
+            text-transform: capitalize;
             &:after {
               position: absolute;
               background-color: #20201e;

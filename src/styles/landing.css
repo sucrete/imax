@@ -9,8 +9,8 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #faecde;
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
   -webkit-animation: opacityShift 1s;
           animation: opacityShift 1s;
   overflow: hidden;
@@ -37,6 +37,7 @@
 .headerWrapper .landingmax {
   font-family: "RosenFont ExtraBlack";
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 .headerWrapper .landingrosen {
@@ -106,7 +107,7 @@
 
 .headerWrapper .informationalContainer .whereToContainer {
   font-family: "RosenFont", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.4em;
   text-align: right;
   font-weight: 400;
   position: relative;
@@ -115,7 +116,6 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo {
   overflow: hidden;
-  position: relative;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div {
@@ -125,12 +125,13 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink {
   cursor: pointer;
-  color: #2b1e14;
+  color: #64320f;
   text-decoration: none;
   line-height: 35px;
   height: 35px;
   display: block;
   overflow: hidden;
+  text-transform: capitalize;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:after {

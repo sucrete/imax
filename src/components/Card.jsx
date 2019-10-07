@@ -21,7 +21,7 @@ function Card() {
     yy: 0,
     height: 35,
     opacity: 1,
-    from: { yy: 10, height: 0, opacity: 0 }
+    from: { yy: 20, height: 0, opacity: 0 }
   });
 
   return (
@@ -55,8 +55,10 @@ function Card() {
                     transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
                   }}
                 >
-                  <animated.div style={{ height }}>
-                    <a className="whereToLink">{whereTo[index]}</a>
+                  <animated.div>
+                    <a style={{ height }} className="whereToLink">
+                      {whereTo[index]}
+                    </a>
                   </animated.div>
                 </animated.div>
               ))}
