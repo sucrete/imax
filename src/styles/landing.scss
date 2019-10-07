@@ -8,25 +8,29 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: #533119;
+  // border: solid 1px #e0d3c6;
   background-color: #faecde;
   animation-delay: 500ms;
   animation: opacityShift 1s;
   overflow: hidden;
   padding-top: 3em;
   padding-bottom: 2.5em;
+  // border-bottom: solid 10px #cad2d4;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.03), 0 15px 12px rgba(0, 0, 0, 0.01);
   .landingHeader {
-    font-size: 7.5em;
+    font-size: 7.6em;
     display: flex;
     height: 130px;
     justify-content: center;
     padding: 16px;
     overflow: hidden;
+    color: #64320f;
   }
-  .landingMax {
-    font-family: "RosenFont Bold";
+  .landingmax {
+    font-family: "RosenFont ExtraBlack";
+    text-transform: capitalize;
   }
-  .landingRosen {
+  .landingrosen {
     font-weight: default;
     font-family: RosenFont, "Arial", sans-serif;
     padding-left: 0.6em;
@@ -42,7 +46,7 @@
       flex-direction: row;
       margin: 0 auto;
       justify-content: space-between;
-      padding-right: 8em;
+      padding-right: 7em;
     }
     .ipsumContainer {
       height: 10em;
@@ -87,7 +91,6 @@
       font-family: "RosenFont", sans-serif;
       font-size: 1.5em;
       text-align: right;
-      line-height: 115%;
       font-weight: 400;
       position: relative;
       top: 25px;
@@ -97,18 +100,32 @@
         div {
           overflow: hidden;
           position: relative;
-          line-height: 32px;
-          height: 32px;
           a.whereToLink {
             cursor: pointer;
             color: #2b1e14;
             text-decoration: none;
-            line-height: 32px;
-            height: 32px;
+            line-height: 35px;
+            height: 35px;
+            display: block;
             // transition: all 0.1s linear;
             overflow: hidden;
+            &:after {
+              position: absolute;
+              background-color: #20201e;
+              content: "";
+              width: 100%;
+              height: 1px;
+              bottom: -1px;
+              left: 0;
+            }
             &:hover {
-              color: rgb(206, 47, 20);
+              color: #ed462f;
+            }
+            &:hover:after {
+              transition: width ease-in 0.3s 0.2s;
+              width: 100%;
+              background-color: #fffef3;
+              left: 100%;
             }
           }
         }
@@ -118,11 +135,10 @@
 }
 
 // ============== the background mouseover effect element below ===========
-.cardComponent {
-  position: absolute;
-}
+
 .container2 {
-  background: #f3e5d7;
+  // background: #e7e5dd;
+  position: absolute;
   // background: linear-gradient(0deg, rgb(253, 238, 224) 35%, #fce0c5 100%);
   width: 100vw;
   height: 100vh;
@@ -131,7 +147,6 @@
   justify-content: center;
   // visibility: hidden;
 }
-
 .blob {
   display: inline-block;
   background: linear-gradient(
