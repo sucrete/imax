@@ -55,7 +55,9 @@ function Card() {
         </header>
         <div className="informationalContainer">
           <div className="centerContainer">
-            <div className="ipsumContainer"></div>
+            <div className="ipsumContainer">
+              <div className="rosenIpsum">DIRECTOR</div>
+            </div>
             <div className="whereToContainer">
               {trail4.map(({ yy, height, ...rest }, index) => (
                 <animated.div

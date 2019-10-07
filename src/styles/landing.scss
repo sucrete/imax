@@ -42,24 +42,23 @@
   }
   .ipsumContainer {
     height: 10em;
-    background-color: #d8d8d8;
+
+    background-color: #fcf4ed;
     width: 40em;
     margin-left: 3.6em;
     margin-top: 1.6em;
-    animation: opacityShift 1s 5s;
+    animation: opacityShift 1s;
+    animation-delay: 2s;
   }
   .rosenIpsum {
     position: relative;
     font-family: "Archivo Black", sans-serif;
     font-size: 2.7em;
     // font-weight: 700;
-    padding-left: 0.13em;
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(85, 61, 22);
+    color: #aab1b3;
+    padding: 26px;
   }
   .rosenIpsum:nth-child(1) {
-    padding-top: 0.15em;
     font-size: 3em;
     // left: 0.05em;
     line-height: 98%;
