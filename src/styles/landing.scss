@@ -15,7 +15,6 @@
   overflow: hidden;
   padding-top: 3em;
   padding-bottom: 2.5em;
-
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.03), 0 15px 12px rgba(0, 0, 0, 0.01);
   .landingHeader {
     font-size: 7.6em;
@@ -30,6 +29,15 @@
     font-family: "RosenFont ExtraBlack";
     text-transform: capitalize;
     cursor: pointer;
+    background-size: cover;
+    background-image: url("../assets/fieldOfColor.jpg");
+    background-position: center;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #64320f;
+    &:hover {
+      -webkit-text-fill-color: transparent;
+    }
   }
   .landingrosen {
     font-weight: default;

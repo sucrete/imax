@@ -38,6 +38,16 @@
   font-family: "RosenFont ExtraBlack";
   text-transform: capitalize;
   cursor: pointer;
+  background-size: cover;
+  background-image: url("../assets/fieldOfColor.jpg");
+  background-position: center;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #64320f;
+}
+
+.headerWrapper .landingmax:hover {
+  -webkit-text-fill-color: transparent;
 }
 
 .headerWrapper .landingrosen {
