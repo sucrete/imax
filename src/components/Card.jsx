@@ -4,7 +4,7 @@ import "../styles/landing.css";
 
 const items = ["max", "rosen"];
 const whereTo = ["video", "photo", "design", "collage", "gooftown"];
-
+const whoIsMax = ["Editor/Director/Cinematographer living in New York City"];
 const config = { mass: 5, tension: 3500, friction: 400 };
 
 function Card() {
@@ -15,11 +15,25 @@ function Card() {
     height: 130,
     from: { yy: 105, height: 0 }
   });
-  const trail4 = useTrail(whereTo.length, {
+  const trail2 = useTrail(whereTo.length, {
     config,
     delay: 1650,
     yy: 0,
     height: 35,
+    opacity: 1,
+    from: { yy: 20, height: 0, opacity: 0 }
+  });
+  const trail3 = useTrail(1, {
+    config,
+    delay: 2000,
+    opacity: 1,
+    from: { opacity: 0 }
+  });
+  const trail4 = useTrail(whoIsMax.length, {
+    config,
+    delay: 2200,
+    yy: 0,
+    height: 30,
     opacity: 1,
     from: { yy: 20, height: 0, opacity: 0 }
   });
@@ -43,11 +57,33 @@ function Card() {
         </header>
         <div className="informationalContainer">
           <div className="centerContainer">
-            <div className="ipsumContainer">
-              <div className="rosenIpsum">DIRECTOR</div>
-            </div>
+            {trail3.map(({ ...rest }, index) => (
+              <animated.div
+                className="ipsumContainer"
+                style={{
+                  ...rest
+                }}
+              >
+                {trail4.map(({ yy, height, ...rest }, index) => (
+                  <animated.div
+                    className="rosenIpsum"
+                    style={{
+                      ...rest,
+                      transform: yy.interpolate(
+                        yy => `translate3d(0,${yy}px,0)`
+                      )
+                    }}
+                  >
+                    <animated.div style={{ height }}>
+                      {whoIsMax[index]}
+                    </animated.div>
+                  </animated.div>
+                ))}
+              </animated.div>
+            ))}
+
             <div className="whereToContainer">
-              {trail4.map(({ yy, height, ...rest }, index) => (
+              {trail2.map(({ yy, height, ...rest }, index) => (
                 <animated.div
                   className="whereTo"
                   style={{

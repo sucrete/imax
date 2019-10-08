@@ -39,7 +39,7 @@
   text-transform: capitalize;
   cursor: pointer;
   background-size: cover;
-  background-image: url("../assets/fieldOfColor.jpg");
+  background-image: url("https://i.imgur.com/ITjXTNl.jpg");
   background-position: center;
   text-align: center;
   -webkit-background-clip: text;
@@ -77,42 +77,23 @@
 }
 
 .headerWrapper .informationalContainer .ipsumContainer {
-  height: 10em;
-  background-color: #fcf4ed;
-  width: 40em;
-  margin-left: 3.6em;
-  margin-top: 1.6em;
-  -webkit-animation: opacityShift 1s;
-          animation: opacityShift 1s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  visibility: hidden;
+  position: relative;
+  width: 60%;
+  height: 10.2em;
+  left: 6.2em;
+  top: 2em;
+  border-right: solid 1px #e69c88;
+  padding-right: 2em;
 }
 
 .headerWrapper .informationalContainer .rosenIpsum {
   position: relative;
-  font-size: 2.7em;
-  color: #aab1b3;
-  padding: 26px;
-}
-
-.headerWrapper .informationalContainer .rosenIpsum:nth-child(1) {
-  font-size: 3em;
-  line-height: 98%;
-}
-
-.headerWrapper .informationalContainer .rosenIpsum:nth-child(2) {
-  font-size: 3.98em;
-  left: -0.05em;
-  line-height: 98%;
-  letter-spacing: 0.41em;
-}
-
-.headerWrapper .informationalContainer .rosenIpsum:nth-child(3) {
-  font-size: 5.55em;
-  left: -0.1em;
-  line-height: 83%;
-  letter-spacing: 0.41em;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #ef7351;
+  height: 30px;
+  line-height: 30px;
 }
 
 .headerWrapper .informationalContainer .whereToContainer {
@@ -155,7 +136,7 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover {
-  color: #ed462f;
+  color: tomato;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover:after {

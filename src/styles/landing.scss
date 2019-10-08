@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
 
+$rosenBrown: #64320f;
+
 .headerWrapper {
   position: absolute;
   min-width: 900px;
@@ -23,18 +25,18 @@
     justify-content: center;
     padding: 16px;
     overflow: hidden;
-    color: #64320f;
+    color: $rosenBrown;
   }
   .landingmax {
     font-family: "RosenFont ExtraBlack";
     text-transform: capitalize;
     cursor: pointer;
     background-size: cover;
-    background-image: url("../assets/fieldOfColor.jpg");
+    background-image: url("https://i.imgur.com/ITjXTNl.jpg");
     background-position: center;
     text-align: center;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #64320f;
+    -webkit-text-fill-color: $rosenBrown;
     &:hover {
       -webkit-text-fill-color: transparent;
     }
@@ -57,43 +59,33 @@
       padding-right: 7em;
     }
     .ipsumContainer {
-      height: 10em;
-      background-color: #fcf4ed;
-      width: 40em;
-      margin-left: 3.6em;
-      margin-top: 1.6em;
-      animation: opacityShift 1s;
-      animation-delay: 2s;
-      visibility: hidden;
+      position: relative;
+      // padding: 1em;
+      width: 60%;
+      height: 10.2em;
+      left: 6.2em;
+      top: 2em;
+      border-right: solid 1px #e69c88;
+      padding-right: 2em;
     }
     .rosenIpsum {
       position: relative;
-      font-size: 2.7em;
-      // font-weight: 700;
-      color: #aab1b3;
-      padding: 26px;
+      font-family: "Work Sans", sans-serif;
+      font-size: 1.2em;
+      font-weight: 400;
+      color: #ef7351;
+      // top: 10px;
+      height: 30px;
+      line-height: 30px;
     }
     .rosenIpsum:nth-child(1) {
-      font-size: 3em;
-      // left: 0.05em;
-      line-height: 98%;
-      // letter-spacing: 0.014em;
-      // color: #8a8d54;
+      //color: #8a8d54; from OKDRUGS!!! (don't delete just yet)
     }
     .rosenIpsum:nth-child(2) {
-      font-size: 3.98em;
-      left: -0.05em;
-      line-height: 98%;
-      letter-spacing: 0.41em;
-      // top: 0px;
-      // color: #f6ae4c;
+      //color: #f6ae4c; from OKDRUGS!!! (don't delete just yet)
     }
     .rosenIpsum:nth-child(3) {
-      font-size: 5.55em;
-      left: -0.1em;
-      // color: #f07f6a; from OKDRUGS!!! (don't delete just yet)
-      line-height: 83%;
-      letter-spacing: 0.41em;
+      //color: #f07f6a; from OKDRUGS!!! (don't delete just yet)
     }
     .whereToContainer {
       font-family: "RosenFont", sans-serif;
@@ -127,7 +119,7 @@
               left: 0;
             }
             &:hover {
-              color: #ed462f;
+              color: tomato;
             }
             &:hover:after {
               transition: width ease-in 0.3s 0.2s;
