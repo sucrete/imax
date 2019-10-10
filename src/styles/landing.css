@@ -9,8 +9,8 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #faecde;
-  -webkit-animation-delay: 750ms;
-          animation-delay: 750ms;
+  -webkit-animation-delay: 1000s;
+          animation-delay: 1000s;
   -webkit-animation: opacityShift 1s;
           animation: opacityShift 1s;
   overflow: hidden;
@@ -136,7 +136,7 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover {
-  color: tomato;
+  color: #ef7351;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover:after {
