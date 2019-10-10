@@ -1,15 +1,17 @@
-### Max Rosen Portfolio v2
+## Max Rosen Portfolio v2
 
-Demo: [⬤](https://sucrete.github.io/imax/)
+## Demo: [⬤](https://sucrete.github.io/imax/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-```
-npm start
-
-npm run deploy
-```
 
 ![bpa free](https://66.media.tumblr.com/b932daf86f29f12926140d3e52ab174f/tumblr_n0x97cjXvc1trrgzfo1_250.gif "bpa free")
 
 --- bpa free ---
+
+> #for my purposes:
+>
+> ```
+> npm start
+>
+> npm run deploy
+> ```
