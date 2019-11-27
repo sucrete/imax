@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #e9dccf;
+  background-color: lightgrey;
+  background: lightgray url(https://i.imgur.com/LvEp1VO.png);
 }
 .App {
   width: 100%;
