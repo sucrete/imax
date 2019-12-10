@@ -13,9 +13,9 @@ $rosenBrown: #64320f;
   // border: solid 1px #e0d3c6;
   background: #fff2e6;
 
-  border-top: solid 1px white;
+  border-top: solid 1px rgb(255, 251, 251);
   border-bottom: solid 1px #f3eeea;
-  animation: opacityShift 1s, shadowShift 4s 1s forwards ease-in;
+  animation: opacityShift 700ms, shadowShift 1s 700ms forwards ease-in;
   opacity: 1;
   overflow: hidden;
   padding-top: 3em;
@@ -68,8 +68,15 @@ $rosenBrown: #64320f;
       height: 10.2em;
       left: 6.2em;
       top: 2em;
-      border-right: solid 1px #ecae9d;
+      border-right: solid 1px #ffb07b;
+      z-index: 5;
       padding-right: 2em;
+      &:after {
+        border-right: solid 2px rgb(101, 170, 101);
+        z-index: 7;
+        height: 100%;
+        width: 100%;
+      }
     }
     .rosenIpsum {
       position: relative;
