@@ -9,8 +9,6 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background: #fff2e6;
-  border-top: solid 1px #fffbfb;
-  border-bottom: solid 1px #f3eeea;
   -webkit-animation: opacityShift 700ms, shadowShift 1s 700ms forwards ease-in;
           animation: opacityShift 700ms, shadowShift 1s 700ms forwards ease-in;
   opacity: 1;
@@ -20,11 +18,11 @@
 }
 
 .headerWrapper .landingHeader {
-  font-size: 7.6em;
+  font-size: 8.6em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 130px;
+  height: 150px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -43,6 +41,7 @@
   text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #64320f;
+  letter-spacing: -0.009em;
 }
 
 .headerWrapper .landingmax:hover {
@@ -52,8 +51,11 @@
 .headerWrapper .landingrosen {
   font-weight: default;
   font-family: RosenFont, "Arial", sans-serif;
-  padding-left: 0.6em;
+  padding-left: 0.2em;
   text-transform: uppercase;
+  position: relative;
+  bottom: -5px;
+  letter-spacing: -0.05em;
 }
 
 .headerWrapper .informationalContainer {
@@ -104,7 +106,7 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer {
-  font-family: "RosenFont", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.4em;
   text-align: right;
   font-weight: 400;
@@ -123,7 +125,7 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink {
   cursor: pointer;
-  color: #64320f;
+  color: #130101;
   text-decoration: none;
   line-height: 35px;
   height: 35px;
