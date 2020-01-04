@@ -1,10 +1,12 @@
 import React from "react";
 import Card from "./components/Card";
+import LeftSection from "./components/LeftSection";
 
 function App() {
   return (
     <div className="App">
-      <Card className="cardComponent"></Card>
+      <LeftSection></LeftSection>
+      <Card></Card>
     </div>
   );
 }

@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600|Inknut+Antiqua:300|Old+Standard+TT&display=swap");
 
 $rosenBrown: #64320f;
 $backgroundColor: #fff2e6;
+
 .headerWrapper {
   position: absolute;
   min-width: 900px;
@@ -12,14 +13,14 @@ $backgroundColor: #fff2e6;
   transform: translate(-50%, -50%);
   // border: solid 1px #e0d3c6;
   background: $backgroundColor;
-  animation: opacityShift 700ms, shadowShift 1s 700ms forwards ease-in;
+  // animation: opacityShift 700ms, shadowShift 1s 700ms forwards ease-in;
   opacity: 1;
   overflow: hidden;
   padding-top: 3em;
   padding-bottom: 2.5em;
 
   .landingHeader {
-    font-size: 8.6em;
+    font-size: 9em;
     display: flex;
     height: 150px;
     justify-content: center;
@@ -65,29 +66,26 @@ $backgroundColor: #fff2e6;
     .ipsumContainer {
       position: relative;
       // padding: 1em;
-      width: 60%;
+      width: 40%;
       height: 10.2em;
       left: 6.2em;
-      top: 2em;
-      border-right: solid 1px #ffb07b;
+      // top: 2em;
+      border-right: solid 2px #fada96;
       z-index: 5;
       padding-right: 2em;
-      &:after {
-        border-right: solid 2px rgb(101, 170, 101);
-        z-index: 7;
-        height: 100%;
-        width: 100%;
-      }
     }
     .rosenIpsum {
       position: relative;
-      font-family: "Work Sans", sans-serif;
-      font-size: 1.2em;
+      font-family: "Inknut Antiqua", "America Expanded Medium", "Helvetica Neue",
+        serif;
+      // font-style: italic;
+      font-size: 3em;
+      word-wrap: break-word;
       font-weight: 400;
-      color: #ef7351;
+      color: #a59b1e;
       // top: 10px;
       height: 30px;
-      line-height: 30px;
+      line-height: 105%;
     }
     .rosenIpsum:nth-child(1) {
       //color: #8a8d54; from OKDRUGS!!! (don't delete just yet)
@@ -99,10 +97,9 @@ $backgroundColor: #fff2e6;
       //color: #f07f6a; from OKDRUGS!!! (don't delete just yet)
     }
     .whereToContainer {
-      font-family: "Work Sans", sans-serif;
-      font-size: 1.4em;
+      font-family: "America Expanded Regular", sans-serif;
+      font-size: 1.8em;
       text-align: right;
-      font-weight: 400;
       position: relative;
       top: 25px;
       div.whereTo {

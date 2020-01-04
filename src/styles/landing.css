@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600|Inknut+Antiqua:300|Old+Standard+TT&display=swap");
 .headerWrapper {
   position: absolute;
   min-width: 900px;
@@ -9,8 +9,6 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background: #fff2e6;
-  -webkit-animation: opacityShift 700ms, shadowShift 1s 700ms forwards ease-in;
-          animation: opacityShift 700ms, shadowShift 1s 700ms forwards ease-in;
   opacity: 1;
   overflow: hidden;
   padding-top: 3em;
@@ -18,7 +16,7 @@
 }
 
 .headerWrapper .landingHeader {
-  font-size: 8.6em;
+  font-size: 9em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,37 +77,29 @@
 
 .headerWrapper .informationalContainer .ipsumContainer {
   position: relative;
-  width: 60%;
+  width: 40%;
   height: 10.2em;
   left: 6.2em;
-  top: 2em;
-  border-right: solid 1px #ffb07b;
+  border-right: solid 2px #fada96;
   z-index: 5;
   padding-right: 2em;
 }
 
-.headerWrapper .informationalContainer .ipsumContainer:after {
-  border-right: solid 2px #65aa65;
-  z-index: 7;
-  height: 100%;
-  width: 100%;
-}
-
 .headerWrapper .informationalContainer .rosenIpsum {
   position: relative;
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.2em;
+  font-family: "Inknut Antiqua", "America Expanded Medium", "Helvetica Neue", serif;
+  font-size: 3em;
+  word-wrap: break-word;
   font-weight: 400;
-  color: #ef7351;
+  color: #a59b1e;
   height: 30px;
-  line-height: 30px;
+  line-height: 105%;
 }
 
 .headerWrapper .informationalContainer .whereToContainer {
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.4em;
+  font-family: "America Expanded Regular", sans-serif;
+  font-size: 1.8em;
   text-align: right;
-  font-weight: 400;
   position: relative;
   top: 25px;
 }

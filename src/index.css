@@ -6,29 +6,89 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff2e6;
-  background: #fff2e6 url(https://i.imgur.com/LvEp1VO.png);
+  /* background: #fff2e6 url(https://i.imgur.com/LvEp1VO.png); */
 }
 .App {
   width: 100%;
   height: 100%;
+  display: flex;
 }
+/* --------- Optima Fonts ---------- */
 @font-face {
   font-family: "RosenFont ExtraBlack";
-  src: url("assets/RosenFont/RosenFont-ExtraBlack.woff") format("woff");
+  src: url("assets/Fonts/RosenFont/RosenFont-ExtraBlack.woff") format("woff");
 }
 @font-face {
   font-family: "RosenFont Bold";
-  src: url("assets/RosenFont/RosenFont-Bold.woff") format("woff");
+  src: url("assets/Fonts/RosenFont/RosenFont-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "RosenFont Italic";
-  src: url("assets/RosenFont/RosenFont-Italic.woff") format("woff");
+  src: url("assets/Fonts/RosenFont/RosenFont-Italic.woff") format("woff");
 }
 @font-face {
   font-family: "RosenFont";
-  src: url("assets/RosenFont/RosenFont-Regular.woff") format("woff");
+  src: url("assets/Fonts/RosenFont/RosenFont-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "RosenFont BoldItalic";
-  src: url("assets/RosenFont/RosenFont-BoldItalic.woff") format("woff");
+  src: url("assets/Fonts/RosenFont/RosenFont-BoldItalic.woff") format("woff");
+}
+
+/* --------- America Fonts ---------- */
+@font-face {
+  font-family: "America Expanded Ultra-Light";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Ultra-Light.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "America Expanded Ultra-Light Italic";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Ultra-Light-Italic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "America Expanded Light";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Light.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "America Expanded Light Italic";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Light-Italic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "America Expanded Regular";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "America Expanded Regular Italic";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Regular-Italic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "America Expanded Medium";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Medium.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "America Expanded Medium Italic";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Medium-Italic.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "America Expanded Medium";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Medium.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "America Expanded Thin";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Thin.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "America Expanded Thin Italic";
+  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Thin-Italic.otf")
+    format("opentype");
 }
