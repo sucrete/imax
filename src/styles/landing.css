@@ -87,21 +87,21 @@
 
 .headerWrapper .informationalContainer .ipsumContainer {
   position: relative;
-  width: 60%;
+  width: 65%;
   height: 10.2em;
-  left: 6.5em;
+  left: 6em;
   z-index: 5;
   padding-right: 2em;
 }
 
 .headerWrapper .informationalContainer .rosenIpsum {
   position: relative;
-  visibility: hidden;
-  font-family: "Inknut Antiqua", "America Expanded Medium", "Helvetica Neue", serif;
-  font-size: 3em;
+  font-family: "America Expanded Ultra-Light Italic", "Helvetica Neue", serif;
+  font-size: 12.5em;
   word-wrap: break-word;
   font-weight: 400;
-  color: #a59b1e;
+  color: white;
+  top: -15px;
   height: 30px;
   line-height: 105%;
 }

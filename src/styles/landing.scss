@@ -76,9 +76,9 @@ $backgroundColor: #fff2e6;
     .ipsumContainer {
       position: relative;
       // padding: 1em;
-      width: 60%;
+      width: 65%;
       height: 10.2em;
-      left: 6.5em;
+      left: 6em;
       // top: 2em;
       // border-right: solid 2px #fada96;
       z-index: 5;
@@ -86,15 +86,14 @@ $backgroundColor: #fff2e6;
     }
     .rosenIpsum {
       position: relative;
-      visibility: hidden;
-      font-family: "Inknut Antiqua", "America Expanded Medium", "Helvetica Neue",
+      font-family: "America Expanded Ultra-Light Italic", "Helvetica Neue",
         serif;
       // font-style: italic;
-      font-size: 3em;
+      font-size: 12.5em;
       word-wrap: break-word;
       font-weight: 400;
-      color: #a59b1e;
-      // top: 10px;
+      color: white;
+      top: -15px;
       height: 30px;
       line-height: 105%;
     }

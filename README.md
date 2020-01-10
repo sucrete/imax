@@ -9,8 +9,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 --- bpa free ---
 
 ### for my purposes:
+
 ```
 npm start
+
+# build with:
+npm run build
 
 npm run deploy
 ```
