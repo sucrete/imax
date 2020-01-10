@@ -4,7 +4,7 @@ import "../styles/landing.css";
 
 const items = ["max", "rosen"];
 const whereTo = ["video", "photo", "design", "collage", "gooftown"];
-const whoIsMax = ["Editor/Director/Cinematographer/New York/New York"];
+const whoIsMax = ["Editor/Director/Cinematographer"];
 const config = { mass: 5, tension: 3500, friction: 400 };
 
 function Card() {

@@ -2,7 +2,15 @@
 
 $rosenBrown: #64320f;
 $backgroundColor: #fff2e6;
-
+.leftSection {
+  font-family: "America Expanded Medium";
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: white;
+}
+.card {
+  position: relative;
+}
 .headerWrapper {
   position: absolute;
   min-width: 900px;
@@ -10,17 +18,17 @@ $backgroundColor: #fff2e6;
   z-index: 298;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-47%, -50%);
   // border: solid 1px #e0d3c6;
-  background: $backgroundColor;
+  // background: $backgroundColor;
   // animation: opacityShift 700ms, shadowShift 1s 700ms forwards ease-in;
   opacity: 1;
   overflow: hidden;
-  padding-top: 3em;
-  padding-bottom: 2.5em;
+  // padding-top: 3em;
+  // padding-bottom: 2.5em;
 
   .landingHeader {
-    font-size: 9em;
+    font-size: 9.5em;
     display: flex;
     height: 150px;
     justify-content: center;
@@ -30,14 +38,15 @@ $backgroundColor: #fff2e6;
   }
   .landingmax {
     font-family: "RosenFont ExtraBlack";
+    display: inline;
     text-transform: capitalize;
     cursor: pointer;
     background-size: cover;
-    background-image: url("https://i.imgur.com/ITjXTNl.jpg");
     background-position: center;
     text-align: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: $rosenBrown;
+    background-image: url("https://i.imgur.com/ITjXTNl.jpg");
     letter-spacing: -0.009em;
     &:hover {
       -webkit-text-fill-color: transparent;
@@ -62,20 +71,22 @@ $backgroundColor: #fff2e6;
       margin: 0 auto;
       justify-content: space-between;
       padding-right: 7em;
+      width: 900px;
     }
     .ipsumContainer {
       position: relative;
       // padding: 1em;
-      width: 40%;
+      width: 60%;
       height: 10.2em;
-      left: 6.2em;
+      left: 6.5em;
       // top: 2em;
-      border-right: solid 2px #fada96;
+      // border-right: solid 2px #fada96;
       z-index: 5;
       padding-right: 2em;
     }
     .rosenIpsum {
       position: relative;
+      visibility: hidden;
       font-family: "Inknut Antiqua", "America Expanded Medium", "Helvetica Neue",
         serif;
       // font-style: italic;
@@ -101,7 +112,7 @@ $backgroundColor: #fff2e6;
       font-size: 1.8em;
       text-align: right;
       position: relative;
-      top: 25px;
+      // top: 25px;
       div.whereTo {
         overflow: hidden;
         div {
@@ -109,7 +120,7 @@ $backgroundColor: #fff2e6;
           position: relative;
           a.whereToLink {
             cursor: pointer;
-            color: #130101;
+            color: red;
             text-decoration: none;
             line-height: 35px;
             height: 35px;
@@ -119,7 +130,7 @@ $backgroundColor: #fff2e6;
             text-transform: capitalize;
             &:after {
               position: absolute;
-              background-color: #20201e;
+              background-color: red;
               content: "";
               width: 100%;
               height: 1px;
@@ -127,7 +138,7 @@ $backgroundColor: #fff2e6;
               left: 0;
             }
             &:hover {
-              color: #ef7351;
+              color: red;
             }
             &:hover:after {
               transition: width ease-in 0.3s 0.2s;

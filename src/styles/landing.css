@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600|Inknut+Antiqua:300|Old+Standard+TT&display=swap");
+.leftSection {
+  font-family: "America Expanded Medium";
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.card {
+  position: relative;
+}
+
 .headerWrapper {
   position: absolute;
   min-width: 900px;
@@ -6,17 +17,14 @@
   z-index: 298;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: #fff2e6;
+  -webkit-transform: translate(-47%, -50%);
+          transform: translate(-47%, -50%);
   opacity: 1;
   overflow: hidden;
-  padding-top: 3em;
-  padding-bottom: 2.5em;
 }
 
 .headerWrapper .landingHeader {
-  font-size: 9em;
+  font-size: 9.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,14 +39,15 @@
 
 .headerWrapper .landingmax {
   font-family: "RosenFont ExtraBlack";
+  display: inline;
   text-transform: capitalize;
   cursor: pointer;
   background-size: cover;
-  background-image: url("https://i.imgur.com/ITjXTNl.jpg");
   background-position: center;
   text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #64320f;
+  background-image: url("https://i.imgur.com/ITjXTNl.jpg");
   letter-spacing: -0.009em;
 }
 
@@ -73,20 +82,21 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-right: 7em;
+  width: 900px;
 }
 
 .headerWrapper .informationalContainer .ipsumContainer {
   position: relative;
-  width: 40%;
+  width: 60%;
   height: 10.2em;
-  left: 6.2em;
-  border-right: solid 2px #fada96;
+  left: 6.5em;
   z-index: 5;
   padding-right: 2em;
 }
 
 .headerWrapper .informationalContainer .rosenIpsum {
   position: relative;
+  visibility: hidden;
   font-family: "Inknut Antiqua", "America Expanded Medium", "Helvetica Neue", serif;
   font-size: 3em;
   word-wrap: break-word;
@@ -101,7 +111,6 @@
   font-size: 1.8em;
   text-align: right;
   position: relative;
-  top: 25px;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo {
@@ -115,7 +124,7 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink {
   cursor: pointer;
-  color: #130101;
+  color: red;
   text-decoration: none;
   line-height: 35px;
   height: 35px;
@@ -126,7 +135,7 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:after {
   position: absolute;
-  background-color: #20201e;
+  background-color: red;
   content: "";
   width: 100%;
   height: 1px;
@@ -135,7 +144,7 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover {
-  color: #ef7351;
+  color: red;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover:after {

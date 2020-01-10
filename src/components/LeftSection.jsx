@@ -14,7 +14,7 @@ function LeftSection() {
 
   return (
     <section className="leftSection">
-      <div>buncha business</div>
+      <div></div>
     </section>
   );
 }
