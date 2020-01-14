@@ -96,7 +96,7 @@
 
 .headerWrapper .informationalContainer .rosenIpsum {
   position: relative;
-  font-family: "America Expanded Ultra-Light Italic", "Helvetica Neue", serif;
+  font-family: "RosenFont Italic", "Helvetica Neue", serif;
   font-size: 12.5em;
   word-wrap: break-word;
   font-weight: 400;
@@ -107,8 +107,8 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer {
-  font-family: "America Expanded Regular", sans-serif;
-  font-size: 1.8em;
+  font-family: "RosenFont", sans-serif;
+  font-size: 1.5em;
   text-align: right;
   position: relative;
 }
@@ -124,13 +124,14 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink {
   cursor: pointer;
-  color: red;
+  color: #64320f;
   text-decoration: none;
   line-height: 35px;
   height: 35px;
   display: block;
   overflow: hidden;
   text-transform: capitalize;
+  letter-spacing: 0.05em;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:after {

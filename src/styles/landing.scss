@@ -86,8 +86,7 @@ $backgroundColor: #fff2e6;
     }
     .rosenIpsum {
       position: relative;
-      font-family: "America Expanded Ultra-Light Italic", "Helvetica Neue",
-        serif;
+      font-family: "RosenFont Italic", "Helvetica Neue", serif;
       // font-style: italic;
       font-size: 12.5em;
       word-wrap: break-word;
@@ -107,8 +106,8 @@ $backgroundColor: #fff2e6;
       //color: #f07f6a; from OKDRUGS!!! (don't delete just yet)
     }
     .whereToContainer {
-      font-family: "America Expanded Regular", sans-serif;
-      font-size: 1.8em;
+      font-family: "RosenFont", sans-serif;
+      font-size: 1.5em;
       text-align: right;
       position: relative;
       // top: 25px;
@@ -119,7 +118,7 @@ $backgroundColor: #fff2e6;
           position: relative;
           a.whereToLink {
             cursor: pointer;
-            color: red;
+            color: $rosenBrown;
             text-decoration: none;
             line-height: 35px;
             height: 35px;
@@ -127,6 +126,7 @@ $backgroundColor: #fff2e6;
             // transition: all 0.1s linear;
             overflow: hidden;
             text-transform: capitalize;
+            letter-spacing: 0.05em;
             &:after {
               position: absolute;
               background-color: red;
