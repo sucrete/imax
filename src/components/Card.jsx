@@ -4,7 +4,7 @@ import "../styles/landing.css";
 
 const items = ["max", "rosen"];
 const whereTo = ["video", "photo", "design", "collage", "gooftown"];
-const whoIsMax = ["NYC"];
+const whoIsMax = new Array(7);
 const config = { mass: 5, tension: 3500, friction: 400 };
 
 function Card() {
@@ -33,7 +33,7 @@ function Card() {
     config,
     delay: 2200,
     yy: 0,
-    height: 30,
+    height: 160,
     opacity: 1,
     from: { yy: 20, height: 0, opacity: 0 }
   });
@@ -73,11 +73,7 @@ function Card() {
                         yy => `translate3d(0,${yy}px,0)`
                       )
                     }}
-                  >
-                    <animated.div style={{ height }}>
-                      {whoIsMax[index]}
-                    </animated.div>
-                  </animated.div>
+                  ></animated.div>
                 ))}
               </animated.div>
             ))}

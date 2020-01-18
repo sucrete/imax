@@ -8,7 +8,7 @@ body {
   background: #fad6c1;
   background: -webkit-linear-gradient(333deg, #fad6c1, #ebd8d8 95%);
   background: -moz-linear-gradient(333deg, #fad6c1, #ebd8d8 95%);
-  background: linear-gradient(349deg, #fae6c0 10%, #f3e8e8 80%);
+  background: linear-gradient(349deg, #f8dfb0 10%, #f1e0e0 80%);
 }
 html {
   background: #f3e8e8;
@@ -20,7 +20,10 @@ body::after {
   height: 100%;
   background: url(./assets/drawing3.svg) no-repeat;
   top: 50%;
-  background-size: cover;
+  background-size: 100% 120%;
+  animation-timing-function: ease-in;
+  animation: opacityShift 4s;
+  /* transition: */
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -44,6 +47,17 @@ body::after {
 }
 .card {
   width: 75%;
+}
+@keyframes opacityShift {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /* --------- Optima Fonts ---------- */
 @font-face {

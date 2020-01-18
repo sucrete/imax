@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600|Inknut+Antiqua:300|Old+Standard+TT&display=swap");
-
+$notchSize: 7px;
 $rosenBrown: #64320f;
 $backgroundColor: #fff2e6;
 .leftSection {
@@ -8,8 +8,16 @@ $backgroundColor: #fff2e6;
   text-transform: uppercase;
   color: white;
 }
-.card {
+.card::before {
   position: relative;
+  background-repeat: no-repeat;
+  content: "";
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 77;
 }
 .headerWrapper {
   position: absolute;
@@ -70,47 +78,82 @@ $backgroundColor: #fff2e6;
       flex-direction: row;
       margin: 0 auto;
       justify-content: space-between;
-      padding-right: 7em;
+      padding-right: 7.5em;
       width: 900px;
     }
     .ipsumContainer {
+      visibility: hidden;
       position: relative;
-      // padding: 1em;
-      width: 65%;
-      height: 10.2em;
+      width: 70%;
       left: 6em;
+      margin-top: 1.5em;
+      margin-left: 1em;
       // top: 2em;
       // border-right: solid 2px #fada96;
       z-index: 5;
-      padding-right: 2em;
+      display: flex;
+      flex-direction: row;
+      background-color: #e2c2ff;
+    }
+    .ipsumContainer:before,
+    .ipsumContainer:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      border-bottom: $notchSize solid #e2c2ff;
+      border-left: $notchSize solid transparent;
+      border-right: $notchSize solid transparent;
+    }
+
+    .ipsumContainer:after {
+      bottom: auto;
+      top: 100%;
+      border-bottom: none;
+      border-top: $notchSize solid #e2c2ff;
     }
     .rosenIpsum {
       position: relative;
-      font-family: "RosenFont Italic", "Helvetica Neue", serif;
-      // font-style: italic;
-      font-size: 12.5em;
-      word-wrap: break-word;
-      font-weight: 400;
-      color: white;
+      height: 176px;
+      background-size: contain;
       top: -15px;
-      height: 30px;
-      line-height: 105%;
+      background-repeat: no-repeat;
     }
     .rosenIpsum:nth-child(1) {
-      //color: #8a8d54; from OKDRUGS!!! (don't delete just yet)
+      background-image: url(../assets/eckmannN.svg);
+      width: 85px;
     }
     .rosenIpsum:nth-child(2) {
-      //color: #f6ae4c; from OKDRUGS!!! (don't delete just yet)
+      background-image: url(../assets/eckmannE.svg);
+      width: 71px;
     }
     .rosenIpsum:nth-child(3) {
-      //color: #f07f6a; from OKDRUGS!!! (don't delete just yet)
+      background-image: url(../assets/eckmannW.svg);
+      width: 109px;
+    }
+    .rosenIpsum:nth-child(4) {
+      background-image: url(../assets/eckmannY.svg);
+      width: 80px;
+    }
+    .rosenIpsum:nth-child(5) {
+      background-image: url(../assets/eckmannO.svg);
+      width: 70.7px;
+    }
+    .rosenIpsum:nth-child(6) {
+      background-image: url(../assets/eckmannR.svg);
+      width: 85px;
+    }
+    .rosenIpsum:nth-child(7) {
+      background-image: url(../assets/eckmannK.svg);
+      width: 82px;
     }
     .whereToContainer {
       font-family: "RosenFont", sans-serif;
-      font-size: 1.5em;
+      font-size: 1.7em;
       text-align: right;
       position: relative;
-      // top: 25px;
+      top: 3px;
       div.whereTo {
         overflow: hidden;
         div {
@@ -118,9 +161,10 @@ $backgroundColor: #fff2e6;
           position: relative;
           a.whereToLink {
             cursor: pointer;
-            color: $rosenBrown;
+            color: rgb(43, 114, 245);
             text-decoration: none;
-            line-height: 35px;
+            line-height: 30px;
+            margin-top: 5px;
             height: 35px;
             display: block;
             // transition: all 0.1s linear;
