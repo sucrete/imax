@@ -55,7 +55,7 @@
   text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #64320f;
-  background-image: url("https://i.imgur.com/ITjXTNl.jpg");
+  background-image: url("../assets/fieldOfColor.jpg");
   letter-spacing: -0.009em;
 }
 
@@ -192,12 +192,14 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink {
   cursor: pointer;
-  color: #2b72f5;
+  color: #577eb7;
   text-decoration: none;
   line-height: 30px;
   margin-top: 5px;
   height: 35px;
   display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   overflow: hidden;
   text-transform: capitalize;
   letter-spacing: 0.05em;
@@ -205,7 +207,7 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:after {
   position: absolute;
-  background-color: red;
+  background-color: #3d6db4;
   content: "";
   width: 100%;
   height: 1px;
@@ -214,7 +216,7 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover {
-  color: red;
+  color: #3267b6;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover:after {

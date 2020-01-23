@@ -17,11 +17,6 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <style>
-      .headerWrapper .landingmax {
-        background: url("src/assets/fieldOfColor.jpg");
-      }
-    </style>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -37,6 +32,22 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="text/javascript">
+      <!--//--><![CDATA[//><!--
+        var bgImage = document.getElementsByClassName('.landingMax')[0];
+        var images = new Array()
+        function preload() {
+          for (i = 0; i < preload.arguments.length; i++) {
+            images[i] = new Image()
+            images[i].src = preload.arguments[i]
+          }
+        }
+        preload(
+          "https://i.imgur.com/ITjXTNl.jpg"
+        )
+      //--><!]]>
+      bgImage.style.backgroundImage = images[0];
+    </script>
     <!--
       
 ███╗   ███╗ █████╗ ██╗  ██╗                                            
