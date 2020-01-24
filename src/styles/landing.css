@@ -1,9 +1,32 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600|Inknut+Antiqua:300|Old+Standard+TT&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:600i|Old+Standard+TT:400i|Playfair+Display+SC:400i,500i&display=swap");
 .leftSection {
   font-family: "America Expanded Medium";
   font-size: 1.5em;
   text-transform: uppercase;
   color: white;
+}
+
+body {
+  background: #fad6c1;
+  background: linear-gradient(349deg, #f8dfb0 10%, #fad6c1 20%, #d5ebff 90%);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/drawing3.svg) no-repeat;
+  top: 50%;
+  background-size: 100% 120%;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation: opacityShift 4s;
+          animation: opacityShift 4s;
+  /* transition: */
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .card::before {
@@ -174,7 +197,7 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer {
-  font-family: "RosenFont", sans-serif;
+  font-family: "Sectra Fine Book Italic", sans-serif;
   font-size: 1.7em;
   text-align: right;
   position: relative;
@@ -192,8 +215,7 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink {
   cursor: pointer;
-  color: #577eb7;
-  text-decoration: none;
+  color: #378b99;
   line-height: 30px;
   margin-top: 5px;
   height: 35px;
@@ -201,7 +223,6 @@
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   overflow: hidden;
-  text-transform: capitalize;
   letter-spacing: 0.05em;
 }
 
@@ -246,9 +267,6 @@
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
@@ -256,9 +274,6 @@
 
 @keyframes opacityShift {
   0% {
-    opacity: 0;
-  }
-  50% {
     opacity: 0;
   }
   100% {

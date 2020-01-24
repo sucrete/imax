@@ -1,6 +1,16 @@
 import React from "react";
 import { useTrail, animated } from "react-spring";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch
+} from "react-router-dom";
 import "../styles/landing.css";
+
+import Main from "./Main";
 
 const items = ["max", "rosen"];
 const whereTo = ["video", "photo", "design", "collage", "gooftown"];
