@@ -7,7 +7,6 @@ $backgroundColor: #fff2e6;
   font-family: "America Expanded Medium";
   font-size: 1.5em;
   text-transform: uppercase;
-  color: white;
 }
 body {
   background: #fad6c1;
@@ -24,12 +23,11 @@ body {
     background-size: 100% 120%;
     animation-timing-function: ease-in;
     animation: opacityShift 4s;
-    /* transition: */
+
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
-
 .card::before {
   position: relative;
   background-repeat: no-repeat;
@@ -181,7 +179,7 @@ body {
         div {
           overflow: hidden;
           position: relative;
-          a.whereToLink {
+          .whereToLink {
             cursor: pointer;
             color: #378b99;
             // text-decoration: none;

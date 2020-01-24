@@ -15,8 +15,6 @@ import Collage from "./Collage";
 import Design from "./Design";
 import Gooftown from "./Gooftown";
 
-import LeftNavigation from "./LeftNavigation";
-
 const config = { mass: 5, tension: 3500, friction: 400 };
 
 function Main() {
@@ -24,27 +22,27 @@ function Main() {
   return (
     <div>
       <h2>Main</h2>
+      <section syle={{ zIndex: "999" }}>
+        <Link style={{ display: "block" }} to={`${url}/video`}>
+          Video
+        </Link>
 
-      <Link style={{ display: "block" }} to={`${url}/video`}>
-        Video
-      </Link>
+        <Link style={{ display: "block" }} to={`${url}/photo`}>
+          Photo
+        </Link>
 
-      <Link style={{ display: "block" }} to={`${url}/photo`}>
-        Photo
-      </Link>
+        <Link style={{ display: "block" }} to={`${url}/design`}>
+          Design
+        </Link>
 
-      <Link style={{ display: "block" }} to={`${url}/design`}>
-        Design
-      </Link>
+        <Link style={{ display: "block" }} to={`${url}/collage`}>
+          Collage
+        </Link>
 
-      <Link style={{ display: "block" }} to={`${url}/collage`}>
-        Collage
-      </Link>
-
-      <Link style={{ display: "block" }} to={`${url}/gooftown`}>
-        Gooftown
-      </Link>
-
+        <Link style={{ display: "block" }} to={`${url}/gooftown`}>
+          Gooftown
+        </Link>
+      </section>
       <Route path={`${url}/video`}>
         <Video />
       </Route>

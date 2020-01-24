@@ -9,6 +9,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 import "../styles/landing.css";
+import LeftSection from "./LeftSection";
 
 import Main from "./Main";
 
@@ -49,66 +50,80 @@ function Card() {
   });
 
   return (
-    <div className="card">
-      <div className="headerWrapper">
-        <header className="landingHeader">
-          {trail.map(({ yy, height, ...rest }, index) => (
-            <animated.div
-              key={items[index]}
-              className={"landing" + items[index]}
-              style={{
-                ...rest,
-                transform: yy.interpolate(yy => `translate3d(0,${yy}%,0)`)
-              }}
-            >
-              <animated.div style={{ height }}>{items[index]}</animated.div>
-            </animated.div>
-          ))}
-        </header>
-        <div className="informationalContainer">
-          <div className="centerContainer">
-            {trail3.map(({ ...rest }, index) => (
-              <animated.div
-                className="ipsumContainer"
-                style={{
-                  ...rest
-                }}
-              >
-                {trail4.map(({ yy, height, ...rest }, index) => (
-                  <animated.div
-                    className="rosenIpsum"
-                    style={{
-                      ...rest,
-                      transform: yy.interpolate(
-                        yy => `translate3d(0,${yy}px,0)`
-                      )
-                    }}
-                  ></animated.div>
-                ))}
-              </animated.div>
-            ))}
-
-            <div className="whereToContainer">
-              {trail2.map(({ yy, height, ...rest }, index) => (
+    <Router>
+      <Route exact path="/">
+        <LeftSection></LeftSection>
+        <div className="card">
+          <div className="headerWrapper">
+            <header className="landingHeader">
+              {trail.map(({ yy, height, ...rest }, index) => (
                 <animated.div
-                  className="whereTo"
+                  key={items[index]}
+                  className={"landing" + items[index]}
                   style={{
                     ...rest,
-                    transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
+                    transform: yy.interpolate(yy => `translate3d(0,${yy}%,0)`)
                   }}
                 >
-                  <animated.div>
-                    <a style={{ height }} className="whereToLink">
-                      {whereTo[index]}
-                    </a>
-                  </animated.div>
+                  <animated.div style={{ height }}>{items[index]}</animated.div>
                 </animated.div>
               ))}
+            </header>
+            <div className="informationalContainer">
+              <div className="centerContainer">
+                {trail3.map(({ ...rest }, index) => (
+                  <animated.div
+                    className="ipsumContainer"
+                    style={{
+                      ...rest
+                    }}
+                  >
+                    {trail4.map(({ yy, height, ...rest }, index) => (
+                      <animated.div
+                        className="rosenIpsum"
+                        style={{
+                          ...rest,
+                          transform: yy.interpolate(
+                            yy => `translate3d(0,${yy}px,0)`
+                          )
+                        }}
+                      ></animated.div>
+                    ))}
+                  </animated.div>
+                ))}
+
+                <div className="whereToContainer">
+                  {trail2.map(({ yy, height, ...rest }, index) => (
+                    <animated.div
+                      className="whereTo"
+                      style={{
+                        ...rest,
+                        transform: yy.interpolate(
+                          yy => `translate3d(0,${yy}px,0)`
+                        )
+                      }}
+                    >
+                      <animated.div>
+                        <Link
+                          style={{ height }}
+                          className="whereToLink"
+                          to={`main/${whereTo[index]}`}
+                        >
+                          {whereTo[index]}
+                        </Link>
+                      </animated.div>
+                    </animated.div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </Route>
+      <Route path="/main">
+        <Main />
+      </Route>
+    </Router>
   );
 }
 export default Card;

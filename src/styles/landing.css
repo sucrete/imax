@@ -3,7 +3,6 @@
   font-family: "America Expanded Medium";
   font-size: 1.5em;
   text-transform: uppercase;
-  color: white;
 }
 
 body {
@@ -23,7 +22,6 @@ body::after {
           animation-timing-function: ease-in;
   -webkit-animation: opacityShift 4s;
           animation: opacityShift 4s;
-  /* transition: */
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -213,7 +211,7 @@ body::after {
   position: relative;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink {
   cursor: pointer;
   color: #378b99;
   line-height: 30px;
@@ -226,7 +224,7 @@ body::after {
   letter-spacing: 0.05em;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:after {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink:after {
   position: absolute;
   background-color: #3d6db4;
   content: "";
@@ -236,11 +234,11 @@ body::after {
   left: 0;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink:hover {
   color: #3267b6;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div a.whereToLink:hover:after {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink:hover:after {
   -webkit-transition: width ease-in 0.3s 0.2s;
   transition: width ease-in 0.3s 0.2s;
   width: 100%;
