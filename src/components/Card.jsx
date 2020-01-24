@@ -1,15 +1,7 @@
 import React from "react";
 import { useTrail, animated } from "react-spring";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../styles/landing.css";
-import LeftSection from "./LeftSection";
 
 import Main from "./Main";
 
@@ -52,7 +44,7 @@ function Card() {
   return (
     <Router>
       <Route exact path="/">
-        <LeftSection></LeftSection>
+        <section></section>
         <div className="card">
           <div className="headerWrapper">
             <header className="landingHeader">
@@ -107,7 +99,7 @@ function Card() {
                         <Link
                           style={{ height }}
                           className="whereToLink"
-                          to={`main/${whereTo[index]}`}
+                          to={`/${whereTo[index]}`}
                         >
                           {whereTo[index]}
                         </Link>

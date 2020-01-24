@@ -5,12 +5,12 @@
   text-transform: uppercase;
 }
 
-body {
-  background: #fad6c1;
-  background: linear-gradient(349deg, #f8dfb0 10%, #fad6c1 20%, #d5ebff 90%);
+#root {
+  background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
+  background-color: green;
 }
 
-body::after {
+#root::after {
   content: "";
   position: absolute;
   width: 100%;

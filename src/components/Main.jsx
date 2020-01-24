@@ -2,10 +2,8 @@ import React from "react";
 import { useTrail, animated } from "react-spring";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Link,
-  useParams,
   useRouteMatch
 } from "react-router-dom";
 import "../styles/landing.css";
@@ -22,46 +20,48 @@ function Main() {
   return (
     <div>
       <h2>Main</h2>
-      <section syle={{ zIndex: "999" }}>
-        <Link style={{ display: "block" }} to={`${url}/video`}>
-          Video
-        </Link>
+      <Router>
+        <section>
+          <Link style={{ display: "block" }} to="/video">
+            Video
+          </Link>
 
-        <Link style={{ display: "block" }} to={`${url}/photo`}>
-          Photo
-        </Link>
+          <Link style={{ display: "block" }} to="/photo">
+            Photo
+          </Link>
 
-        <Link style={{ display: "block" }} to={`${url}/design`}>
-          Design
-        </Link>
+          <Link style={{ display: "block" }} to="/design">
+            Design
+          </Link>
 
-        <Link style={{ display: "block" }} to={`${url}/collage`}>
-          Collage
-        </Link>
+          <Link style={{ display: "block" }} to="/collage">
+            Collage
+          </Link>
 
-        <Link style={{ display: "block" }} to={`${url}/gooftown`}>
-          Gooftown
-        </Link>
-      </section>
-      <Route path={`${url}/video`}>
-        <Video />
-      </Route>
+          <Link style={{ display: "block" }} to="/gooftown">
+            Gooftown
+          </Link>
+        </section>
+        <Route path="/video">
+          <Video />
+        </Route>
 
-      <Route path={`${url}/photo`}>
-        <Photo />
-      </Route>
+        <Route path="/photo">
+          <Photo />
+        </Route>
 
-      <Route path={`${url}/design`}>
-        <Design />
-      </Route>
+        <Route path="/design">
+          <Design />
+        </Route>
 
-      <Route path={`${url}/collage`}>
-        <Collage />
-      </Route>
+        <Route path="/collage">
+          <Collage />
+        </Route>
 
-      <Route path={`${url}/gooftown`}>
-        <Gooftown />
-      </Route>
+        <Route path="/gooftown">
+          <Gooftown />
+        </Route>
+      </Router>
     </div>
   );
 }

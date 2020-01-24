@@ -8,11 +8,22 @@ $backgroundColor: #fff2e6;
   font-size: 1.5em;
   text-transform: uppercase;
 }
-body {
-  background: #fad6c1;
-  background: -webkit-linear-gradient(333deg, #fad6c1, #ebd8d8 95%);
-  background: -moz-linear-gradient(333deg, #fad6c1, #ebd8d8 95%);
-  background: linear-gradient(349deg, #f8dfb0 10%, #fad6c1 20%, #d5ebff 90%);
+#root {
+  // background: -webkit-linear-gradient(
+  //   349deg,
+  //   #f8dfb0 10%,
+  //   #fad6c1 20%,
+  //   #d5ebff 90%
+  // );
+  // background: -moz-linear-gradient(
+  //   349deg,
+  //   #f8dfb0 10%,
+  //   #fad6c1 20%,
+  //   #d5ebff 90%
+  // );
+  // background: linear-gradient(349deg, #f8dfb0 10%, #fad6c1 20%, #d5ebff 90%);
+  background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
+  background-color: green;
   &::after {
     content: "";
     position: absolute;
@@ -23,7 +34,6 @@ body {
     background-size: 100% 120%;
     animation-timing-function: ease-in;
     animation: opacityShift 4s;
-
     left: 50%;
     transform: translate(-50%, -50%);
   }
