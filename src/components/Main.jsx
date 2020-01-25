@@ -14,7 +14,7 @@ import Design from "./Design";
 import Gooftown from "./Gooftown";
 
 const config = { mass: 5, tension: 3500, friction: 400 };
-
+const routes = ["video", "photo", "design", "collage", "gooftown"];
 function Main() {
   let { path, url } = useRouteMatch();
   return (
@@ -22,45 +22,38 @@ function Main() {
       <h2>Main</h2>
       <Router>
         <section>
-          <Link style={{ display: "block" }} to="/video">
-            Video
-          </Link>
-
-          <Link style={{ display: "block" }} to="/photo">
-            Photo
-          </Link>
-
-          <Link style={{ display: "block" }} to="/design">
-            Design
-          </Link>
-
-          <Link style={{ display: "block" }} to="/collage">
-            Collage
-          </Link>
-
-          <Link style={{ display: "block" }} to="/gooftown">
-            Gooftown
-          </Link>
+          {routes.map((value, index) => {
+            return (
+              <Link
+                style={{ display: "block", textTransform: "capitalize" }}
+                to={`${url}/${value}`}
+              >
+                {value}
+              </Link>
+            );
+          })}
         </section>
-        <Route path="/video">
-          <Video />
-        </Route>
+        <section>
+          <Route exact path={`${url}/video`}>
+            <Video />
+          </Route>
 
-        <Route path="/photo">
-          <Photo />
-        </Route>
+          <Route path={`${url}/photo`}>
+            <Photo />
+          </Route>
 
-        <Route path="/design">
-          <Design />
-        </Route>
+          <Route path={`${url}/design`}>
+            <Design />
+          </Route>
 
-        <Route path="/collage">
-          <Collage />
-        </Route>
+          <Route path={`${url}/collage`}>
+            <Collage />
+          </Route>
 
-        <Route path="/gooftown">
-          <Gooftown />
-        </Route>
+          <Route path={`${url}/gooftown`}>
+            <Gooftown />
+          </Route>
+        </section>
       </Router>
     </div>
   );

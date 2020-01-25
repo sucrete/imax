@@ -99,7 +99,7 @@ function Card() {
                         <Link
                           style={{ height }}
                           className="whereToLink"
-                          to={`/${whereTo[index]}`}
+                          to={`main/${whereTo[index]}`}
                         >
                           {whereTo[index]}
                         </Link>

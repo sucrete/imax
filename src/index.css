@@ -10,6 +10,9 @@ body {
 html {
   background: #f3e8e8;
 }
+.App div {
+  z-index: 7;
+}
 body {
   background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
 }
