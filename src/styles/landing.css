@@ -7,7 +7,6 @@
 
 #root {
   background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
-  background-color: green;
 }
 
 #root::after {

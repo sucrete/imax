@@ -43,7 +43,7 @@ function Card() {
 
   return (
     <Router>
-      <Route exact path="/">
+      <Route exact path={process.env.PUBLIC_URL + "/"}>
         <section></section>
         <div className="card">
           <div className="headerWrapper">
@@ -99,7 +99,9 @@ function Card() {
                         <Link
                           style={{ height }}
                           className="whereToLink"
-                          to={`main/${whereTo[index]}`}
+                          to={
+                            process.env.PUBLIC_URL + "/" + `m/${whereTo[index]}`
+                          }
                         >
                           {whereTo[index]}
                         </Link>
@@ -112,7 +114,7 @@ function Card() {
           </div>
         </div>
       </Route>
-      <Route path="/main">
+      <Route path={process.env.PUBLIC_URL + "/m"}>
         <Main />
       </Route>
     </Router>

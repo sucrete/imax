@@ -6,7 +6,7 @@ import {
   Link,
   useRouteMatch
 } from "react-router-dom";
-import "../styles/landing.css";
+import "../styles/main.css";
 import Photo from "./Photo";
 import Video from "./Video";
 import Collage from "./Collage";
@@ -19,9 +19,8 @@ function Main() {
   let { path, url } = useRouteMatch();
   return (
     <div>
-      <h2>Main</h2>
       <Router>
-        <section>
+        <section className="sideNavigation">
           {routes.map((value, index) => {
             return (
               <Link
@@ -33,7 +32,7 @@ function Main() {
             );
           })}
         </section>
-        <section>
+        <section className="mainContent">
           <Route exact path={`${url}/video`}>
             <Video />
           </Route>

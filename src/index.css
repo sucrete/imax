@@ -12,6 +12,10 @@ html {
 }
 .App div {
   z-index: 7;
+  display: flex;
+  align-items: stretch;
+}
+.App div section {
 }
 body {
   background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
