@@ -10,6 +10,11 @@ section.sideNavigation {
 }
 section.mainContent {
   flex: 4;
+  padding-right: 5em;
+  padding-left: 2em;
+  div {
+    flex-direction: column;
+  }
 }
 .App {
   height: 100vh;
@@ -19,8 +24,7 @@ section.mainContent {
   }
 }
 img {
-  width: unset;
-  height: unset;
+  align-self: flex-start;
 }
 body {
   background: unset;

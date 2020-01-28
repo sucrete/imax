@@ -16,6 +16,15 @@ section.mainContent {
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
+  padding-right: 5em;
+  padding-left: 2em;
+}
+
+section.mainContent div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .App {
@@ -30,8 +39,8 @@ section.mainContent {
 }
 
 img {
-  width: unset;
-  height: unset;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 body {
