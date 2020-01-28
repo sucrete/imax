@@ -3,7 +3,7 @@ class Gooftown extends React.Component {
   render() {
     return (
       <div>
-        <h1>Gooftown ere!</h1>
+        <h1 className="pageTitle">Gooftown ere!</h1>
       </div>
     );
   }

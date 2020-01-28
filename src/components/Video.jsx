@@ -3,14 +3,19 @@ class Video extends React.Component {
   render() {
     return (
       <div>
-        <h1>Videos ere!</h1>
+        <h1 className="pageTitle">Videos ere!</h1>
         <p>
           O my friend -- but it is too much for my strength -- I sink under the
           weight of the splendour of these visions! A wonderful serenity has
           taken possession of my entire soul, like these sweet mornings of
           spring which I enjoy with my whole heart. I am alone, and feel the
           charm of existence in this spot, which was created for the bliss of
-          souls like mine.
+          souls like mine. O my friend -- but it is too much for my strength --
+          I sink under the weight of the splendour of these visions! A wonderful
+          serenity has taken possession of my entire soul, like these sweet
+          mornings of spring which I enjoy with my whole heart. I am alone, and
+          feel the charm of existence in this spot, which was created for the
+          bliss of souls like mine.
         </p>
         <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
           <iframe
@@ -25,6 +30,7 @@ class Video extends React.Component {
             frameborder="0"
             allow="autoplay; fullscreen"
             allowfullscreen
+            loading="lazy"
           ></iframe>
         </div>
         <script src="https://player.vimeo.com/api/player.js"></script>

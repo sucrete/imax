@@ -4,12 +4,32 @@ section.sideNavigation {
           flex: 0.9;
   font-family: "Sectra Fine Book Italic";
   font-size: 1.5em;
-  padding-left: 1em;
-  padding-top: 0.75em;
+  padding-left: 1.5em;
+  padding-top: 1.5em;
 }
 
 section.sideNavigation a {
   text-decoration: none;
+}
+
+.navLink {
+  display: block;
+}
+
+.pageTitle {
+  font-size: 2.5em;
+  font-family: "RosenFont", sans-serif;
+  color: #64320f;
+}
+
+.App .main {
+  z-index: 7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 section.mainContent {
@@ -25,17 +45,6 @@ section.mainContent div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.App {
-  height: 100vh;
-}
-
-.App div {
-  width: inherit;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
 }
 
 img {

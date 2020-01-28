@@ -5,6 +5,10 @@
   text-transform: uppercase;
 }
 
+body {
+  background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
+}
+
 #root {
   background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
 }

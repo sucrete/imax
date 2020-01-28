@@ -44,7 +44,6 @@ function Card() {
   return (
     <Router>
       <Route exact path={process.env.PUBLIC_URL + "/"}>
-        <section></section>
         <div className="card">
           <div className="headerWrapper">
             <header className="landingHeader">
