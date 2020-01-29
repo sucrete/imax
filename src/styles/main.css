@@ -57,8 +57,9 @@ section.mainContent div {
 }
 
 section.mainContent div p {
-  font-family: "Crimson Text";
-  font-size: 2em;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.3em;
+  color: #3a3636;
 }
 
 img {
