@@ -29,7 +29,7 @@ function Main() {
     <div className="main">
       <Router>
         <section className="sideNavigation">
-          <div className="navigationContainer">
+          <div id="navigationContainer">
             {trail2.map(({ yy, height, ...rest }, index) => (
               <animated.div
                 style={{
