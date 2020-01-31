@@ -3,7 +3,7 @@ class Video extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="pageTitle">Videos ere!</h1>
+        <h1 className="pageTitle">Video</h1>
         <p>
           O my friend -- but it is too much for my strength -- I sink under the
           weight of the splendour of these visions! A wonderful serenity has

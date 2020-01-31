@@ -3,7 +3,7 @@ class Collage extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="pageTitle">Collage shit</h1>
+        <h1 className="pageTitle">Collage</h1>
         <img src="https://loremflickr.com/320/240/collage" />
         <p>
           O my friend -- but it is too much for my strength -- I sink under the

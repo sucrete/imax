@@ -4,8 +4,8 @@ section.sideNavigation {
           flex: 0.9;
   font-family: "Sectra Fine Book Italic";
   font-size: 1.5em;
-  padding-left: 1.5em;
-  padding-top: 1.5em;
+  padding-left: 1.75em;
+  padding-top: 1.8em;
 }
 
 section.sideNavigation #navigationContainer {
@@ -13,11 +13,17 @@ section.sideNavigation #navigationContainer {
   transition: 400ms ease-in-out;
   position: -webkit-sticky;
   position: sticky;
-  top: 1.5em;
+  top: 1.8em;
 }
 
 section.sideNavigation a {
   text-decoration: none;
+}
+
+.maxSpacer {
+  position: relative;
+  height: 68vh;
+  width: 100%;
 }
 
 .navLink {
@@ -25,7 +31,9 @@ section.sideNavigation a {
 }
 
 .pageTitle {
-  font-size: 2.5em;
+  font-size: 5em;
+  margin-top: 1em;
+  margin-bottom: 0.6em;
   font-family: "RosenFont", sans-serif;
   letter-spacing: 0.05em;
   color: #64320f;
@@ -45,8 +53,8 @@ section.mainContent {
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
-  padding-right: 5em;
-  padding-left: 2em;
+  padding-right: 8em;
+  padding-left: 1.2em;
 }
 
 section.mainContent div {
@@ -60,6 +68,7 @@ section.mainContent div p {
   font-family: "Work Sans", sans-serif;
   font-size: 1.3em;
   color: #3a3636;
+  padding-bottom: 2em;
 }
 
 img {
