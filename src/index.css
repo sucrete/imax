@@ -72,6 +72,10 @@ html {
     format("opentype");
 }
 @font-face {
+  font-family: "America Regular";
+  src: url("assets/Fonts/GT-America/America-Regular.otf") format("opentype");
+}
+@font-face {
   font-family: "America Extended Light";
   src: url("assets/Fonts/GT-America/America-Extended-Light.otf")
     format("opentype");

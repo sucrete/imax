@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTrail, animated } from "react-spring";
 import {
   BrowserRouter as Router,
@@ -24,7 +24,20 @@ function Main() {
     opacity: 1,
     from: { yy: 20, height: 0, opacity: 0 }
   });
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
+
+  useEffect(() => {
+    // const subRoutes = ['doc','narrative','visual','promo'];
+    const videoLink = document.getElementsByClassName("navLink")[0];
+    const newSpan = document.createElement("div");
+    newSpan.setAttribute("class", "videoArrow");
+    videoLink.appendChild(newSpan);
+    // const expandOnClick = function() {
+
+    //   subRoutes.forEach()
+    // }
+  });
+
   return (
     <div className="main">
       <Router>

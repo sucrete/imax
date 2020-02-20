@@ -2,7 +2,7 @@ $rosenBrown: #64320f;
 section.sideNavigation {
   flex: 0.9;
   color: red;
-  font-family: "America Extended Regular";
+  font-family: "Work Sans";
   font-size: 1.4em;
   padding-left: 1.75em;
   padding-top: 1.8em;
@@ -16,10 +16,25 @@ section.sideNavigation {
   a {
     text-decoration: none;
     &:visited {
-      color: #251a10;
       color: red;
     }
+    &:active {
+      color: blue;
+    }
   }
+}
+.videoArrow {
+  display: inline-block;
+  position: relative;
+  height: 15px;
+  top: 1px;
+  width: 15px;
+  background-image: url(../assets/down-arrow.svg);
+  background-size: 11px 11px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in-out;
+  transform: rotate(90deg);
 }
 .maxSpacer {
   position: relative;
@@ -49,9 +64,9 @@ section.mainContent {
   div {
     flex-direction: column;
     p {
-      font-family: "America Extended Regular", sans-serif;
-      font-size: 1.3em;
-      color: #251a10;
+      font-family: "Work Sans", sans-serif;
+      font-size: 1.2em;
+      color: #3b2e22;
       padding-bottom: 2em;
     }
   }

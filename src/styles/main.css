@@ -3,7 +3,7 @@ section.sideNavigation {
       -ms-flex: 0.9;
           flex: 0.9;
   color: red;
-  font-family: "America Extended Regular";
+  font-family: "Work Sans";
   font-size: 1.4em;
   padding-left: 1.75em;
   padding-top: 1.8em;
@@ -22,8 +22,27 @@ section.sideNavigation a {
 }
 
 section.sideNavigation a:visited {
-  color: #251a10;
   color: red;
+}
+
+section.sideNavigation a:active {
+  color: blue;
+}
+
+.videoArrow {
+  display: inline-block;
+  position: relative;
+  height: 15px;
+  top: 1px;
+  width: 15px;
+  background-image: url(../assets/down-arrow.svg);
+  background-size: 11px 11px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .maxSpacer {
@@ -71,9 +90,9 @@ section.mainContent div {
 }
 
 section.mainContent div p {
-  font-family: "America Extended Regular", sans-serif;
-  font-size: 1.3em;
-  color: #251a10;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2em;
+  color: #3b2e22;
   padding-bottom: 2em;
 }
 
