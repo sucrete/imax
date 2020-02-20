@@ -67,54 +67,22 @@ html {
 
 /* --------- America Fonts ---------- */
 @font-face {
-  font-family: "America Expanded Ultra-Light";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Ultra-Light.otf")
-    format("opentype");
-}
-
-@font-face {
-  font-family: "America Expanded Ultra-Light Italic";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Ultra-Light-Italic.otf")
+  font-family: "America Extended Thin";
+  src: url("assets/Fonts/GT-America/America-Extended-Thin.otf")
     format("opentype");
 }
 @font-face {
-  font-family: "America Expanded Light";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Light.otf")
+  font-family: "America Extended Light";
+  src: url("assets/Fonts/GT-America/America-Extended-Light.otf")
     format("opentype");
 }
 @font-face {
-  font-family: "America Expanded Light Italic";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Light-Italic.otf")
-    format("opentype");
+  font-family: "America Light";
+  src: url("assets/Fonts/GT-America/America-Light.otf") format("opentype");
 }
 @font-face {
-  font-family: "America Expanded Regular";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Regular.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "America Expanded Regular Italic";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Regular-Italic.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "America Expanded Medium";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Medium.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "America Expanded Medium Italic";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Medium-Italic.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "America Expanded Thin";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Thin.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "America Expanded Thin Italic";
-  src: url("assets/Fonts/GT-America/GT-America-Trial-Expanded-Thin-Italic.otf")
+  font-family: "America Extended Regular";
+  src: url("assets/Fonts/GT-America/America-Extended-Regular.otf")
     format("opentype");
 }
 @font-face {

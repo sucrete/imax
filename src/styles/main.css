@@ -2,8 +2,9 @@ section.sideNavigation {
   -webkit-box-flex: 0.9;
       -ms-flex: 0.9;
           flex: 0.9;
-  font-family: "Sectra Fine Book Italic";
-  font-size: 1.5em;
+  color: red;
+  font-family: "America Extended Regular";
+  font-size: 1.4em;
   padding-left: 1.75em;
   padding-top: 1.8em;
 }
@@ -18,6 +19,11 @@ section.sideNavigation #navigationContainer {
 
 section.sideNavigation a {
   text-decoration: none;
+}
+
+section.sideNavigation a:visited {
+  color: #251a10;
+  color: red;
 }
 
 .maxSpacer {
@@ -65,9 +71,9 @@ section.mainContent div {
 }
 
 section.mainContent div p {
-  font-family: "Work Sans", sans-serif;
+  font-family: "America Extended Regular", sans-serif;
   font-size: 1.3em;
-  color: #3a3636;
+  color: #251a10;
   padding-bottom: 2em;
 }
 

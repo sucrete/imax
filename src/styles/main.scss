@@ -1,10 +1,12 @@
 $rosenBrown: #64320f;
 section.sideNavigation {
   flex: 0.9;
-  font-family: "Sectra Fine Book Italic";
-  font-size: 1.5em;
+  color: red;
+  font-family: "America Extended Regular";
+  font-size: 1.4em;
   padding-left: 1.75em;
   padding-top: 1.8em;
+
   #navigationContainer {
     transition: 400ms ease-in-out;
     position: -webkit-sticky;
@@ -13,6 +15,10 @@ section.sideNavigation {
   }
   a {
     text-decoration: none;
+    &:visited {
+      color: #251a10;
+      color: red;
+    }
   }
 }
 .maxSpacer {
@@ -43,9 +49,9 @@ section.mainContent {
   div {
     flex-direction: column;
     p {
-      font-family: "Work Sans", sans-serif;
+      font-family: "America Extended Regular", sans-serif;
       font-size: 1.3em;
-      color: rgb(58, 54, 54);
+      color: #251a10;
       padding-bottom: 2em;
     }
   }
