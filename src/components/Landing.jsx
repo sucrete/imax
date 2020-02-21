@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTrail, animated } from "react-spring";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../styles/landing.css";
@@ -10,7 +10,18 @@ const whereTo = ["video", "photo", "design", "collage", "gooftown"];
 const whoIsMax = new Array(7);
 const config = { mass: 5, tension: 3500, friction: 400 };
 
-function Card() {
+function Landing() {
+  // useEffect(() => {
+  //   const allUnderlined = document.getElementsByClassName("whereToLink");
+  //   console.log("booger");
+  //   function addUnderlinedClass(array) {
+  //     for (let elmo = 0; elmo < array.length; elmo++) {
+  //       array[elmo].classList.add("underlined", "underlined--thin");
+  //     }
+  //   }
+
+  //   addUnderlinedClass(allUnderlined);
+  // });
   const trail = useTrail(items.length, {
     config,
     delay: 1200,
@@ -97,7 +108,7 @@ function Card() {
                       <animated.div>
                         <Link
                           style={{ height }}
-                          className="whereToLink"
+                          className="whereToLink underlined underlined--thin"
                           to={
                             process.env.PUBLIC_URL + "/" + `m/${whereTo[index]}`
                           }
@@ -119,4 +130,4 @@ function Card() {
     </Router>
   );
 }
-export default Card;
+export default Landing;

@@ -2,8 +2,8 @@ section.sideNavigation {
   -webkit-box-flex: 0.9;
       -ms-flex: 0.9;
           flex: 0.9;
-  color: red;
-  font-family: "Work Sans";
+  color: #708090;
+  font-family: "Bossa Expanded Regular";
   font-size: 1.4em;
   padding-left: 1.75em;
   padding-top: 1.8em;
@@ -15,6 +15,7 @@ section.sideNavigation #navigationContainer {
   position: -webkit-sticky;
   position: sticky;
   top: 1.8em;
+  opacity: 0.6;
 }
 
 section.sideNavigation a {
@@ -22,7 +23,7 @@ section.sideNavigation a {
 }
 
 section.sideNavigation a:visited {
-  color: red;
+  color: #708090;
 }
 
 section.sideNavigation a:active {
@@ -79,7 +80,7 @@ section.mainContent {
       -ms-flex: 4;
           flex: 4;
   padding-right: 8em;
-  padding-left: 1.2em;
+  padding-left: 1.3em;
 }
 
 section.mainContent div {
@@ -90,8 +91,8 @@ section.mainContent div {
 }
 
 section.mainContent div p {
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.2em;
+  font-family: "Bossa Expanded Light", sans-serif;
+  font-size: 1.1em;
   color: #3b2e22;
   padding-bottom: 2em;
 }

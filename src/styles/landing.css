@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
-.leftSection {
-  font-family: "America Expanded Medium";
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
-
 body {
   background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
 }
@@ -163,55 +157,55 @@ body {
 }
 
 .headerWrapper .informationalContainer .whereToContainer {
-  font-family: "Sectra Fine Book Italic", sans-serif;
   font-size: 1.7em;
+  position: relative;
+  right: -2px;
+  top: 6px;
+}
+
+.headerWrapper .informationalContainer .whereToContainer div {
   text-align: right;
-  position: relative;
-  top: 3px;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo {
-  overflow: hidden;
-}
-
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div {
+.headerWrapper .informationalContainer .whereToContainer div div {
   overflow: hidden;
   position: relative;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink {
-  cursor: pointer;
-  color: #378b99;
-  line-height: 30px;
+.headerWrapper .informationalContainer .whereToContainer div div .whereToLink {
+  color: #708090;
   margin-top: 5px;
   height: 35px;
-  display: block;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  overflow: hidden;
   letter-spacing: 0.05em;
+  text-align: right;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink:after {
-  position: absolute;
-  background-color: #3d6db4;
-  content: "";
-  width: 100%;
-  height: 1px;
-  bottom: -1px;
-  left: 0;
+.underlined {
+  color: #708090;
+  font-family: "Bossa Expanded Regular", sans-serif;
+  line-height: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-decoration: none;
+  background-position: 0 1.2em;
+  background-size: 0% 100%;
+  -moz-background-size: 0% 100%;
+  background-repeat: no-repeat;
+  left: 0px;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink:hover {
-  color: #3267b6;
+.underlined:hover {
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink:hover:after {
-  -webkit-transition: width ease-in 0.3s 0.2s;
-  transition: width ease-in 0.3s 0.2s;
-  width: 100%;
-  background-color: #fffef3;
-  left: 100%;
+.underlined--thin {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #708090), to(#708090));
+  background-image: linear-gradient(to left, #708090 0, #708090 100%);
 }
 
 .container2 {

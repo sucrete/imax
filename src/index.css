@@ -94,3 +94,20 @@ html {
   src: url("assets/Fonts/GT-America/GT-Sectra-Fine-Trial-Book-Italic.otf")
     format("opentype");
 }
+/* --------- Bossa Fonts ---------- */
+@font-face {
+  font-family: "Bossa Expanded Light";
+  src: url("assets/Fonts/Bossa/Bossa-ExpandedLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bossa Light";
+  src: url("assets/Fonts/Bossa/Bossa-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bossa Regular";
+  src: url("assets/Fonts/Bossa/Bossa-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Bossa Expanded Regular";
+  src: url("assets/Fonts/Bossa/Bossa-ExpandedRegular.otf") format("opentype");
+}
