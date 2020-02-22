@@ -32,6 +32,18 @@ function Main() {
     const newSpan = document.createElement("div");
     newSpan.setAttribute("class", "videoArrow");
     videoLink.appendChild(newSpan);
+    newSpan.addEventListener("mouseover", function(event) {
+      event.target.style.backgroundColor = "yellow";
+    });
+    newSpan.addEventListener("mouseover", function(event) {
+      event.target.style.backgroundColor = "rgba(0,0,0,.1)";
+    });
+    newSpan.addEventListener("mouseout", function(event) {
+      event.target.style.backgroundColor = "transparent";
+    });
+    newSpan.addEventListener("click", function(event) {
+      event.target.classList.toggle("turnt");
+    });
     // const expandOnClick = function() {
 
     //   subRoutes.forEach()
