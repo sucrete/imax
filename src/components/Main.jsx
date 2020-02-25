@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTrail, animated } from "react-spring";
+import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Route,
@@ -12,6 +13,7 @@ import Video from "./Video";
 import Collage from "./Collage";
 import Design from "./Design";
 import Gooftown from "./Gooftown";
+import List from "./List";
 
 const config = { mass: 5, tension: 3500, friction: 400 };
 const routes = ["video", "photo", "design", "collage", "gooftown"];
@@ -27,27 +29,34 @@ function Main() {
   let { url } = useRouteMatch();
 
   useEffect(() => {
-    // const subRoutes = ['doc','narrative','visual','promo'];
+    const subRoutes = ["doc", "narrative", "visual", "promo"];
     const videoLink = document.getElementsByClassName("navLink")[0];
-    const newSpan = document.createElement("div");
-    newSpan.setAttribute("class", "videoArrow");
-    videoLink.appendChild(newSpan);
-    newSpan.addEventListener("mouseover", function(event) {
-      event.target.style.backgroundColor = "yellow";
-    });
-    newSpan.addEventListener("mouseover", function(event) {
+    const newSVG = document.createElement("svg");
+    newSVG.setAttribute("class", "videoArrow");
+    videoLink.appendChild(newSVG);
+    const newList = document.createElement("div");
+    newList.classList.add("invisibleList");
+
+    // for (var tell = 0; 0 < subRoutes.length; tell++) {
+    //   var listItem = document.createElement("li");
+    //   var linkItem = document.createElement("a");
+    //   var listItemText = document.createTextNode(subRoutes[tell]);
+    //   linkItem.appendChild(listItemText);
+    //   listItem.appendChild(linkItem);
+    //   newList.appendChild(listItem);
+    // }
+    newSVG.parentNode.insertBefore(newList, newSVG.nextSibling);
+    newSVG.addEventListener("mouseover", function(event) {
       event.target.style.backgroundColor = "rgba(0,0,0,.1)";
     });
-    newSpan.addEventListener("mouseout", function(event) {
+    newSVG.addEventListener("mouseout", function(event) {
       event.target.style.backgroundColor = "transparent";
     });
-    newSpan.addEventListener("click", function(event) {
+    newSVG.addEventListener("click", function(event) {
       event.target.classList.toggle("turnt");
+      newList.classList.toggle("invisibleList--madeVisible");
     });
-    // const expandOnClick = function() {
-
-    //   subRoutes.forEach()
-    // }
+    ReactDOM.render(<List />, newList);
   });
 
   return (
