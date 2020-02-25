@@ -3,7 +3,7 @@ section.sideNavigation {
       -ms-flex: 0.9;
           flex: 0.9;
   color: #222222;
-  font-family: "Bossa Expanded Regular";
+  font-family: "Bossa Light";
   font-size: 1.4em;
   padding-left: 1.75em;
   padding-top: 1.8em;
@@ -25,6 +25,20 @@ section.sideNavigation a {
 
 section.sideNavigation a:visited {
   color: #222222;
+}
+
+.subHeader {
+  font-family: "RosenFont", sans-serif;
+  font-size: 2.2em;
+}
+
+.subsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .listItem {
@@ -99,11 +113,11 @@ section.sideNavigation a:visited {
 }
 
 .pageTitle {
-  font-size: 5em;
+  font-size: 3em;
   margin-top: 1em;
   margin-bottom: 0.6em;
   font-family: "RosenFont", sans-serif;
-  color: #222222;
+  color: #708090;
   letter-spacing: 0.05em;
 }
 

@@ -36,15 +36,6 @@ function Main() {
     videoLink.appendChild(newSVG);
     const newList = document.createElement("div");
     newList.classList.add("invisibleList");
-
-    // for (var tell = 0; 0 < subRoutes.length; tell++) {
-    //   var listItem = document.createElement("li");
-    //   var linkItem = document.createElement("a");
-    //   var listItemText = document.createTextNode(subRoutes[tell]);
-    //   linkItem.appendChild(listItemText);
-    //   listItem.appendChild(linkItem);
-    //   newList.appendChild(listItem);
-    // }
     newSVG.parentNode.insertBefore(newList, newSVG.nextSibling);
     newSVG.addEventListener("mouseover", function(event) {
       event.target.style.backgroundColor = "rgba(0,0,0,.1)";
