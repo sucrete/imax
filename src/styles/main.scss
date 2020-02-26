@@ -152,6 +152,9 @@ section.mainContent {
   div {
     .subsection {
       .lesserVideosContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         .lesserVideo {
           p.videoDescriptionSmaller {
             font-size: 1em;

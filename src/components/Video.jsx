@@ -3,8 +3,13 @@ function Video() {
   const allExtraVideos = {
     docVideos: [
       {
-        source: "https://www.youtube.com/embed/gpq0BW7Lt1I",
+        source: "gpq0BW7Lt1I",
         description: "Bloomberg, director / cinematographer / editor"
+      },
+      {
+        source: "W3IKyyd53yQ",
+        description:
+          "Vice News Tonight on HBO, producer / director / cinematographer / co-editor"
       }
     ],
     narrativeVideos: [],
@@ -12,7 +17,15 @@ function Video() {
     promoVideos: []
   };
   const docVideos = allExtraVideos.docVideos.map(route => (
-    <div className="lesserVideo" style={{ width: "45%", height: "45%" }}>
+    <div
+      className="lesserVideo"
+      style={{
+        width: "45%",
+        height: "45%",
+        display: "inline-block",
+        verticalAlign: "baseline"
+      }}
+    >
       <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
         <iframe
           id="ytplayer"
@@ -24,7 +37,7 @@ function Video() {
             width: "100%",
             height: "100%"
           }}
-          src={route.source}
+          src={`https://www.youtube.com/embed/${route.source}`}
           frameborder="0"
           allowfullscreen
         />
