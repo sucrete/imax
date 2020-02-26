@@ -27,7 +27,7 @@ function Video() {
       {
         source: "https://www.youtube.com/embed/pMaoSw1sv_Q",
         description:
-          "Vice News Tonight on HBO; producer / director / co-cinematographer / co-editor"
+          "Vice News Tonight on HBO, producer / director / co-cinematographer / co-editor"
       },
       {
         source: "https://www.youtube.com/embed/XNQ0A48Eh1c",

@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { useTrail, animated } from "react-spring";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  HashRouter
+} from "react-router-dom";
 import "../styles/landing.css";
 
 import Main from "./Main";
@@ -53,7 +58,7 @@ function Landing() {
   });
 
   return (
-    <Router>
+    <Router basename="/">
       <Route exact path={process.env.PUBLIC_URL + "/"}>
         <div className="card">
           <div className="headerWrapper">
