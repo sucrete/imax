@@ -99,7 +99,9 @@ function Main() {
       <style jsx>{`
         body,
         p,
-        .pageTitle {
+        .pageTitle,
+        :root,
+        html {
           background-color: rgb(34, 34, 34);
           color: white;
         }

@@ -4,41 +4,163 @@ function Video() {
   const allExtraVideos = {
     docVideos: [
       {
-        source: "gpq0BW7Lt1I",
+        source: "https://www.youtube.com/embed/gpq0BW7Lt1I",
         description: "Bloomberg, director / cinematographer / editor"
       },
       {
-        source: "W3IKyyd53yQ",
+        source: "https://www.youtube.com/embed/W3IKyyd53yQ",
         description:
           "Vice News Tonight on HBO, producer / director / cinematographer / co-editor"
       },
       {
-        source: "hEpmVNVBmlA",
+        source: "https://www.youtube.com/embed/hEpmVNVBmlA",
         description: "Bloomberg, producer / director / cinematographer / editor"
       },
       {
-        source: "PxtSvNjwhIc",
+        source: "https://www.youtube.com/embed/PxtSvNjwhIc",
         description: "Saving Mothers, editor"
       },
       {
-        source: "UkRSn6SaLVw",
+        source: "https://www.youtube.com/embed/UkRSn6SaLVw",
         description: "Bloomberg, co-producer / cinematographer / editor"
       },
       {
-        source: "pMaoSw1sv_Q",
+        source: "https://www.youtube.com/embed/pMaoSw1sv_Q",
         description:
           "Vice News Tonight on HBO; producer / director / co-cinematographer / co-editor"
       },
       {
-        source: "XNQ0A48Eh1c",
+        source: "https://www.youtube.com/embed/XNQ0A48Eh1c",
         description: "Bloomberg, director / cinematographer / editor"
       }
     ],
-    narrativeVideos: [],
-    visualVideos: [],
-    promoVideos: []
+    narrativeVideos: [
+      {
+        source:
+          "https://player.vimeo.com/video/91259909?title=0&byline=0&portrait=0",
+        description:
+          "short film, producer / writer / director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/17105762?title=0&byline=0&portrait=0",
+        description:
+          "short film, producer / writer / director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/13929772?title=0&byline=0&portrait=0",
+        description: "short film, co-producer / writer / co-director / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/144325903?title=0&byline=0&portrait=0",
+        description: "short film, director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://www.youtube.com/embed/videoseries?list=PLFvtQAdINl8SYnfOmaY-Gq5gc90_U4-VI",
+        description: "web series, director / cinematographer / editor"
+      },
+      {
+        source: "https://www.youtube.com/embed/je9j4IKRhbI",
+        description: "short film, director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://www.youtube.com/embed/videoseries?list=PLLv6h4AcoO1tJ3_gGhkYQLq3VTGfdMLXw",
+        description: "web series, co-director / co-cinematographer"
+      }
+    ],
+    visualVideos: [
+      {
+        source: "https://www.youtube.com/embed/7dIxUhRpFbE",
+        description: "music video, director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/53358519?title=0&byline=0&portrait=0",
+        description: "short film, director / cinematographer / editor"
+      },
+      {
+        source: "https://www.youtube.com/embed/0Vy8AVWisiA",
+        description: "music video, editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/126227887?title=0&byline=0&portrait=0",
+        description: "short film, director / cinematographer / editor"
+      }
+    ],
+    promoVideos: [
+      {
+        source:
+          "https://player.vimeo.com/video/234086472?title=0&byline=0&portrait=0",
+        description:
+          "book trailer; producer / director / cinematographer / editor"
+      },
+      {
+        source: "https://www.youtube.com/embed/QrUWg1mAIsw",
+        description: "Showgasm promo, director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/224372771?title=0&byline=0&portrait=0",
+        description:
+          "book trailer; producer / director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/222937242?title=0&byline=0&portrait=0",
+        description: "live show intro; director / cinematographer / edito"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/230542561?title=0&byline=0&portrait=0",
+        description:
+          "art show promo; producer / director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/225349394?title=0&byline=0&portrait=0",
+        description: "live show promo; director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/190474505?title=0&byline=0&portrait=0",
+        description: "Ivy promo; cinematographer / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/129576853?title=0&byline=0&portrait=0",
+        description: "producer / director / cinematographer / editor"
+      },
+      {
+        source:
+          "https://player.vimeo.com/video/132705369?title=0&byline=0&portrait=0",
+        description: "Ivy promo; cinematographer / editor"
+      }
+    ]
   };
-  const docVideos = allExtraVideos.docVideos.map(route => (
+  const docVids = allExtraVideos.docVideos.map(route => (
+    <LesserVideos
+      vidSource={route.source}
+      vidDescription={route.description}
+    ></LesserVideos>
+  ));
+  const narrativeVids = allExtraVideos.narrativeVideos.map(route => (
+    <LesserVideos
+      vidSource={route.source}
+      vidDescription={route.description}
+    ></LesserVideos>
+  ));
+  const visualVids = allExtraVideos.visualVideos.map(route => (
+    <LesserVideos
+      vidSource={route.source}
+      vidDescription={route.description}
+    ></LesserVideos>
+  ));
+  const promoVids = allExtraVideos.promoVideos.map(route => (
     <LesserVideos
       vidSource={route.source}
       vidDescription={route.description}
@@ -53,8 +175,10 @@ function Video() {
                   DOC BELOW HERE
 
         *************************************** */}
-      <div className="subsection" name="doc">
-        <h2 className="subHeader">doc</h2>
+      <div className="subsection">
+        <h2 className="subHeader" name="doc">
+          doc
+        </h2>
         <div className="firstVideo">
           <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
             <iframe
@@ -76,15 +200,17 @@ function Video() {
             [Disney+, editor on 14 of 52 episodes]
           </p>
         </div>
-        <div className="lesserVideosContainer">{docVideos}</div>
+        <div className="lesserVideosContainer">{docVids}</div>
       </div>
       {/* ***************************************
 
                   NARRATIVE BELOW HERE
 
         *************************************** */}
-      <div className="subsection" name="narrative">
-        <h2 className="subHeader">narrative</h2>
+      <div className="subsection">
+        <h2 className="subHeader" name="narrative">
+          narrative
+        </h2>
         <div className="firstVideo">
           <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
             <iframe
@@ -108,14 +234,17 @@ function Video() {
             editor]
           </p>
         </div>
+        <div className="lesserVideosContainer">{narrativeVids}</div>
       </div>
       {/* ***************************************
 
                   VISUAL BELOW HERE
 
         *************************************** */}
-      <div className="subsection" name="visual">
-        <h2 className="subHeader">visual</h2>
+      <div className="subsection">
+        <h2 className="subHeader" name="visual">
+          visual
+        </h2>
         <div
           style={{ padding: "56.25% 0 0 0", position: "relative" }}
           className="firstVideo"
@@ -138,14 +267,17 @@ function Video() {
         <p className="videoDescription">
           [music video, director / co-cinematographer / editor]
         </p>
+        <div className="lesserVideosContainer">{visualVids}</div>
       </div>
       {/* ***************************************
 
                   PROMO BELOW HERE
 
         *************************************** */}
-      <div className="subsection" name="promo">
-        <h2 className="subHeader">promo</h2>
+      <div className="subsection">
+        <h2 className="subHeader" name="promo">
+          promo
+        </h2>
         <div
           style={{ padding: "56.25% 0 0 0", position: "relative" }}
           className="firstVideo"
@@ -168,13 +300,15 @@ function Video() {
         <p className="videoDescription">
           [Showgasm promo, director / cinematographer / editor]
         </p>
+        <div className="lesserVideosContainer">{promoVids}</div>
       </div>
       <style jsx>{`
         section.mainContent div p,
         .videoDescription {
           color: white;
         }
-        :root {
+        :root,
+        html {
           background-color: rgb(34, 34, 34);
         }
         .videoDescriptionSmaller {

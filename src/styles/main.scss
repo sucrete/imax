@@ -29,8 +29,10 @@ section.sideNavigation {
 }
 .subHeader {
   font-family: "Bossa Light", sans-serif;
-  font-size: 2.2em;
+  font-size: 3em;
   letter-spacing: 0.05em;
+  padding-top: 0.5em;
+  padding-bottom: 0.6em;
 }
 .subsection {
   display: flex;
@@ -148,6 +150,7 @@ body {
     transform: translate(-50%, -50%);
   }
 }
+
 section.mainContent {
   div {
     .subsection {
@@ -163,5 +166,31 @@ section.mainContent {
         }
       }
     }
+  }
+}
+.left {
+  order: 1;
+  background: red;
+  flex-basis: 100%;
+  height: 300px;
+}
+.right {
+  order: 2;
+  background: yellow;
+  flex-basis: 100%;
+  height: 300px;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    flex-wrap: nowrap;
+  }
+
+  .left {
+    flex-basis: 200px;
+    order: 1;
+  }
+  .right {
+    flex-basis: 200px;
+    order: 3;
   }
 }

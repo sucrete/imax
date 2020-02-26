@@ -33,8 +33,10 @@ section.sideNavigation a:visited {
 
 .subHeader {
   font-family: "Bossa Light", sans-serif;
-  font-size: 2.2em;
+  font-size: 3em;
   letter-spacing: 0.05em;
+  padding-top: 0.5em;
+  padding-bottom: 0.6em;
 }
 
 .subsection {
@@ -198,5 +200,46 @@ section.mainContent div .subsection .lesserVideosContainer {
 
 section.mainContent div .subsection .lesserVideosContainer .lesserVideo p.videoDescriptionSmaller {
   font-size: 1em;
+}
+
+.left {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background: red;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 300px;
+}
+
+.right {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  background: yellow;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 300px;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .left {
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .right {
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
 }
 /*# sourceMappingURL=main.css.map */
