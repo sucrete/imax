@@ -38,7 +38,7 @@ function Main() {
     newList.classList.add("invisibleList");
     newSVG.parentNode.insertBefore(newList, newSVG.nextSibling);
     newSVG.addEventListener("mouseover", function(event) {
-      event.target.style.backgroundColor = "rgba(0,0,0,.1)";
+      event.target.style.backgroundColor = "rgba(0,0,0,.2)";
     });
     newSVG.addEventListener("mouseout", function(event) {
       event.target.style.backgroundColor = "transparent";
@@ -96,6 +96,21 @@ function Main() {
           </Route>
         </section>
       </Router>
+      <style jsx>{`
+        body,
+        p,
+        .pageTitle {
+          background-color: rgb(34, 34, 34);
+          color: white;
+        }
+        section.sideNavigation a,
+        section.sideNavigation a:visited {
+          color: white;
+        }
+        p.videosDescriptionSmaller {
+          font-size: 1em;
+        }
+      `}</style>
     </div>
   );
 }

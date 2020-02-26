@@ -2,7 +2,7 @@ $rosenBrown: #64320f;
 section.sideNavigation {
   flex: 0.9;
   color: rgb(34, 34, 34);
-  font-family: "Bossa Light";
+  font-family: "Bossa Regular", sans-serif;
   font-size: 1.4em;
   padding-left: 1.75em;
   padding-top: 1.8em;
@@ -24,9 +24,13 @@ section.sideNavigation {
     }
   }
 }
+.main {
+  width: 100%;
+}
 .subHeader {
-  font-family: "RosenFont", sans-serif;
+  font-family: "Bossa Light", sans-serif;
   font-size: 2.2em;
+  letter-spacing: 0.05em;
 }
 .subsection {
   display: flex;
@@ -46,23 +50,25 @@ section.sideNavigation {
   transition: all 0.25s ease-in-out;
   height: 0px;
   &--madeVisible {
-    height: 84px;
+    height: 100px;
   }
   ul {
     position: absolute;
     display: block;
-    top: -1.2em;
+    top: -1em;
     left: -1em;
     li {
-      &:nth-child(2) {
-        top: 1em;
-      }
-      &:nth-child(3) {
-        top: 2em;
-      }
-      &:nth-child(4) {
-        top: 3em;
-      }
+      position: relative;
+      line-height: 1.2em;
+      // &:nth-child(2) {
+      //   top: 1em;
+      // }
+      // &:nth-child(3) {
+      //   top: 2em;
+      // }
+      // &:nth-child(4) {
+      //   top: 3em;
+      // }
     }
   }
 }
@@ -75,13 +81,12 @@ section.sideNavigation {
   width: 25px;
   left: 5px;
   border-radius: 100%;
-  // background: yellow;
-  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0OTEuOTk2IDQ5MS45OTYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ5MS45OTYgNDkxLjk5NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4NC4xMzIsMTI0Ljk4NmwtMTYuMTE2LTE2LjIyOGMtNS4wNzItNS4wNjgtMTEuODItNy44Ni0xOS4wMzItNy44NmMtNy4yMDgsMC0xMy45NjQsMi43OTItMTkuMDM2LDcuODZsLTE4My44NCwxODMuODQ4ICAgIEw2Mi4wNTYsMTA4LjU1NGMtNS4wNjQtNS4wNjgtMTEuODItNy44NTYtMTkuMDI4LTcuODU2cy0xMy45NjgsMi43ODgtMTkuMDM2LDcuODU2bC0xNi4xMiwxNi4xMjggICAgYy0xMC40OTYsMTAuNDg4LTEwLjQ5NiwyNy41NzIsMCwzOC4wNmwyMTkuMTM2LDIxOS45MjRjNS4wNjQsNS4wNjQsMTEuODEyLDguNjMyLDE5LjA4NCw4LjYzMmgwLjA4NCAgICBjNy4yMTIsMCwxMy45Ni0zLjU3MiwxOS4wMjQtOC42MzJsMjE4LjkzMi0yMTkuMzI4YzUuMDcyLTUuMDY0LDcuODU2LTEyLjAxNiw3Ljg2NC0xOS4yMjQgICAgQzQ5MS45OTYsMTM2LjkwMiw0ODkuMjA0LDEzMC4wNDYsNDg0LjEzMiwxMjQuOTg2eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MS45OTYgNDkxLjk5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkxLjk5NiA0OTEuOTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGNsYXNzPSIiPjxnPjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4NC4xMzIsMTI0Ljk4NmwtMTYuMTE2LTE2LjIyOGMtNS4wNzItNS4wNjgtMTEuODItNy44Ni0xOS4wMzItNy44NmMtNy4yMDgsMC0xMy45NjQsMi43OTItMTkuMDM2LDcuODZsLTE4My44NCwxODMuODQ4ICAgIEw2Mi4wNTYsMTA4LjU1NGMtNS4wNjQtNS4wNjgtMTEuODItNy44NTYtMTkuMDI4LTcuODU2cy0xMy45NjgsMi43ODgtMTkuMDM2LDcuODU2bC0xNi4xMiwxNi4xMjggICAgYy0xMC40OTYsMTAuNDg4LTEwLjQ5NiwyNy41NzIsMCwzOC4wNmwyMTkuMTM2LDIxOS45MjRjNS4wNjQsNS4wNjQsMTEuODEyLDguNjMyLDE5LjA4NCw4LjYzMmgwLjA4NCAgICBjNy4yMTIsMCwxMy45Ni0zLjU3MiwxOS4wMjQtOC42MzJsMjE4LjkzMi0yMTkuMzI4YzUuMDcyLTUuMDY0LDcuODU2LTEyLjAxNiw3Ljg2NC0xOS4yMjQgICAgQzQ5MS45OTYsMTM2LjkwMiw0ODkuMjA0LDEzMC4wNDYsNDg0LjEzMiwxMjQuOTg2eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
   background-size: 11px 11px;
   background-position: 53% 58%;
   background-repeat: no-repeat;
   transition: all 0.2s ease-in-out;
-  fill: orange;
+  color: white;
   transform: rotate(90deg);
   &.turnt {
     transform: rotate(0deg);
@@ -94,11 +99,11 @@ section.sideNavigation {
 }
 
 .pageTitle {
-  font-size: 3em;
+  font-size: 6em;
   margin-top: 1em;
   margin-bottom: 0.6em;
   font-family: "RosenFont", sans-serif;
-  color: #708090;
+  color: rgb(34, 34, 34);
   letter-spacing: 0.05em;
 }
 .App .main {
@@ -141,5 +146,18 @@ body {
     animation: opacityShift 4s;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+section.mainContent {
+  div {
+    .subsection {
+      .lesserVideosContainer {
+        .lesserVideo {
+          p.videoDescriptionSmaller {
+            font-size: 1em;
+          }
+        }
+      }
+    }
   }
 }
