@@ -1,4 +1,5 @@
 import React from "react";
+import LesserVideos from "./LesserVideos";
 function Video() {
   const allExtraVideos = {
     docVideos: [
@@ -10,6 +11,27 @@ function Video() {
         source: "W3IKyyd53yQ",
         description:
           "Vice News Tonight on HBO, producer / director / cinematographer / co-editor"
+      },
+      {
+        source: "hEpmVNVBmlA",
+        description: "Bloomberg, producer / director / cinematographer / editor"
+      },
+      {
+        source: "PxtSvNjwhIc",
+        description: "Saving Mothers, editor"
+      },
+      {
+        source: "UkRSn6SaLVw",
+        description: "Bloomberg, co-producer / cinematographer / editor"
+      },
+      {
+        source: "pMaoSw1sv_Q",
+        description:
+          "Vice News Tonight on HBO; producer / director / co-cinematographer / co-editor"
+      },
+      {
+        source: "XNQ0A48Eh1c",
+        description: "Bloomberg, director / cinematographer / editor"
       }
     ],
     narrativeVideos: [],
@@ -17,33 +39,10 @@ function Video() {
     promoVideos: []
   };
   const docVideos = allExtraVideos.docVideos.map(route => (
-    <div
-      className="lesserVideo"
-      style={{
-        width: "45%",
-        height: "45%",
-        display: "inline-block",
-        verticalAlign: "baseline"
-      }}
-    >
-      <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-        <iframe
-          id="ytplayer"
-          type="text/html"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%"
-          }}
-          src={`https://www.youtube.com/embed/${route.source}`}
-          frameborder="0"
-          allowfullscreen
-        />
-      </div>
-      <p className="videoDescriptionSmaller">{`[${route.description}]`}</p>
-    </div>
+    <LesserVideos
+      vidSource={route.source}
+      vidDescription={route.description}
+    ></LesserVideos>
   ));
   return (
     <div>
