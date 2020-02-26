@@ -58,7 +58,7 @@ function Landing() {
   });
 
   return (
-    <Router basename="/">
+    <Router>
       <Route exact path={process.env.PUBLIC_URL + "/"}>
         <div className="card">
           <div className="headerWrapper">
@@ -114,9 +114,7 @@ function Landing() {
                         <Link
                           style={{ height }}
                           className="whereToLink underlined underlined--thin"
-                          to={
-                            process.env.PUBLIC_URL + "/" + `m/${whereTo[index]}`
-                          }
+                          to={"/" + `m/${whereTo[index]}`}
                         >
                           {whereTo[index]}
                         </Link>
@@ -129,7 +127,7 @@ function Landing() {
           </div>
         </div>
       </Route>
-      <Route path={process.env.PUBLIC_URL + "/m"}>
+      <Route path={"/m"}>
         <Main />
       </Route>
     </Router>
