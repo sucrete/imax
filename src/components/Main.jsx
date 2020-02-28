@@ -97,16 +97,14 @@ function Main() {
         </section>
       </Router>
       <style jsx>{`
-        body,
-        p,
-        .pageTitle,
-        :root,
-        html {
+        body {
           background-color: rgb(34, 34, 34);
-          color: white;
         }
         section.sideNavigation a,
-        section.sideNavigation a:visited {
+        section.sideNavigation a:visited,
+        .pageTitle,
+        .subHeader,
+        p {
           color: white;
         }
         p.videosDescriptionSmaller {

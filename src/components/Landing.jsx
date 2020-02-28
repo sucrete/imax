@@ -16,17 +16,6 @@ const whoIsMax = new Array(7);
 const config = { mass: 5, tension: 3500, friction: 400 };
 
 function Landing() {
-  // useEffect(() => {
-  //   const allUnderlined = document.getElementsByClassName("whereToLink");
-  //   console.log("booger");
-  //   function addUnderlinedClass(array) {
-  //     for (let elmo = 0; elmo < array.length; elmo++) {
-  //       array[elmo].classList.add("underlined", "underlined--thin");
-  //     }
-  //   }
-
-  //   addUnderlinedClass(allUnderlined);
-  // });
   const trail = useTrail(items.length, {
     config,
     delay: 1200,
@@ -38,9 +27,9 @@ function Landing() {
     config,
     delay: 1650,
     yy: 0,
-    height: 35,
+    height: 65,
     opacity: 1,
-    from: { yy: 20, height: 0, opacity: 0 }
+    from: { yy: 25, height: 0, opacity: 0 }
   });
   const trail3 = useTrail(1, {
     config,
@@ -130,6 +119,7 @@ function Landing() {
       <Route path={"/m"}>
         <Main />
       </Route>
+      <style jsx>{``}</style>
     </Router>
   );
 }

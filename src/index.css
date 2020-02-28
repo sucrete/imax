@@ -5,11 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fad6c1;
+  /* background: #fad6c1; */
+}
+/* body {
 }
 html {
   background: #f3e8e8;
-}
+} */
 
 .App {
   width: 100%;
