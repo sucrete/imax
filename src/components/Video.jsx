@@ -7,7 +7,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 //   import { useTrail, animated } from "react-spring";
-const subRoutes = ["doc", "narrative", "visual", "promo"];
+
 function Video() {
   let { url } = useRouteMatch();
   const allExtraVideos = {
@@ -175,91 +175,93 @@ function Video() {
       vidDescription={route.description}
     ></LesserVideos>
   ));
+  const subRoutes = ["doc", "narrative", "visual", "promo"];
   return (
     <div>
       <h1 className="pageTitle">Video</h1>
       <hr />
 
-      <Router>
-        <div className="maxSpacer"></div>
-        <div id="navigationContainer">
-          {}
-          <Link
-            style={{ height }}
-            className="navLink"
-            to={`${url}/${routes[index]}`}
-          >
-            {routes[index]}
+      <div id="videoSubRoutesContainer">
+        {subRoutes.map((aThing, id) => (
+          <Link className="subRoute" key={id} to={`${url}/${aThing}`}>
+            {aThing}
           </Link>
-        </div>
-
-        <section className="mainContent">
-          <Route exact path={`${url}/video/doc`}>
-            <div className="subsection">
-              <h2 className="subHeader" name="doc">
-                doc
-              </h2>
-              <div className="firstVideo">
-                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-                  <iframe
-                    id="ytplayer"
-                    type="text/html"
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%"
-                    }}
-                    src="https://www.youtube.com/embed/c3dukvXxtsc"
-                    frameborder="0"
-                    allowfullscreen
-                  />
-                </div>
-                <p className="videoDescription">
-                  [Disney+, editor on 14 of 52 episodes]
-                </p>
-              </div>
-              <div className="lesserVideosContainer">{docVids}</div>
+        ))}
+      </div>
+      <Route exact path={`${url}/doc`}>
+        <div className="subsection">
+          <h2 className="subHeader" name="doc">
+            doc
+          </h2>
+          <div className="firstVideo">
+            <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+              <iframe
+                id="ytplayer"
+                type="text/html"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%"
+                }}
+                src="https://www.youtube.com/embed/c3dukvXxtsc"
+                frameborder="0"
+                allowfullscreen
+              />
             </div>
-          </Route>
+            <p className="videoDescription">
+              [Disney+, editor on 14 of 52 episodes]
+            </p>
+          </div>
+          <div className="lesserVideosContainer">{docVids}</div>
+        </div>
+      </Route>
 
-          <Route path={`${url}/photo`}>
-            <Photo />
-          </Route>
+      <Route path={`${url}/narrative`}>
+        <div className="subsection">
+          <h2 className="subHeader" name="narrative">
+            narrative
+          </h2>
+          <div className="firstVideo">
+            <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+              <iframe
+                src="https://player.vimeo.com/video/289986054?title=0&byline=0&portrait=0"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%"
+                }}
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+            <p className="videoDescription">
+              [short film, producer / writer / director / cinematographer /
+              editor]
+            </p>
+          </div>
+          <div className="lesserVideosContainer">{narrativeVids}</div>
+        </div>
+      </Route>
 
-          <Route path={`${url}/design`}>
-            <Design />
-          </Route>
-
-          <Route path={`${url}/collage`}>
-            <Collage />
-          </Route>
-
-          <Route path={`${url}/gooftown`}>
-            <Gooftown />
-          </Route>
-        </section>
-      </Router>
-      {/* ***************************************
-
-                  DOC BELOW HERE
-
-        *************************************** */}
-
-      {/* ***************************************
-
-                  NARRATIVE BELOW HERE
-
-        *************************************** */}
-      <div className="subsection">
-        <h2 className="subHeader" name="narrative">
-          narrative
-        </h2>
-        <div className="firstVideo">
-          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+      <Route path={`${url}/visual`}>
+        <div className="subsection">
+          <h2 className="subHeader" name="visual">
+            visual
+          </h2>
+          <div
+            style={{ padding: "56.25% 0 0 0", position: "relative" }}
+            className="firstVideo"
+          >
             <iframe
-              src="https://player.vimeo.com/video/289986054?title=0&byline=0&portrait=0"
+              id="ytplayer"
+              type="text/html"
               style={{
                 position: "absolute",
                 top: 0,
@@ -267,86 +269,49 @@ function Video() {
                 width: "100%",
                 height: "100%"
               }}
+              src="https://www.youtube.com/embed/IXPw5wgyg6g"
               frameborder="0"
-              allow="autoplay; fullscreen"
               allowfullscreen
-              loading="lazy"
-            ></iframe>
+            />
           </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
           <p className="videoDescription">
-            [short film, producer / writer / director / cinematographer /
-            editor]
+            [music video, director / co-cinematographer / editor]
           </p>
+          <div className="lesserVideosContainer">{visualVids}</div>
         </div>
-        <div className="lesserVideosContainer">{narrativeVids}</div>
-      </div>
-      {/* ***************************************
+      </Route>
 
-                  VISUAL BELOW HERE
-
-        *************************************** */}
-      <div className="subsection">
-        <h2 className="subHeader" name="visual">
-          visual
-        </h2>
-        <div
-          style={{ padding: "56.25% 0 0 0", position: "relative" }}
-          className="firstVideo"
-        >
-          <iframe
-            id="ytplayer"
-            type="text/html"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%"
-            }}
-            src="https://www.youtube.com/embed/IXPw5wgyg6g"
-            frameborder="0"
-            allowfullscreen
-          />
+      <Route path={`${url}/promo`}>
+        <div className="subsection">
+          <h2 className="subHeader" name="promo">
+            promo
+          </h2>
+          <div
+            style={{ padding: "56.25% 0 0 0", position: "relative" }}
+            className="firstVideo"
+          >
+            <iframe
+              id="ytplayer"
+              type="text/html"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%"
+              }}
+              src="https://www.youtube.com/embed/qsT_yXLi2j4"
+              frameborder="0"
+              allowfullscreen
+            />
+          </div>
+          <p className="videoDescription">
+            [Showgasm promo, director / cinematographer / editor]
+          </p>
+          <div className="lesserVideosContainer">{promoVids}</div>
         </div>
-        <p className="videoDescription">
-          [music video, director / co-cinematographer / editor]
-        </p>
-        <div className="lesserVideosContainer">{visualVids}</div>
-      </div>
-      {/* ***************************************
+      </Route>
 
-                  PROMO BELOW HERE
-
-        *************************************** */}
-      <div className="subsection">
-        <h2 className="subHeader" name="promo">
-          promo
-        </h2>
-        <div
-          style={{ padding: "56.25% 0 0 0", position: "relative" }}
-          className="firstVideo"
-        >
-          <iframe
-            id="ytplayer"
-            type="text/html"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%"
-            }}
-            src="https://www.youtube.com/embed/qsT_yXLi2j4"
-            frameborder="0"
-            allowfullscreen
-          />
-        </div>
-        <p className="videoDescription">
-          [Showgasm promo, director / cinematographer / editor]
-        </p>
-        <div className="lesserVideosContainer">{promoVids}</div>
-      </div>
       <style jsx>{`
         section.mainContent div p,
         .videoDescription {

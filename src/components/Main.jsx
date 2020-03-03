@@ -42,7 +42,11 @@ function Main() {
                 <Link
                   style={{ height }}
                   className="navLink"
-                  to={`${url}/${routes[index]}`}
+                  to={`${url}/${
+                    routes[index] === "video"
+                      ? routes[index] + "/doc"
+                      : routes[index]
+                  }`}
                 >
                   {routes[index]}
                 </Link>
@@ -51,7 +55,7 @@ function Main() {
           </div>
         </section>
         <section className="mainContent">
-          <Route exact path={`${url}/video/doc`}>
+          <Route path={`${url}/video`}>
             <Video />
           </Route>
 
