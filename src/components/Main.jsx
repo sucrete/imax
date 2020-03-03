@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTrail, animated } from "react-spring";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Route,
@@ -13,7 +13,6 @@ import Video from "./Video";
 import Collage from "./Collage";
 import Design from "./Design";
 import Gooftown from "./Gooftown";
-import List from "./List";
 
 const config = { mass: 5, tension: 3500, friction: 400 };
 const routes = ["video", "photo", "design", "collage", "gooftown"];
@@ -27,29 +26,6 @@ function Main() {
     from: { yy: 20, height: 0, opacity: 0 }
   });
   let { url } = useRouteMatch();
-
-  useEffect(() => {
-    const subRoutes = ["doc", "narrative", "visual", "promo"];
-    const videoLink = document.getElementsByClassName("navLink")[0];
-    const newSVG = document.createElement("svg");
-    newSVG.setAttribute("class", "videoArrow");
-    videoLink.appendChild(newSVG);
-    const newList = document.createElement("div");
-    newList.classList.add("invisibleList");
-    newSVG.parentNode.insertBefore(newList, newSVG.nextSibling);
-    newSVG.addEventListener("mouseover", function(event) {
-      event.target.style.backgroundColor = "rgba(0,0,0,.2)";
-    });
-    newSVG.addEventListener("mouseout", function(event) {
-      event.target.style.backgroundColor = "transparent";
-    });
-    newSVG.addEventListener("click", function(event) {
-      event.target.classList.toggle("turnt");
-      newList.classList.toggle("invisibleList--madeVisible");
-    });
-    ReactDOM.render(<List />, newList);
-  });
-
   return (
     <div className="main">
       <Router>
@@ -75,7 +51,7 @@ function Main() {
           </div>
         </section>
         <section className="mainContent">
-          <Route exact path={`${url}/video`}>
+          <Route exact path={`${url}/video/doc`}>
             <Video />
           </Route>
 

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Old+Standard+TT:400,400i,700|Oranienbaum&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cardo:400,400i,700&display=swap");
 $notchSize: 7px;
 $rosenBrown: #64320f;
 $backgroundColor: #fff2e6;
@@ -143,12 +143,13 @@ $backgroundColor: #fff2e6;
       position: relative;
       right: -2px;
       top: 8px;
-      div {
+      div.whereTo {
         text-align: right;
-        height: 70px;
+        height: 60px;
         div {
           // overflow: hidden;
           position: relative;
+          height: 60px;
           .whereToLink {
             text-align: right;
           }
@@ -161,7 +162,7 @@ $whereToColor: #019563;
 .underlined {
   font-size: 3em;
   color: $whereToColor;
-  font-family: "Bossa Light";
+  font-family: "Bossa Expanded Light";
   // text-transform: capitalize;
   // line-height: 20px;
   flex: 1;

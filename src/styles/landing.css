@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Old+Standard+TT:400,400i,700|Oranienbaum&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cardo:400,400i,700&display=swap");
 .card {
   background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
   background: linear-gradient(349deg, #f8dfb0 10%, #fad6c1 20%, #d5ebff 90%);
@@ -148,23 +148,24 @@
   top: 8px;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo {
   text-align: right;
-  height: 70px;
+  height: 60px;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div div {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div {
   position: relative;
+  height: 60px;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div div .whereToLink {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink {
   text-align: right;
 }
 
 .underlined {
   font-size: 3em;
   color: #019563;
-  font-family: "Bossa Light";
+  font-family: "Bossa Expanded Light";
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

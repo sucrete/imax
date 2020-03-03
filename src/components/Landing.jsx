@@ -26,10 +26,10 @@ function Landing() {
   const trail2 = useTrail(whereTo.length, {
     config,
     delay: 1650,
-    yy: 0,
-    height: 65,
+    yy: -15,
+    height: 35,
     opacity: 1,
-    from: { yy: 25, height: 0, opacity: 0 }
+    from: { yy: 25, height: 20, opacity: 0 }
   });
   const trail3 = useTrail(1, {
     config,

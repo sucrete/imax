@@ -1,6 +1,15 @@
 import React from "react";
 import LesserVideos from "./LesserVideos";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  useRouteMatch
+} from "react-router-dom";
+//   import { useTrail, animated } from "react-spring";
+const subRoutes = ["doc", "narrative", "visual", "promo"];
 function Video() {
+  let { url } = useRouteMatch();
   const allExtraVideos = {
     docVideos: [
       {
@@ -170,38 +179,74 @@ function Video() {
     <div>
       <h1 className="pageTitle">Video</h1>
       <hr />
+
+      <Router>
+        <div className="maxSpacer"></div>
+        <div id="navigationContainer">
+          {}
+          <Link
+            style={{ height }}
+            className="navLink"
+            to={`${url}/${routes[index]}`}
+          >
+            {routes[index]}
+          </Link>
+        </div>
+
+        <section className="mainContent">
+          <Route exact path={`${url}/video/doc`}>
+            <div className="subsection">
+              <h2 className="subHeader" name="doc">
+                doc
+              </h2>
+              <div className="firstVideo">
+                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+                  <iframe
+                    id="ytplayer"
+                    type="text/html"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%"
+                    }}
+                    src="https://www.youtube.com/embed/c3dukvXxtsc"
+                    frameborder="0"
+                    allowfullscreen
+                  />
+                </div>
+                <p className="videoDescription">
+                  [Disney+, editor on 14 of 52 episodes]
+                </p>
+              </div>
+              <div className="lesserVideosContainer">{docVids}</div>
+            </div>
+          </Route>
+
+          <Route path={`${url}/photo`}>
+            <Photo />
+          </Route>
+
+          <Route path={`${url}/design`}>
+            <Design />
+          </Route>
+
+          <Route path={`${url}/collage`}>
+            <Collage />
+          </Route>
+
+          <Route path={`${url}/gooftown`}>
+            <Gooftown />
+          </Route>
+        </section>
+      </Router>
       {/* ***************************************
 
                   DOC BELOW HERE
 
         *************************************** */}
-      <div className="subsection">
-        <h2 className="subHeader" name="doc">
-          doc
-        </h2>
-        <div className="firstVideo">
-          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-            <iframe
-              id="ytplayer"
-              type="text/html"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%"
-              }}
-              src="https://www.youtube.com/embed/c3dukvXxtsc"
-              frameborder="0"
-              allowfullscreen
-            />
-          </div>
-          <p className="videoDescription">
-            [Disney+, editor on 14 of 52 episodes]
-          </p>
-        </div>
-        <div className="lesserVideosContainer">{docVids}</div>
-      </div>
+
       {/* ***************************************
 
                   NARRATIVE BELOW HERE
