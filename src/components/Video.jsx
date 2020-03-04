@@ -7,6 +7,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 //   import { useTrail, animated } from "react-spring";
+import "../styles/main.css";
 
 function Video() {
   let { url } = useRouteMatch();
@@ -121,7 +122,7 @@ function Video() {
       {
         source:
           "https://player.vimeo.com/video/222937242?title=0&byline=0&portrait=0",
-        description: "live show intro; director / cinematographer / edito"
+        description: "live show intro; director / cinematographer / editor"
       },
       {
         source:
@@ -181,7 +182,7 @@ function Video() {
       <h1 className="pageTitle">Video</h1>
       <hr />
 
-      <div id="videoSubRoutesContainer">
+      <div className="videoSubRoutesContainer">
         {subRoutes.map((aThing, id) => (
           <Link className="subRoute" key={id} to={`${url}/${aThing}`}>
             {aThing}
@@ -190,9 +191,6 @@ function Video() {
       </div>
       <Route exact path={`${url}/doc`}>
         <div className="subsection">
-          <h2 className="subHeader" name="doc">
-            doc
-          </h2>
           <div className="firstVideo">
             <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
               <iframe
@@ -220,9 +218,6 @@ function Video() {
 
       <Route path={`${url}/narrative`}>
         <div className="subsection">
-          <h2 className="subHeader" name="narrative">
-            narrative
-          </h2>
           <div className="firstVideo">
             <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
               <iframe
@@ -252,9 +247,6 @@ function Video() {
 
       <Route path={`${url}/visual`}>
         <div className="subsection">
-          <h2 className="subHeader" name="visual">
-            visual
-          </h2>
           <div
             style={{ padding: "56.25% 0 0 0", position: "relative" }}
             className="firstVideo"
@@ -283,9 +275,6 @@ function Video() {
 
       <Route path={`${url}/promo`}>
         <div className="subsection">
-          <h2 className="subHeader" name="promo">
-            promo
-          </h2>
           <div
             style={{ padding: "56.25% 0 0 0", position: "relative" }}
             className="firstVideo"

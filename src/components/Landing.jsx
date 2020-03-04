@@ -103,7 +103,14 @@ function Landing() {
                         <Link
                           style={{ height }}
                           className="whereToLink underlined underlined--thin"
-                          to={"/" + `m/${whereTo[index]}`}
+                          to={
+                            "/" +
+                            `m/${
+                              whereTo[index] === "video"
+                                ? whereTo[index] + "/doc"
+                                : whereTo[index]
+                            }`
+                          }
                         >
                           {whereTo[index]}
                         </Link>
@@ -119,7 +126,6 @@ function Landing() {
       <Route path={"/m"}>
         <Main />
       </Route>
-      <style jsx>{``}</style>
     </Router>
   );
 }
