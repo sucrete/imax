@@ -57,8 +57,8 @@ div.App div.main section.mainContent div .pageTitle {
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
   font-size: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,8 +66,7 @@ div.App div.main section.mainContent div .videoSubRoutesContainer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 4em;
-  margin: 0.2em 0 0.5em 0;
+  height: 3em;
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute {
@@ -77,22 +76,24 @@ div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute {
   text-decoration: none;
   color: white;
   position: relative;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
-div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:hover {
-  color: #a3a3a3;
+div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:hover, div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:focus {
+  color: #f1bbbb;
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(2) {
-  top: 1em;
+  top: 0.55em;
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(3) {
-  top: 2em;
+  top: 1em;
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(4) {
-  top: 3em;
+  top: 1.5em;
 }
 
 div.App div.main section.mainContent div div.subsection {
@@ -106,6 +107,7 @@ div.App div.main section.mainContent div div.subsection {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 4em;
 }
 
 div.App div.main section.mainContent div div.subsection p {

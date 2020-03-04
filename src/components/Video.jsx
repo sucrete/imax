@@ -189,7 +189,8 @@ function Video() {
           </Link>
         ))}
       </div>
-      <Route exact path={`${url}/doc`}>
+      <hr />
+      <Route path={`${url}/doc`}>
         <div className="subsection">
           <div className="firstVideo">
             <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>

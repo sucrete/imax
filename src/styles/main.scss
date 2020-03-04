@@ -46,14 +46,14 @@ div.App {
           letter-spacing: 0.05em;
         }
         .videoSubRoutesContainer {
-          padding-top: 0.5em;
-          padding-bottom: 0.5em;
+          padding-top: 0em;
+          padding-bottom: 0em;
           font-size: 3em;
           display: flex;
           justify-content: space-between;
-          height: 4em;
+          height: 3em;
+
           // transform: rotate(8deg);
-          margin: 0.2em 0 0.5em 0;
           a.subRoute {
             letter-spacing: 0.03em;
             display: inline-block;
@@ -61,17 +61,19 @@ div.App {
             text-decoration: none;
             color: white;
             position: relative;
-            &:hover {
-              color: rgb(163, 163, 163);
+            transition: 0.2s all ease-in-out;
+            &:hover,
+            &:focus {
+              color: #f1bbbb;
             }
             &:nth-child(2) {
-              top: 1em;
+              top: 0.55em;
             }
             &:nth-child(3) {
-              top: 2em;
+              top: 1em;
             }
             &:nth-child(4) {
-              top: 3em;
+              top: 1.5em;
             }
           }
         }
@@ -79,6 +81,7 @@ div.App {
           display: flex;
           justify-content: center;
           flex-direction: column;
+          padding-top: 4em;
           p {
             font-family: "Work Sans", sans-serif;
             font-size: 1.2em;
