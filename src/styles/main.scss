@@ -46,12 +46,14 @@ div.App {
           letter-spacing: 0.05em;
         }
         .videoSubRoutesContainer {
+          margin-top: -0.25em;
+          margin-bottom: -0.12em;
           padding-top: 0em;
           padding-bottom: 0em;
-          font-size: 3em;
+          font-size: 2.5em;
           display: flex;
           justify-content: space-between;
-          height: 3em;
+          height: 2.8em;
 
           // transform: rotate(8deg);
           a.subRoute {
@@ -62,18 +64,28 @@ div.App {
             color: white;
             position: relative;
             transition: 0.2s all ease-in-out;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform-origin: 50% -50% 50%;
+            transform-origin: 50% -50% 50%;
             &:hover,
             &:focus {
               color: #f1bbbb;
             }
+            &:nth-child(1) {
+              transform: rotateX(50deg) translateZ(20px);
+            }
             &:nth-child(2) {
-              top: 0.55em;
+              top: 0.58em;
+              transform: rotateX(35deg) translateZ(20px);
             }
             &:nth-child(3) {
-              top: 1em;
+              top: 0.66em;
+              transform: rotateX(-35deg) translateZ(20px);
             }
             &:nth-child(4) {
-              top: 1.5em;
+              top: 1em;
+              transform: rotateX(-50deg) translateZ(20px);
             }
           }
         }
@@ -83,7 +95,7 @@ div.App {
           flex-direction: column;
           padding-top: 4em;
           p {
-            font-family: "Work Sans", sans-serif;
+            font-family: "Bossa Regular", sans-serif;
             font-size: 1.2em;
             padding-bottom: 2em;
           }

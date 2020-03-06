@@ -27,7 +27,7 @@ function Landing() {
     config,
     delay: 1650,
     yy: -15,
-    height: 35,
+    height: 25,
     opacity: 1,
     from: { yy: 25, height: 20, opacity: 0 }
   });

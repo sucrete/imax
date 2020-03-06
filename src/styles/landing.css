@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Cardo:400,400i,700&display=swap");
-.card {
-  background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
-  background: linear-gradient(349deg, #f8dfb0 10%, #fad6c1 20%, #d5ebff 90%);
-}
-
 .card::after {
   content: "";
   position: absolute;
@@ -145,25 +140,20 @@
 .headerWrapper .informationalContainer .whereToContainer {
   position: relative;
   right: -2px;
-  top: 8px;
+  top: 12px;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo {
   text-align: right;
-  height: 60px;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div {
   position: relative;
-  height: 60px;
+  height: 30px;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink {
-  text-align: right;
-}
-
-.underlined {
-  font-size: 3em;
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined {
+  font-size: 1.5em;
   color: #019563;
   font-family: "Bossa Expanded Light";
   -webkit-box-flex: 1;
@@ -180,8 +170,12 @@
   transition: 0.5s;
 }
 
-.underlined:hover {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined:hover {
   color: #017750;
+}
+
+.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink {
+  text-align: right;
 }
 
 @-webkit-keyframes opacityShift {

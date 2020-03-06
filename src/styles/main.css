@@ -57,16 +57,18 @@ div.App div.main section.mainContent div .pageTitle {
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer {
+  margin-top: -0.25em;
+  margin-bottom: -0.12em;
   padding-top: 0em;
   padding-bottom: 0em;
-  font-size: 3em;
+  font-size: 2.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 3em;
+  height: 2.8em;
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute {
@@ -78,22 +80,37 @@ div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute {
   position: relative;
   -webkit-transition: 0.2s all ease-in-out;
   transition: 0.2s all ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-origin: 50% -50% 50%;
+  transform-origin: 50% -50% 50%;
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:hover, div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:focus {
   color: #f1bbbb;
 }
 
+div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(1) {
+  -webkit-transform: rotateX(50deg) translateZ(20px);
+          transform: rotateX(50deg) translateZ(20px);
+}
+
 div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(2) {
-  top: 0.55em;
+  top: 0.58em;
+  -webkit-transform: rotateX(35deg) translateZ(20px);
+          transform: rotateX(35deg) translateZ(20px);
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(3) {
-  top: 1em;
+  top: 0.66em;
+  -webkit-transform: rotateX(-35deg) translateZ(20px);
+          transform: rotateX(-35deg) translateZ(20px);
 }
 
 div.App div.main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(4) {
-  top: 1.5em;
+  top: 1em;
+  -webkit-transform: rotateX(-50deg) translateZ(20px);
+          transform: rotateX(-50deg) translateZ(20px);
 }
 
 div.App div.main section.mainContent div div.subsection {
@@ -111,7 +128,7 @@ div.App div.main section.mainContent div div.subsection {
 }
 
 div.App div.main section.mainContent div div.subsection p {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Bossa Regular", sans-serif;
   font-size: 1.2em;
   padding-bottom: 2em;
 }
