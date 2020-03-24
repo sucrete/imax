@@ -1,11 +1,23 @@
 $rosenBrown: #64320f;
-
-div.App {
-  div.main {
+section.sideNavigation a,
+section.sideNavigation a:visited,
+.pageTitle,
+.subHeader,
+p {
+  color: white;
+}
+p.videosDescriptionSmaller {
+  font-size: 1em;
+}
+.App {
+  .main {
     width: 100%;
     z-index: 7;
     display: flex;
     align-items: stretch;
+    &.hidden {
+      display: none;
+    }
     section.sideNavigation {
       flex: 0.9;
       // color: rgb(34, 34, 34);

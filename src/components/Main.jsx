@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTrail, animated } from "react-spring";
+import { CSSTransition } from "react-transition-group";
 // import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
@@ -19,15 +20,21 @@ const routes = ["video", "photo", "design", "collage", "gooftown"];
 function Main() {
   const trail2 = useTrail(routes.length, {
     config,
-    delay: 1000,
+    delay: 800,
     yy: 0,
     height: 35,
     opacity: 1,
     from: { yy: 20, height: 0, opacity: 0 }
   });
   let { url } = useRouteMatch();
+  useEffect(() => {
+    setTimeout(() => {
+      const mainElement = document.getElementsByClassName("main")[0];
+      mainElement.classList.toggle("hidden");
+    }, 800);
+  });
   return (
-    <div className="main">
+    <div className="main hidden">
       <Router>
         <section className="sideNavigation">
           <div className="maxSpacer"></div>
@@ -79,16 +86,6 @@ function Main() {
       <style jsx>{`
         body {
           background-color: rgb(34, 34, 34);
-        }
-        section.sideNavigation a,
-        section.sideNavigation a:visited,
-        .pageTitle,
-        .subHeader,
-        p {
-          color: white;
-        }
-        p.videosDescriptionSmaller {
-          font-size: 1em;
         }
       `}</style>
     </div>

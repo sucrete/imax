@@ -1,42 +1,26 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Cardo:400,400i,700&display=swap");
 $notchSize: 7px;
 $rosenBrown: #64320f;
 $backgroundColor: #fff2e6;
 $whereToColor: #019563;
-.card {
-  // background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
-  // background: -webkit-linear-gradient(
-  //   349deg,
-  //   #f8dfb0 10%,
-  //   #fad6c1 20%,
-  //   #d5ebff 90%
-  // );
-  // background: -moz-linear-gradient(
-  //   349deg,
-  //   #f8dfb0 10%,
-  //   #fad6c1 20%,
-  //   #d5ebff 90%
-  // );
-  // background: linear-gradient(349deg, #f8dfb0 10%, #fad6c1 20%, #d5ebff 90%);
-  // background: linear-gradient(349deg, #f8dfb0 1%, #d5ebff 90%);
-}
-.card::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url(../assets/drawing3.svg) no-repeat;
-  top: 50%;
-  background-size: 100% 120%;
-  animation-timing-function: ease-in;
-  animation: opacityShift 4s;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 #root {
 }
 
+.card {
+  &::after {
+    content: "";
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background: url(../assets/drawing3.svg) no-repeat;
+    top: 50%;
+    background-size: cover;
+    animation-timing-function: ease-in;
+    animation: opacityShift 4s;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .headerWrapper {
   position: absolute;
   min-width: 900px;
@@ -57,35 +41,34 @@ $whereToColor: #019563;
     font-size: 9.5em;
     display: flex;
     height: 150px;
-    justify-content: center;
     padding: 16px;
     overflow: hidden;
     color: $rosenBrown;
-  }
-  .landingmax {
-    font-family: "RosenFont ExtraBlack";
-    display: inline;
-    text-transform: capitalize;
-    cursor: pointer;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: $rosenBrown;
-    background-image: url("../assets/fieldOfColor.jpg");
-    letter-spacing: -0.009em;
-    &:hover {
-      -webkit-text-fill-color: transparent;
+    .landingmax {
+      font-family: "RosenFont ExtraBlack";
+      display: inline;
+      text-transform: capitalize;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: $rosenBrown;
+      background-image: url("../assets/fieldOfColor.jpg");
+      letter-spacing: -0.009em;
+      &:hover {
+        -webkit-text-fill-color: transparent;
+      }
     }
-  }
-  .landingrosen {
-    font-weight: default;
-    font-family: RosenFont, "Arial", sans-serif;
-    padding-left: 0.2em;
-    text-transform: uppercase;
-    position: relative;
-    bottom: -5px;
-    letter-spacing: -0.05em;
+    .landingrosen {
+      font-weight: default;
+      font-family: RosenFont, "Arial", sans-serif;
+      padding-left: 0.2em;
+      text-transform: uppercase;
+      position: relative;
+      bottom: -5px;
+      letter-spacing: -0.05em;
+    }
   }
 
   .informationalContainer {
@@ -98,45 +81,6 @@ $whereToColor: #019563;
       justify-content: space-between;
       padding-right: 7.5em;
       width: 900px;
-    }
-    .ipsumContainer {
-      visibility: hidden;
-      position: relative;
-      width: 70%;
-      left: 6em;
-      margin-top: 1.5em;
-      margin-left: 1em;
-      // top: 2em;
-      // border-right: solid 2px #fada96;
-      z-index: 5;
-      display: flex;
-      flex-direction: row;
-      background-color: #e2c2ff;
-    }
-    .ipsumContainer:before,
-    .ipsumContainer:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 100%;
-      border-bottom: $notchSize solid #e2c2ff;
-      border-left: $notchSize solid transparent;
-      border-right: $notchSize solid transparent;
-    }
-
-    .ipsumContainer:after {
-      bottom: auto;
-      top: 100%;
-      border-bottom: none;
-      border-top: $notchSize solid #e2c2ff;
-    }
-    .rosenIpsum {
-      position: relative;
-      height: 176px;
-      background-size: contain;
-      top: -15px;
-      background-repeat: no-repeat;
     }
 
     .whereToContainer {
@@ -168,7 +112,7 @@ $whereToColor: #019563;
               // background-size: 100% 20%;
               // -moz-background-size: 100% 20%;
               // font-style: italic;
-              color: #017750;
+              color: #006845;
             }
             // &--thin {
             //   background-image: linear-gradient(
@@ -186,7 +130,36 @@ $whereToColor: #019563;
     }
   }
 }
+.card-exit {
+  .headerWrapper {
+    transform: translate(-47%, -50%);
+    opacity: 1;
+    .landingmax {
+      color: $rosenBrown;
+      -webkit-text-fill-color: unset;
+    }
+  }
+  &::after {
+    opacity: 1;
+  }
+}
+.card-exit-active {
+  .headerWrapper {
+    opacity: 0;
+    transform: translate(-47%, -65%);
+    transition: transform 700ms cubic-bezier(0.7, 0, 0.76, 0.59), opacity 650ms;
+    .landingmax,
+    .landingrosen {
+      color: $backgroundColor;
+      transition: all 700ms ease;
+    }
+  }
 
+  &::after {
+    opacity: 0;
+    transition: all 600ms linear;
+  }
+}
 @keyframes opacityShift {
   0% {
     opacity: 0;

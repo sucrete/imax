@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTrail, animated } from "react-spring";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  HashRouter
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../styles/landing.css";
-
+// import { play, exitLanding } from "./timelines";
+import { CSSTransition } from "react-transition-group";
 import Main from "./Main";
 
 const items = ["max", "rosen"];
@@ -45,83 +41,95 @@ function Landing() {
     opacity: 1,
     from: { yy: 20, height: 0, opacity: 0 }
   });
-
   return (
     <Router>
       <Route exact path={process.env.PUBLIC_URL + "/"}>
-        <div className="card">
-          <div className="headerWrapper">
-            <header className="landingHeader">
-              {trail.map(({ yy, height, ...rest }, index) => (
-                <animated.div
-                  key={items[index]}
-                  className={"landing" + items[index]}
-                  style={{
-                    ...rest,
-                    transform: yy.interpolate(yy => `translate3d(0,${yy}%,0)`)
-                  }}
-                >
-                  <animated.div style={{ height }}>{items[index]}</animated.div>
-                </animated.div>
-              ))}
-            </header>
-            <div className="informationalContainer">
-              <div className="centerContainer">
-                {trail3.map(({ ...rest }, index) => (
-                  <animated.div
-                    className="ipsumContainer"
-                    style={{
-                      ...rest
-                    }}
-                  >
-                    {trail4.map(({ yy, height, ...rest }, index) => (
-                      <animated.div
-                        className="rosenIpsum"
-                        style={{
-                          ...rest,
-                          transform: yy.interpolate(
-                            yy => `translate3d(0,${yy}px,0)`
-                          )
-                        }}
-                      ></animated.div>
-                    ))}
-                  </animated.div>
-                ))}
-
-                <div className="whereToContainer">
-                  {trail2.map(({ yy, height, ...rest }, index) => (
+        {({ match }) => (
+          <CSSTransition
+            in={match != null}
+            timeout={750}
+            classNames="card"
+            unmountOnExit
+          >
+            <div className="card">
+              <div className="headerWrapper">
+                <header className="landingHeader">
+                  {trail.map(({ yy, height, ...rest }, index) => (
                     <animated.div
-                      className="whereTo"
+                      key={items[index]}
+                      className={"landing" + items[index]}
                       style={{
                         ...rest,
                         transform: yy.interpolate(
-                          yy => `translate3d(0,${yy}px,0)`
+                          yy => `translate3d(0,${yy}%,0)`
                         )
                       }}
                     >
-                      <animated.div>
-                        <Link
-                          style={{ height }}
-                          className="whereToLink underlined underlined--thin"
-                          to={
-                            "/" +
-                            `m/${
-                              whereTo[index] === "video"
-                                ? whereTo[index] + "/doc"
-                                : whereTo[index]
-                            }`
-                          }
-                        >
-                          {whereTo[index]}
-                        </Link>
+                      <animated.div style={{ height }}>
+                        {items[index]}
                       </animated.div>
                     </animated.div>
                   ))}
+                </header>
+                <div className="informationalContainer">
+                  <div className="centerContainer">
+                    {trail3.map(({ ...rest }, index) => (
+                      <animated.div
+                        className="ipsumContainer"
+                        style={{
+                          ...rest
+                        }}
+                      >
+                        {trail4.map(({ yy, height, ...rest }, index) => (
+                          <animated.div
+                            className="rosenIpsum"
+                            style={{
+                              ...rest,
+                              transform: yy.interpolate(
+                                yy => `translate3d(0,${yy}px,0)`
+                              )
+                            }}
+                          ></animated.div>
+                        ))}
+                      </animated.div>
+                    ))}
+
+                    <div className="whereToContainer">
+                      {trail2.map(({ yy, height, ...rest }, index) => (
+                        <animated.div
+                          className="whereTo"
+                          style={{
+                            ...rest,
+                            transform: yy.interpolate(
+                              yy => `translate3d(0,${yy}px,0)`
+                            )
+                          }}
+                        >
+                          <animated.div>
+                            <Link
+                              style={{ height }}
+                              className="whereToLink underlined underlined--thin"
+                              to={
+                                "/" +
+                                `m/${
+                                  whereTo[index] === "video"
+                                    ? whereTo[index] + "/doc"
+                                    : whereTo[index]
+                                }`
+                              }
+                            >
+                              {whereTo[index]}
+                            </Link>
+                          </animated.div>
+                        </animated.div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </CSSTransition>
+        )}
       </Route>
       <Route path={"/m"}>
         <Main />
