@@ -47,82 +47,84 @@ function Landing() {
         {({ match }) => (
           <CSSTransition
             in={match != null}
-            timeout={750}
+            timeout={900}
             classNames="card"
             unmountOnExit
           >
             <div className="card">
-              <div className="headerWrapper">
-                <header className="landingHeader">
-                  {trail.map(({ yy, height, ...rest }, index) => (
-                    <animated.div
-                      key={items[index]}
-                      className={"landing" + items[index]}
-                      style={{
-                        ...rest,
-                        transform: yy.interpolate(
-                          yy => `translate3d(0,${yy}%,0)`
-                        )
-                      }}
-                    >
-                      <animated.div style={{ height }}>
-                        {items[index]}
-                      </animated.div>
-                    </animated.div>
-                  ))}
-                </header>
-                <div className="informationalContainer">
-                  <div className="centerContainer">
-                    {trail3.map(({ ...rest }, index) => (
+              <div className="secondCard">
+                <div className="headerWrapper">
+                  <header className="landingHeader">
+                    {trail.map(({ yy, height, ...rest }, index) => (
                       <animated.div
-                        className="ipsumContainer"
+                        key={items[index]}
+                        className={"landing" + items[index]}
                         style={{
-                          ...rest
+                          ...rest,
+                          transform: yy.interpolate(
+                            yy => `translate3d(0,${yy}%,0)`
+                          )
                         }}
                       >
-                        {trail4.map(({ yy, height, ...rest }, index) => (
+                        <animated.div style={{ height }}>
+                          {items[index]}
+                        </animated.div>
+                      </animated.div>
+                    ))}
+                  </header>
+                  <div className="informationalContainer">
+                    <div className="centerContainer">
+                      {trail3.map(({ ...rest }, index) => (
+                        <animated.div
+                          className="ipsumContainer"
+                          style={{
+                            ...rest
+                          }}
+                        >
+                          {trail4.map(({ yy, height, ...rest }, index) => (
+                            <animated.div
+                              className="rosenIpsum"
+                              style={{
+                                ...rest,
+                                transform: yy.interpolate(
+                                  yy => `translate3d(0,${yy}px,0)`
+                                )
+                              }}
+                            ></animated.div>
+                          ))}
+                        </animated.div>
+                      ))}
+
+                      <div className="whereToContainer">
+                        {trail2.map(({ yy, height, ...rest }, index) => (
                           <animated.div
-                            className="rosenIpsum"
+                            className="whereTo"
                             style={{
                               ...rest,
                               transform: yy.interpolate(
                                 yy => `translate3d(0,${yy}px,0)`
                               )
                             }}
-                          ></animated.div>
-                        ))}
-                      </animated.div>
-                    ))}
-
-                    <div className="whereToContainer">
-                      {trail2.map(({ yy, height, ...rest }, index) => (
-                        <animated.div
-                          className="whereTo"
-                          style={{
-                            ...rest,
-                            transform: yy.interpolate(
-                              yy => `translate3d(0,${yy}px,0)`
-                            )
-                          }}
-                        >
-                          <animated.div>
-                            <Link
-                              style={{ height }}
-                              className="whereToLink underlined underlined--thin"
-                              to={
-                                "/" +
-                                `m/${
-                                  whereTo[index] === "video"
-                                    ? whereTo[index] + "/doc"
-                                    : whereTo[index]
-                                }`
-                              }
-                            >
-                              {whereTo[index]}
-                            </Link>
+                          >
+                            <animated.div>
+                              <Link
+                                style={{ height }}
+                                className="whereToLink underlined underlined--thin"
+                                to={
+                                  "/" +
+                                  `m/${
+                                    whereTo[index] === "video"
+                                      ? whereTo[index] + "/doc"
+                                      : whereTo[index]
+                                  }`
+                                }
+                              >
+                                {whereTo[index]}
+                              </Link>
+                            </animated.div>
                           </animated.div>
-                        </animated.div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

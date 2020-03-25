@@ -2,16 +2,29 @@ $notchSize: 7px;
 $rosenBrown: #64320f;
 $backgroundColor: #fff2e6;
 $whereToColor: #019563;
-
+$darkBackground: rgb(34, 34, 34);
 #root {
 }
 
 .card {
+  .secondCard {
+    width: 100%;
+    height: 100%;
+    &::after {
+      content: "";
+      position: absolute;
+      min-width: 105vw;
+      min-height: 105vh;
+      background: $darkBackground;
+      z-index: 2;
+      opacity: 0;
+    }
+  }
   &::after {
     content: "";
     position: absolute;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 105vw;
+    min-height: 105vh;
     background: url(../assets/drawing3.svg) no-repeat;
     top: 50%;
     background-size: cover;
@@ -19,6 +32,31 @@ $whereToColor: #019563;
     animation: opacityShift 4s;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+.card-exit {
+  .secondCard {
+    &::after {
+      opacity: 0;
+    }
+    .headerWrapper {
+      transform: translate(-47%, -50%);
+      opacity: 1;
+    }
+  }
+}
+.card-exit-active {
+  .secondCard {
+    &::after {
+      opacity: 1;
+      transition: opacity 800ms;
+    }
+    .headerWrapper {
+      opacity: 0;
+      transform: translate(-47%, -60%);
+      transition: transform 850ms ease-in, opacity 800ms;
+    }
   }
 }
 .headerWrapper {
@@ -29,14 +67,8 @@ $whereToColor: #019563;
   left: 50%;
   top: 50%;
   transform: translate(-47%, -50%);
-  // border: solid 1px #e0d3c6;
-  // background: $backgroundColor;
-  // animation: opacityShift 700ms, shadowShift 1s 700ms forwards ease-in;
   opacity: 1;
   overflow: hidden;
-  // padding-top: 3em;
-  // padding-bottom: 2.5em;
-
   .landingHeader {
     font-size: 9.5em;
     display: flex;
@@ -87,6 +119,7 @@ $whereToColor: #019563;
       position: relative;
       right: -2px;
       top: 12px;
+
       div.whereTo {
         text-align: right;
         div {
@@ -130,36 +163,7 @@ $whereToColor: #019563;
     }
   }
 }
-.card-exit {
-  .headerWrapper {
-    transform: translate(-47%, -50%);
-    opacity: 1;
-    .landingmax {
-      color: $rosenBrown;
-      -webkit-text-fill-color: unset;
-    }
-  }
-  &::after {
-    opacity: 1;
-  }
-}
-.card-exit-active {
-  .headerWrapper {
-    opacity: 0;
-    transform: translate(-47%, -65%);
-    transition: transform 700ms cubic-bezier(0.7, 0, 0.76, 0.59), opacity 650ms;
-    .landingmax,
-    .landingrosen {
-      color: $backgroundColor;
-      transition: all 700ms ease;
-    }
-  }
 
-  &::after {
-    opacity: 0;
-    transition: all 600ms linear;
-  }
-}
 @keyframes opacityShift {
   0% {
     opacity: 0;

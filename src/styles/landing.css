@@ -1,8 +1,23 @@
+.card .secondCard {
+  width: 100%;
+  height: 100%;
+}
+
+.card .secondCard::after {
+  content: "";
+  position: absolute;
+  min-width: 105vw;
+  min-height: 105vh;
+  background: #222222;
+  z-index: 2;
+  opacity: 0;
+}
+
 .card::after {
   content: "";
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 105vw;
+  min-height: 105vh;
   background: url(../assets/drawing3.svg) no-repeat;
   top: 50%;
   background-size: cover;
@@ -13,6 +28,33 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.card-exit .secondCard::after {
+  opacity: 0;
+}
+
+.card-exit .secondCard .headerWrapper {
+  -webkit-transform: translate(-47%, -50%);
+          transform: translate(-47%, -50%);
+  opacity: 1;
+}
+
+.card-exit-active .secondCard::after {
+  opacity: 1;
+  -webkit-transition: opacity 800ms;
+  transition: opacity 800ms;
+}
+
+.card-exit-active .secondCard .headerWrapper {
+  opacity: 0;
+  -webkit-transform: translate(-47%, -60%);
+          transform: translate(-47%, -60%);
+  -webkit-transition: opacity 800ms, -webkit-transform 850ms ease-in;
+  transition: opacity 800ms, -webkit-transform 850ms ease-in;
+  transition: transform 850ms ease-in, opacity 800ms;
+  transition: transform 850ms ease-in, opacity 800ms, -webkit-transform 850ms ease-in;
 }
 
 .headerWrapper {
@@ -126,44 +168,6 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink {
   text-align: right;
-}
-
-.card-exit .headerWrapper {
-  -webkit-transform: translate(-47%, -50%);
-          transform: translate(-47%, -50%);
-  opacity: 1;
-}
-
-.card-exit .headerWrapper .landingmax {
-  color: #64320f;
-  -webkit-text-fill-color: unset;
-}
-
-.card-exit::after {
-  opacity: 1;
-}
-
-.card-exit-active .headerWrapper {
-  opacity: 0;
-  -webkit-transform: translate(-47%, -65%);
-          transform: translate(-47%, -65%);
-  -webkit-transition: opacity 650ms, -webkit-transform 700ms cubic-bezier(0.7, 0, 0.76, 0.59);
-  transition: opacity 650ms, -webkit-transform 700ms cubic-bezier(0.7, 0, 0.76, 0.59);
-  transition: transform 700ms cubic-bezier(0.7, 0, 0.76, 0.59), opacity 650ms;
-  transition: transform 700ms cubic-bezier(0.7, 0, 0.76, 0.59), opacity 650ms, -webkit-transform 700ms cubic-bezier(0.7, 0, 0.76, 0.59);
-}
-
-.card-exit-active .headerWrapper .landingmax,
-.card-exit-active .headerWrapper .landingrosen {
-  color: #fff2e6;
-  -webkit-transition: all 700ms ease;
-  transition: all 700ms ease;
-}
-
-.card-exit-active::after {
-  opacity: 0;
-  -webkit-transition: all 600ms linear;
-  transition: all 600ms linear;
 }
 
 @-webkit-keyframes opacityShift {
