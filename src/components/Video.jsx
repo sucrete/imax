@@ -302,19 +302,7 @@ function Video() {
         </div>
       </Route>
 
-      <style jsx>{`
-        section.mainContent div p,
-        .videoDescription {
-          color: white;
-        }
-        :root,
-        html {
-          background-color: rgb(34, 34, 34);
-        }
-        .videoDescriptionSmaller {
-          font-size: 1em;
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </div>
   );
 }

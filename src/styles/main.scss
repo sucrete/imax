@@ -1,4 +1,8 @@
 $rosenBrown: #64320f;
+.main {
+  background: rgb(34, 34, 34);
+  min-height: 100vh;
+}
 section.sideNavigation a,
 section.sideNavigation a:visited,
 .pageTitle,
@@ -8,6 +12,10 @@ p {
 }
 p.videosDescriptionSmaller {
   font-size: 1em;
+}
+section.mainContent div p,
+.videoDescription {
+  color: white;
 }
 .App {
   .main {

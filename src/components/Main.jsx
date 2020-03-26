@@ -20,7 +20,7 @@ const routes = ["video", "photo", "design", "collage", "gooftown"];
 function Main() {
   const trail2 = useTrail(routes.length, {
     config,
-    delay: 1000,
+    delay: 1200,
     yy: 0,
     height: 35,
     opacity: 1,
@@ -31,7 +31,7 @@ function Main() {
     setTimeout(() => {
       const mainElement = document.getElementsByClassName("main")[0];
       mainElement.classList.toggle("hidden");
-    }, 1000);
+    }, 1200);
   });
   return (
     <div className="main hidden">
@@ -83,11 +83,7 @@ function Main() {
           </Route>
         </section>
       </Router>
-      <style jsx>{`
-        body {
-          background-color: rgb(34, 34, 34);
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </div>
   );
 }

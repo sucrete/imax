@@ -14,40 +14,27 @@ const config = { mass: 5, tension: 3500, friction: 400 };
 function Landing() {
   const trail = useTrail(items.length, {
     config,
-    delay: 1200,
+    delay: 1000,
     yy: 0,
-    height: 130,
-    from: { yy: 105, height: 0 }
+    height: 150,
+    from: { yy: 300, height: 0 }
   });
   const trail2 = useTrail(whereTo.length, {
     config,
-    delay: 1650,
-    yy: -15,
+    delay: 1550,
+    yy: 0,
     height: 25,
     opacity: 1,
-    from: { yy: 25, height: 20, opacity: 0 }
+    from: { yy: 25, height: 0, opacity: 0 }
   });
-  const trail3 = useTrail(1, {
-    config,
-    delay: 2000,
-    opacity: 1,
-    from: { opacity: 0 }
-  });
-  const trail4 = useTrail(whoIsMax.length, {
-    config,
-    delay: 2200,
-    yy: 0,
-    height: 160,
-    opacity: 1,
-    from: { yy: 20, height: 0, opacity: 0 }
-  });
+
   return (
     <Router>
       <Route exact path={process.env.PUBLIC_URL + "/"}>
         {({ match }) => (
           <CSSTransition
             in={match != null}
-            timeout={900}
+            timeout={1000}
             classNames="card"
             unmountOnExit
           >
@@ -74,27 +61,6 @@ function Landing() {
                   </header>
                   <div className="informationalContainer">
                     <div className="centerContainer">
-                      {trail3.map(({ ...rest }, index) => (
-                        <animated.div
-                          className="ipsumContainer"
-                          style={{
-                            ...rest
-                          }}
-                        >
-                          {trail4.map(({ yy, height, ...rest }, index) => (
-                            <animated.div
-                              className="rosenIpsum"
-                              style={{
-                                ...rest,
-                                transform: yy.interpolate(
-                                  yy => `translate3d(0,${yy}px,0)`
-                                )
-                              }}
-                            ></animated.div>
-                          ))}
-                        </animated.div>
-                      ))}
-
                       <div className="whereToContainer">
                         {trail2.map(({ yy, height, ...rest }, index) => (
                           <animated.div

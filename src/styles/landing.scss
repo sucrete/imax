@@ -13,8 +13,8 @@ $darkBackground: rgb(34, 34, 34);
     &::after {
       content: "";
       position: absolute;
-      min-width: 105vw;
-      min-height: 105vh;
+      min-width: 100vw;
+      min-height: 100vh;
       background: $darkBackground;
       z-index: 2;
       opacity: 0;
@@ -23,9 +23,10 @@ $darkBackground: rgb(34, 34, 34);
   &::after {
     content: "";
     position: absolute;
-    min-width: 105vw;
-    min-height: 105vh;
+    min-width: 100vw;
+    min-height: 100vh;
     background: url(../assets/drawing3.svg) no-repeat;
+    background-color: rgb(230, 216, 252);
     top: 50%;
     background-size: cover;
     animation-timing-function: ease-in;
@@ -35,27 +36,70 @@ $darkBackground: rgb(34, 34, 34);
     z-index: 1;
   }
 }
+
 .card-exit {
+  &::after {
+    opacity: 1;
+  }
   .secondCard {
     &::after {
       opacity: 0;
     }
     .headerWrapper {
-      transform: translate(-47%, -50%);
+      transform: translate(-50%, -50%);
       opacity: 1;
+      .landingmax {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: unset;
+        color: $rosenBrown;
+      }
+      .landingrosen {
+        color: $rosenBrown;
+      }
+      .informationalContainer {
+        .whereToContainer {
+          .whereTo {
+            div {
+              .underlined {
+                color: $whereToColor;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 .card-exit-active {
+  &::after {
+    transition: opacity 550ms;
+    opacity: 0;
+  }
   .secondCard {
     &::after {
       opacity: 1;
-      transition: opacity 800ms;
+      transition: opacity 700ms;
     }
     .headerWrapper {
       opacity: 0;
-      transform: translate(-47%, -60%);
-      transition: transform 850ms ease-in, opacity 800ms;
+      transform: translate(-50%, -58%);
+      transition: transform 700ms ease-in, opacity 650ms;
+      .landingmax {
+      }
+      .landingrosen {
+      }
+      .informationalContainer {
+        .whereToContainer {
+          .whereTo {
+            div {
+              .underlined {
+                color: #222524;
+                transition: color 650ms;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -66,30 +110,32 @@ $darkBackground: rgb(34, 34, 34);
   z-index: 298;
   left: 50%;
   top: 50%;
-  transform: translate(-47%, -50%);
+  transform: translate(-50%, -50%);
   opacity: 1;
   overflow: hidden;
   .landingHeader {
     font-size: 9.5em;
     display: flex;
-    height: 150px;
     padding: 16px;
     overflow: hidden;
     color: $rosenBrown;
+    align-items: center;
+    justify-content: center;
     .landingmax {
       font-family: "RosenFont ExtraBlack";
       display: inline;
       text-transform: capitalize;
       cursor: pointer;
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: $rosenBrown;
-      background-image: url("../assets/fieldOfColor.jpg");
       letter-spacing: -0.009em;
-      &:hover {
-        -webkit-text-fill-color: transparent;
+      div {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: $rosenBrown;
+        background-image: url("../assets/fieldOfColor.jpg");
+        background-size: cover;
+        background-position: center;
+        &:hover {
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
     .landingrosen {
@@ -104,13 +150,11 @@ $darkBackground: rgb(34, 34, 34);
   }
 
   .informationalContainer {
-    min-height: 12em;
-    // width: 100%;
     .centerContainer {
       display: flex;
       flex-direction: row;
       margin: 0 auto;
-      justify-content: space-between;
+      justify-content: flex-end;
       padding-right: 7.5em;
       width: 900px;
     }
@@ -123,7 +167,7 @@ $darkBackground: rgb(34, 34, 34);
       div.whereTo {
         text-align: right;
         div {
-          // overflow: hidden;
+          overflow: hidden;
           position: relative;
           height: 30px;
           .underlined {
@@ -140,7 +184,7 @@ $darkBackground: rgb(34, 34, 34);
             background-repeat: no-repeat;
             left: 0px;
             display: inline-block;
-            transition: 0.5s;
+            transition: 0.3s ease;
             &:hover {
               // background-size: 100% 20%;
               // -moz-background-size: 100% 20%;

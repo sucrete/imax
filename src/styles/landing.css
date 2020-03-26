@@ -6,8 +6,8 @@
 .card .secondCard::after {
   content: "";
   position: absolute;
-  min-width: 105vw;
-  min-height: 105vh;
+  min-width: 100vw;
+  min-height: 100vh;
   background: #222222;
   z-index: 2;
   opacity: 0;
@@ -16,9 +16,10 @@
 .card::after {
   content: "";
   position: absolute;
-  min-width: 105vw;
-  min-height: 105vh;
+  min-width: 100vw;
+  min-height: 100vh;
   background: url(../assets/drawing3.svg) no-repeat;
+  background-color: #e6d8fc;
   top: 50%;
   background-size: cover;
   -webkit-animation-timing-function: ease-in;
@@ -31,30 +32,60 @@
   z-index: 1;
 }
 
+.card-exit::after {
+  opacity: 1;
+}
+
 .card-exit .secondCard::after {
   opacity: 0;
 }
 
 .card-exit .secondCard .headerWrapper {
-  -webkit-transform: translate(-47%, -50%);
-          transform: translate(-47%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 1;
+}
+
+.card-exit .secondCard .headerWrapper .landingmax {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: unset;
+  color: #64320f;
+}
+
+.card-exit .secondCard .headerWrapper .landingrosen {
+  color: #64320f;
+}
+
+.card-exit .secondCard .headerWrapper .informationalContainer .whereToContainer .whereTo div .underlined {
+  color: #019563;
+}
+
+.card-exit-active::after {
+  -webkit-transition: opacity 550ms;
+  transition: opacity 550ms;
+  opacity: 0;
 }
 
 .card-exit-active .secondCard::after {
   opacity: 1;
-  -webkit-transition: opacity 800ms;
-  transition: opacity 800ms;
+  -webkit-transition: opacity 700ms;
+  transition: opacity 700ms;
 }
 
 .card-exit-active .secondCard .headerWrapper {
   opacity: 0;
-  -webkit-transform: translate(-47%, -60%);
-          transform: translate(-47%, -60%);
-  -webkit-transition: opacity 800ms, -webkit-transform 850ms ease-in;
-  transition: opacity 800ms, -webkit-transform 850ms ease-in;
-  transition: transform 850ms ease-in, opacity 800ms;
-  transition: transform 850ms ease-in, opacity 800ms, -webkit-transform 850ms ease-in;
+  -webkit-transform: translate(-50%, -58%);
+          transform: translate(-50%, -58%);
+  -webkit-transition: opacity 650ms, -webkit-transform 700ms ease-in;
+  transition: opacity 650ms, -webkit-transform 700ms ease-in;
+  transition: transform 700ms ease-in, opacity 650ms;
+  transition: transform 700ms ease-in, opacity 650ms, -webkit-transform 700ms ease-in;
+}
+
+.card-exit-active .secondCard .headerWrapper .informationalContainer .whereToContainer .whereTo div .underlined {
+  color: #222524;
+  -webkit-transition: color 650ms;
+  transition: color 650ms;
 }
 
 .headerWrapper {
@@ -64,8 +95,8 @@
   z-index: 298;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-47%, -50%);
-          transform: translate(-47%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 1;
   overflow: hidden;
 }
@@ -75,10 +106,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 150px;
   padding: 16px;
   overflow: hidden;
   color: #64320f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .headerWrapper .landingHeader .landingmax {
@@ -86,16 +122,18 @@
   display: inline;
   text-transform: capitalize;
   cursor: pointer;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #64320f;
-  background-image: url("../assets/fieldOfColor.jpg");
   letter-spacing: -0.009em;
 }
 
-.headerWrapper .landingHeader .landingmax:hover {
+.headerWrapper .landingHeader .landingmax div {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #64320f;
+  background-image: url("../assets/fieldOfColor.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.headerWrapper .landingHeader .landingmax div:hover {
   -webkit-text-fill-color: transparent;
 }
 
@@ -109,10 +147,6 @@
   letter-spacing: -0.05em;
 }
 
-.headerWrapper .informationalContainer {
-  min-height: 12em;
-}
-
 .headerWrapper .informationalContainer .centerContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,9 +156,9 @@
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-right: 7.5em;
   width: 900px;
 }
@@ -140,6 +174,7 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div {
+  overflow: hidden;
   position: relative;
   height: 30px;
 }
@@ -158,8 +193,8 @@
   background-repeat: no-repeat;
   left: 0px;
   display: inline-block;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined:hover {
