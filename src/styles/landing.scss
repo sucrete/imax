@@ -168,15 +168,17 @@ $darkBackground: rgb(34, 34, 34);
           overflow: hidden;
           position: relative;
           // height: 30px;
-          -webkit-background-clip: text;
-          // -webkit-text-fill-color: $rosenBrown;
-          background-image: url("../assets/fieldOfColor.jpg");
-          background-size: cover;
-          background-position: center;
+
           .underlined {
             font-size: 1.2em;
             color: $whereToColor;
             font-family: "Bossa Expanded Light";
+            -webkit-background-clip: text;
+            background-image: radial-gradient(
+              circle,
+              rgba(245, 206, 236, 1) 0%,
+              rgba(238, 214, 120, 1) 100%
+            );
             // text-transform: capitalize;
             // line-height: 20px;
             flex: 1;

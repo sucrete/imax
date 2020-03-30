@@ -175,16 +175,14 @@
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div {
   overflow: hidden;
   position: relative;
-  -webkit-background-clip: text;
-  background-image: url("../assets/fieldOfColor.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined {
   font-size: 1.2em;
   color: #019563;
   font-family: "Bossa Expanded Light";
+  -webkit-background-clip: text;
+  background-image: radial-gradient(circle, #f5ceec 0%, #eed678 100%);
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
