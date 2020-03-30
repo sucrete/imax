@@ -3,8 +3,6 @@ $rosenBrown: #64320f;
 $backgroundColor: #fff2e6;
 $whereToColor: #019563;
 $darkBackground: rgb(34, 34, 34);
-#root {
-}
 
 .card {
   .secondCard {
@@ -77,7 +75,7 @@ $darkBackground: rgb(34, 34, 34);
   }
   .secondCard {
     &::after {
-      opacity: 1;
+      opacity: 0;
       transition: opacity 700ms;
     }
     .headerWrapper {
@@ -162,29 +160,35 @@ $darkBackground: rgb(34, 34, 34);
     .whereToContainer {
       position: relative;
       right: -2px;
-      top: 12px;
+      // top: 12px;
 
       div.whereTo {
         text-align: right;
         div {
           overflow: hidden;
           position: relative;
-          height: 30px;
+          // height: 30px;
+          -webkit-background-clip: text;
+          // -webkit-text-fill-color: $rosenBrown;
+          background-image: url("../assets/fieldOfColor.jpg");
+          background-size: cover;
+          background-position: center;
           .underlined {
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: $whereToColor;
             font-family: "Bossa Expanded Light";
             // text-transform: capitalize;
             // line-height: 20px;
             flex: 1;
             text-decoration: none;
-            background-position: 0 1em;
-            background-size: 0% 100%;
-            -moz-background-size: 0% 100%;
-            background-repeat: no-repeat;
+            // background-position: 0 1em;
+            // background-size: 0% 100%;
+            // -moz-background-size: 0% 100%;
+            // background-repeat: no-repeat;
             left: 0px;
-            display: inline-block;
-            transition: 0.3s ease;
+            display: block;
+            // transition: 0.3s ease;
+
             &:hover {
               // background-size: 100% 20%;
               // -moz-background-size: 100% 20%;

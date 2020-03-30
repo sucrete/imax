@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { useTrail, animated } from "react-spring";
-import { CSSTransition } from "react-transition-group";
-// import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Route,
@@ -20,7 +18,7 @@ const routes = ["video", "photo", "design", "collage", "gooftown"];
 function Main() {
   const trail2 = useTrail(routes.length, {
     config,
-    delay: 1200,
+    delay: 1000,
     yy: 0,
     height: 35,
     opacity: 1,
@@ -29,61 +27,68 @@ function Main() {
   let { url } = useRouteMatch();
   useEffect(() => {
     setTimeout(() => {
-      const mainElement = document.getElementsByClassName("main")[0];
+      const mainElement = document.getElementsByClassName("innerContainer")[0];
       mainElement.classList.toggle("hidden");
-    }, 1200);
+    }, 1000);
   });
   return (
-    <div className="main hidden">
-      <Router>
-        <section className="sideNavigation">
-          <div className="maxSpacer"></div>
-          <div id="navigationContainer">
-            {trail2.map(({ yy, height, ...rest }, index) => (
-              <animated.div
-                style={{
-                  ...rest,
-                  transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
-                }}
-              >
-                <Link
-                  style={{ height }}
-                  className="navLink"
-                  to={`${url}/${
-                    routes[index] === "video"
-                      ? routes[index] + "/doc"
-                      : routes[index]
-                  }`}
+    <div class="main">
+      <div className="innerContainer hidden">
+        <Router>
+          <section className="sideNavigation">
+            <a className="mainMax">Max</a>
+            <div className="maxSpacer"></div>
+            <div id="navigationContainer">
+              {trail2.map(({ yy, height, ...rest }, index) => (
+                <animated.div
+                  style={{
+                    ...rest,
+                    transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
+                  }}
                 >
-                  {routes[index]}
-                </Link>
-              </animated.div>
-            ))}
-          </div>
-        </section>
-        <section className="mainContent">
-          <Route path={`${url}/video`}>
-            <Video />
-          </Route>
+                  <Link
+                    style={{ height }}
+                    className="navLink"
+                    to={`${url}/${
+                      routes[index] === "video"
+                        ? routes[index] + "/doc"
+                        : routes[index]
+                    }`}
+                  >
+                    {routes[index]}
+                  </Link>
+                </animated.div>
+              ))}
+            </div>
+          </section>
+          <section className="mainContent">
+            <Route path={`${url}/video`}>
+              <Video />
+            </Route>
 
-          <Route path={`${url}/photo`}>
-            <Photo />
-          </Route>
+            <Route path={`${url}/photo`}>
+              <Photo />
+            </Route>
 
-          <Route path={`${url}/design`}>
-            <Design />
-          </Route>
+            <Route path={`${url}/design`}>
+              <Design />
+            </Route>
 
-          <Route path={`${url}/collage`}>
-            <Collage />
-          </Route>
+            <Route path={`${url}/collage`}>
+              <Collage />
+            </Route>
 
-          <Route path={`${url}/gooftown`}>
-            <Gooftown />
-          </Route>
-        </section>
-      </Router>
-      <style jsx>{``}</style>
+            <Route path={`${url}/gooftown`}>
+              <Gooftown />
+            </Route>
+          </section>
+        </Router>
+      </div>
+      <style jsx>{`
+        html {
+          background-color: rgb(34, 34, 34);
+        }
+      `}</style>
     </div>
   );
 }

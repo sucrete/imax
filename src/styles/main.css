@@ -1,26 +1,32 @@
 .main {
-  background: #222222;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
-section.sideNavigation a,
-section.sideNavigation a:visited,
-.pageTitle,
-.subHeader,
+hr {
+  background-color: #24201d;
+  border: none;
+  height: 1px;
+  opacity: 0.8;
+}
+
+.main,
+body,
+html {
+  background: #f3ebe4 !important;
+}
+
+h1.pageTitle,
 p {
-  color: white;
-}
-
-p.videosDescriptionSmaller {
-  font-size: 1em;
+  color: #24201d !important;
 }
 
 section.mainContent div p,
 .videoDescription {
-  color: white;
+  color: #24201d;
 }
 
-.App .main {
+.App .innerContainer {
   width: 100%;
   z-index: 7;
   display: -webkit-box;
@@ -31,41 +37,68 @@ section.mainContent div p,
           align-items: stretch;
 }
 
-.App .main.hidden {
+.App .innerContainer.hidden {
   display: none;
 }
 
-.App .main section.sideNavigation {
+.App .innerContainer section.sideNavigation {
   -webkit-box-flex: 0.9;
       -ms-flex: 0.9;
           flex: 0.9;
-  font-family: "Bossa Regular", sans-serif;
-  font-size: 1.4em;
+  font-family: "Bossa Expanded Light", sans-serif;
+  font-size: 1.2em;
   padding-left: 1.75em;
   padding-top: 1.8em;
 }
 
-.App .main section.sideNavigation .maxSpacer {
+.App .innerContainer section.sideNavigation .mainMax {
   position: relative;
-  height: 68vh;
+  font-size: 3.2em;
+  line-height: 60%;
+  font-family: "RosenFont ExtraBlack";
+  display: inline;
+  left: -5px;
+  top: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+  letter-spacing: -0.009em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #64320f;
+  background-image: url("../assets/fieldOfColor.jpg");
+  background-size: 110% 110%;
+  background-position: center;
+}
+
+.App .innerContainer section.sideNavigation .mainMax:hover {
+  -webkit-text-fill-color: transparent;
+}
+
+.App .innerContainer section.sideNavigation .maxSpacer {
+  position: relative;
+  height: 67vh;
   width: 100%;
 }
 
-.App .main section.sideNavigation #navigationContainer {
+.App .innerContainer section.sideNavigation #navigationContainer {
   -webkit-transition: 400ms ease-in-out;
   transition: 400ms ease-in-out;
   position: -webkit-sticky;
   position: sticky;
   top: 1.8em;
-  opacity: 0.6;
 }
 
-.App .main section.sideNavigation #navigationContainer div .navLink {
+.App .innerContainer section.sideNavigation #navigationContainer div .navLink {
   display: block;
   text-decoration: none;
+  color: #24201d;
 }
 
-.App .main section.mainContent {
+.App .innerContainer section.sideNavigation #navigationContainer div .navLink:hover {
+  color: #006845;
+}
+
+.App .innerContainer section.mainContent {
+  padding-top: 5em;
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
@@ -73,36 +106,43 @@ section.mainContent div p,
   padding-left: 1.3em;
 }
 
-.App .main section.mainContent div .pageTitle {
-  font-size: 6em;
+.App .innerContainer section.mainContent div .pageTitle {
+  font-size: 5em;
   margin-top: 1em;
   margin-bottom: 0.6em;
   font-family: "RosenFont", sans-serif;
-  color: white;
+  color: #24201d;
   letter-spacing: 0.05em;
 }
 
-.App .main section.mainContent div .videoSubRoutesContainer {
+.App .innerContainer section.mainContent div p {
+  font-family: "Bossa Expanded Light";
+}
+
+.App .innerContainer section.mainContent div .videoSubRoutesContainer {
+  border-radius: 3px;
+  background-color: #ebe9e9;
   margin-top: -0.25em;
   margin-bottom: -0.12em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  font-size: 2.5em;
+  padding-left: 1.7em;
+  padding-right: 1.7em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 2.8em;
 }
 
-.App .main section.mainContent div .videoSubRoutesContainer a.subRoute {
+.App .innerContainer section.mainContent div .videoSubRoutesContainer a.subRoute {
   letter-spacing: 0.03em;
   display: inline-block;
   font-family: "Bossa Regular", sans-serif;
   text-decoration: none;
-  color: white;
+  color: #24201d;
   position: relative;
   -webkit-transition: 0.2s all ease-in-out;
   transition: 0.2s all ease-in-out;
@@ -112,34 +152,11 @@ section.mainContent div p,
   transform-origin: 50% -50% 50%;
 }
 
-.App .main section.mainContent div .videoSubRoutesContainer a.subRoute:hover, .App .main section.mainContent div .videoSubRoutesContainer a.subRoute:focus {
-  color: #f1bbbb;
+.App .innerContainer section.mainContent div .videoSubRoutesContainer a.subRoute:hover, .App .innerContainer section.mainContent div .videoSubRoutesContainer a.subRoute:focus {
+  color: #c46133;
 }
 
-.App .main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(1) {
-  -webkit-transform: rotateX(50deg) translateZ(20px);
-          transform: rotateX(50deg) translateZ(20px);
-}
-
-.App .main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(2) {
-  top: 0.58em;
-  -webkit-transform: rotateX(35deg) translateZ(20px);
-          transform: rotateX(35deg) translateZ(20px);
-}
-
-.App .main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(3) {
-  top: 0.66em;
-  -webkit-transform: rotateX(-35deg) translateZ(20px);
-          transform: rotateX(-35deg) translateZ(20px);
-}
-
-.App .main section.mainContent div .videoSubRoutesContainer a.subRoute:nth-child(4) {
-  top: 1em;
-  -webkit-transform: rotateX(-50deg) translateZ(20px);
-          transform: rotateX(-50deg) translateZ(20px);
-}
-
-.App .main section.mainContent div div.subsection {
+.App .innerContainer section.mainContent div div.subsection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,13 +170,13 @@ section.mainContent div p,
   padding-top: 4em;
 }
 
-.App .main section.mainContent div div.subsection p {
+.App .innerContainer section.mainContent div div.subsection p {
   font-family: "Bossa Regular", sans-serif;
   font-size: 1.2em;
   padding-bottom: 2em;
 }
 
-.App .main section.mainContent div div.subsection div.lesserVideosContainer {
+.App .innerContainer section.mainContent div div.subsection div.lesserVideosContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,7 +191,7 @@ section.mainContent div p,
       flex-wrap: wrap;
 }
 
-.App .main section.mainContent div div.subsection div.lesserVideosContainer div.lesserVideo p.videoDescriptionSmaller {
+.App .innerContainer section.mainContent div div.subsection div.lesserVideosContainer div.lesserVideo p.videoDescriptionSmaller {
   font-size: 1em;
 }
 

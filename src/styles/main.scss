@@ -1,24 +1,31 @@
 $rosenBrown: #64320f;
+$rosenBrownL: #24201d;
 .main {
-  background: rgb(34, 34, 34);
   min-height: 100vh;
+  min-width: 100vw;
 }
-section.sideNavigation a,
-section.sideNavigation a:visited,
-.pageTitle,
-.subHeader,
+hr {
+  background-color: $rosenBrownL;
+  border: none;
+  height: 1px;
+  opacity: 0.8;
+}
+.main,
+body,
+html {
+  background: #f3ebe4 !important;
+}
+h1.pageTitle,
 p {
-  color: white;
+  color: $rosenBrownL !important;
 }
-p.videosDescriptionSmaller {
-  font-size: 1em;
-}
+
 section.mainContent div p,
 .videoDescription {
-  color: white;
+  color: $rosenBrownL;
 }
 .App {
-  .main {
+  .innerContainer {
     width: 100%;
     z-index: 7;
     display: flex;
@@ -27,15 +34,34 @@ section.mainContent div p,
       display: none;
     }
     section.sideNavigation {
+      .mainMax {
+        position: relative;
+        font-size: 3.2em;
+        line-height: 60%;
+        font-family: "RosenFont ExtraBlack";
+        display: inline;
+        left: -5px;
+        top: 5px;
+        text-transform: capitalize;
+        cursor: pointer;
+        letter-spacing: -0.009em;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: $rosenBrown;
+        background-image: url("../assets/fieldOfColor.jpg");
+        background-size: 110% 110%;
+        background-position: center;
+        &:hover {
+          -webkit-text-fill-color: transparent;
+        }
+      }
       flex: 0.9;
-      // color: rgb(34, 34, 34);
-      font-family: "Bossa Regular", sans-serif;
-      font-size: 1.4em;
+      font-family: "Bossa Expanded Light", sans-serif;
+      font-size: 1.2em;
       padding-left: 1.75em;
       padding-top: 1.8em;
       .maxSpacer {
         position: relative;
-        height: 68vh;
+        height: 67vh;
         width: 100%;
       }
       #navigationContainer {
@@ -43,37 +69,50 @@ section.mainContent div p,
         position: -webkit-sticky;
         position: sticky;
         top: 1.8em;
-        opacity: 0.6;
+        // opacity: 0.6;
+
         div {
           .navLink {
             display: block;
             text-decoration: none;
+            color: $rosenBrownL;
+            &:hover {
+              color: #006845;
+            }
           }
         }
       }
     }
     section.mainContent {
+      padding-top: 5em;
       flex: 4;
       padding-right: 8em;
       padding-left: 1.3em;
       div {
         .pageTitle {
-          font-size: 6em;
+          font-size: 5em;
           margin-top: 1em;
           margin-bottom: 0.6em;
           font-family: "RosenFont", sans-serif;
-          color: white;
+          color: $rosenBrownL;
           letter-spacing: 0.05em;
         }
+        p {
+          font-family: "Bossa Expanded Light";
+        }
         .videoSubRoutesContainer {
+          border-radius: 3px;
+          background-color: #ebe9e9;
+          // border: 1px solid $rosenBrownL;
           margin-top: -0.25em;
           margin-bottom: -0.12em;
-          padding-top: 0em;
-          padding-bottom: 0em;
-          font-size: 2.5em;
+          padding-left: 1.7em;
+          padding-right: 1.7em;
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+          font-size: 1em;
           display: flex;
           justify-content: space-between;
-          height: 2.8em;
 
           // transform: rotate(8deg);
           a.subRoute {
@@ -81,7 +120,7 @@ section.mainContent div p,
             display: inline-block;
             font-family: "Bossa Regular", sans-serif;
             text-decoration: none;
-            color: white;
+            color: $rosenBrownL;
             position: relative;
             transition: 0.2s all ease-in-out;
             -webkit-backface-visibility: hidden;
@@ -90,22 +129,22 @@ section.mainContent div p,
             transform-origin: 50% -50% 50%;
             &:hover,
             &:focus {
-              color: #f1bbbb;
+              color: #c46133;
             }
             &:nth-child(1) {
-              transform: rotateX(50deg) translateZ(20px);
+              // transform: rotateX(50deg) translateZ(20px);
             }
             &:nth-child(2) {
-              top: 0.58em;
-              transform: rotateX(35deg) translateZ(20px);
+              // top: 0.58em;
+              // transform: rotateX(35deg) translateZ(20px);
             }
             &:nth-child(3) {
-              top: 0.66em;
-              transform: rotateX(-35deg) translateZ(20px);
+              // top: 0.66em;
+              // transform: rotateX(-35deg) translateZ(20px);
             }
             &:nth-child(4) {
-              top: 1em;
-              transform: rotateX(-50deg) translateZ(20px);
+              // top: 1em;
+              // transform: rotateX(-50deg) translateZ(20px);
             }
           }
         }

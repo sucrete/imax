@@ -21,13 +21,19 @@ function Landing() {
   });
   const trail2 = useTrail(whereTo.length, {
     config,
-    delay: 1550,
+    delay: 1650,
     yy: 0,
-    height: 25,
+    height: 42,
     opacity: 1,
-    from: { yy: 25, height: 0, opacity: 0 }
+    from: { yy: 20, height: 0, opacity: 0 }
   });
-
+  //FROM MAIN (THE GOOD ONE)
+  // config,
+  // delay: 1000,
+  // yy: 0,
+  // height: 35,
+  // opacity: 1,
+  // from: { yy: 20, height: 0, opacity: 0 }
   return (
     <Router>
       <Route exact path={process.env.PUBLIC_URL + "/"}>

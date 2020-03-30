@@ -33,44 +33,44 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="text/javascript">
-      function isNear(element, distance, event) {
-        var left = element.documentOffsetLeft - distance,
-          top = element.documentOffsetTop - distance,
-          right = left + element.clientWidth + 2 * distance,
-          bottom = top + element.clientHeight + 2 * distance,
-          x = event.pageX,
-          y = event.pageY;
+      // function isNear(element, distance, event) {
+      //   var left = element.documentOffsetLeft - distance,
+      //     top = element.documentOffsetTop - distance,
+      //     right = left + element.clientWidth + 2 * distance,
+      //     bottom = top + element.clientHeight + 2 * distance,
+      //     x = event.pageX,
+      //     y = event.pageY;
 
-        return x > left && x < right && y > top && y < bottom;
-      }
+      //   return x > left && x < right && y > top && y < bottom;
+      // }
 
-      document.body.addEventListener("mousemove", function() {
-        var near = document.getElementById("navigationContainer");
+      // document.body.addEventListener("mousemove", function() {
+      //   var near = document.getElementById("navigationContainer");
 
-        if (isNear(near, 100, event)) {
-          near.style.opacity = "1";
-        } else {
-          near.style.opacity = ".6";
-        }
-      });
+      //   if (isNear(near, 100, event)) {
+      //     near.style.opacity = "1";
+      //   } else {
+      //     near.style.opacity = ".75";
+      //   }
+      // });
 
-      window.Object.defineProperty(Element.prototype, "documentOffsetTop", {
-        get: function() {
-          return (
-            this.offsetTop +
-            (this.offsetParent ? this.offsetParent.documentOffsetTop : 0)
-          );
-        }
-      });
+      // window.Object.defineProperty(Element.prototype, "documentOffsetTop", {
+      //   get: function() {
+      //     return (
+      //       this.offsetTop +
+      //       (this.offsetParent ? this.offsetParent.documentOffsetTop : 0)
+      //     );
+      //   }
+      // });
 
-      window.Object.defineProperty(Element.prototype, "documentOffsetLeft", {
-        get: function() {
-          return (
-            this.offsetLeft +
-            (this.offsetParent ? this.offsetParent.documentOffsetLeft : 0)
-          );
-        }
-      });
+      // window.Object.defineProperty(Element.prototype, "documentOffsetLeft", {
+      //   get: function() {
+      //     return (
+      //       this.offsetLeft +
+      //       (this.offsetParent ? this.offsetParent.documentOffsetLeft : 0)
+      //     );
+      //   }
+      // });
     </script>
     <!--
       

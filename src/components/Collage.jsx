@@ -3,8 +3,6 @@ class Collage extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="pageTitle">Collage</h1>
-        <img src="https://loremflickr.com/320/240/collage" />
         <p>
           O my friend -- but it is too much for my strength -- I sink under the
           weight of the splendour of these visions! A wonderful serenity has
