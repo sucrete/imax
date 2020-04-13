@@ -41,34 +41,25 @@ section.mainContent div p,
       display: flex;
       position: relative;
       width: inherit;
+      padding: 1.5em 0.5em 1.2em 0.5em;
       .mainMax {
         position: relative;
         font-size: 2.2em;
         line-height: 60%;
         font-family: "RosenFont ExtraBlack";
         display: inline;
-        top: 5px;
+        top: 3px;
         text-transform: capitalize;
         text-decoration: none;
         cursor: pointer;
         letter-spacing: -0.009em;
         color: $rosenBrown;
         padding-left: 15px;
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: $rosenBrown;
-        // background-image: url("../assets/fieldOfColor.jpg");
         background-size: 120% 120%;
         background-position: center;
-        // &:hover {
-        //   -webkit-text-fill-color: transparent;
-        // }
       }
-
-      padding: 1.5em 0.5em 1.2em 0.5em;
-
       .inner {
         border-radius: 4px;
-        // border: 1px solid transparent;
         width: 175px;
         clip-path: circle(30px at 85% 10%);
         transition: all 0.3s ease-in-out;
@@ -77,41 +68,42 @@ section.mainContent div p,
         cursor: pointer;
         top: 20px;
         box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0);
+        border: 1px solid transparent;
         .svg-1 {
           float: right;
+          display: block;
+          padding-right: 5px;
           path {
             fill: none;
             stroke: $rosenBrown;
-            transition: 0.25s;
+            transition: 0.25s ease;
             stroke-width: 2px;
           }
         }
         &:hover {
           clip-path: circle(85%);
           background: #f8f0e8;
-          // border: 1px solid #e6dcd4;
-          box-shadow: 0px 8px 20px 0px #d3cac3ad;
+          border: 1px solid #e6dcd4;
+          box-shadow: 0px 8px 20px 0px #d3cac380;
           .svg-1 {
             path {
-              stroke: #c4afac;
+              stroke: #d1bbb7;
             }
-            #top {
-              d: path("M10,11 L35,34");
-            }
-            #bottom {
-              d: path("M10,34 L35,11");
-            }
+            // #top {
+            //   d: path("M10,11 L35,34");
+            // }
+            // #bottom {
+            //   d: path("M10,34 L35,11");
+            // }
           }
         }
 
         #navigationContainer {
-          transition: 400ms ease-in-out;
           position: -webkit-sticky;
           position: sticky;
-          padding-top: 1.8em;
+          padding-top: 3.5em;
           position: relative;
           padding-right: 1em;
-          float: right;
           text-align: right;
           .navLink {
             text-decoration: none;
@@ -119,11 +111,9 @@ section.mainContent div p,
             font-family: "Bossa Expanded Light", sans-serif;
             font-size: 1.2em;
             display: block;
+            transition: color 250ms ease;
             &:hover {
               color: #786f7e;
-            }
-            &:first-child {
-              padding-top: 0em;
             }
             &:last-child {
               padding-bottom: 0.8em;
@@ -185,21 +175,6 @@ section.mainContent div p,
             &:hover,
             &:focus {
               color: #c46133;
-            }
-            &:nth-child(1) {
-              // transform: rotateX(50deg) translateZ(20px);
-            }
-            &:nth-child(2) {
-              // top: 0.58em;
-              // transform: rotateX(35deg) translateZ(20px);
-            }
-            &:nth-child(3) {
-              // top: 0.66em;
-              // transform: rotateX(-35deg) translateZ(20px);
-            }
-            &:nth-child(4) {
-              // top: 1em;
-              // transform: rotateX(-50deg) translateZ(20px);
             }
           }
         }

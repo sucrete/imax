@@ -56,7 +56,7 @@ section.mainContent div p,
   line-height: 60%;
   font-family: "RosenFont ExtraBlack";
   display: inline;
-  top: 5px;
+  top: 3px;
   text-transform: capitalize;
   text-decoration: none;
   cursor: pointer;
@@ -80,17 +80,20 @@ section.mainContent div p,
   top: 20px;
   -webkit-box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0);
           box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
 }
 
 .App .innerContainer section.topNavigation .inner .svg-1 {
   float: right;
+  display: block;
+  padding-right: 5px;
 }
 
 .App .innerContainer section.topNavigation .inner .svg-1 path {
   fill: none;
   stroke: #64320f;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
   stroke-width: 2px;
 }
 
@@ -98,31 +101,21 @@ section.mainContent div p,
   -webkit-clip-path: circle(85%);
           clip-path: circle(85%);
   background: #f8f0e8;
-  -webkit-box-shadow: 0px 8px 20px 0px #d3cac3ad;
-          box-shadow: 0px 8px 20px 0px #d3cac3ad;
+  border: 1px solid #e6dcd4;
+  -webkit-box-shadow: 0px 8px 20px 0px #d3cac380;
+          box-shadow: 0px 8px 20px 0px #d3cac380;
 }
 
 .App .innerContainer section.topNavigation .inner:hover .svg-1 path {
-  stroke: #c4afac;
-}
-
-.App .innerContainer section.topNavigation .inner:hover .svg-1 #top {
-  d: path("M10,11 L35,34");
-}
-
-.App .innerContainer section.topNavigation .inner:hover .svg-1 #bottom {
-  d: path("M10,34 L35,11");
+  stroke: #d1bbb7;
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer {
-  -webkit-transition: 400ms ease-in-out;
-  transition: 400ms ease-in-out;
   position: -webkit-sticky;
   position: sticky;
-  padding-top: 1.8em;
+  padding-top: 3.5em;
   position: relative;
   padding-right: 1em;
-  float: right;
   text-align: right;
 }
 
@@ -132,14 +125,12 @@ section.mainContent div p,
   font-family: "Bossa Expanded Light", sans-serif;
   font-size: 1.2em;
   display: block;
+  -webkit-transition: color 250ms ease;
+  transition: color 250ms ease;
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer .navLink:hover {
   color: #786f7e;
-}
-
-.App .innerContainer section.topNavigation .inner #navigationContainer .navLink:first-child {
-  padding-top: 0em;
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer .navLink:last-child {
