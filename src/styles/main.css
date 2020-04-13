@@ -68,8 +68,8 @@ section.mainContent div p,
 }
 
 .App .innerContainer section.topNavigation .inner {
-  border-radius: 4px;
-  width: 175px;
+  border-radius: 3px;
+  width: 190px;
   -webkit-clip-path: circle(30px at 85% 10%);
           clip-path: circle(30px at 85% 10%);
   -webkit-transition: all 0.3s ease-in-out;
@@ -78,15 +78,15 @@ section.mainContent div p,
   right: 15px;
   cursor: pointer;
   top: 20px;
-  -webkit-box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0);
-          box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 8px 8px 20px 0px #d3cac300;
+          box-shadow: 8px 8px 20px 0px #d3cac300;
   border: 1px solid transparent;
 }
 
 .App .innerContainer section.topNavigation .inner .svg-1 {
   float: right;
   display: block;
-  padding-right: 5px;
+  padding-right: 6px;
 }
 
 .App .innerContainer section.topNavigation .inner .svg-1 path {
@@ -107,16 +107,22 @@ section.mainContent div p,
 }
 
 .App .innerContainer section.topNavigation .inner:hover .svg-1 path {
-  stroke: #d1bbb7;
+  stroke: #d3c9c0;
+}
+
+.App .innerContainer section.topNavigation .inner:hover #navigationContainer {
+  border-top: 1px solid #e6dcd4;
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer {
-  position: -webkit-sticky;
-  position: sticky;
-  padding-top: 3.5em;
+  margin-top: 2.7em;
+  padding-top: 2.3em;
   position: relative;
   padding-right: 1em;
   text-align: right;
+  border-top: 1px solid transparent;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer .navLink {
@@ -134,7 +140,7 @@ section.mainContent div p,
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer .navLink:last-child {
-  padding-bottom: 0.8em;
+  padding-bottom: 0.7em;
 }
 
 .App .innerContainer section.mainContent {
