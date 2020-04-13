@@ -32,20 +32,28 @@ function Main() {
     yy: 0,
     height: 35,
     opacity: 1,
-    from: { yy: 20, height: 0, opacity: 0 }
+    from: { yy: 50, height: 70, opacity: 0 }
   });
   let { url } = useRouteMatch();
   useEffect(() => {
     setTimeout(() => {
       const mainElement = document.getElementsByClassName("innerContainer")[0];
       mainElement.classList.toggle("hidden");
-    }, 1000);
+    }, 1500);
   });
+  const mainRoutes = routes.map(route => (
+    <Link
+      className="navLink"
+      to={`${url}/${route === "video" ? route + "/doc" : route}`}
+    >
+      {route}
+    </Link>
+  ));
   return (
     <div class="main">
       <div className="innerContainer hidden">
         <Router>
-          <section className="sideNavigation">
+          <section className="topNavigation">
             {trail7.map(({ yy, height, ...rest }, index) => (
               <animated.div
                 style={{
@@ -62,28 +70,15 @@ function Main() {
                 </Link>
               </animated.div>
             ))}
-            <div className="maxSpacer"></div>
-            <div id="navigationContainer">
-              {trail2.map(({ yy, height, ...rest }, index) => (
-                <animated.div
-                  style={{
-                    ...rest,
-                    transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
-                  }}
-                >
-                  <Link
-                    style={{ height }}
-                    className="navLink"
-                    to={`${url}/${
-                      routes[index] === "video"
-                        ? routes[index] + "/doc"
-                        : routes[index]
-                    }`}
-                  >
-                    {routes[index]}
-                  </Link>
-                </animated.div>
-              ))}
+
+            <div class="inner">
+              <svg height="45" width="45" class="svg-1">
+                <path id="top" d="M7,17 L38,17" />
+                <path id="bottom" d="M7,27 L38,27" />
+              </svg>
+              <nav role="navigation" id="navigationContainer">
+                {mainRoutes}
+              </nav>
             </div>
           </section>
           <section className="mainContent">

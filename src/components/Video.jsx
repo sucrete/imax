@@ -21,28 +21,28 @@ function Video() {
         source: "https://www.youtube.com/embed/W3IKyyd53yQ",
         description:
           "Vice News Tonight on HBO, producer / director / cinematographer / co-editor"
-      },
-      {
-        source: "https://www.youtube.com/embed/hEpmVNVBmlA",
-        description: "Bloomberg, producer / director / cinematographer / editor"
-      },
-      {
-        source: "https://www.youtube.com/embed/PxtSvNjwhIc",
-        description: "Saving Mothers, editor"
-      },
-      {
-        source: "https://www.youtube.com/embed/UkRSn6SaLVw",
-        description: "Bloomberg, co-producer / cinematographer / editor"
-      },
-      {
-        source: "https://www.youtube.com/embed/pMaoSw1sv_Q",
-        description:
-          "Vice News Tonight on HBO, producer / director / co-cinematographer / co-editor"
-      },
-      {
-        source: "https://www.youtube.com/embed/XNQ0A48Eh1c",
-        description: "Bloomberg, director / cinematographer / editor"
       }
+      // {
+      //   source: "https://www.youtube.com/embed/hEpmVNVBmlA",
+      //   description: "Bloomberg, producer / director / cinematographer / editor"
+      // }
+      // {
+      //   source: "https://www.youtube.com/embed/PxtSvNjwhIc",
+      //   description: "Saving Mothers, editor"
+      // },
+      // {
+      //   source: "https://www.youtube.com/embed/UkRSn6SaLVw",
+      //   description: "Bloomberg, co-producer / cinematographer / editor"
+      // },
+      // {
+      //   source: "https://www.youtube.com/embed/pMaoSw1sv_Q",
+      //   description:
+      //     "Vice News Tonight on HBO, producer / director / co-cinematographer / co-editor"
+      // },
+      // {
+      //   source: "https://www.youtube.com/embed/XNQ0A48Eh1c",
+      //   description: "Bloomberg, director / cinematographer / editor"
+      // }
     ],
     narrativeVideos: [
       {
@@ -111,7 +111,7 @@ function Video() {
       },
       {
         source: "https://www.youtube.com/embed/QrUWg1mAIsw",
-        description: "Showgasm promo, director / cinematographer / editor"
+        description: "Showgasm promo; director / cinematographer / editor"
       },
       {
         source:
@@ -179,6 +179,7 @@ function Video() {
   const subRoutes = ["doc", "narrative", "visual", "promo"];
   return (
     <div>
+      <h1 className="pageTitle">video</h1>
       <div className="videoSubRoutesContainer">
         {subRoutes.map((aThing, id) => (
           <Link className="subRoute" key={id} to={`${url}/${aThing}`}>

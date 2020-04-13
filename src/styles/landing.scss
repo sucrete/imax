@@ -59,7 +59,7 @@ $darkBackground: rgb(34, 34, 34);
           .whereTo {
             div {
               .underlined {
-                color: $whereToColor;
+                color: #141211;
               }
             }
           }
@@ -81,7 +81,7 @@ $darkBackground: rgb(34, 34, 34);
     .headerWrapper {
       opacity: 0;
       transform: translate(-50%, -58%);
-      transition: transform 700ms ease-in, opacity 650ms;
+      transition: transform 700ms cubic-bezier(0.32, 0, 0.67, 0), opacity 650ms;
       .landingmax {
       }
       .landingrosen {
@@ -170,8 +170,9 @@ $darkBackground: rgb(34, 34, 34);
           // height: 30px;
 
           .underlined {
-            font-size: 1.2em;
-            color: $whereToColor;
+            font-size: 0.9em;
+            // text-transform: uppercase;
+            color: #2e2728;
             font-family: "Bossa Expanded Light";
             -webkit-background-clip: text;
             background-image: radial-gradient(
@@ -190,12 +191,13 @@ $darkBackground: rgb(34, 34, 34);
             left: 0px;
             display: block;
             // transition: 0.3s ease;
+            letter-spacing: 0.03em;
 
             &:hover {
               // background-size: 100% 20%;
               // -moz-background-size: 100% 20%;
               // font-style: italic;
-              color: #006845;
+              color: #4b3e48;
             }
             // &--thin {
             //   background-image: linear-gradient(

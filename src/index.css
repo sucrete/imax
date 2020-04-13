@@ -113,3 +113,8 @@ html {
   font-family: "Bossa Expanded Regular";
   src: url("assets/Fonts/Bossa/Bossa-ExpandedRegular.otf") format("opentype");
 }
+/* --------- Agrandir Fonts ---------- */
+@font-face {
+  font-family: "Agrandir Grand Heavy";
+  src: url("assets/Fonts/Agrandir/Agrandir-GrandHeavy.otf") format("opentype");
+}

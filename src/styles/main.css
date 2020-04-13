@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Gotu&family=Work+Sans:wght@300;400&display=swap");
 .main {
   min-height: 100vh;
-  min-width: 100vw;
+  width: 80vw;
 }
 
 hr {
-  background-color: #24201d;
+  background-color: #1b1816;
   border: none;
   height: 1px;
   opacity: 0.8;
@@ -16,120 +17,171 @@ html {
   background: #f3ebe4 !important;
 }
 
-h1.pageTitle,
-p {
-  color: #24201d !important;
+.hidden {
+  display: none;
 }
 
 section.mainContent div p,
 .videoDescription {
-  color: #24201d;
+  color: #74655a;
 }
 
-.App .innerContainer {
-  width: 100%;
-  z-index: 7;
+.App {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.App .innerContainer.hidden {
-  display: none;
+.App .innerContainer {
+  z-index: 7;
 }
 
-.App .innerContainer section.sideNavigation {
-  -webkit-box-flex: 0.9;
-      -ms-flex: 0.9;
-          flex: 0.9;
-  font-family: "Bossa Expanded Light", sans-serif;
-  font-size: 1.2em;
-  padding-left: 1.75em;
-  padding-top: 1.8em;
-}
-
-.App .innerContainer section.sideNavigation .mainMax {
+.App .innerContainer section.topNavigation {
+  z-index: 99;
+  border-bottom: 1px solid #ece3db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  font-size: 3.2em;
+  width: inherit;
+  padding: 1.5em 0.5em 1.2em 0.5em;
+}
+
+.App .innerContainer section.topNavigation .mainMax {
+  position: relative;
+  font-size: 2.2em;
   line-height: 60%;
   font-family: "RosenFont ExtraBlack";
   display: inline;
-  left: -5px;
   top: 5px;
   text-transform: capitalize;
   text-decoration: none;
   cursor: pointer;
   letter-spacing: -0.009em;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #64320f;
-  background-image: url("../assets/fieldOfColor.jpg");
-  background-size: 110% 110%;
+  color: #64320f;
+  padding-left: 15px;
+  background-size: 120% 120%;
   background-position: center;
 }
 
-.App .innerContainer section.sideNavigation .mainMax:hover {
-  -webkit-text-fill-color: transparent;
+.App .innerContainer section.topNavigation .inner {
+  border-radius: 4px;
+  width: 175px;
+  -webkit-clip-path: circle(30px at 85% 10%);
+          clip-path: circle(30px at 85% 10%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  top: 20px;
+  -webkit-box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0);
+          box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0);
 }
 
-.App .innerContainer section.sideNavigation .maxSpacer {
-  position: relative;
-  height: 67vh;
-  width: 100%;
+.App .innerContainer section.topNavigation .inner .svg-1 {
+  float: right;
 }
 
-.App .innerContainer section.sideNavigation #navigationContainer {
+.App .innerContainer section.topNavigation .inner .svg-1 path {
+  fill: none;
+  stroke: #64320f;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  stroke-width: 2px;
+}
+
+.App .innerContainer section.topNavigation .inner:hover {
+  -webkit-clip-path: circle(85%);
+          clip-path: circle(85%);
+  background: #f8f0e8;
+  -webkit-box-shadow: 0px 8px 20px 0px #d3cac3ad;
+          box-shadow: 0px 8px 20px 0px #d3cac3ad;
+}
+
+.App .innerContainer section.topNavigation .inner:hover .svg-1 path {
+  stroke: #c4afac;
+}
+
+.App .innerContainer section.topNavigation .inner:hover .svg-1 #top {
+  d: path("M10,11 L35,34");
+}
+
+.App .innerContainer section.topNavigation .inner:hover .svg-1 #bottom {
+  d: path("M10,34 L35,11");
+}
+
+.App .innerContainer section.topNavigation .inner #navigationContainer {
   -webkit-transition: 400ms ease-in-out;
   transition: 400ms ease-in-out;
   position: -webkit-sticky;
   position: sticky;
-  top: 1.8em;
+  padding-top: 1.8em;
+  position: relative;
+  padding-right: 1em;
+  float: right;
+  text-align: right;
 }
 
-.App .innerContainer section.sideNavigation #navigationContainer div .navLink {
-  display: block;
+.App .innerContainer section.topNavigation .inner #navigationContainer .navLink {
   text-decoration: none;
-  color: #24201d;
+  color: #1b1816;
+  font-family: "Bossa Expanded Light", sans-serif;
+  font-size: 1.2em;
+  display: block;
 }
 
-.App .innerContainer section.sideNavigation #navigationContainer div .navLink:hover {
-  color: #006845;
+.App .innerContainer section.topNavigation .inner #navigationContainer .navLink:hover {
+  color: #786f7e;
+}
+
+.App .innerContainer section.topNavigation .inner #navigationContainer .navLink:first-child {
+  padding-top: 0em;
+}
+
+.App .innerContainer section.topNavigation .inner #navigationContainer .navLink:last-child {
+  padding-bottom: 0.8em;
 }
 
 .App .innerContainer section.mainContent {
-  padding-top: 5em;
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
-  padding-right: 8em;
-  padding-left: 1.3em;
+  padding-top: 4em;
+  z-index: 98;
 }
 
 .App .innerContainer section.mainContent div .pageTitle {
-  font-size: 5em;
-  margin-top: 1em;
+  position: relative;
+  font-size: 1.5em;
+  margin-top: 0em;
   margin-bottom: 0.6em;
-  font-family: "RosenFont", sans-serif;
-  color: #24201d;
+  padding-left: 10px;
+  font-family: "Agrandir Grand Heavy", sans-serif;
+  color: #f8f0e8;
   letter-spacing: 0.05em;
+  -webkit-transform: scale(4);
+          transform: scale(4);
+  -webkit-transform-origin: 1% 50%;
+          transform-origin: 1% 50%;
+  left: 20px;
+  -webkit-text-stroke-width: 0.015em;
+  -webkit-text-stroke-color: #e6dcd4;
 }
 
 .App .innerContainer section.mainContent div p {
-  font-family: "Bossa Expanded Light";
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2em;
 }
 
 .App .innerContainer section.mainContent div .videoSubRoutesContainer {
   border-radius: 3px;
-  background-color: #ebe9e9;
-  margin-top: -0.25em;
   margin-bottom: -0.12em;
   padding-left: 1.7em;
   padding-right: 1.7em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  font-size: 1em;
+  font-size: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,9 +193,9 @@ section.mainContent div p,
 .App .innerContainer section.mainContent div .videoSubRoutesContainer a.subRoute {
   letter-spacing: 0.03em;
   display: inline-block;
-  font-family: "Bossa Regular", sans-serif;
+  font-family: "Bossa Expanded Light", sans-serif;
   text-decoration: none;
-  color: #24201d;
+  color: #1b1816;
   position: relative;
   -webkit-transition: 0.2s all ease-in-out;
   transition: 0.2s all ease-in-out;
@@ -169,11 +221,12 @@ section.mainContent div p,
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 4em;
+  color: #6e645c;
 }
 
 .App .innerContainer section.mainContent div div.subsection p {
-  font-family: "Bossa Regular", sans-serif;
-  font-size: 1.2em;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1em;
   padding-bottom: 2em;
 }
 
@@ -194,31 +247,6 @@ section.mainContent div p,
 
 .App .innerContainer section.mainContent div div.subsection div.lesserVideosContainer div.lesserVideo p.videoDescriptionSmaller {
   font-size: 1em;
-}
-
-img {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.left {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  background: red;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  height: 300px;
-}
-
-.right {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  background: yellow;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  height: 300px;
 }
 
 @media screen and (min-width: 600px) {

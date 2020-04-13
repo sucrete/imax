@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Gotu&family=Work+Sans:wght@300;400&display=swap");
 $rosenBrown: #64320f;
-$rosenBrownL: #24201d;
+$rosenBrownL: #1b1816;
+
 .main {
   min-height: 100vh;
-  min-width: 100vw;
+  width: 80vw;
 }
 hr {
   background-color: $rosenBrownL;
@@ -15,103 +17,155 @@ body,
 html {
   background: #f3ebe4 !important;
 }
-h1.pageTitle,
-p {
-  color: $rosenBrownL !important;
-}
 
+p {
+  // color: $rosenBrownL !important;
+}
+.hidden {
+  display: none;
+}
 section.mainContent div p,
 .videoDescription {
-  color: $rosenBrownL;
+  color: #74655a;
 }
+
 .App {
+  display: flex;
+  justify-content: center;
   .innerContainer {
-    width: 100%;
+    // background-color: white;
     z-index: 7;
-    display: flex;
-    align-items: stretch;
-    &.hidden {
-      display: none;
-    }
-    section.sideNavigation {
+    section.topNavigation {
+      z-index: 99;
+      border-bottom: 1px solid #ece3db;
+      display: flex;
+      position: relative;
+      width: inherit;
       .mainMax {
         position: relative;
-        font-size: 3.2em;
+        font-size: 2.2em;
         line-height: 60%;
         font-family: "RosenFont ExtraBlack";
         display: inline;
-        left: -5px;
         top: 5px;
         text-transform: capitalize;
         text-decoration: none;
         cursor: pointer;
         letter-spacing: -0.009em;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: $rosenBrown;
-        background-image: url("../assets/fieldOfColor.jpg");
-        background-size: 110% 110%;
+        color: $rosenBrown;
+        padding-left: 15px;
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: $rosenBrown;
+        // background-image: url("../assets/fieldOfColor.jpg");
+        background-size: 120% 120%;
         background-position: center;
-        &:hover {
-          -webkit-text-fill-color: transparent;
-        }
+        // &:hover {
+        //   -webkit-text-fill-color: transparent;
+        // }
       }
-      flex: 0.9;
-      font-family: "Bossa Expanded Light", sans-serif;
-      font-size: 1.2em;
-      padding-left: 1.75em;
-      padding-top: 1.8em;
-      .maxSpacer {
-        position: relative;
-        height: 67vh;
-        width: 100%;
-      }
-      #navigationContainer {
-        transition: 400ms ease-in-out;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 1.8em;
-        // opacity: 0.6;
 
-        div {
+      padding: 1.5em 0.5em 1.2em 0.5em;
+
+      .inner {
+        border-radius: 4px;
+        // border: 1px solid transparent;
+        width: 175px;
+        clip-path: circle(30px at 85% 10%);
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        right: 15px;
+        cursor: pointer;
+        top: 20px;
+        box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0);
+        .svg-1 {
+          float: right;
+          path {
+            fill: none;
+            stroke: $rosenBrown;
+            transition: 0.25s;
+            stroke-width: 2px;
+          }
+        }
+        &:hover {
+          clip-path: circle(85%);
+          background: #f8f0e8;
+          // border: 1px solid #e6dcd4;
+          box-shadow: 0px 8px 20px 0px #d3cac3ad;
+          .svg-1 {
+            path {
+              stroke: #c4afac;
+            }
+            #top {
+              d: path("M10,11 L35,34");
+            }
+            #bottom {
+              d: path("M10,34 L35,11");
+            }
+          }
+        }
+
+        #navigationContainer {
+          transition: 400ms ease-in-out;
+          position: -webkit-sticky;
+          position: sticky;
+          padding-top: 1.8em;
+          position: relative;
+          padding-right: 1em;
+          float: right;
+          text-align: right;
           .navLink {
-            display: block;
             text-decoration: none;
             color: $rosenBrownL;
+            font-family: "Bossa Expanded Light", sans-serif;
+            font-size: 1.2em;
+            display: block;
             &:hover {
-              color: #006845;
+              color: #786f7e;
+            }
+            &:first-child {
+              padding-top: 0em;
+            }
+            &:last-child {
+              padding-bottom: 0.8em;
             }
           }
         }
       }
     }
     section.mainContent {
-      padding-top: 5em;
-      flex: 4;
-      padding-right: 8em;
-      padding-left: 1.3em;
+      padding-top: 4em;
+      z-index: 98;
       div {
         .pageTitle {
-          font-size: 5em;
-          margin-top: 1em;
+          position: relative;
+          font-size: 1.5em;
+          margin-top: 0em;
           margin-bottom: 0.6em;
-          font-family: "RosenFont", sans-serif;
-          color: $rosenBrownL;
+          padding-left: 10px;
+          font-family: "Agrandir Grand Heavy", sans-serif;
+          color: #f8f0e8;
           letter-spacing: 0.05em;
+          transform: scale(4);
+          transform-origin: 1% 50%;
+          left: 20px;
+          -webkit-text-stroke-width: 0.015em;
+          -webkit-text-stroke-color: #e6dcd4;
         }
         p {
-          font-family: "Bossa Expanded Light";
+          font-family: "Work Sans", sans-serif;
+          font-size: 1.2em;
         }
         .videoSubRoutesContainer {
           border-radius: 3px;
-          background-color: #ebe9e9;
+          // background-color: #ebe9e9;
           // border: 1px solid $rosenBrownL;
-          margin-top: -0.25em;
+          // margin-top: -0.25em;
           margin-bottom: -0.12em;
           padding-left: 1.7em;
           padding-right: 1.7em;
           padding-top: 0.5em;
           padding-bottom: 0.5em;
-          font-size: 1em;
+          font-size: 1.2em;
           display: flex;
           justify-content: space-between;
 
@@ -119,7 +173,7 @@ section.mainContent div p,
           a.subRoute {
             letter-spacing: 0.03em;
             display: inline-block;
-            font-family: "Bossa Regular", sans-serif;
+            font-family: "Bossa Expanded Light", sans-serif;
             text-decoration: none;
             color: $rosenBrownL;
             position: relative;
@@ -154,9 +208,10 @@ section.mainContent div p,
           justify-content: center;
           flex-direction: column;
           padding-top: 4em;
+          color: #6e645c;
           p {
-            font-family: "Bossa Regular", sans-serif;
-            font-size: 1.2em;
+            font-family: "Work Sans", sans-serif;
+            font-size: 1em;
             padding-bottom: 2em;
           }
           div.lesserVideosContainer {
@@ -176,22 +231,6 @@ section.mainContent div p,
   }
 }
 
-img {
-  align-self: flex-start;
-}
-
-.left {
-  order: 1;
-  background: red;
-  flex-basis: 100%;
-  height: 300px;
-}
-.right {
-  order: 2;
-  background: yellow;
-  flex-basis: 100%;
-  height: 300px;
-}
 @media screen and (min-width: 600px) {
   .container {
     flex-wrap: nowrap;

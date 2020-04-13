@@ -40,7 +40,7 @@ function Landing() {
         {({ match }) => (
           <CSSTransition
             in={match != null}
-            timeout={1000}
+            timeout={1500}
             classNames="card"
             unmountOnExit
           >

@@ -57,7 +57,7 @@
 }
 
 .card-exit .secondCard .headerWrapper .informationalContainer .whereToContainer .whereTo div .underlined {
-  color: #019563;
+  color: #141211;
 }
 
 .card-exit-active::after {
@@ -76,10 +76,10 @@
   opacity: 0;
   -webkit-transform: translate(-50%, -58%);
           transform: translate(-50%, -58%);
-  -webkit-transition: opacity 650ms, -webkit-transform 700ms ease-in;
-  transition: opacity 650ms, -webkit-transform 700ms ease-in;
-  transition: transform 700ms ease-in, opacity 650ms;
-  transition: transform 700ms ease-in, opacity 650ms, -webkit-transform 700ms ease-in;
+  -webkit-transition: opacity 650ms, -webkit-transform 700ms cubic-bezier(0.32, 0, 0.67, 0);
+  transition: opacity 650ms, -webkit-transform 700ms cubic-bezier(0.32, 0, 0.67, 0);
+  transition: transform 700ms cubic-bezier(0.32, 0, 0.67, 0), opacity 650ms;
+  transition: transform 700ms cubic-bezier(0.32, 0, 0.67, 0), opacity 650ms, -webkit-transform 700ms cubic-bezier(0.32, 0, 0.67, 0);
 }
 
 .card-exit-active .secondCard .headerWrapper .informationalContainer .whereToContainer .whereTo div .underlined {
@@ -178,8 +178,8 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined {
-  font-size: 1.2em;
-  color: #019563;
+  font-size: 0.9em;
+  color: #2e2728;
   font-family: "Bossa Expanded Light";
   -webkit-background-clip: text;
   background-image: radial-gradient(circle, #f5ceec 0%, #eed678 100%);
@@ -189,10 +189,11 @@
   text-decoration: none;
   left: 0px;
   display: block;
+  letter-spacing: 0.03em;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined:hover {
-  color: #006845;
+  color: #4b3e48;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink {
