@@ -179,7 +179,12 @@ function Video() {
   const subRoutes = ["doc", "narrative", "visual", "promo"];
   return (
     <div>
-      <h1 className="pageTitle">video</h1>
+      <div className="topBlock">
+        <div className="titleWrapper">
+          <h1 className="pageTitle">video</h1>
+        </div>
+      </div>
+
       <div className="videoSubRoutesContainer">
         {subRoutes.map((aThing, id) => (
           <Link className="subRoute" key={id} to={`${url}/${aThing}`}>

@@ -37,7 +37,7 @@ section.mainContent div p,
     z-index: 7;
     section.topNavigation {
       z-index: 99;
-      border-bottom: 1px solid #ece3db;
+      border-bottom: 1px solid #e6dcd4;
       display: flex;
       position: relative;
       width: inherit;
@@ -50,13 +50,12 @@ section.mainContent div p,
         display: inline;
         top: 3px;
         text-transform: capitalize;
-        text-decoration: none;
-        cursor: pointer;
         letter-spacing: -0.009em;
         color: $rosenBrown;
         padding-left: 15px;
         background-size: 120% 120%;
         background-position: center;
+        cursor: none;
       }
       .inner {
         border-radius: 3px;
@@ -66,7 +65,7 @@ section.mainContent div p,
         position: absolute;
         right: 15px;
         cursor: pointer;
-        top: 20px;
+        top: 18px;
         box-shadow: 8px 8px 20px 0px #d3cac300;
         border: 1px solid transparent;
         .svg-1 {
@@ -127,43 +126,44 @@ section.mainContent div p,
       }
     }
     section.mainContent {
-      padding-top: 4em;
       z-index: 98;
       div {
-        .pageTitle {
-          position: relative;
-          font-size: 1.5em;
-          margin-top: 0em;
-          margin-bottom: 0.6em;
-          padding-left: 10px;
-          font-family: "Agrandir Grand Heavy", sans-serif;
-          color: #f8f0e8;
-          letter-spacing: 0.05em;
-          transform: scale(4);
-          transform-origin: 1% 50%;
-          left: 20px;
-          -webkit-text-stroke-width: 0.015em;
-          -webkit-text-stroke-color: #e6dcd4;
+        .topBlock {
+          width: 100%;
+          height: 20em;
+          box-shadow: 0 1px 0 0 #e6dcd4;
+          .titleWrapper {
+            box-shadow: 1px 0 0 0 #e6dcd4;
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            .pageTitle {
+              position: relative;
+              margin: auto;
+              text-align: center;
+              font-size: 3.5em;
+              padding-left: 10px;
+              font-family: "Agrandir Grand Heavy", sans-serif;
+              color: #fdf7f3;
+              letter-spacing: 0.05em;
+              -webkit-text-stroke-width: 0.015em;
+              -webkit-text-stroke-color: #e6dcd4;
+            }
+          }
         }
+
         p {
           font-family: "Work Sans", sans-serif;
           font-size: 1.2em;
         }
         .videoSubRoutesContainer {
-          border-radius: 3px;
-          // background-color: #ebe9e9;
-          // border: 1px solid $rosenBrownL;
-          // margin-top: -0.25em;
-          margin-bottom: -0.12em;
-          padding-left: 1.7em;
-          padding-right: 1.7em;
           padding-top: 0.5em;
           padding-bottom: 0.5em;
           font-size: 1.2em;
           display: flex;
-          justify-content: space-between;
-
-          // transform: rotate(8deg);
+          justify-content: space-around;
+          margin-top: 2em;
           a.subRoute {
             letter-spacing: 0.03em;
             display: inline-block;
@@ -171,11 +171,7 @@ section.mainContent div p,
             text-decoration: none;
             color: $rosenBrownL;
             position: relative;
-            transition: 0.2s all ease-in-out;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            -webkit-transform-origin: 50% -50% 50%;
-            transform-origin: 50% -50% 50%;
+            transition: 250ms all ease-in-out;
             &:hover,
             &:focus {
               color: #c46133;
@@ -186,7 +182,7 @@ section.mainContent div p,
           display: flex;
           justify-content: center;
           flex-direction: column;
-          padding-top: 4em;
+          padding-top: 2em;
           color: #6e645c;
           p {
             font-family: "Work Sans", sans-serif;

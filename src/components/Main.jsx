@@ -15,7 +15,7 @@ import Gooftown from "./Gooftown";
 import About from "./About";
 
 const config = { mass: 5, tension: 3500, friction: 400 };
-const routes = ["video", "photo", "design", "collage", "gooftown"];
+const routes = ["about", "video", "photo", "design", "collage", "gooftown"];
 const mainMax = ["Max"];
 function Main() {
   const trail2 = useTrail(routes.length, {
@@ -61,13 +61,9 @@ function Main() {
                   transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
                 }}
               >
-                <Link
-                  style={{ height }}
-                  className="mainMax"
-                  to={`${url}/about`}
-                >
+                <span style={{ height }} className="mainMax">
                   {mainMax[index]}
-                </Link>
+                </span>
               </animated.div>
             ))}
 
