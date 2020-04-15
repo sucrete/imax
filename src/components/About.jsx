@@ -4,8 +4,15 @@ class Collage extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="pageTitle">about</h1>
-        <img style={{ height: "300px", width: "auto" }} src={maxPic} />
+        <div className="topBlock">
+          <div className="titleWrapper">
+            <h1 className="pageTitle">about</h1>
+          </div>
+          <div className="imagesWrapper">
+            <img style={{ height: "300px", width: "auto" }} src={maxPic} />
+          </div>
+        </div>
+
         <p>
           O my friend -- but it is too much for my strength -- I sink under the
           weight of the splendour of these visions! A wonderful serenity has

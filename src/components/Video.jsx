@@ -8,7 +8,9 @@ import {
 } from "react-router-dom";
 //   import { useTrail, animated } from "react-spring";
 import "../styles/main.css";
-
+import disney from "../assets/disneyplus.png";
+import bloomberg from "../assets/bloombergbusiness.png";
+import vice from "../assets/vicenews.png";
 function Video() {
   let { url } = useRouteMatch();
   const allExtraVideos = {
@@ -182,6 +184,11 @@ function Video() {
       <div className="topBlock">
         <div className="titleWrapper">
           <h1 className="pageTitle">video</h1>
+        </div>
+        <div className="imagesWrapper">
+          <img className="img-1" src={disney} />
+          <img className="img-2" src={vice} />
+          <img className="img-3" src={bloomberg} />
         </div>
       </div>
 
