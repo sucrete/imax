@@ -71,10 +71,12 @@ section.mainContent div p,
         top: 18px;
         box-shadow: 8px 8px 20px 0px #d3cac300;
         border: 1px solid transparent;
+        z-index: 7;
         .svg-1 {
           float: right;
           display: block;
           padding-right: 6px;
+          z-index: 8;
           path {
             fill: none;
             stroke: $rosenBrown;
@@ -104,6 +106,7 @@ section.mainContent div p,
         }
 
         #navigationContainer {
+          z-index: 9;
           margin-top: 2.7em;
           padding-top: 2.3em;
           position: relative;
@@ -146,6 +149,9 @@ section.mainContent div p,
               position: absolute;
               height: auto;
               width: 100%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
             }
             .img-1 {
               animation: showDontShow 12s infinite;
@@ -269,7 +275,7 @@ section.mainContent div p,
   0% {
     visibility: visible;
   }
-  33.33% {
+  33.4% {
     visibility: hidden;
   }
   100% {
