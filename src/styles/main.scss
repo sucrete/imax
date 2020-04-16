@@ -64,14 +64,15 @@ section.mainContent div p,
         border-radius: 3px;
         width: 190px;
         clip-path: circle(30px at 85% 10%);
-        transition: all 0.3s ease-in-out;
+        transition: clip-path 0.2s ease-in-out,
+          background-color 0.1s ease-in-out, border 0.1s ease-in-out;
         position: absolute;
         right: 15px;
         cursor: pointer;
         top: 18px;
-        box-shadow: 8px 8px 20px 0px #d3cac300;
         border: 1px solid transparent;
         z-index: 7;
+        background-color: rgba(248, 164, 108, 0);
         .svg-1 {
           float: right;
           display: block;
@@ -88,7 +89,6 @@ section.mainContent div p,
           clip-path: circle(85%);
           background: #f8f0e8;
           border: 1px solid #e6dcd4;
-          // box-shadow: 8px 8px 20px 0px #cac2bb54;
           .svg-1 {
             path {
               stroke: #d3c9c0;
@@ -102,6 +102,8 @@ section.mainContent div p,
           }
           #navigationContainer {
             border-top: 1px solid #e6dcd4;
+            transform: translate(0%, 0%);
+            opacity: 1;
           }
         }
 
@@ -113,7 +115,10 @@ section.mainContent div p,
           padding-right: 1em;
           text-align: right;
           border-top: 1px solid transparent;
-          transition: all 250ms ease;
+          transition: border-top 260ms ease, transform 260ms ease 150ms,
+            opacity 260ms ease 150ms;
+          opacity: 0;
+          transform: translate(-5%, 0%);
           .navLink {
             text-decoration: none;
             color: $rosenBrownL;
@@ -275,7 +280,7 @@ section.mainContent div p,
   0% {
     visibility: visible;
   }
-  33.4% {
+  33.3% {
     visibility: hidden;
   }
   100% {

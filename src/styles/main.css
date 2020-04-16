@@ -74,16 +74,17 @@ section.mainContent div p,
   width: 190px;
   -webkit-clip-path: circle(30px at 85% 10%);
           clip-path: circle(30px at 85% 10%);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
+  transition: background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
+  transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out;
+  transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
   position: absolute;
   right: 15px;
   cursor: pointer;
   top: 18px;
-  -webkit-box-shadow: 8px 8px 20px 0px #d3cac300;
-          box-shadow: 8px 8px 20px 0px #d3cac300;
   border: 1px solid transparent;
   z-index: 7;
+  background-color: rgba(248, 164, 108, 0);
 }
 
 .App .innerContainer section.topNavigation .inner .svg-1 {
@@ -114,6 +115,9 @@ section.mainContent div p,
 
 .App .innerContainer section.topNavigation .inner:hover #navigationContainer {
   border-top: 1px solid #e6dcd4;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  opacity: 1;
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer {
@@ -124,8 +128,13 @@ section.mainContent div p,
   padding-right: 1em;
   text-align: right;
   border-top: 1px solid transparent;
-  -webkit-transition: all 250ms ease;
-  transition: all 250ms ease;
+  -webkit-transition: border-top 260ms ease, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
+  transition: border-top 260ms ease, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
+  transition: border-top 260ms ease, transform 260ms ease 150ms, opacity 260ms ease 150ms;
+  transition: border-top 260ms ease, transform 260ms ease 150ms, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
+  opacity: 0;
+  -webkit-transform: translate(-5%, 0%);
+          transform: translate(-5%, 0%);
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer .navLink {
@@ -325,7 +334,7 @@ section.mainContent div p,
   0% {
     visibility: visible;
   }
-  33.4% {
+  33.3% {
     visibility: hidden;
   }
   100% {
@@ -337,7 +346,7 @@ section.mainContent div p,
   0% {
     visibility: visible;
   }
-  33.4% {
+  33.3% {
     visibility: hidden;
   }
   100% {
