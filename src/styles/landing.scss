@@ -1,9 +1,8 @@
 $notchSize: 7px;
 $rosenBrown: #64320f;
 $backgroundColor: #fff2e6;
-$whereToColor: #019563;
 $darkBackground: rgb(34, 34, 34);
-
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap");
 .card {
   .secondCard {
     width: 100%;
@@ -170,29 +169,15 @@ $darkBackground: rgb(34, 34, 34);
           // height: 30px;
 
           .underlined {
-            font-size: 1em;
-            // text-transform: uppercase;
+            font-size: 1.1em;
             color: #2e2728;
-            font-family: "Bossa Expanded Light";
-            -webkit-background-clip: text;
-            background-image: radial-gradient(
-              circle,
-              rgba(245, 206, 236, 1) 0%,
-              rgba(238, 214, 120, 1) 100%
-            );
-            // text-transform: capitalize;
-            // line-height: 20px;
+            font-family: "Bossa Expanded Light", sans-serif;
             flex: 1;
             text-decoration: none;
-            // background-position: 0 1em;
-            // background-size: 0% 100%;
-            // -moz-background-size: 0% 100%;
-            // background-repeat: no-repeat;
             left: 0px;
             display: block;
             // transition: 0.3s ease;
             letter-spacing: 0.03em;
-
             &:hover {
               // background-size: 100% 20%;
               // -moz-background-size: 100% 20%;

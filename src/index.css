@@ -5,14 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: #fad6c1; */
 }
-/* body {
-}
-html {
-  background: #f3e8e8;
-} */
-
 .App {
   width: 100%;
   height: 100%;
@@ -21,13 +14,8 @@ html {
   flex-direction: row;
   align-items: stretch;
 }
-.card,
-.leftSection {
-}
 .leftSection {
   width: 18%;
-  /* background-color: #fdeddd; */
-  /* background-color: white; */
   height: 100vh;
   align-items: stretch;
 }
@@ -68,29 +56,7 @@ html {
 }
 
 /* --------- America Fonts ---------- */
-@font-face {
-  font-family: "America Extended Thin";
-  src: url("assets/Fonts/GT-America/America-Extended-Thin.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "America Regular";
-  src: url("assets/Fonts/GT-America/America-Regular.otf") format("opentype");
-}
-@font-face {
-  font-family: "America Extended Light";
-  src: url("assets/Fonts/GT-America/America-Extended-Light.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "America Light";
-  src: url("assets/Fonts/GT-America/America-Light.otf") format("opentype");
-}
-@font-face {
-  font-family: "America Extended Regular";
-  src: url("assets/Fonts/GT-America/America-Extended-Regular.otf")
-    format("opentype");
-}
+
 @font-face {
   font-family: "Sectra Fine Book Italic";
   src: url("assets/Fonts/GT-America/GT-Sectra-Fine-Trial-Book-Italic.otf")
@@ -117,4 +83,13 @@ html {
 @font-face {
   font-family: "Agrandir Grand Heavy";
   src: url("assets/Fonts/Agrandir/Agrandir-GrandHeavy.otf") format("opentype");
+}
+/* --------- Sabon Fonts ---------- */
+@font-face {
+  font-family: "Sabon";
+  src: url("assets/Fonts/Sabon-Font/Sabon_Roman.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Sabon Italic";
+  src: url("assets/Fonts/Sabon-Font/Sabon_Italic.ttf") format("truetype");
 }

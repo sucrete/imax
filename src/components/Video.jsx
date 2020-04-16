@@ -11,6 +11,9 @@ import "../styles/main.css";
 import disney from "../assets/disneyplus.png";
 import bloomberg from "../assets/bloombergbusiness.png";
 import vice from "../assets/vicenews.png";
+import allYouNeedIsLikes from "../assets/AllYouNeedIsLikes.jpg";
+import clickBait from "../assets/ClickBait.jpg";
+import oneDayAtDisney from "../assets/OneDayAtDisney2.jpg";
 function Video() {
   let { url } = useRouteMatch();
   const allExtraVideos = {
@@ -202,27 +205,27 @@ function Video() {
       <Route path={`${url}/doc`}>
         <div className="subsection">
           <div className="firstVideo">
-            <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-              <iframe
-                id="ytplayer"
-                type="text/html"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%"
-                }}
-                src="https://www.youtube.com/embed/c3dukvXxtsc"
-                frameborder="0"
-                allowfullscreen
-              />
-            </div>
+            <img src={oneDayAtDisney} />
             <p className="videoDescription">
               [Disney+, editor on 14 of 52 episodes]
             </p>
           </div>
-          <div className="lesserVideosContainer">{docVids}</div>
+          <div className="lesserVideosContainer">
+            <div className="lesserVideo">
+              <img src={allYouNeedIsLikes} />
+              <p className="videoDescriptionSmaller">
+                [Vice News Tonight on HBO, producer / director / cinematographer
+                / co-editor]
+              </p>
+            </div>
+            <div className="lesserVideo">
+              <img src={clickBait} />
+              <p className="videoDescriptionSmaller">
+                [Vice News Tonight on HBO; producer / director /
+                co-cinematographer / co-editor]
+              </p>
+            </div>
+          </div>
         </div>
       </Route>
 

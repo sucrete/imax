@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap");
 .card .secondCard {
   width: 100%;
   height: 100%;
@@ -178,11 +179,9 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined {
-  font-size: 1em;
+  font-size: 1.1em;
   color: #2e2728;
-  font-family: "Bossa Expanded Light";
-  -webkit-background-clip: text;
-  background-image: radial-gradient(circle, #f5ceec 0%, #eed678 100%);
+  font-family: "Bossa Expanded Light", sans-serif;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

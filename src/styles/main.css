@@ -115,9 +115,9 @@ section.mainContent div p,
 
 .App .innerContainer section.topNavigation .inner:hover #navigationContainer {
   border-top: 1px solid #e6dcd4;
-  -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
   opacity: 1;
+  -webkit-transform: translate(0%, 0%);
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer {
@@ -133,8 +133,8 @@ section.mainContent div p,
   transition: border-top 260ms ease, transform 260ms ease 150ms, opacity 260ms ease 150ms;
   transition: border-top 260ms ease, transform 260ms ease 150ms, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
   opacity: 0;
-  -webkit-transform: translate(-5%, 0%);
-          transform: translate(-5%, 0%);
+  transform: translate(-3%, 0%);
+  -webkit-transform: translate(-3%, 0%);
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer .navLink {
@@ -157,6 +157,8 @@ section.mainContent div p,
 
 .App .innerContainer section.mainContent {
   z-index: 98;
+  margin-bottom: 10em;
+  width: 100%;
 }
 
 .App .innerContainer section.mainContent div .topBlock {
@@ -173,6 +175,18 @@ section.mainContent div p,
           flex-direction: row;
 }
 
+.App .innerContainer section.mainContent div .topBlock:after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 20em;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  background-color: #ebebeb;
+  z-index: 1;
+}
+
 .App .innerContainer section.mainContent div .topBlock .imagesWrapper {
   width: 50%;
   height: 100%;
@@ -180,12 +194,13 @@ section.mainContent div p,
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  z-index: 2;
 }
 
 .App .innerContainer section.mainContent div .topBlock .imagesWrapper img {
   position: absolute;
   height: auto;
-  width: 100%;
+  width: 90%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -215,25 +230,24 @@ section.mainContent div p,
 }
 
 .App .innerContainer section.mainContent div .topBlock .titleWrapper {
-  -webkit-box-shadow: 1px 0 0 0 #e6dcd4;
-          box-shadow: 1px 0 0 0 #e6dcd4;
   width: 50%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 3;
 }
 
 .App .innerContainer section.mainContent div .topBlock .titleWrapper .pageTitle {
   position: relative;
   margin: auto;
   text-align: center;
-  font-size: 3.5em;
+  font-size: 5.5em;
   font-family: "Agrandir Grand Heavy", sans-serif;
   color: white;
   letter-spacing: 0.05em;
   -webkit-text-stroke-width: 0.015em;
-  -webkit-text-stroke-color: #e6dcd4;
+  -webkit-text-stroke-color: #d8cfc7;
   text-shadow: 1px 1px 0 #e3dadb, 3px 3px 0 rgba(227, 218, 219, 0.9), 5px 5px 0 rgba(227, 218, 219, 0.8), 7px 7px 0 rgba(227, 218, 219, 0.7), 9px 9px 0 rgba(227, 218, 219, 0.6), 11px 11px 0 rgba(227, 218, 219, 0.5), 13px 13px 0 rgba(227, 218, 219, 0.4), 15px 15px 0 rgba(227, 218, 219, 0.3), 17px 17px 0 rgba(227, 218, 219, 0.2), 19px 19px 0 rgba(227, 218, 219, 0.1), 21px 21px 0 rgba(227, 218, 219, 0.08), 22px 22px 0 rgba(227, 218, 219, 0.07), 23px 23px 0 rgba(227, 218, 219, 0.06), 25px 25px 0 rgba(227, 218, 219, 0.04), 27px 27px 0 rgba(227, 218, 219, 0.02), 28px 28px 0 rgba(170, 28, 44, 0.01), 29px 29px 0 rgba(227, 218, 219, 0);
 }
 
@@ -259,7 +273,7 @@ section.mainContent div p,
   display: inline-block;
   font-family: "Bossa Expanded Light", sans-serif;
   text-decoration: none;
-  color: #1b1816;
+  color: #3c343d;
   position: relative;
   -webkit-transition: 250ms all ease-in-out;
   transition: 250ms all ease-in-out;
@@ -282,15 +296,33 @@ section.mainContent div p,
           flex-direction: column;
   padding-top: 2em;
   color: #6e645c;
+  overflow: hidden;
 }
 
-.App .innerContainer section.mainContent div div.subsection p {
+.App .innerContainer section.mainContent div div.subsection .firstVideo {
+  width: 96%;
+  display: block;
+  margin: 0 auto;
+}
+
+.App .innerContainer section.mainContent div div.subsection .firstVideo:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.App .innerContainer section.mainContent div div.subsection .firstVideo img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.App .innerContainer section.mainContent div div.subsection .firstVideo p {
   font-family: "Work Sans", sans-serif;
   font-size: 1em;
   padding-bottom: 2em;
 }
 
-.App .innerContainer section.mainContent div div.subsection div.lesserVideosContainer {
+.App .innerContainer section.mainContent div div.subsection .lesserVideosContainer {
+  width: 96%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,9 +335,24 @@ section.mainContent div p,
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0 auto;
 }
 
-.App .innerContainer section.mainContent div div.subsection div.lesserVideosContainer div.lesserVideo p.videoDescriptionSmaller {
+.App .innerContainer section.mainContent div div.subsection .lesserVideosContainer .lesserVideo {
+  width: 48%;
+}
+
+.App .innerContainer section.mainContent div div.subsection .lesserVideosContainer .lesserVideo img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.App .innerContainer section.mainContent div div.subsection .lesserVideosContainer .lesserVideo img:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.App .innerContainer section.mainContent div div.subsection .lesserVideosContainer .lesserVideo .videoDescriptionSmaller {
   font-size: 1em;
 }
 
