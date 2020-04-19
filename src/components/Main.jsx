@@ -14,25 +14,33 @@ import Design from "./Design";
 import Gooftown from "./Gooftown";
 import About from "./About";
 
-const config = { mass: 5, tension: 3500, friction: 400 };
+const config = { mass: 4, tension: 3400, friction: 320 };
 const routes = ["about", "video", "photo", "design", "collage", "gooftown"];
-const mainMax = ["Max"];
+const mainMax = ["Max", "Rosen"];
+const bodyMovin = new Array(1);
 function Main() {
   const trail2 = useTrail(routes.length, {
     config,
-    delay: 1800,
+    delay: 2100,
     yy: 0,
-    height: 70,
+    height: 25,
     opacity: 1,
-    from: { yy: 60, height: 0, opacity: 0 }
+    from: { yy: 30, height: 0, opacity: 0 }
   });
   const trail7 = useTrail(mainMax.length, {
     config,
-    delay: 1500,
+    delay: 1600,
     yy: 0,
     height: 35,
     opacity: 1,
     from: { yy: 50, height: 70, opacity: 0 }
+  });
+  const trail3 = useTrail(bodyMovin.length, {
+    config,
+    delay: 2500,
+    yy: 0,
+    opacity: 1,
+    from: { yy: 70, opacity: 0 }
   });
   let { url } = useRouteMatch();
   useEffect(() => {
@@ -41,31 +49,25 @@ function Main() {
       mainElement.classList.toggle("hidden");
     }, 1500);
   });
-  const mainRoutes = routes.map(route => (
-    <Link
-      className="navLink"
-      to={`${url}/${route === "video" ? route + "/doc" : route}`}
-    >
-      {route}
-    </Link>
-  ));
   return (
     <div class="main">
       <div className="innerContainer hidden">
         <Router>
           <section className="topNavigation">
-            {trail7.map(({ yy, height, ...rest }, index) => (
-              <animated.div
-                style={{
-                  ...rest,
-                  transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
-                }}
-              >
-                <span style={{ height }} className="mainMax">
-                  {mainMax[index]}
-                </span>
-              </animated.div>
-            ))}
+            <div className="logo">
+              {trail7.map(({ yy, height, ...rest }, index) => (
+                <animated.div
+                  style={{
+                    ...rest,
+                    transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
+                  }}
+                >
+                  <span style={{ height }} className={"main" + mainMax[index]}>
+                    {mainMax[index]}
+                  </span>
+                </animated.div>
+              ))}
+            </div>
 
             <div class="inner">
               <svg height="45" width="45" class="svg-1">
@@ -73,34 +75,64 @@ function Main() {
                 <path id="bottom" d="M7,27 L38,27" />
               </svg>
               <nav role="navigation" id="navigationContainer">
-                {mainRoutes}
+                {trail2.map(({ yy, height, ...rest }, index) => (
+                  <animated.div
+                    style={{
+                      ...rest,
+                      transform: yy.interpolate(
+                        yy => `translate3d(0,${yy}px,0)`
+                      )
+                    }}
+                  >
+                    <Link
+                      style={{ height }}
+                      className="navLink"
+                      to={`${url}/${
+                        routes[index] === "video"
+                          ? routes[index] + "/doc"
+                          : routes[index]
+                      }`}
+                    >
+                      {routes[index]}
+                    </Link>
+                  </animated.div>
+                ))}
               </nav>
             </div>
           </section>
-          <section className="mainContent">
-            <Route path={`${url}/video`}>
-              <Video />
-            </Route>
+          {trail3.map(({ yy, ...rest }, index) => (
+            <animated.div
+              style={{
+                ...rest,
+                transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
+              }}
+            >
+              <section className="mainContent">
+                <Route path={`${url}/video`}>
+                  <Video />
+                </Route>
 
-            <Route path={`${url}/photo`}>
-              <Photo />
-            </Route>
+                <Route path={`${url}/photo`}>
+                  <Photo />
+                </Route>
 
-            <Route path={`${url}/design`}>
-              <Design />
-            </Route>
+                <Route path={`${url}/design`}>
+                  <Design />
+                </Route>
 
-            <Route path={`${url}/collage`}>
-              <Collage />
-            </Route>
+                <Route path={`${url}/collage`}>
+                  <Collage />
+                </Route>
 
-            <Route path={`${url}/gooftown`}>
-              <Gooftown />
-            </Route>
-            <Route path={`${url}/about`}>
-              <About />
-            </Route>
-          </section>
+                <Route path={`${url}/gooftown`}>
+                  <Gooftown />
+                </Route>
+                <Route path={`${url}/about`}>
+                  <About />
+                </Route>
+              </section>
+            </animated.div>
+          ))}
         </Router>
       </div>
       <style jsx>{`

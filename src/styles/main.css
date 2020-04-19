@@ -51,9 +51,18 @@ section.mainContent div p,
   top: 0;
   width: inherit;
   padding: 1.5em 0.5em 1.2em 0.5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.App .innerContainer section.topNavigation .mainMax {
+.App .innerContainer section.topNavigation .logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.App .innerContainer section.topNavigation .logo .mainMax {
   position: relative;
   font-size: 2.2em;
   line-height: 60%;
@@ -64,94 +73,62 @@ section.mainContent div p,
   letter-spacing: -0.009em;
   color: #64320f;
   padding-left: 15px;
-  background-size: 120% 120%;
   background-position: center;
   cursor: none;
 }
 
+.App .innerContainer section.topNavigation .logo .mainRosen {
+  font-weight: default;
+  font-size: 2.2em;
+  font-family: "RosenFont", "Arial", sans-serif;
+  padding-left: 0.2em;
+  text-transform: uppercase;
+  display: inline;
+  line-height: 60%;
+  top: 4px;
+  position: relative;
+  letter-spacing: -0.05em;
+  color: #64320f;
+  cursor: none;
+}
+
 .App .innerContainer section.topNavigation .inner {
-  border-radius: 3px;
-  width: 190px;
-  -webkit-clip-path: circle(30px at 85% 10%);
-          clip-path: circle(30px at 85% 10%);
-  -webkit-transition: background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
-  transition: background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
-  transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out;
-  transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
-  position: absolute;
-  right: 15px;
-  cursor: pointer;
-  top: 18px;
-  border: 1px solid transparent;
-  z-index: 7;
-  background-color: rgba(248, 164, 108, 0);
+  position: relative;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 5px;
 }
 
 .App .innerContainer section.topNavigation .inner .svg-1 {
-  float: right;
-  display: block;
-  padding-right: 6px;
-  z-index: 8;
-}
-
-.App .innerContainer section.topNavigation .inner .svg-1 path {
-  fill: none;
-  stroke: #64320f;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
-  stroke-width: 2px;
-}
-
-.App .innerContainer section.topNavigation .inner:hover {
-  -webkit-clip-path: circle(85%);
-          clip-path: circle(85%);
-  background: #f8f0e8;
-  border: 1px solid #e6dcd4;
-}
-
-.App .innerContainer section.topNavigation .inner:hover .svg-1 path {
-  stroke: #d3c9c0;
-}
-
-.App .innerContainer section.topNavigation .inner:hover #navigationContainer {
-  border-top: 1px solid #e6dcd4;
-  transform: translate(0%, 0%);
-  opacity: 1;
-  -webkit-transform: translate(0%, 0%);
+  display: none;
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer {
-  z-index: 9;
-  margin-top: 2.7em;
-  padding-top: 2.3em;
-  position: relative;
-  padding-right: 1em;
-  text-align: right;
-  border-top: 1px solid transparent;
-  -webkit-transition: border-top 260ms ease, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
-  transition: border-top 260ms ease, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
-  transition: border-top 260ms ease, transform 260ms ease 150ms, opacity 260ms ease 150ms;
-  transition: border-top 260ms ease, transform 260ms ease 150ms, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
-  opacity: 0;
-  transform: translate(-3%, 0%);
-  -webkit-transform: translate(-3%, 0%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
-.App .innerContainer section.topNavigation .inner #navigationContainer .navLink {
+.App .innerContainer section.topNavigation .inner #navigationContainer div .navLink {
   text-decoration: none;
   color: #1b1816;
-  font-family: "Bossa Expanded Light", sans-serif;
-  font-size: 1.2em;
-  display: block;
+  font-family: "Criteria Medium", sans-serif;
+  font-size: 0.9em;
   -webkit-transition: color 250ms ease;
   transition: color 250ms ease;
 }
 
-.App .innerContainer section.topNavigation .inner #navigationContainer .navLink:hover {
+.App .innerContainer section.topNavigation .inner #navigationContainer div .navLink:hover {
   color: #786f7e;
 }
 
-.App .innerContainer section.topNavigation .inner #navigationContainer .navLink:last-child {
+.App .innerContainer section.topNavigation .inner #navigationContainer div .navLink:last-child {
   padding-bottom: 0.7em;
 }
 
@@ -175,60 +152,6 @@ section.mainContent div p,
           flex-direction: row;
 }
 
-.App .innerContainer section.mainContent div .topBlock:after {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 20em;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
-  background-color: #ebebeb;
-  z-index: 1;
-}
-
-.App .innerContainer section.mainContent div .topBlock .imagesWrapper {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  z-index: 2;
-}
-
-.App .innerContainer section.mainContent div .topBlock .imagesWrapper img {
-  position: absolute;
-  height: auto;
-  width: 90%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.App .innerContainer section.mainContent div .topBlock .imagesWrapper .img-1 {
-  -webkit-animation: showDontShow 12s infinite;
-          animation: showDontShow 12s infinite;
-  visibility: visible;
-}
-
-.App .innerContainer section.mainContent div .topBlock .imagesWrapper .img-2 {
-  -webkit-animation: showDontShow 12s infinite;
-          animation: showDontShow 12s infinite;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  visibility: hidden;
-}
-
-.App .innerContainer section.mainContent div .topBlock .imagesWrapper .img-3 {
-  -webkit-animation: showDontShow 12s infinite;
-          animation: showDontShow 12s infinite;
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
-  visibility: hidden;
-}
-
 .App .innerContainer section.mainContent div .topBlock .titleWrapper {
   width: 50%;
   height: 100%;
@@ -246,9 +169,6 @@ section.mainContent div p,
   font-family: "Agrandir Grand Heavy", sans-serif;
   color: white;
   letter-spacing: 0.05em;
-  -webkit-text-stroke-width: 0.015em;
-  -webkit-text-stroke-color: #d8cfc7;
-  text-shadow: 1px 1px 0 #e3dadb, 3px 3px 0 rgba(227, 218, 219, 0.9), 5px 5px 0 rgba(227, 218, 219, 0.8), 7px 7px 0 rgba(227, 218, 219, 0.7), 9px 9px 0 rgba(227, 218, 219, 0.6), 11px 11px 0 rgba(227, 218, 219, 0.5), 13px 13px 0 rgba(227, 218, 219, 0.4), 15px 15px 0 rgba(227, 218, 219, 0.3), 17px 17px 0 rgba(227, 218, 219, 0.2), 19px 19px 0 rgba(227, 218, 219, 0.1), 21px 21px 0 rgba(227, 218, 219, 0.08), 22px 22px 0 rgba(227, 218, 219, 0.07), 23px 23px 0 rgba(227, 218, 219, 0.06), 25px 25px 0 rgba(227, 218, 219, 0.04), 27px 27px 0 rgba(227, 218, 219, 0.02), 28px 28px 0 rgba(170, 28, 44, 0.01), 29px 29px 0 rgba(227, 218, 219, 0);
 }
 
 .App .innerContainer section.mainContent div p {
@@ -259,7 +179,7 @@ section.mainContent div p,
 .App .innerContainer section.mainContent div .videoSubRoutesContainer {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  font-size: 1.2em;
+  font-size: 1.1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,7 +191,7 @@ section.mainContent div p,
 .App .innerContainer section.mainContent div .videoSubRoutesContainer a.subRoute {
   letter-spacing: 0.03em;
   display: inline-block;
-  font-family: "Bossa Expanded Light", sans-serif;
+  font-family: "Criteria Medium", sans-serif;
   text-decoration: none;
   color: #3c343d;
   position: relative;
@@ -398,6 +318,79 @@ section.mainContent div p,
   }
   100% {
     visibility: hidden;
+  }
+}
+
+@media (max-width: 1100px) {
+  .inner {
+    border-radius: 3px;
+    width: 190px;
+    -webkit-clip-path: circle(30px at 85% 10%);
+            clip-path: circle(30px at 85% 10%);
+    -webkit-transition: background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
+    transition: background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
+    transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out;
+    transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    top: 18px;
+    border: 1px solid transparent;
+    z-index: 7;
+    background-color: rgba(248, 164, 108, 0);
+  }
+  .inner .svg-1 {
+    float: right;
+    display: block;
+    padding-right: 6px;
+    z-index: 8;
+  }
+  .inner .svg-1 path {
+    fill: none;
+    stroke: #64320f;
+    -webkit-transition: 0.25s ease;
+    transition: 0.25s ease;
+    stroke-width: 2px;
+  }
+  .inner:hover {
+    -webkit-clip-path: circle(85%);
+            clip-path: circle(85%);
+    background: #f8f0e8;
+    border: 1px solid #e6dcd4;
+  }
+  .inner:hover .svg-1 {
+    display: block;
+  }
+  .inner:hover .svg-1 path {
+    stroke: #d3c9c0;
+  }
+  .inner:hover .svg-1 #top {
+    d: path("M10,11 L35,34");
+  }
+  .inner:hover .svg-1 #bottom {
+    d: path("M10,34 L35,11");
+  }
+  .inner:hover #navigationContainer {
+    border-top: 1px solid #e6dcd4;
+    transform: translate(0%, 0%);
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+  }
+  .inner #navigationContainer {
+    z-index: 9;
+    margin-top: 2.7em;
+    padding-top: 2.3em;
+    position: relative;
+    padding-right: 1em;
+    text-align: right;
+    border-top: 1px solid transparent;
+    -webkit-transition: border-top 260ms ease, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
+    transition: border-top 260ms ease, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
+    transition: border-top 260ms ease, transform 260ms ease 150ms, opacity 260ms ease 150ms;
+    transition: border-top 260ms ease, transform 260ms ease 150ms, opacity 260ms ease 150ms, -webkit-transform 260ms ease 150ms;
+    opacity: 0;
+    transform: translate(-3%, 0%);
+    -webkit-transform: translate(-3%, 0%);
   }
 }
 /*# sourceMappingURL=main.css.map */

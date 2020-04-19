@@ -93,3 +93,16 @@ body {
   font-family: "Sabon Italic";
   src: url("assets/Fonts/Sabon-Font/Sabon_Italic.ttf") format("truetype");
 }
+/* --------- Criteria Fonts ---------- */
+@font-face {
+  font-family: "Criteria Light";
+  src: url("assets/Fonts/Criteria/CriteriaLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Criteria Regular";
+  src: url("assets/Fonts/Criteria/CriteriaRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "Criteria Medium";
+  src: url("assets/Fonts/Criteria/CriteriaMedium.woff") format("woff");
+}

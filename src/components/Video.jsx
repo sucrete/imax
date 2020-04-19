@@ -188,11 +188,6 @@ function Video() {
         <div className="titleWrapper">
           <h1 className="pageTitle">video</h1>
         </div>
-        <div className="imagesWrapper">
-          <img className="img-1" src={disney} />
-          <img className="img-2" src={vice} />
-          <img className="img-3" src={bloomberg} />
-        </div>
       </div>
 
       <div className="videoSubRoutesContainer">
