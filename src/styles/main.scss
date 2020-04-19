@@ -264,20 +264,21 @@ section.mainContent div p,
 @media (max-width: 1100px) {
   .inner {
     border-radius: 3px;
-    width: 190px;
+    width: 190px !important;
     clip-path: circle(30px at 85% 10%);
     transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out,
       border 0.1s ease-in-out;
-    position: absolute;
+    position: absolute !important;
     right: 15px;
     cursor: pointer;
-    top: 18px;
+    display: block !important;
+    top: 18px !important;
     border: 1px solid transparent;
     z-index: 7;
     background-color: rgba(248, 164, 108, 0);
     .svg-1 {
       float: right;
-      display: block;
+      display: block !important;
       padding-right: 6px;
       z-index: 8;
       path {
@@ -292,7 +293,6 @@ section.mainContent div p,
       background: #f8f0e8;
       border: 1px solid #e6dcd4;
       .svg-1 {
-        display: block;
         path {
           stroke: #d3c9c0;
         }
@@ -312,10 +312,8 @@ section.mainContent div p,
     }
     #navigationContainer {
       z-index: 9;
-      margin-top: 2.7em;
-      padding-top: 2.3em;
+      padding-top: 2em;
       position: relative;
-      padding-right: 1em;
       text-align: right;
       border-top: 1px solid transparent;
       transition: border-top 260ms ease, transform 260ms ease 150ms,
@@ -323,6 +321,13 @@ section.mainContent div p,
       opacity: 0;
       transform: translate(-3%, 0%);
       -webkit-transform: translate(-3%, 0%);
+      flex-direction: column !important;
+      div {
+        padding-right: 1em;
+        &:last-child {
+          padding-bottom: 1em;
+        }
+      }
     }
   }
 }

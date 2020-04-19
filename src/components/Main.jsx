@@ -25,7 +25,7 @@ function Main() {
     yy: 0,
     height: 25,
     opacity: 1,
-    from: { yy: 30, height: 0, opacity: 0 }
+    from: { yy: 5, height: 0, opacity: 0 }
   });
   const trail7 = useTrail(mainMax.length, {
     config,
@@ -33,11 +33,11 @@ function Main() {
     yy: 0,
     height: 35,
     opacity: 1,
-    from: { yy: 50, height: 70, opacity: 0 }
+    from: { yy: 20, height: 70, opacity: 0 }
   });
   const trail3 = useTrail(bodyMovin.length, {
     config,
-    delay: 2500,
+    delay: 2300,
     yy: 0,
     opacity: 1,
     from: { yy: 70, opacity: 0 }
