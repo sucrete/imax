@@ -109,16 +109,16 @@ $darkBackground: rgb(34, 34, 34);
       text-transform: capitalize;
       cursor: pointer;
       letter-spacing: -0.009em;
-      div {
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: $rosenBrown;
-        background-image: url("../assets/fieldOfColor.jpg");
-        background-size: cover;
-        background-position: center;
-        &:hover {
-          -webkit-text-fill-color: transparent;
-        }
-      }
+      // div {
+      //   -webkit-background-clip: text;
+      //   -webkit-text-fill-color: $rosenBrown;
+      //   background-image: url("../assets/fieldOfColor.jpg");
+      //   background-size: cover;
+      //   background-position: center;
+      //   &:hover {
+      //     -webkit-text-fill-color: transparent;
+      //   }
+      // }
     }
     .landingrosen {
       font-weight: default;
@@ -154,9 +154,9 @@ $darkBackground: rgb(34, 34, 34);
           // height: 30px;
 
           .underlined {
-            font-size: 1.1em;
+            font-size: 1em;
             color: #2e2728;
-            font-family: "Criteria Medium", sans-serif;
+            font-family: "Criteria Regular", sans-serif;
             flex: 1;
             text-decoration: none;
             left: 0px;

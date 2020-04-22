@@ -41,7 +41,6 @@ section.mainContent div p,
 
 .App .innerContainer section.topNavigation {
   z-index: 99;
-  border-bottom: 1px solid #e6dcd4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,15 +55,37 @@ section.mainContent div p,
           justify-content: space-between;
 }
 
+.App .innerContainer section.topNavigation:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #e6dcd4;
+  left: 0px;
+  bottom: -1px;
+  width: 100%;
+  visibility: hidden;
+  -webkit-animation: 450ms showBottomBorder;
+          animation: 450ms showBottomBorder;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: normal !important;
+          animation-direction: normal !important;
+}
+
 .App .innerContainer section.topNavigation .logo {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .App .innerContainer section.topNavigation .logo .mainMax {
   position: relative;
-  font-size: 2.2em;
+  font-size: 2em;
   line-height: 60%;
   font-family: "RosenFont ExtraBlack";
   display: inline;
@@ -74,31 +95,32 @@ section.mainContent div p,
   color: #64320f;
   padding-left: 15px;
   background-position: center;
-  cursor: none;
+  cursor: default;
 }
 
 .App .innerContainer section.topNavigation .logo .mainRosen {
   font-weight: default;
-  font-size: 2.2em;
+  font-size: 2em;
   font-family: "RosenFont", "Arial", sans-serif;
   padding-left: 0.2em;
   text-transform: uppercase;
   display: inline;
   line-height: 60%;
-  top: 4px;
+  top: 5px;
   position: relative;
   letter-spacing: -0.05em;
   color: #64320f;
-  cursor: none;
+  cursor: default;
 }
 
 .App .innerContainer section.topNavigation .inner {
   position: relative;
-  width: 40%;
+  width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   top: 5px;
+  right: 15px;
 }
 
 .App .innerContainer section.topNavigation .inner .svg-1 {
@@ -117,9 +139,9 @@ section.mainContent div p,
 
 .App .innerContainer section.topNavigation .inner #navigationContainer div .navLink {
   text-decoration: none;
-  color: #1b1816;
+  color: #635856;
   font-family: "Criteria Medium", sans-serif;
-  font-size: 0.9em;
+  font-size: 0.8em;
   -webkit-transition: color 250ms ease;
   transition: color 250ms ease;
 }
@@ -140,9 +162,7 @@ section.mainContent div p,
 
 .App .innerContainer section.mainContent div .topBlock {
   width: 100%;
-  height: 20em;
-  -webkit-box-shadow: 0 1px 0 0 #e6dcd4;
-          box-shadow: 0 1px 0 0 #e6dcd4;
+  height: 15em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,48 +170,94 @@ section.mainContent div p,
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  z-index: 12;
 }
 
-.App .innerContainer section.mainContent div .topBlock .titleWrapper {
-  width: 50%;
+.App .innerContainer section.mainContent div .topBlock #canvasContainer {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
+}
+
+.App .innerContainer section.mainContent div .topBlock #canvasContainer canvas {
+  width: 60%;
+  height: 500px;
+  margin: 0;
+  background: black;
+  -webkit-transform-origin: 50%, 50%;
+          transform-origin: 50%, 50%;
+  top: -20%;
+  position: relative;
+  left: 3%;
+  z-index: 1;
+}
+
+.App .innerContainer section.mainContent div .topBlock #canvasContainer #canvasOverlay {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-.App .innerContainer section.mainContent div .topBlock .titleWrapper .pageTitle {
+.App .innerContainer section.mainContent div .topBlock #canvasContainer svg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 7;
+}
+
+.App .innerContainer section.mainContent div .topBlock #canvasContainer svg text {
   position: relative;
   margin: auto;
-  text-align: center;
-  font-size: 5.5em;
+  font-size: 1em;
   font-family: "Agrandir Grand Heavy", sans-serif;
-  color: white;
   letter-spacing: 0.05em;
+  display: inline-block;
+  -webkit-transform: scale(1.5, 1);
+  /* Safari and Chrome */
+  transform: scale(1.5, 1);
 }
 
-.App .innerContainer section.mainContent div p {
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.2em;
+.App .innerContainer section.mainContent div .topBlock #canvasContainer svg rect {
+  fill: #f3ebe4;
+}
+
+.App .innerContainer section.mainContent div .topBlock #canvasContainer svg > rect {
+  -webkit-mask: url(#mask);
+  mask: url(#mask);
 }
 
 .App .innerContainer section.mainContent div .videoSubRoutesContainer {
-  padding-top: 0.5em;
+  position: relative;
+  padding-top: 2.5em;
   padding-bottom: 0.5em;
-  font-size: 1.1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 0.9em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-top: 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 8;
+  background-color: #f3ebe4;
+  -webkit-box-shadow: 0 -1px 0 0 #e6dcd4;
+          box-shadow: 0 -1px 0 0 #e6dcd4;
 }
 
 .App .innerContainer section.mainContent div .videoSubRoutesContainer a.subRoute {
   letter-spacing: 0.03em;
   display: inline-block;
-  font-family: "Criteria Medium", sans-serif;
+  font-family: "Criteria Regular", sans-serif;
   text-decoration: none;
   color: #3c343d;
   position: relative;
@@ -217,17 +283,15 @@ section.mainContent div p,
   padding-top: 2em;
   color: #6e645c;
   overflow: hidden;
+  z-index: 88;
+  background-color: #f3ebe4;
+  position: relative;
 }
 
 .App .innerContainer section.mainContent div div.subsection .firstVideo {
   width: 96%;
   display: block;
   margin: 0 auto;
-}
-
-.App .innerContainer section.mainContent div div.subsection .firstVideo:hover {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
 }
 
 .App .innerContainer section.mainContent div div.subsection .firstVideo img {
@@ -267,11 +331,6 @@ section.mainContent div p,
   border-radius: 4px;
 }
 
-.App .innerContainer section.mainContent div div.subsection .lesserVideosContainer .lesserVideo img:hover {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-}
-
 .App .innerContainer section.mainContent div div.subsection .lesserVideosContainer .lesserVideo .videoDescriptionSmaller {
   font-size: 1em;
 }
@@ -297,31 +356,27 @@ section.mainContent div p,
   }
 }
 
-@-webkit-keyframes showDontShow {
+@-webkit-keyframes showBottomBorder {
   0% {
-    visibility: visible;
-  }
-  33.3% {
-    visibility: hidden;
+    opacity: 0;
   }
   100% {
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-@keyframes showDontShow {
+@keyframes showBottomBorder {
   0% {
-    visibility: visible;
-  }
-  33.3% {
-    visibility: hidden;
+    opacity: 0;
   }
   100% {
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .inner {
     border-radius: 3px;
     width: 190px !important;
@@ -343,12 +398,13 @@ section.mainContent div p,
   .inner .svg-1 {
     float: right;
     display: block !important;
-    padding-right: 6px;
     z-index: 8;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   .inner .svg-1 path {
     fill: none;
-    stroke: #64320f;
+    stroke: #635856;
     -webkit-transition: 0.25s ease;
     transition: 0.25s ease;
     stroke-width: 2px;
@@ -396,7 +452,22 @@ section.mainContent div p,
     padding-right: 1em;
   }
   .inner #navigationContainer div:last-child {
-    padding-bottom: 1em;
+    padding-bottom: 0.8em;
+  }
+  .inner #navigationContainer div .navLink {
+    font-size: 0.9em !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .inner {
+    top: 15px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .main {
+    width: 95vw !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

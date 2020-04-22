@@ -107,18 +107,6 @@
   letter-spacing: -0.009em;
 }
 
-.headerWrapper .landingHeader .landingmax div {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #64320f;
-  background-image: url("../assets/fieldOfColor.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.headerWrapper .landingHeader .landingmax div:hover {
-  -webkit-text-fill-color: transparent;
-}
-
 .headerWrapper .landingHeader .landingrosen {
   font-weight: default;
   font-family: RosenFont, "Arial", sans-serif;
@@ -160,9 +148,9 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined {
-  font-size: 1.1em;
+  font-size: 1em;
   color: #2e2728;
-  font-family: "Criteria Medium", sans-serif;
+  font-family: "Criteria Regular", sans-serif;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

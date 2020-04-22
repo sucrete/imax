@@ -8,9 +8,7 @@ import {
 } from "react-router-dom";
 //   import { useTrail, animated } from "react-spring";
 import "../styles/main.css";
-import disney from "../assets/disneyplus.png";
-import bloomberg from "../assets/bloombergbusiness.png";
-import vice from "../assets/vicenews.png";
+import Graphic from "./Graphic";
 import allYouNeedIsLikes from "../assets/AllYouNeedIsLikes.jpg";
 import clickBait from "../assets/ClickBait.jpg";
 import oneDayAtDisney from "../assets/OneDayAtDisney2.jpg";
@@ -185,8 +183,25 @@ function Video() {
   return (
     <div>
       <div className="topBlock">
-        <div className="titleWrapper">
-          <h1 className="pageTitle">video</h1>
+        <div id="canvasContainer">
+          <Graphic />
+          <div id="canvasOverlay"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 285 80"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <defs>
+              <mask id="mask" x="0" y="0" width="100%" height="100%">
+                <rect x="0" y="0" width="100%" height="100%" />
+                <text x="5" y="63">
+                  video
+                </text>
+              </mask>
+            </defs>
+            <rect id="sayhey" x="0" y="0" width="100%" height="100%" />
+            <rect id="sayhey" x="0" y="0" width="100%" height="100%" />
+          </svg>
         </div>
       </div>
 

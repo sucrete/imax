@@ -5,9 +5,6 @@ class Collage extends React.Component {
     return (
       <div>
         <div className="topBlock">
-          <div className="titleWrapper">
-            <h1 className="pageTitle">about</h1>
-          </div>
           <div className="imagesWrapper">
             <img style={{ height: "300px", width: "auto" }} src={maxPic} />
           </div>

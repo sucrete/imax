@@ -15,11 +15,7 @@ hr {
 .main,
 body,
 html {
-  background: #f3ebe4 !important;
-}
-
-p {
-  // color: $rosenBrownL !important;
+  background: rgb(243, 235, 228) !important;
 }
 .hidden {
   display: none;
@@ -37,7 +33,6 @@ section.mainContent div p,
     z-index: 7;
     section.topNavigation {
       z-index: 99;
-      border-bottom: 1px solid #e6dcd4;
       display: flex;
       position: sticky;
       position: -webkit-sticky;
@@ -46,11 +41,27 @@ section.mainContent div p,
       width: inherit;
       padding: 1.5em 0.5em 1.2em 0.5em;
       justify-content: space-between;
+      &:after {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid #e6dcd4;
+        left: 0px;
+        bottom: -1px;
+        width: 100%;
+        visibility: hidden;
+        animation: 450ms showBottomBorder;
+        animation-delay: 800ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-direction: normal !important;
+      }
       .logo {
         display: inline-flex;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         .mainMax {
           position: relative;
-          font-size: 2.2em;
+          font-size: 2em;
           line-height: 60%;
           font-family: "RosenFont ExtraBlack";
           display: inline;
@@ -60,29 +71,30 @@ section.mainContent div p,
           color: $rosenBrown;
           padding-left: 15px;
           background-position: center;
-          cursor: none;
+          cursor: default;
         }
         .mainRosen {
           font-weight: default;
-          font-size: 2.2em;
+          font-size: 2em;
           font-family: "RosenFont", "Arial", sans-serif;
           padding-left: 0.2em;
           text-transform: uppercase;
           display: inline;
           line-height: 60%;
-          top: 4px;
+          top: 5px;
           position: relative;
           letter-spacing: -0.05em;
           color: $rosenBrown;
-          cursor: none;
+          cursor: default;
         }
       }
 
       .inner {
         position: relative;
-        width: 40%;
+        width: 400px;
         display: flex;
         top: 5px;
+        right: 15px;
         .svg-1 {
           display: none;
         }
@@ -94,9 +106,9 @@ section.mainContent div p,
           div {
             .navLink {
               text-decoration: none;
-              color: $rosenBrownL;
+              color: rgb(99, 88, 86);
               font-family: "Criteria Medium", sans-serif;
-              font-size: 0.9em;
+              font-size: 0.8em;
               // text-transform: uppercase;
               transition: color 250ms ease;
               &:hover {
@@ -117,63 +129,99 @@ section.mainContent div p,
       div {
         .topBlock {
           width: 100%;
-          height: 20em;
-          box-shadow: 0 1px 0 0 #e6dcd4;
+          height: 15em;
           display: flex;
           flex-direction: row;
-
-          .titleWrapper {
-            // box-shadow: 1px 0 0 0 #e6dcd4;
-            width: 50%;
-            height: 100%;
-            display: flex;
-            z-index: 3;
-            .pageTitle {
+          z-index: 12;
+          #canvasContainer {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            max-width: 1200px;
+            canvas {
+              width: 60%;
+              height: 500px;
+              margin: 0;
+              background: hsla(0, 0%, 0%, 1);
+              // transform: rotate(10deg);
+              transform-origin: 50%, 50%;
+              top: -20%;
               position: relative;
-              margin: auto;
-              text-align: center;
-              font-size: 5.5em;
-              font-family: "Agrandir Grand Heavy", sans-serif;
-              color: white;
-              letter-spacing: 0.05em;
-              // -webkit-text-stroke-width: 0.015em;
-              // -webkit-text-stroke-color: #d8cfc7;
-              // text-shadow: 1px 1px 0 rgba(227, 218, 219, 1),
-              //   3px 3px 0 rgba(227, 218, 219, 0.9),
-              //   5px 5px 0 rgba(227, 218, 219, 0.8),
-              //   7px 7px 0 rgba(227, 218, 219, 0.7),
-              //   9px 9px 0 rgba(227, 218, 219, 0.6),
-              //   11px 11px 0 rgba(227, 218, 219, 0.5),
-              //   13px 13px 0 rgba(227, 218, 219, 0.4),
-              //   15px 15px 0 rgba(227, 218, 219, 0.3),
-              //   17px 17px 0 rgba(227, 218, 219, 0.2),
-              //   19px 19px 0 rgba(227, 218, 219, 0.1),
-              //   21px 21px 0 rgba(227, 218, 219, 0.08),
-              //   22px 22px 0 rgba(227, 218, 219, 0.07),
-              //   23px 23px 0 rgba(227, 218, 219, 0.06),
-              //   25px 25px 0 rgba(227, 218, 219, 0.04),
-              //   27px 27px 0 rgba(227, 218, 219, 0.02),
-              //   28px 28px 0 rgba(170, 28, 44, 0.01),
-              //   29px 29px 0 rgba(227, 218, 219, 0);
+              left: 3%;
+              z-index: 1;
+            }
+            #canvasOverlay {
+              width: 100%;
+              background-color: rgba(255, 255, 255, 0.3);
+              backdrop-filter: blur(15px);
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 2;
+            }
+            svg {
+              width: 100%;
+              position: absolute;
+              top: 0;
+              left: 0; // needed for FF, Safari, Edge
+              height: 100%;
+              z-index: 7;
+              text {
+                position: relative;
+                margin: auto;
+                font-size: 1em;
+                font-family: "Agrandir Grand Heavy", sans-serif;
+                letter-spacing: 0.05em;
+                display: inline-block;
+                -webkit-transform: scale(1.5, 1); /* Safari and Chrome */
+                transform: scale(1.5, 1);
+                // -webkit-text-stroke-width: 0.015em;
+                // -webkit-text-stroke-color: #d8cfc7;
+                // text-shadow: 1px 1px 0 rgba(227, 218, 219, 1),
+                //   3px 3px 0 rgba(227, 218, 219, 0.9),
+                //   5px 5px 0 rgba(227, 218, 219, 0.8),
+                //   7px 7px 0 rgba(227, 218, 219, 0.7),
+                //   9px 9px 0 rgba(227, 218, 219, 0.6),
+                //   11px 11px 0 rgba(227, 218, 219, 0.5),
+                //   13px 13px 0 rgba(227, 218, 219, 0.4),
+                //   15px 15px 0 rgba(227, 218, 219, 0.3),
+                //   17px 17px 0 rgba(227, 218, 219, 0.2),
+                //   19px 19px 0 rgba(227, 218, 219, 0.1),
+                //   21px 21px 0 rgba(227, 218, 219, 0.08),
+                //   22px 22px 0 rgba(227, 218, 219, 0.07),
+                //   23px 23px 0 rgba(227, 218, 219, 0.06),
+                //   25px 25px 0 rgba(227, 218, 219, 0.04),
+                //   27px 27px 0 rgba(227, 218, 219, 0.02),
+                //   28px 28px 0 rgba(170, 28, 44, 0.01),
+                //   29px 29px 0 rgba(227, 218, 219, 0);
+              }
+              rect {
+                fill: rgb(243, 235, 228);
+              }
+            }
+            svg > rect {
+              -webkit-mask: url(#mask);
+              mask: url(#mask);
             }
           }
         }
-
-        p {
-          font-family: "Work Sans", sans-serif;
-          font-size: 1.2em;
-        }
         .videoSubRoutesContainer {
-          padding-top: 0.5em;
+          position: relative;
+          padding-top: 2.5em;
           padding-bottom: 0.5em;
-          font-size: 1.1em;
+          padding-left: 2em;
+          padding-right: 2em;
+          font-size: 0.9em;
           display: flex;
-          justify-content: space-around;
-          margin-top: 2em;
+          justify-content: space-between;
+          z-index: 8;
+          background-color: rgb(243, 235, 228);
+          box-shadow: 0 -1px 0 0 #e6dcd4;
           a.subRoute {
             letter-spacing: 0.03em;
             display: inline-block;
-            font-family: "Criteria Medium", sans-serif;
+            font-family: "Criteria Regular", sans-serif;
             text-decoration: none;
             color: rgb(60, 52, 61);
             position: relative;
@@ -191,12 +239,14 @@ section.mainContent div p,
           padding-top: 2em;
           color: #6e645c;
           overflow: hidden;
+          z-index: 88;
+          background-color: rgb(243, 235, 228);
+          position: relative;
           .firstVideo {
             width: 96%;
             display: block;
             margin: 0 auto;
             &:hover {
-              filter: grayscale(100%);
             }
             img {
               width: 100%;
@@ -222,7 +272,6 @@ section.mainContent div p,
                 width: 100%;
                 border-radius: 4px;
                 &:hover {
-                  filter: grayscale(100%);
                 }
               }
               .videoDescriptionSmaller {
@@ -250,18 +299,16 @@ section.mainContent div p,
     order: 3;
   }
 }
-@keyframes showDontShow {
+@keyframes showBottomBorder {
   0% {
-    visibility: visible;
-  }
-  33.3% {
-    visibility: hidden;
+    opacity: 0;
   }
   100% {
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .inner {
     border-radius: 3px;
     width: 190px !important;
@@ -279,11 +326,11 @@ section.mainContent div p,
     .svg-1 {
       float: right;
       display: block !important;
-      padding-right: 6px;
       z-index: 8;
+      transform: scale(0.8);
       path {
         fill: none;
-        stroke: $rosenBrown;
+        stroke: rgb(99, 88, 86);
         transition: 0.25s ease;
         stroke-width: 2px;
       }
@@ -325,9 +372,22 @@ section.mainContent div p,
       div {
         padding-right: 1em;
         &:last-child {
-          padding-bottom: 1em;
+          padding-bottom: 0.8em;
+        }
+        .navLink {
+          font-size: 0.9em !important;
         }
       }
     }
+  }
+}
+@media (max-width: 575px) {
+  .inner {
+    top: 15px !important;
+  }
+}
+@media (max-width: 800px) {
+  .main {
+    width: 95vw !important;
   }
 }

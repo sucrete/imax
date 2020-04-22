@@ -13,12 +13,19 @@ import Collage from "./Collage";
 import Design from "./Design";
 import Gooftown from "./Gooftown";
 import About from "./About";
-
 const config = { mass: 4, tension: 3400, friction: 320 };
 const routes = ["about", "video", "photo", "design", "collage", "gooftown"];
 const mainMax = ["Max", "Rosen"];
 const bodyMovin = new Array(1);
 function Main() {
+  const trail1 = useTrail(mainMax.length, {
+    config,
+    delay: 1600,
+    yy: 0,
+    height: 35,
+    opacity: 1,
+    from: { yy: 25, height: 70, opacity: 0 }
+  });
   const trail2 = useTrail(routes.length, {
     config,
     delay: 2100,
@@ -27,21 +34,22 @@ function Main() {
     opacity: 1,
     from: { yy: 5, height: 0, opacity: 0 }
   });
-  const trail7 = useTrail(mainMax.length, {
-    config,
-    delay: 1600,
-    yy: 0,
-    height: 35,
-    opacity: 1,
-    from: { yy: 20, height: 70, opacity: 0 }
-  });
   const trail3 = useTrail(bodyMovin.length, {
+    config,
+    delay: 2100,
+    yy: 0,
+    height: 25,
+    opacity: 1,
+    from: { yy: 5, height: 0, opacity: 0 }
+  });
+  const trail4 = useTrail(bodyMovin.length, {
     config,
     delay: 2300,
     yy: 0,
     opacity: 1,
-    from: { yy: 70, opacity: 0 }
+    from: { yy: 40, opacity: 0 }
   });
+
   let { url } = useRouteMatch();
   useEffect(() => {
     setTimeout(() => {
@@ -55,7 +63,7 @@ function Main() {
         <Router>
           <section className="topNavigation">
             <div className="logo">
-              {trail7.map(({ yy, height, ...rest }, index) => (
+              {trail1.map(({ yy, height, ...rest }, index) => (
                 <animated.div
                   style={{
                     ...rest,
@@ -70,10 +78,20 @@ function Main() {
             </div>
 
             <div class="inner">
-              <svg height="45" width="45" class="svg-1">
-                <path id="top" d="M7,17 L38,17" />
-                <path id="bottom" d="M7,27 L38,27" />
-              </svg>
+              {trail3.map(({ yy, height, ...rest }, index) => (
+                <animated.div
+                  style={{
+                    ...rest,
+                    transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
+                  }}
+                >
+                  <svg height="45" width="45" class="svg-1">
+                    <path id="top" d="M7,17 L38,17" />
+                    <path id="bottom" d="M7,27 L38,27" />
+                  </svg>
+                </animated.div>
+              ))}
+
               <nav role="navigation" id="navigationContainer">
                 {trail2.map(({ yy, height, ...rest }, index) => (
                   <animated.div
@@ -100,7 +118,7 @@ function Main() {
               </nav>
             </div>
           </section>
-          {trail3.map(({ yy, ...rest }, index) => (
+          {trail4.map(({ yy, ...rest }, index) => (
             <animated.div
               style={{
                 ...rest,
@@ -135,6 +153,7 @@ function Main() {
           ))}
         </Router>
       </div>
+
       <style jsx>{`
         html {
           background-color: rgb(34, 34, 34);
