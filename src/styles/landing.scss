@@ -148,38 +148,33 @@ $darkBackground: rgb(34, 34, 34);
 
       div.whereTo {
         text-align: right;
-        div {
-          overflow: hidden;
-          position: relative;
-          // height: 30px;
 
-          .underlined {
-            font-size: 1em;
-            color: #2e2728;
-            font-family: "Criteria Regular", sans-serif;
-            flex: 1;
-            text-decoration: none;
-            left: 0px;
-            display: block;
-            // transition: 0.3s ease;
-            letter-spacing: 0.03em;
-            &:hover {
-              // background-size: 100% 20%;
-              // -moz-background-size: 100% 20%;
-              // font-style: italic;
-              color: #786f7e;
-            }
-            // &--thin {
-            //   background-image: linear-gradient(
-            //     to left,
-            //     $whereToColor 0,
-            //     $whereToColor 100%
-            //   );
-            // }
+        .underlined {
+          font-size: 1em;
+          color: #2e2728;
+          font-family: "Criteria Regular", sans-serif;
+          flex: 1;
+          text-decoration: none;
+          left: 0px;
+          display: block;
+          // transition: 0.3s ease;
+          letter-spacing: 0.03em;
+          &:hover {
+            // background-size: 100% 20%;
+            // -moz-background-size: 100% 20%;
+            // font-style: italic;
+            color: #786f7e;
           }
-          .whereToLink {
-            text-align: right;
-          }
+          // &--thin {
+          //   background-image: linear-gradient(
+          //     to left,
+          //     $whereToColor 0,
+          //     $whereToColor 100%
+          //   );
+          // }
+        }
+        .whereToLink {
+          text-align: right;
         }
       }
     }

@@ -368,7 +368,6 @@ function Video() {
        */
         .c-tab {
           display: none;
-          border-top: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .c-tab.is-active {
@@ -380,7 +379,10 @@ function Video() {
           position: relative;
           animation: showTab 300ms ease-in-out both;
         }
-
+        .c-tab__content p {
+          font-family: "Criteria Regular", sans-serif;
+          color: #a39c97;
+        }
         @keyframes showTab {
           from {
             opacity: 0;

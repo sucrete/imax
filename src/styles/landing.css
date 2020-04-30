@@ -142,12 +142,7 @@
   text-align: right;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div {
-  overflow: hidden;
-  position: relative;
-}
-
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo .underlined {
   font-size: 1em;
   color: #2e2728;
   font-family: "Criteria Regular", sans-serif;
@@ -160,11 +155,11 @@
   letter-spacing: 0.03em;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div .underlined:hover {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo .underlined:hover {
   color: #786f7e;
 }
 
-.headerWrapper .informationalContainer .whereToContainer div.whereTo div .whereToLink {
+.headerWrapper .informationalContainer .whereToContainer div.whereTo .whereToLink {
   text-align: right;
 }
 
