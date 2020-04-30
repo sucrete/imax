@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bourbon": "^7.0.0",
+    "eyeglass": "^3.0.0",
     "gsap": "^3.2.5",
+    "node-sass": "^4.14.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.2",

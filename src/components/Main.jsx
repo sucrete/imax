@@ -1,11 +1,16 @@
+// <------ MAIN.JSX --------->
+
 import React, { useEffect } from "react";
 import { useTrail, animated } from "react-spring";
 import {
   BrowserRouter as Router,
   Route,
   Link,
-  useRouteMatch
+  NavLink,
+  useRouteMatch,
+  withRouter
 } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 import "../styles/main.css";
 import Photo from "./Photo";
 import Video from "./Video";
@@ -15,6 +20,14 @@ import Gooftown from "./Gooftown";
 import About from "./About";
 const config = { mass: 4, tension: 3400, friction: 320 };
 const routes = ["about", "video", "photo", "design", "collage", "gooftown"];
+const topRoutes = [
+  { path: "/about", name: "About", Component: About },
+  { path: "/video", name: "Video", Component: Video },
+  { path: "/photo", name: "Photo", Component: Photo },
+  { path: "/design", name: "Design", Component: Design },
+  { path: "/collage", name: "Collage", Component: Collage },
+  { path: "/gooftown", name: "Gooftown", Component: Gooftown }
+];
 const mainMax = ["Max", "Rosen"];
 const bodyMovin = new Array(1);
 function Main() {
@@ -50,7 +63,7 @@ function Main() {
     from: { yy: 40, opacity: 0 }
   });
 
-  let { url } = useRouteMatch();
+  let match = useRouteMatch();
   useEffect(() => {
     setTimeout(() => {
       const mainElement = document.getElementsByClassName("innerContainer")[0];
@@ -91,7 +104,6 @@ function Main() {
                   </svg>
                 </animated.div>
               ))}
-
               <nav role="navigation" id="navigationContainer">
                 {trail2.map(({ yy, height, ...rest }, index) => (
                   <animated.div
@@ -103,13 +115,11 @@ function Main() {
                     }}
                   >
                     <Link
+                      as={NavLink}
                       style={{ height }}
+                      key={`/${routes[index]}`}
                       className="navLink"
-                      to={`${url}/${
-                        routes[index] === "video"
-                          ? routes[index] + "/doc"
-                          : routes[index]
-                      }`}
+                      to={`${match.url}/${routes[index]}`}
                     >
                       {routes[index]}
                     </Link>
@@ -118,39 +128,55 @@ function Main() {
               </nav>
             </div>
           </section>
-          {trail4.map(({ yy, ...rest }, index) => (
-            <animated.div
-              style={{
-                ...rest,
-                transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
-              }}
-            >
-              <section className="mainContent">
-                <Route path={`${url}/video`}>
+          <section className="mainContent">
+            {trail4.map(({ yy, ...rest }) => (
+              <animated.div
+                style={{
+                  ...rest,
+                  transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
+                }}
+              >
+                {topRoutes.map(({ path, Component }) => (
+                  <Route key={path} path={`${match.path + path}`}>
+                    {({ match }) => (
+                      <CSSTransition
+                        in={match != null}
+                        timeout={300}
+                        classNames="mainRoute"
+                        unmountOnExit
+                      >
+                        <div className="mainRoute">
+                          <Component />
+                        </div>
+                      </CSSTransition>
+                    )}
+                  </Route>
+                ))}
+                {/* <Route path={`${match.path}/about`}>
+                  <About />
+                </Route>
+                <Route path={`${match.path}/video`}>
                   <Video />
                 </Route>
 
-                <Route path={`${url}/photo`}>
+                <Route path={`${match.path}/photo`}>
                   <Photo />
                 </Route>
 
-                <Route path={`${url}/design`}>
+                <Route path={`${match.path}/design`}>
                   <Design />
                 </Route>
 
-                <Route path={`${url}/collage`}>
+                <Route path={`${match.path}/collage`}>
                   <Collage />
                 </Route>
 
-                <Route path={`${url}/gooftown`}>
+                <Route path={`${match.path}/gooftown`}>
                   <Gooftown />
-                </Route>
-                <Route path={`${url}/about`}>
-                  <About />
-                </Route>
-              </section>
-            </animated.div>
-          ))}
+                </Route> */}
+              </animated.div>
+            ))}
+          </section>
         </Router>
       </div>
 
@@ -162,4 +188,4 @@ function Main() {
     </div>
   );
 }
-export default Main;
+export default withRouter(Main);

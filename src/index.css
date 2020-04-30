@@ -106,3 +106,7 @@ body {
   font-family: "Criteria Medium";
   src: url("assets/Fonts/Criteria/CriteriaMedium.woff") format("woff");
 }
+@font-face {
+  font-family: "Criteria Demi";
+  src: url("assets/Fonts/Criteria/CriteriaDemi.woff") format("woff");
+}

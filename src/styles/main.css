@@ -26,6 +26,10 @@ section.mainContent div p,
   color: #74655a;
 }
 
+p {
+  font-family: "Criteria Medium", sans-serif;
+}
+
 .App {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,6 +85,7 @@ section.mainContent div p,
   display: inline-flex;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
 }
 
 .App .innerContainer section.topNavigation .logo .mainMax {
@@ -95,7 +100,6 @@ section.mainContent div p,
   color: #64320f;
   padding-left: 15px;
   background-position: center;
-  cursor: default;
 }
 
 .App .innerContainer section.topNavigation .logo .mainRosen {
@@ -110,7 +114,6 @@ section.mainContent div p,
   position: relative;
   letter-spacing: -0.05em;
   color: #64320f;
-  cursor: default;
 }
 
 .App .innerContainer section.topNavigation .inner {
@@ -140,8 +143,9 @@ section.mainContent div p,
 .App .innerContainer section.topNavigation .inner #navigationContainer div .navLink {
   text-decoration: none;
   color: #635856;
-  font-family: "Criteria Medium", sans-serif;
-  font-size: 0.8em;
+  font-family: "Criteria Demi", sans-serif;
+  font-size: 0.7em;
+  text-transform: uppercase;
   -webkit-transition: color 250ms ease;
   transition: color 250ms ease;
 }
@@ -173,68 +177,6 @@ section.mainContent div p,
   z-index: 12;
 }
 
-.App .innerContainer section.mainContent div .topBlock #canvasContainer {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  max-width: 1200px;
-}
-
-.App .innerContainer section.mainContent div .topBlock #canvasContainer canvas {
-  width: 60%;
-  height: 500px;
-  margin: 0;
-  background: black;
-  -webkit-transform-origin: 50%, 50%;
-          transform-origin: 50%, 50%;
-  top: -20%;
-  position: relative;
-  left: 3%;
-  z-index: 1;
-}
-
-.App .innerContainer section.mainContent div .topBlock #canvasContainer #canvasOverlay {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.App .innerContainer section.mainContent div .topBlock #canvasContainer svg {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: 7;
-}
-
-.App .innerContainer section.mainContent div .topBlock #canvasContainer svg text {
-  position: relative;
-  margin: auto;
-  font-size: 1em;
-  font-family: "Agrandir Grand Heavy", sans-serif;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  -webkit-transform: scale(1.5, 1);
-  /* Safari and Chrome */
-  transform: scale(1.5, 1);
-}
-
-.App .innerContainer section.mainContent div .topBlock #canvasContainer svg rect {
-  fill: #f3ebe4;
-}
-
-.App .innerContainer section.mainContent div .topBlock #canvasContainer svg > rect {
-  -webkit-mask: url(#mask);
-  mask: url(#mask);
-}
-
 .App .innerContainer section.mainContent div .videoSubRoutesContainer {
   position: relative;
   padding-top: 2.5em;
@@ -245,9 +187,8 @@ section.mainContent div p,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   z-index: 8;
   background-color: #f3ebe4;
   -webkit-box-shadow: 0 -1px 0 0 #e6dcd4;
@@ -257,7 +198,7 @@ section.mainContent div p,
 .App .innerContainer section.mainContent div .videoSubRoutesContainer a.subRoute {
   letter-spacing: 0.03em;
   display: inline-block;
-  font-family: "Criteria Regular", sans-serif;
+  font-family: "Criteria Medium", sans-serif;
   text-decoration: none;
   color: #3c343d;
   position: relative;
@@ -469,5 +410,43 @@ section.mainContent div p,
   .main {
     width: 95vw !important;
   }
+}
+
+.mainRoute {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.mainRoute-enter {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.mainRoute-enter-active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.mainRoute-exit {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.mainRoute-exit-active {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
 }
 /*# sourceMappingURL=main.css.map */

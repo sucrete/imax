@@ -24,7 +24,9 @@ section.mainContent div p,
 .videoDescription {
   color: #74655a;
 }
-
+p {
+  font-family: "Criteria Medium", sans-serif;
+}
 .App {
   display: flex;
   justify-content: center;
@@ -59,6 +61,7 @@ section.mainContent div p,
         display: inline-flex;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        text-decoration: none;
         .mainMax {
           position: relative;
           font-size: 2em;
@@ -71,7 +74,6 @@ section.mainContent div p,
           color: $rosenBrown;
           padding-left: 15px;
           background-position: center;
-          cursor: default;
         }
         .mainRosen {
           font-weight: default;
@@ -85,7 +87,6 @@ section.mainContent div p,
           position: relative;
           letter-spacing: -0.05em;
           color: $rosenBrown;
-          cursor: default;
         }
       }
 
@@ -98,7 +99,6 @@ section.mainContent div p,
         .svg-1 {
           display: none;
         }
-
         #navigationContainer {
           display: flex;
           justify-content: space-between;
@@ -107,9 +107,10 @@ section.mainContent div p,
             .navLink {
               text-decoration: none;
               color: rgb(99, 88, 86);
-              font-family: "Criteria Medium", sans-serif;
-              font-size: 0.8em;
-              // text-transform: uppercase;
+              font-family: "Criteria Demi", sans-serif;
+              font-size: 0.7em;
+
+              text-transform: uppercase;
               transition: color 250ms ease;
               &:hover {
                 color: #786f7e;
@@ -133,78 +134,6 @@ section.mainContent div p,
           display: flex;
           flex-direction: row;
           z-index: 12;
-          #canvasContainer {
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-            max-width: 1200px;
-            canvas {
-              width: 60%;
-              height: 500px;
-              margin: 0;
-              background: hsla(0, 0%, 0%, 1);
-              // transform: rotate(10deg);
-              transform-origin: 50%, 50%;
-              top: -20%;
-              position: relative;
-              left: 3%;
-              z-index: 1;
-            }
-            #canvasOverlay {
-              width: 100%;
-              background-color: rgba(255, 255, 255, 0.3);
-              backdrop-filter: blur(15px);
-              height: 100%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              z-index: 2;
-            }
-            svg {
-              width: 100%;
-              position: absolute;
-              top: 0;
-              left: 0; // needed for FF, Safari, Edge
-              height: 100%;
-              z-index: 7;
-              text {
-                position: relative;
-                margin: auto;
-                font-size: 1em;
-                font-family: "Agrandir Grand Heavy", sans-serif;
-                letter-spacing: 0.05em;
-                display: inline-block;
-                -webkit-transform: scale(1.5, 1); /* Safari and Chrome */
-                transform: scale(1.5, 1);
-                // -webkit-text-stroke-width: 0.015em;
-                // -webkit-text-stroke-color: #d8cfc7;
-                // text-shadow: 1px 1px 0 rgba(227, 218, 219, 1),
-                //   3px 3px 0 rgba(227, 218, 219, 0.9),
-                //   5px 5px 0 rgba(227, 218, 219, 0.8),
-                //   7px 7px 0 rgba(227, 218, 219, 0.7),
-                //   9px 9px 0 rgba(227, 218, 219, 0.6),
-                //   11px 11px 0 rgba(227, 218, 219, 0.5),
-                //   13px 13px 0 rgba(227, 218, 219, 0.4),
-                //   15px 15px 0 rgba(227, 218, 219, 0.3),
-                //   17px 17px 0 rgba(227, 218, 219, 0.2),
-                //   19px 19px 0 rgba(227, 218, 219, 0.1),
-                //   21px 21px 0 rgba(227, 218, 219, 0.08),
-                //   22px 22px 0 rgba(227, 218, 219, 0.07),
-                //   23px 23px 0 rgba(227, 218, 219, 0.06),
-                //   25px 25px 0 rgba(227, 218, 219, 0.04),
-                //   27px 27px 0 rgba(227, 218, 219, 0.02),
-                //   28px 28px 0 rgba(170, 28, 44, 0.01),
-                //   29px 29px 0 rgba(227, 218, 219, 0);
-              }
-              rect {
-                fill: rgb(243, 235, 228);
-              }
-            }
-            svg > rect {
-              -webkit-mask: url(#mask);
-              mask: url(#mask);
-            }
-          }
         }
         .videoSubRoutesContainer {
           position: relative;
@@ -214,14 +143,14 @@ section.mainContent div p,
           padding-right: 2em;
           font-size: 0.9em;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           z-index: 8;
           background-color: rgb(243, 235, 228);
           box-shadow: 0 -1px 0 0 #e6dcd4;
           a.subRoute {
             letter-spacing: 0.03em;
             display: inline-block;
-            font-family: "Criteria Regular", sans-serif;
+            font-family: "Criteria Medium", sans-serif;
             text-decoration: none;
             color: rgb(60, 52, 61);
             position: relative;
@@ -390,4 +319,31 @@ section.mainContent div p,
   .main {
     width: 95vw !important;
   }
+}
+.mainRoute {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.mainRoute-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.mainRoute-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.mainRoute-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mainRoute-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
 }

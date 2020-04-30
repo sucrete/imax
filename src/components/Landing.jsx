@@ -8,7 +8,6 @@ import Main from "./Main";
 
 const items = ["max", "rosen"];
 const whereTo = ["video", "photo", "design", "collage", "gooftown"];
-const whoIsMax = new Array(7);
 const config = { mass: 5, tension: 3500, friction: 400 };
 
 function Landing() {
@@ -17,7 +16,7 @@ function Landing() {
     delay: 1000,
     yy: 0,
     height: 150,
-    from: { yy: 300, height: 0 }
+    from: { yy: 250, height: 0 }
   });
   const trail2 = useTrail(whereTo.length, {
     config,
@@ -59,9 +58,7 @@ function Landing() {
                           )
                         }}
                       >
-                        <animated.div style={{ height }}>
-                          {items[index]}
-                        </animated.div>
+                        <div style={{ height }}>{items[index]}</div>
                       </animated.div>
                     ))}
                   </header>
@@ -78,22 +75,13 @@ function Landing() {
                               )
                             }}
                           >
-                            <animated.div>
-                              <Link
-                                style={{ height }}
-                                className="whereToLink underlined underlined--thin"
-                                to={
-                                  "/" +
-                                  `m/${
-                                    whereTo[index] === "video"
-                                      ? whereTo[index] + "/doc"
-                                      : whereTo[index]
-                                  }`
-                                }
-                              >
-                                {whereTo[index]}
-                              </Link>
-                            </animated.div>
+                            <Link
+                              style={{ height }}
+                              className="whereToLink underlined underlined--thin"
+                              to={"/" + `m/${whereTo[index]}`}
+                            >
+                              {whereTo[index]}
+                            </Link>
                           </animated.div>
                         ))}
                       </div>
