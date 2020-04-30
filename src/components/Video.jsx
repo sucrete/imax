@@ -252,21 +252,20 @@ function Video() {
       vidDescription={route.description}
     ></LesserVideos>
   ));
-  const subRoutes = ["doc", "narrative", "visual", "promo"];
   return (
     <section id="page">
       <div id="tabs" className="c-tabs">
         <div className="c-tabs-nav">
-          <a href="javascript:void(0);" className="c-tabs-nav__link is-active">
+          <a href="#;" className="c-tabs-nav__link is-active">
             doc
           </a>
-          <a href="javascript:void(0);" className="c-tabs-nav__link">
+          <a href="#;" className="c-tabs-nav__link">
             narrative
           </a>
-          <a href="javascript:void(0);" className="c-tabs-nav__link">
+          <a href="#;" className="c-tabs-nav__link">
             visual
           </a>
-          <a href="javascript:void(0);" className="c-tabs-nav__link">
+          <a href="#;" className="c-tabs-nav__link">
             promo
           </a>
           <div className="c-tab-nav-marker"></div>
@@ -274,13 +273,28 @@ function Video() {
 
         <div className="c-tab is-active">
           <div className="c-tab__content">
-            <h2>Home</h2>
-            <p>
-              lorem ipsum set dolor amet lorem ipsum set dolor amet lorem ipsum
-              set doet dolor amet lorem ipsum set dolor amet lorem ipsum set
-              dolor amet lorem ipsum set dolor amet lorem ipsum set dolor amet
-              lorem ipsum set dolor amet
-            </p>
+            <div className="firstVideo">
+              <img className="firstVideoImg" src={oneDayAtDisney} />
+              <p className="videoDescription">
+                Disney+, editor on 14 of 52 episodes
+              </p>
+            </div>
+            <div className="lesserVideosContainer">
+              <div className="lesserVideo">
+                <img src={allYouNeedIsLikes} />
+                <p className="videoDescriptionSmaller">
+                  [Vice News Tonight on HBO, producer / director /
+                  cinematographer / co-editor]
+                </p>
+              </div>
+              <div className="lesserVideo">
+                <img src={clickBait} />
+                <p className="videoDescriptionSmaller">
+                  [Vice News Tonight on HBO; producer / director /
+                  co-cinematographer / co-editor]
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -326,15 +340,38 @@ function Video() {
         </div>
       </div>
       <style jsx>{`
-        @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-
+        .videoDescriptionSmaller {
+          width: 100%;
+          font-size: 0.8em;
+        }
+        .lesserVideosContainer {
+          display: flex;
+          flex-wrap: wrap;
+          width: 95%;
+          margin: 0 auto;
+          justify-content: space-between;
+        }
+        .lesserVideo {
+          width: 48%;
+        }
+        .lesserVideo img {
+          width: 100%;
+        }
+        .firstVideo {
+          padding-top: 1em;
+          width: 95%;
+          margin: 0 auto;
+        }
+        .firstVideoImg {
+          width: 100%;
+        }
         body {
           font-family: "Criteria Regular", sans-serif;
           color: #fff;
           background-image: linear-gradient(135deg, #349bc7 0%, #236dcf 100%);
         }
         #page {
-          width: 50%;
+          width: 100%;
           margin: 0 auto;
           min-height: 100vh;
         }
@@ -346,8 +383,11 @@ function Video() {
         .c-tabs-nav {
           list-style: none;
           padding: 0;
+          margin: 0 auto;
           position: relative;
           margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
         }
 
         .c-tabs-nav__link {
@@ -368,6 +408,7 @@ function Video() {
        */
         .c-tab {
           display: none;
+          width: 100%;
         }
 
         .c-tab.is-active {
@@ -375,9 +416,10 @@ function Video() {
         }
 
         .c-tab__content {
-          padding: 20px;
-          position: relative;
+          width: 95%;
           animation: showTab 300ms ease-in-out both;
+          margin: 0 auto;
+          margin-top: 3em;
         }
         .c-tab__content p {
           font-family: "Criteria Regular", sans-serif;
@@ -396,52 +438,15 @@ function Video() {
 
         .c-tab-nav-marker {
           min-height: 4px;
-          background-color: #fff;
+          background-color: #e3cbba;
           position: absolute;
           bottom: -10px;
-
           transition: all 0.3s ease-out;
         }
       `}</style>
     </section>
 
     // <div className="tabs">
-    //   {/* {subRoutes.map((aThing) => (
-    //     ))} */}
-    //   <input type="radio" id="tab1" name="tab-control" checked />
-    //   <input type="radio" id="tab2" name="tab-control" />
-    //   <input type="radio" id="tab3" name="tab-control" />
-    //   <input type="radio" id="tab4" name="tab-control" />
-    //   <ul>
-    //     <li title="doc">
-    //       <label for="tab1" role="button">
-    //         <br />
-    //         <span>doc</span>
-    //       </label>
-    //     </li>
-    //     <li title="narrative">
-    //       <label for="tab2" role="button">
-    //         <br />
-    //         <span>narrative</span>
-    //       </label>
-    //     </li>
-    //     <li title="visual">
-    //       <label for="tab3" role="button">
-    //         <br />
-    //         <span>visual</span>
-    //       </label>
-    //     </li>
-    //     <li title="promo">
-    //       <label for="tab4" role="button">
-    //         <br />
-    //         <span>promo</span>
-    //       </label>
-    //     </li>
-    //   </ul>
-
-    //   <div class="slider">
-    //     <div class="indicator"></div>
-    //   </div>
 
     //   <section className="subsection">
     //     <div className="firstVideo">
