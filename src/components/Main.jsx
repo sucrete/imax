@@ -184,6 +184,9 @@ function Main() {
         html {
           background-color: rgb(34, 34, 34);
         }
+        .App {
+          height: 110vh;
+        }
       `}</style>
     </div>
   );

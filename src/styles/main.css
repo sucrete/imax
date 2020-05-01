@@ -30,6 +30,11 @@ p {
   font-family: "Criteria Medium", sans-serif;
 }
 
+.contentBody {
+  font-family: "Criteria Regular", sans-serif;
+  font-size: 1.1em;
+}
+
 .App {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,6 +46,7 @@ p {
 
 .App .innerContainer {
   z-index: 7;
+  padding-bottom: 10em;
 }
 
 .App .innerContainer section.topNavigation {
@@ -401,6 +407,7 @@ p {
 
 .mainRoute {
   position: absolute;
+  padding: 2em 2em 0em 2em;
   left: 15px;
   right: 15px;
 }
@@ -431,5 +438,9 @@ p {
   transition: opacity 100ms, -webkit-transform 300ms;
   transition: opacity 100ms, transform 300ms;
   transition: opacity 100ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.topBlock {
+  padding: 3em 0em 1.5em 0.5em;
 }
 /*# sourceMappingURL=main.css.map */

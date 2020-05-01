@@ -27,12 +27,17 @@ section.mainContent div p,
 p {
   font-family: "Criteria Medium", sans-serif;
 }
+.contentBody {
+  font-family: "Criteria Regular", sans-serif;
+  font-size: 1.1em;
+}
 .App {
   display: flex;
   justify-content: center;
   .innerContainer {
     // background-color: white;
     z-index: 7;
+    padding-bottom: 10em;
     section.topNavigation {
       z-index: 99;
       display: flex;
@@ -313,8 +318,12 @@ p {
     width: 95vw !important;
   }
 }
+@media (max-width: 850px) {
+}
+
 .mainRoute {
   position: absolute;
+  padding: 2em 2em 0em 2em;
   left: 15px;
   right: 15px;
 }
@@ -339,4 +348,7 @@ p {
   opacity: 0;
   // transform: scale(0.9);
   transition: opacity 100ms, transform 300ms;
+}
+.topBlock {
+  padding: 3em 0em 1.5em 0.5em;
 }

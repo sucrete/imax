@@ -15,8 +15,8 @@ function Landing() {
     config,
     delay: 1000,
     yy: 0,
-    height: 150,
-    from: { yy: 250, height: 0 }
+    height: 110,
+    from: { yy: 150, height: 0 }
   });
   const trail2 = useTrail(whereTo.length, {
     config,

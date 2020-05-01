@@ -283,15 +283,15 @@ function Video() {
               <div className="lesserVideo">
                 <img src={allYouNeedIsLikes} />
                 <p className="videoDescriptionSmaller">
-                  [Vice News Tonight on HBO, producer / director /
-                  cinematographer / co-editor]
+                  Vice News Tonight on HBO, producer / director /
+                  cinematographer / co-editor
                 </p>
               </div>
               <div className="lesserVideo">
                 <img src={clickBait} />
                 <p className="videoDescriptionSmaller">
-                  [Vice News Tonight on HBO; producer / director /
-                  co-cinematographer / co-editor]
+                  Vice News Tonight on HBO, producer / director /
+                  co-cinematographer / co-editor
                 </p>
               </div>
             </div>
@@ -300,7 +300,7 @@ function Video() {
 
         <div className="c-tab">
           <div className="c-tab__content">
-            <h2>About us</h2>
+            <h2>Narrative</h2>
             <p>
               lorem ipsum set dolor amet lorem ipsum set dolor amet lorem ipsum
               set dolor amet lorem ipsum set dolor amet lorem ipsum set dolor
@@ -312,7 +312,7 @@ function Video() {
 
         <div className="c-tab">
           <div className="c-tab__content">
-            <h2>Contact</h2>
+            <h2>Visual</h2>
             <p>
               lorem ipsum set dolor amet lorem ipsum set dolor amet lorem ipsum
               set dolor amet lorem ipsum set dolor amet lorem ipsum set dolor
@@ -326,7 +326,7 @@ function Video() {
         </div>
         <div className="c-tab">
           <div className="c-tab__content">
-            <h2>Contact</h2>
+            <h2>Promotional</h2>
             <p>
               lorem ipsum set dolor amet lorem ipsum set dolor amet lorem ipsum
               set dolor amet lorem ipsum set dolor amet lorem ipsum set dolor
@@ -347,7 +347,7 @@ function Video() {
         .lesserVideosContainer {
           display: flex;
           flex-wrap: wrap;
-          width: 95%;
+          width: 100%;
           margin: 0 auto;
           justify-content: space-between;
         }
@@ -357,9 +357,12 @@ function Video() {
         .lesserVideo img {
           width: 100%;
         }
+        h2 {
+          font-size: 2em;
+        }
         .firstVideo {
-          padding-top: 1em;
-          width: 95%;
+          padding: 1em 0em;
+          width: 100%;
           margin: 0 auto;
         }
         .firstVideoImg {
@@ -416,7 +419,7 @@ function Video() {
         }
 
         .c-tab__content {
-          width: 95%;
+          width: 100%;
           animation: showTab 300ms ease-in-out both;
           margin: 0 auto;
           margin-top: 3em;

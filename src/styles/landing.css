@@ -88,7 +88,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 16px;
+  padding: 26px 16px 0px 16px;
   overflow: hidden;
   color: #64320f;
   -webkit-box-align: center;
@@ -103,7 +103,6 @@
   font-family: "RosenFont ExtraBlack";
   display: inline;
   text-transform: capitalize;
-  cursor: pointer;
   letter-spacing: -0.009em;
 }
 
