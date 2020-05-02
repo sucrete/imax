@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gotu&family=Work+Sans:wght@300;400&display=swap");
 $rosenBrown: #64320f;
 $rosenBrownL: #1b1816;
-
+$bgColor: #f0e5e0;
 .main {
   min-height: 100vh;
   width: 80vw;
@@ -15,7 +15,7 @@ hr {
 .main,
 body,
 html {
-  background: rgb(243, 235, 228) !important;
+  background: $bgColor !important;
 }
 .hidden {
   display: none;
@@ -23,6 +23,7 @@ html {
 section.mainContent div p,
 .videoDescription {
   color: #74655a;
+  font-size: 1em;
 }
 p {
   font-family: "Criteria Medium", sans-serif;
@@ -43,7 +44,7 @@ p {
       display: flex;
       position: sticky;
       position: -webkit-sticky;
-      background-color: #f3ebe4;
+      background-color: $bgColor;
       top: 0;
       width: inherit;
       padding: 1.5em 0.5em 1.2em 0.5em;

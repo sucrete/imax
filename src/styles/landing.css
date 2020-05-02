@@ -12,6 +12,8 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 1;
+  -webkit-animation: opacityShift 500ms ease;
+          animation: opacityShift 500ms ease;
 }
 
 .card-exit::after {
@@ -39,7 +41,7 @@
 }
 
 .card-exit .secondCard .headerWrapper .informationalContainer .whereToContainer .whereTo div .underlined {
-  color: #141211;
+  color: #635856;
 }
 
 .card-exit-active::after {
@@ -65,7 +67,7 @@
 }
 
 .card-exit-active .secondCard .headerWrapper .informationalContainer .whereToContainer .whereTo div .underlined {
-  color: #222524;
+  color: #635856;
   -webkit-transition: color 650ms;
   transition: color 650ms;
 }
@@ -143,7 +145,7 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo .underlined {
   font-size: 1em;
-  color: #2e2728;
+  color: #635856;
   font-family: "Criteria Regular", sans-serif;
   -webkit-box-flex: 1;
       -ms-flex: 1;

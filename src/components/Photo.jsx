@@ -12,7 +12,7 @@ class Photo extends React.Component {
         </p>
         <style jsx>{`
           h2 {
-            color: white;
+            color: #90b8ad;
             font-size: 2em;
             font-family: "Criteria Regular", sans-serif;
             padding-bottom: 0.5em;

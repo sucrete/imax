@@ -19,7 +19,7 @@ class Collage extends React.Component {
           </div>
         </div>
         <h2>About Your Boy</h2>
-        <p className="contentBody">
+        <p className="contentBody" style={{ width: "55%" }}>
           O my friend -- but it is too much for my strength -- I sink under the
           weight of the splendour of these visions! A wonderful serenity has
           taken possession of my entire soul, like these sweet mornings of
@@ -29,13 +29,10 @@ class Collage extends React.Component {
         </p>
         <style jsx>{`
           h2 {
-            color: white;
+            color: #90b8ad;
             font-size: 2em;
             font-family: "Criteria Regular", sans-serif;
             padding-bottom: 0.5em;
-          }
-          p {
-            width: 55%;
           }
           .frame__outside {
             position: absolute;

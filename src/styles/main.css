@@ -14,7 +14,7 @@ hr {
 .main,
 body,
 html {
-  background: #f3ebe4 !important;
+  background: #f0e5e0 !important;
 }
 
 .hidden {
@@ -24,6 +24,7 @@ html {
 section.mainContent div p,
 .videoDescription {
   color: #74655a;
+  font-size: 1em;
 }
 
 p {
@@ -56,7 +57,7 @@ p {
   display: flex;
   position: sticky;
   position: -webkit-sticky;
-  background-color: #f3ebe4;
+  background-color: #f0e5e0;
   top: 0;
   width: inherit;
   padding: 1.5em 0.5em 1.2em 0.5em;

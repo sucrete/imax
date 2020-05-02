@@ -276,22 +276,25 @@ function Video() {
             <div className="firstVideo">
               <img className="firstVideoImg" src={oneDayAtDisney} />
               <p className="videoDescription">
-                Disney+, editor on 14 of 52 episodes
+                <span className="noteHeader">Disney+</span>
+                <br />
+                editor on 14 of 52 episodes
               </p>
             </div>
             <div className="lesserVideosContainer">
               <div className="lesserVideo">
                 <img src={allYouNeedIsLikes} />
                 <p className="videoDescriptionSmaller">
-                  Vice News Tonight on HBO, producer / director /
-                  cinematographer / co-editor
+                  <span className="noteHeader">Vice News Tonight on HBO</span>
+                  <br /> producer / director / cinematographer / co-editor
                 </p>
               </div>
               <div className="lesserVideo">
                 <img src={clickBait} />
                 <p className="videoDescriptionSmaller">
-                  Vice News Tonight on HBO, producer / director /
-                  co-cinematographer / co-editor
+                  <span className="noteHeader">Vice News Tonight on HBO</span>
+                  <br />
+                  producer / director / co-cinematographer / co-editor
                 </p>
               </div>
             </div>
@@ -340,6 +343,10 @@ function Video() {
         </div>
       </div>
       <style jsx>{`
+        .noteHeader {
+          font-family: "Criteria Demi", sans-serif;
+          color: #4b423b;
+        }
         .videoDescriptionSmaller {
           width: 100%;
           font-size: 0.8em;
@@ -359,6 +366,7 @@ function Video() {
         }
         h2 {
           font-size: 2em;
+          color: #90b8ad;
         }
         .firstVideo {
           padding: 1em 0em;
