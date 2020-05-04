@@ -1,4 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap");
+.card .goofImage {
+  width: 250px;
+  top: calc(20% + 20vh);
+  left: 20vw;
+}
+
+.card .collageImage {
+  width: 400px;
+  top: calc(20% + 24vh);
+  right: calc(8% + 18vw);
+}
+
+.card .designVid {
+  width: 320px;
+  top: calc(5% + 6vh);
+  right: calc(8% + 15vw);
+}
+
+.card .vidVid {
+  width: 320px;
+  top: calc(20% + 30vh);
+  left: calc(25% + 12vw);
+}
+
+.card .photog {
+  width: 450px;
+  top: 5%;
+  left: calc(15% + 12vw);
+}
+
+.card .revealer {
+  position: absolute;
+  z-index: 99;
+  height: auto;
+}
+
 .card::after {
   content: "";
   position: absolute;
@@ -114,7 +150,7 @@
   padding-left: 0.2em;
   text-transform: uppercase;
   position: relative;
-  bottom: -5px;
+  bottom: -3px;
   letter-spacing: -0.05em;
 }
 
@@ -136,7 +172,7 @@
 
 .headerWrapper .informationalContainer .whereToContainer {
   position: relative;
-  right: -2px;
+  top: -10px;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo {
@@ -144,8 +180,9 @@
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo .underlined {
-  font-size: 1em;
-  color: #635856;
+  font-size: 1.1em;
+  float: right;
+  color: #3a3332;
   font-family: "Criteria Regular", sans-serif;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -153,11 +190,18 @@
   text-decoration: none;
   left: 0px;
   display: block;
-  letter-spacing: 0.03em;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #3a3332), to(#3a3332));
+  background-image: linear-gradient(to right, #3a3332 0, #3a3332 100%);
+  background-position: 0 1.22em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo .underlined:hover {
-  color: #786f7e;
+  background-size: 100% 100%;
+  color: #3a3332;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo .whereToLink {

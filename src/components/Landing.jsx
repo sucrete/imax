@@ -2,9 +2,14 @@ import React from "react";
 import { useTrail, animated } from "react-spring";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../styles/landing.css";
-// import { play, exitLanding } from "./timelines";
 import { CSSTransition } from "react-transition-group";
 import Main from "./Main";
+
+import Gooftown from "../assets/babyGoof.jpg";
+import Design from "../assets/designLettering.mp4";
+import Video from "../assets/julioVideo.mp4";
+import Photo from "../assets/kewtPhoto.jpg";
+import Collage from "../assets/mirrorCollage.jpg";
 
 const items = ["max", "rosen"];
 const whereTo = ["video", "photo", "design", "collage", "gooftown"];
@@ -44,6 +49,15 @@ function Landing() {
             unmountOnExit
           >
             <div className="card">
+              <img className="collageImage revealer" src={Collage} />
+              <img className="photog revealer" src={Photo} />
+              <img className="goofImage revealer" src={Gooftown} />
+              <video className="designVid revealer" loop muted autoPlay>
+                <source src={Design} type="video/mp4" />
+              </video>
+              <video className="vidVid revealer" loop muted autoPlay>
+                <source src={Video} type="video/mp4" />
+              </video>
               <div className="secondCard">
                 <div className="headerWrapper">
                   <header className="landingHeader">
@@ -77,7 +91,7 @@ function Landing() {
                           >
                             <Link
                               style={{ height }}
-                              className="whereToLink underlined underlined--thin"
+                              className="whereToLink underlined underlined--thick"
                               to={"/" + `m/${whereTo[index]}`}
                             >
                               {whereTo[index]}

@@ -3,7 +3,38 @@ $rosenBrown: #64320f;
 $backgroundColor: #fff2e6;
 $darkBackground: rgb(34, 34, 34);
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap");
+
 .card {
+  .goofImage {
+    width: 250px;
+    top: calc(20% + 20vh);
+    left: 20vw;
+  }
+  .collageImage {
+    width: 400px;
+    top: calc(20% + 24vh);
+    right: calc(8% + 18vw);
+  }
+  .designVid {
+    width: 320px;
+    top: calc(5% + 6vh);
+    right: calc(8% + 15vw);
+  }
+  .vidVid {
+    width: 320px;
+    top: calc(20% + 30vh);
+    left: calc(25% + 12vw);
+  }
+  .photog {
+    width: 450px;
+    top: 5%;
+    left: calc(15% + 12vw);
+  }
+  .revealer {
+    position: absolute;
+    z-index: 99;
+    height: auto;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -67,10 +98,7 @@ $darkBackground: rgb(34, 34, 34);
       opacity: 0;
       transform: translate(-50%, -58%);
       transition: transform 700ms cubic-bezier(0.32, 0, 0.67, 0), opacity 650ms;
-      .landingmax {
-      }
-      .landingrosen {
-      }
+
       .informationalContainer {
         .whereToContainer {
           .whereTo {
@@ -109,16 +137,6 @@ $darkBackground: rgb(34, 34, 34);
       display: inline;
       text-transform: capitalize;
       letter-spacing: -0.009em;
-      // div {
-      //   -webkit-background-clip: text;
-      //   -webkit-text-fill-color: $rosenBrown;
-      //   background-image: url("../assets/fieldOfColor.jpg");
-      //   background-size: cover;
-      //   background-position: center;
-      //   &:hover {
-      //     -webkit-text-fill-color: transparent;
-      //   }
-      // }
     }
     .landingrosen {
       font-weight: default;
@@ -126,7 +144,7 @@ $darkBackground: rgb(34, 34, 34);
       padding-left: 0.2em;
       text-transform: uppercase;
       position: relative;
-      bottom: -5px;
+      bottom: -3px;
       letter-spacing: -0.05em;
     }
   }
@@ -143,35 +161,34 @@ $darkBackground: rgb(34, 34, 34);
 
     .whereToContainer {
       position: relative;
-      right: -2px;
-      // top: 12px;
+      // right: -2px;
+      top: -10px;
 
       div.whereTo {
         text-align: right;
 
         .underlined {
-          font-size: 1em;
-          color: rgb(99, 88, 86);
+          font-size: 1.1em;
+          float: right;
+          color: rgb(58, 51, 50);
           font-family: "Criteria Regular", sans-serif;
           flex: 1;
           text-decoration: none;
           left: 0px;
           display: block;
-          // transition: 0.3s ease;
-          letter-spacing: 0.03em;
+          transition: 0.3s ease;
+          background-image: linear-gradient(
+            to right,
+            rgb(58, 51, 50) 0,
+            rgb(58, 51, 50) 100%
+          );
+          background-position: 0 1.22em;
+          background-size: 0 100%;
+          background-repeat: no-repeat;
           &:hover {
-            // background-size: 100% 20%;
-            // -moz-background-size: 100% 20%;
-            // font-style: italic;
-            color: #786f7e;
+            background-size: 100% 100%;
+            color: rgb(58, 51, 50);
           }
-          // &--thin {
-          //   background-image: linear-gradient(
-          //     to left,
-          //     $whereToColor 0,
-          //     $whereToColor 100%
-          //   );
-          // }
         }
         .whereToLink {
           text-align: right;
