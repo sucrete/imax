@@ -34,6 +34,7 @@ $darkBackground: rgb(34, 34, 34);
     position: absolute;
     z-index: 99;
     height: auto;
+    transition: all 3ms ease;
   }
   &::after {
     content: "";
@@ -52,6 +53,9 @@ $darkBackground: rgb(34, 34, 34);
 }
 
 .card-exit {
+  .revealer {
+    opacity: 1;
+  }
   &::after {
     opacity: 1;
   }
@@ -85,6 +89,9 @@ $darkBackground: rgb(34, 34, 34);
   }
 }
 .card-exit-active {
+  .revealer {
+    opacity: 0;
+  }
   &::after {
     transition: opacity 550ms;
     opacity: 0;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTrail, animated } from "react-spring";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../styles/landing.css";
@@ -16,6 +16,33 @@ const whereTo = ["video", "photo", "design", "collage", "gooftown"];
 const config = { mass: 5, tension: 3500, friction: 400 };
 
 function Landing() {
+  const [isShownVideo, setIsShownVideo] = useState(false);
+  const [isShownDesign, setIsShownDesign] = useState(false);
+  const [isShownPhoto, setIsShownPhoto] = useState(false);
+  const [isShownCollage, setIsShownCollage] = useState(false);
+  const [isShownGooftown, setIsShownGooftown] = useState(false);
+  const indexOfFunctions = {
+    video: {
+      yay: () => setIsShownVideo(true),
+      nay: () => setIsShownVideo(false)
+    },
+    photo: {
+      yay: () => setIsShownPhoto(true),
+      nay: () => setIsShownPhoto(false)
+    },
+    design: {
+      yay: () => setIsShownDesign(true),
+      nay: () => setIsShownDesign(false)
+    },
+    collage: {
+      yay: () => setIsShownCollage(true),
+      nay: () => setIsShownCollage(false)
+    },
+    gooftown: {
+      yay: () => setIsShownGooftown(true),
+      nay: () => setIsShownGooftown(false)
+    }
+  };
   const trail = useTrail(items.length, {
     config,
     delay: 1000,
@@ -31,13 +58,6 @@ function Landing() {
     opacity: 1,
     from: { yy: 20, height: 0, opacity: 0 }
   });
-  //FROM MAIN (THE GOOD ONE)
-  // config,
-  // delay: 1000,
-  // yy: 0,
-  // height: 35,
-  // opacity: 1,
-  // from: { yy: 20, height: 0, opacity: 0 }
   return (
     <Router>
       <Route exact path={process.env.PUBLIC_URL + "/"}>
@@ -49,15 +69,41 @@ function Landing() {
             unmountOnExit
           >
             <div className="card">
-              <img className="collageImage revealer" src={Collage} />
-              <img className="photog revealer" src={Photo} />
-              <img className="goofImage revealer" src={Gooftown} />
-              <video className="designVid revealer" loop muted autoPlay>
-                <source src={Design} type="video/mp4" />
-              </video>
-              <video className="vidVid revealer" loop muted autoPlay>
-                <source src={Video} type="video/mp4" />
-              </video>
+              {isShownCollage && (
+                <img
+                  className="collageImage revealer collage--revealer"
+                  src={Collage}
+                />
+              )}
+              {isShownPhoto && (
+                <img className="photog revealer photo--revealer" src={Photo} />
+              )}
+              {isShownGooftown && (
+                <img
+                  className="goofImage revealer gooftown--revealer"
+                  src={Gooftown}
+                />
+              )}
+              {isShownDesign && (
+                <video
+                  className="designVid revealer design--revealer"
+                  loop
+                  muted
+                  autoPlay
+                >
+                  <source src={Design} type="video/mp4" />
+                </video>
+              )}
+              {isShownVideo && (
+                <video
+                  className="vidVid revealer video--revealer"
+                  loop
+                  muted
+                  autoPlay
+                >
+                  <source src={Video} type="video/mp4" />
+                </video>
+              )}
               <div className="secondCard">
                 <div className="headerWrapper">
                   <header className="landingHeader">
@@ -91,8 +137,17 @@ function Landing() {
                           >
                             <Link
                               style={{ height }}
-                              className="whereToLink underlined underlined--thick"
+                              className={
+                                `whereToLink underlined underlined--thick` +
+                                ` whereToLink--${whereTo[index]}`
+                              }
                               to={"/" + `m/${whereTo[index]}`}
+                              onMouseEnter={
+                                indexOfFunctions[whereTo[index]].yay
+                              }
+                              onMouseLeave={
+                                indexOfFunctions[whereTo[index]].nay
+                              }
                             >
                               {whereTo[index]}
                             </Link>
