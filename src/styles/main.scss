@@ -6,16 +6,20 @@ $bgColor: #f0e5e0;
   min-height: 100vh;
   width: 90vw;
 }
-hr {
-  background-color: $rosenBrownL;
-  border: none;
-  height: 1px;
-  opacity: 0.8;
+
+h2 {
+  padding-top: 1em;
 }
 .main,
 body,
 html {
   background: $bgColor !important;
+}
+.contentBody {
+  font-size: 0.95em;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-align: justify;
 }
 .hidden {
   display: none;
@@ -79,7 +83,7 @@ p {
           line-height: 60%;
           font-family: "RosenFont ExtraBlack";
           display: inline;
-          top: 3px;
+          top: 2px;
           text-transform: capitalize;
           letter-spacing: -0.009em;
           color: $rosenBrown;
@@ -94,7 +98,7 @@ p {
           text-transform: uppercase;
           display: inline;
           line-height: 60%;
-          top: 5px;
+          top: 4px;
           position: relative;
           letter-spacing: -0.05em;
           color: $rosenBrown;
@@ -150,7 +154,7 @@ p {
           margin: 0 auto;
           font-size: 0.9em;
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;
           z-index: 8;
           background-color: rgb(243, 235, 228);
           box-shadow: 0 -1px 0 0 #e6dcd4;
@@ -212,6 +216,7 @@ p {
               }
               .videoDescriptionSmaller {
                 font-size: 1em;
+                text-align: left;
               }
             }
           }

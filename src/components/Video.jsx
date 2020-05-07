@@ -6,6 +6,8 @@ import "../styles/main.css";
 import allYouNeedIsLikes from "../assets/AllYouNeedIsLikes.jpg";
 import clickBait from "../assets/ClickBait.jpg";
 import oneDayAtDisney from "../assets/OneDayAtDisney2.jpg";
+import playButton from "../assets/playButton.svg";
+
 function Video() {
   useEffect(() => {
     function Tabs(options) {
@@ -274,7 +276,16 @@ function Video() {
         <div className="c-tab is-active">
           <div className="c-tab__content">
             <div className="firstVideo">
-              <img className="firstVideoImg" src={oneDayAtDisney} />
+              <div className="imageWrapper">
+                <div className="mask"></div>
+                <img
+                  className="firstVideoImg"
+                  style={{ borderRadius: "3px" }}
+                  src={oneDayAtDisney}
+                />
+                <img src={playButton} className="playButton-lrg" />
+              </div>
+
               <p className="videoDescription">
                 <span className="noteHeader">Disney+</span>
                 <br />
@@ -343,6 +354,59 @@ function Video() {
         </div>
       </div>
       <style jsx>{`
+        .mask,
+        .playButton-lrg {
+          position: absolute;
+        }
+        .imageWrapper {
+          position: relative;
+        }
+        .imageWrapper:hover .playButton-lrg {
+          opacity: 1;
+        }
+        .playButton-lrg {
+          z-index: 50;
+          top: 17px;
+          right: 17px;
+          width: 55px;
+          height: auto;
+          opacity: 0;
+          transition: opacity 300ms ease;
+        }
+
+        .mask {
+          background: linear-gradient(
+            to bottom,
+            hsl(0, 0%, 0%) 0%,
+            hsla(0, 0%, 0%, 0.884) 7.3%,
+            hsla(0, 0%, 0%, 0.774) 13.2%,
+            hsla(0, 0%, 0%, 0.669) 17.8%,
+            hsla(0, 0%, 0%, 0.571) 21.6%,
+            hsla(0, 0%, 0%, 0.479) 24.8%,
+            hsla(0, 0%, 0%, 0.393) 27.9%,
+            hsla(0, 0%, 0%, 0.315) 31%,
+            hsla(0, 0%, 0%, 0.244) 34.6%,
+            hsla(0, 0%, 0%, 0.182) 39%,
+            hsla(0, 0%, 0%, 0.128) 44.5%,
+            hsla(0, 0%, 0%, 0.083) 51.4%,
+            hsla(0, 0%, 0%, 0.047) 60.1%,
+            hsla(0, 0%, 0%, 0.021) 70.9%,
+            hsla(0, 0%, 0%, 0.005) 84.1%,
+            hsla(0, 0%, 0%, 0) 100%
+          );
+          // backdrop-filter: blur(2px);
+          transition: opacity 300ms ease;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 44;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+        }
+        .mask:hover {
+          opacity: 0.3;
+        }
+
         .noteHeader {
           font-family: "Criteria Demi", sans-serif;
           color: #4b423b;
@@ -375,6 +439,7 @@ function Video() {
         }
         .firstVideoImg {
           width: 100%;
+          height: auto;
         }
         body {
           font-family: "Criteria Regular", sans-serif;
@@ -435,6 +500,10 @@ function Video() {
         .c-tab__content p {
           font-family: "Criteria Regular", sans-serif;
           color: #a39c97;
+          font-size: 0.95em;
+          line-height: 150%;
+          letter-spacing: 0.04em;
+          text-align: justify;
         }
         @keyframes showTab {
           from {
@@ -453,6 +522,13 @@ function Video() {
           position: absolute;
           bottom: -10px;
           transition: all 0.3s ease-out;
+        }
+        .videoDescription,
+        .videoDescriptionSmaller {
+          text-align: left !important;
+          line-height: 90%;
+          margin-block-start: 0.9em;
+          margin-block-end: 1.1em;
         }
       `}</style>
     </section>

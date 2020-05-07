@@ -4,17 +4,21 @@
   width: 90vw;
 }
 
-hr {
-  background-color: #1b1816;
-  border: none;
-  height: 1px;
-  opacity: 0.8;
+h2 {
+  padding-top: 1em;
 }
 
 .main,
 body,
 html {
   background: #f0e5e0 !important;
+}
+
+.contentBody {
+  font-size: 0.95em;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-align: justify;
 }
 
 .hidden {
@@ -106,7 +110,7 @@ p {
   line-height: 60%;
   font-family: "RosenFont ExtraBlack";
   display: inline;
-  top: 3px;
+  top: 2px;
   text-transform: capitalize;
   letter-spacing: -0.009em;
   color: #64320f;
@@ -122,7 +126,7 @@ p {
   text-transform: uppercase;
   display: inline;
   line-height: 60%;
-  top: 5px;
+  top: 4px;
   position: relative;
   letter-spacing: -0.05em;
   color: #64320f;
@@ -189,8 +193,9 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   z-index: 8;
   background-color: #f3ebe4;
   -webkit-box-shadow: 0 -1px 0 0 #e6dcd4;
@@ -276,6 +281,7 @@ p {
 
 .App .innerContainer section.mainContent div div.subsection .lesserVideosContainer .lesserVideo .videoDescriptionSmaller {
   font-size: 1em;
+  text-align: left;
 }
 
 @media screen and (min-width: 600px) {
