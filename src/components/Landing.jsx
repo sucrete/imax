@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTrail, animated } from "react-spring";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../styles/landing.css";

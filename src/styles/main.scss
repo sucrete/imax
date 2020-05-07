@@ -4,7 +4,7 @@ $rosenBrownL: #1b1816;
 $bgColor: #f0e5e0;
 .main {
   min-height: 100vh;
-  width: 80vw;
+  width: 90vw;
 }
 hr {
   background-color: $rosenBrownL;
@@ -40,34 +40,39 @@ p {
     z-index: 7;
     padding-bottom: 10em;
     section.topNavigation {
-      z-index: 99;
+      z-index: 9;
       display: flex;
       position: sticky;
       position: -webkit-sticky;
       background-color: $bgColor;
-      top: 0;
       width: inherit;
       padding: 1.5em 0.5em 1.2em 0.5em;
       justify-content: space-between;
       &:after {
         content: "";
         position: absolute;
-        border-bottom: 1px solid #e6dcd4;
+        border-bottom: 1px solid #dad0c8;
+        background: url(../assets/navbackground.png) no-repeat;
+        background-size: 100% 100%;
+        top: 0;
         left: 0px;
         bottom: -1px;
         width: 100%;
+        height: auto;
         visibility: hidden;
         animation: 450ms showBottomBorder;
         animation-delay: 800ms;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         animation-direction: normal !important;
+        z-index: 8;
       }
       .logo {
         display: inline-flex;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-decoration: none;
+        z-index: 10;
         .mainMax {
           position: relative;
           font-size: 2em;
@@ -100,8 +105,9 @@ p {
         position: relative;
         width: 400px;
         display: flex;
-        top: 5px;
+        top: 2px;
         right: 15px;
+        z-index: 11;
         .svg-1 {
           display: none;
         }
@@ -132,7 +138,8 @@ p {
     section.mainContent {
       z-index: 98;
       margin-bottom: 10em;
-      width: 100%;
+      width: 85%;
+      margin: 0 auto;
       div {
         .videoSubRoutesContainer {
           position: relative;
@@ -140,6 +147,7 @@ p {
           padding-bottom: 0.5em;
           padding-left: 2em;
           padding-right: 2em;
+          margin: 0 auto;
           font-size: 0.9em;
           display: flex;
           justify-content: space-around;
@@ -247,7 +255,7 @@ p {
     right: 15px;
     cursor: pointer;
     display: block !important;
-    top: 18px !important;
+    top: 15px !important;
     border: 1px solid transparent;
     z-index: 7;
     background-color: rgba(248, 164, 108, 0);
@@ -303,7 +311,7 @@ p {
           padding-bottom: 0.8em;
         }
         .navLink {
-          font-size: 0.9em !important;
+          font-size: 0.7em !important;
         }
       }
     }
@@ -318,8 +326,6 @@ p {
   .main {
     width: 95vw !important;
   }
-}
-@media (max-width: 850px) {
 }
 
 .mainRoute {
@@ -352,4 +358,9 @@ p {
 }
 .topBlock {
   padding: 3em 0em 1.5em 0.5em;
+}
+@media (max-width: 685px) {
+  .mainRoute {
+    padding: 2em 0em 0em 0em;
+  }
 }

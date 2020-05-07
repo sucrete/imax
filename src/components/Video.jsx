@@ -406,7 +406,7 @@ function Video() {
           color: #1b1816;
           cursor: pointer;
           opacity: 0.7;
-          margin-right: 25px;
+          margin: 0px 10px 0px 10px;
           padding: 10px 15px;
         }
 

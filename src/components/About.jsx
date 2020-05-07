@@ -18,7 +18,7 @@ class Collage extends React.Component {
             </div>
           </div>
         </div>
-        <h2>About Your Boy</h2>
+        <h2>Your Boy</h2>
         <p className="contentBody" style={{ width: "55%" }}>
           O my friend -- but it is too much for my strength -- I sink under the
           weight of the splendour of these visions! A wonderful serenity has

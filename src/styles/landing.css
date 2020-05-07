@@ -12,13 +12,13 @@
 }
 
 .card .designVid {
-  width: 320px;
+  width: 350px;
   top: calc(5% + 6vh);
   right: calc(8% + 15vw);
 }
 
 .card .vidVid {
-  width: 320px;
+  width: 350px;
   top: calc(20% + 30vh);
   left: calc(25% + 12vw);
 }
@@ -192,7 +192,7 @@
 .headerWrapper .informationalContainer .whereToContainer div.whereTo .underlined {
   font-size: 1.1em;
   float: right;
-  color: #3a3332;
+  color: #5c5250;
   font-family: "Criteria Regular", sans-serif;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -202,8 +202,8 @@
   display: block;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #3a3332), to(#3a3332));
-  background-image: linear-gradient(to right, #3a3332 0, #3a3332 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #b3a4a2), to(#b3a4a2));
+  background-image: linear-gradient(to right, #b3a4a2 0, #b3a4a2 100%);
   background-position: 0 1.22em;
   background-size: 0 100%;
   background-repeat: no-repeat;
@@ -211,7 +211,7 @@
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo .underlined:hover {
   background-size: 100% 100%;
-  color: #3a3332;
+  color: #4e4544;
 }
 
 .headerWrapper .informationalContainer .whereToContainer div.whereTo .whereToLink {
