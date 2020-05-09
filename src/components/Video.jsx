@@ -276,16 +276,19 @@ function Video() {
         <div className="c-tab is-active">
           <div className="c-tab__content">
             <div className="firstVideo">
-              <div className="imageWrapper">
-                <div className="mask"></div>
-                <img
-                  className="firstVideoImg"
-                  style={{ borderRadius: "3px" }}
-                  src={oneDayAtDisney}
-                />
-                <img src={playButton} className="playButton-lrg" />
-              </div>
-
+              <a
+                href="https://www.youtube.com/watch?v=c3dukvXxtsc"
+                target="_blank"
+              >
+                <div className="imageWrapper">
+                  <div className="mask"></div>
+                  <img
+                    className="firstVideoImg videoThumb"
+                    src={oneDayAtDisney}
+                  />
+                  <img src={playButton} className="playButton-lrg" />
+                </div>
+              </a>
               <p className="videoDescription">
                 <span className="noteHeader">Disney+</span>
                 <br />
@@ -294,14 +297,38 @@ function Video() {
             </div>
             <div className="lesserVideosContainer">
               <div className="lesserVideo">
-                <img src={allYouNeedIsLikes} />
+                <a
+                  href="https://www.youtube.com/watch?v=W3IKyyd53yQ"
+                  target="_blank"
+                >
+                  <div className="imageWrapper">
+                    <div className="mask"></div>
+                    <img
+                      className="lesserVideoImg videoThumb"
+                      src={allYouNeedIsLikes}
+                    />
+                    <img src={playButton} className="playButton-lrg" />
+                  </div>
+                </a>
                 <p className="videoDescriptionSmaller">
                   <span className="noteHeader">Vice News Tonight on HBO</span>
                   <br /> producer / director / cinematographer / co-editor
                 </p>
               </div>
               <div className="lesserVideo">
-                <img src={clickBait} />
+                <a
+                  href="https://www.youtube.com/watch?v=pMaoSw1sv_Q"
+                  target="_blank"
+                >
+                  <div className="imageWrapper">
+                    <div className="mask"></div>
+                    <img
+                      className="lesserVideoImg videoThumb"
+                      src={clickBait}
+                    />
+                    <img src={playButton} className="playButton-lrg" />
+                  </div>
+                </a>
                 <p className="videoDescriptionSmaller">
                   <span className="noteHeader">Vice News Tonight on HBO</span>
                   <br />
@@ -364,6 +391,9 @@ function Video() {
         .imageWrapper:hover .playButton-lrg {
           opacity: 1;
         }
+        .videoThumb {
+          border-radius: 3px;
+        }
         .playButton-lrg {
           z-index: 50;
           top: 17px;
@@ -371,7 +401,7 @@ function Video() {
           width: 55px;
           height: auto;
           opacity: 0;
-          transition: opacity 300ms ease;
+          transition: opacity 200ms ease;
         }
 
         .mask {
@@ -395,7 +425,7 @@ function Video() {
             hsla(0, 0%, 0%, 0) 100%
           );
           // backdrop-filter: blur(2px);
-          transition: opacity 300ms ease;
+          transition: opacity 200ms ease;
           opacity: 0;
           width: 100%;
           height: 100%;
@@ -427,6 +457,9 @@ function Video() {
         }
         .lesserVideo img {
           width: 100%;
+        }
+        .lesserVideo .imageWrapper .playButton-lrg {
+          width: 55px;
         }
         h2 {
           font-size: 2em;
@@ -532,46 +565,6 @@ function Video() {
         }
       `}</style>
     </section>
-
-    // <div className="tabs">
-
-    //   <section className="subsection">
-    //     <div className="firstVideo">
-    //       <img src={oneDayAtDisney} />
-    //       <p className="videoDescription">
-    //         [Disney+, editor on 14 of 52 episodes]
-    //       </p>
-    //     </div>
-    //     <div className="lesserVideosContainer">
-    //       <div className="lesserVideo">
-    //         <img src={allYouNeedIsLikes} />
-    //         <p className="videoDescriptionSmaller">
-    //           [Vice News Tonight on HBO, producer / director / cinematographer /
-    //           co-editor]
-    //         </p>
-    //       </div>
-    //       <div className="lesserVideo">
-    //         <img src={clickBait} />
-    //         <p className="videoDescriptionSmaller">
-    //           [Vice News Tonight on HBO; producer / director /
-    //           co-cinematographer / co-editor]
-    //         </p>
-    //       </div>
-    //     </div>
-    //   </section>
-
-    //   <section className="subsection">
-    //     <div className="lesserVideosContainer">{narrativeVids}</div>
-    //   </section>
-
-    //   <section className="subsection">
-    //     <div className="lesserVideosContainer">{visualVids}</div>
-    //   </section>
-
-    //   <section className="subsection">
-    //     <div className="lesserVideosContainer">{promoVids}</div>
-    //   </section>
-    // </div>
   );
 }
 export default Video;

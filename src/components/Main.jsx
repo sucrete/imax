@@ -98,7 +98,7 @@ function Main() {
                     transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
                   }}
                 >
-                  <svg height="45" width="45" class="svg-1">
+                  <svg height="45" width="45" className="svg-1">
                     <path id="top" d="M7,17 L38,17" />
                     <path id="bottom" d="M7,27 L38,27" />
                   </svg>
