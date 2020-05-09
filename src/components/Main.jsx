@@ -185,7 +185,10 @@ function Main() {
           background-color: rgb(34, 34, 34);
         }
         .App {
-          height: 110vh;
+          height: 100vh;
+        }
+        h2 {
+          color: #a8b293;
         }
       `}</style>
     </div>

@@ -275,6 +275,7 @@ function Video() {
 
         <div className="c-tab is-active">
           <div className="c-tab__content">
+            <h3 className="selectWorks">select work ↓</h3>
             <div className="firstVideo">
               <a
                 href="https://www.youtube.com/watch?v=c3dukvXxtsc"
@@ -381,6 +382,12 @@ function Video() {
         </div>
       </div>
       <style jsx>{`
+        .selectWorks {
+          margin-block-end: 0.2em;
+          font-size: 1.1em;
+          color: #a8b293;
+          font-family: "Bossa Expanded Regular", sans-serif;
+        }
         .mask,
         .playButton-lrg {
           position: absolute;
@@ -463,10 +470,9 @@ function Video() {
         }
         h2 {
           font-size: 2em;
-          color: #90b8ad;
         }
         .firstVideo {
-          padding: 1em 0em;
+          // padding: 1em 0em;
           width: 100%;
           margin: 0 auto;
         }
@@ -509,7 +515,7 @@ function Video() {
         }
 
         .c-tabs-nav__link.is-active {
-          opacity: 1;
+          opacity: 0.9;
         }
 
         /**
@@ -534,7 +540,7 @@ function Video() {
           font-family: "Criteria Regular", sans-serif;
           color: #a39c97;
           font-size: 0.95em;
-          line-height: 150%;
+          line-height: 120%;
           letter-spacing: 0.04em;
           text-align: justify;
         }
@@ -558,6 +564,8 @@ function Video() {
         }
         .videoDescription,
         .videoDescriptionSmaller {
+          top: -10px;
+          position: relative;
           text-align: left !important;
           line-height: 90%;
           margin-block-start: 0.9em;

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Gotu&family=Work+Sans:wght@300;400&display=swap");
 $rosenBrown: #64320f;
 $rosenBrownL: #1b1816;
-$bgColor: #f0e5e0;
+$bgColor: rgb(250, 229, 221);
 .main {
   min-height: 100vh;
-  width: 90vw;
+  width: 100vw;
 }
 
 h2 {
@@ -13,7 +13,7 @@ h2 {
 .main,
 body,
 html {
-  background: $bgColor !important;
+  background: #fefefa !important;
 }
 .contentBody {
   font-size: 0.95em;
@@ -48,15 +48,15 @@ p {
       display: flex;
       position: sticky;
       position: -webkit-sticky;
-      background-color: $bgColor;
+      background-color: #fbeeee;
       width: inherit;
-      padding: 1.5em 0.5em 1.2em 0.5em;
+      padding: 2.5em 5.5em 2.2em 5.8em;
       justify-content: space-between;
       &:after {
         content: "";
         position: absolute;
-        border-bottom: 1px solid #dad0c8;
-        background: url(../assets/navbackground.png) no-repeat;
+        // border-bottom: 1px solid #663d206b;
+        // background: url(../assets/navbackground.png) no-repeat;
         background-size: 100% 100%;
         top: 0;
         left: 0px;
@@ -79,11 +79,11 @@ p {
         z-index: 10;
         .mainMax {
           position: relative;
-          font-size: 2em;
+          font-size: 2.3em;
           line-height: 60%;
           font-family: "RosenFont ExtraBlack";
           display: inline;
-          top: 2px;
+          top: 1px;
           text-transform: capitalize;
           letter-spacing: -0.009em;
           color: $rosenBrown;
@@ -92,13 +92,13 @@ p {
         }
         .mainRosen {
           font-weight: default;
-          font-size: 2em;
+          font-size: 2.3em;
           font-family: "RosenFont", "Arial", sans-serif;
           padding-left: 0.2em;
           text-transform: uppercase;
           display: inline;
           line-height: 60%;
-          top: 4px;
+          top: 1px;
           position: relative;
           letter-spacing: -0.05em;
           color: $rosenBrown;
@@ -109,7 +109,7 @@ p {
         position: relative;
         width: 400px;
         display: flex;
-        top: 2px;
+        top: 4px;
         right: 15px;
         z-index: 11;
         .svg-1 {
@@ -122,11 +122,10 @@ p {
           div {
             .navLink {
               text-decoration: none;
-              color: rgb(99, 88, 86);
-              font-family: "Criteria Demi", sans-serif;
-              font-size: 0.7em;
-
-              text-transform: uppercase;
+              color: #322b2a;
+              font-family: "Criteria Medium", sans-serif;
+              font-size: 0.9em;
+              // text-transform: uppercase;
               transition: color 250ms ease;
               &:hover {
                 color: #786f7e;
@@ -156,7 +155,6 @@ p {
           display: flex;
           justify-content: space-between;
           z-index: 8;
-          background-color: rgb(243, 235, 228);
           box-shadow: 0 -1px 0 0 #e6dcd4;
           a.subRoute {
             letter-spacing: 0.03em;
