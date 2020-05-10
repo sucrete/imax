@@ -14,30 +14,29 @@ html {
   background: #fefefa !important;
 }
 
-.contentBody {
-  font-size: 0.95em;
-  line-height: 150%;
-  letter-spacing: 0.04em;
-  text-align: justify;
-}
-
 .hidden {
   display: none;
 }
 
-section.mainContent div p,
 .videoDescription {
   color: #74655a;
-  font-size: 1em;
+  font-size: 0.5em;
+}
+
+section.mainContent div p {
+  color: #928a85;
 }
 
 p {
-  font-family: "Criteria Medium", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .contentBody {
-  font-family: "Criteria Regular", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.1em;
+  line-height: 145%;
+  text-align: justify;
+  font-family: "Work Sans", "Criteria Regular", sans-serif;
 }
 
 .App {
@@ -59,37 +58,12 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: sticky;
-  position: -webkit-sticky;
   background-color: #fbeeee;
   width: inherit;
-  padding: 2.5em 5.5em 2.2em 5.8em;
+  padding: 2.5em 6em 2.2em 6.2em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.App .innerContainer section.topNavigation:after {
-  content: "";
-  position: absolute;
-  background-size: 100% 100%;
-  top: 0;
-  left: 0px;
-  bottom: -1px;
-  width: 100%;
-  height: auto;
-  visibility: hidden;
-  -webkit-animation: 450ms showBottomBorder;
-          animation: 450ms showBottomBorder;
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-direction: normal !important;
-          animation-direction: normal !important;
-  z-index: 8;
 }
 
 .App .innerContainer section.topNavigation .logo {
@@ -157,7 +131,7 @@ p {
 
 .App .innerContainer section.topNavigation .inner #navigationContainer div .navLink {
   text-decoration: none;
-  color: #322b2a;
+  color: #786f7e;
   font-family: "Criteria Medium", sans-serif;
   font-size: 0.9em;
   -webkit-transition: color 250ms ease;
@@ -165,7 +139,7 @@ p {
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer div .navLink:hover {
-  color: #786f7e;
+  color: #322b2a;
 }
 
 .App .innerContainer section.topNavigation .inner #navigationContainer div .navLink:last-child {
@@ -175,7 +149,7 @@ p {
 .App .innerContainer section.mainContent {
   z-index: 98;
   margin-bottom: 10em;
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -201,7 +175,7 @@ p {
 .App .innerContainer section.mainContent div .videoSubRoutesContainer a.subRoute {
   letter-spacing: 0.03em;
   display: inline-block;
-  font-family: "Criteria Medium", sans-serif;
+  font-family: "Criteria Demi", sans-serif;
   text-decoration: none;
   color: #3c343d;
   position: relative;
@@ -245,7 +219,6 @@ p {
 
 .App .innerContainer section.mainContent div div.subsection .firstVideo p {
   font-family: "Work Sans", sans-serif;
-  font-size: 1em;
   padding-bottom: 2em;
 }
 
@@ -276,7 +249,7 @@ p {
 }
 
 .App .innerContainer section.mainContent div div.subsection .lesserVideosContainer .lesserVideo .videoDescriptionSmaller {
-  font-size: 1em;
+  font-size: 0.7em;
   text-align: left;
 }
 

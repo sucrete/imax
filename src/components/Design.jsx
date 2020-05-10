@@ -12,13 +12,7 @@ class Design extends React.Component {
           charm of existence in this spot, which was created for the bliss of
           souls like mine.
         </p>
-        <style jsx>{`
-          h2 {
-            font-size: 2em;
-            font-family: "Criteria Regular", sans-serif;
-            padding-bottom: 0.5em;
-          }
-        `}</style>
+        <style jsx>{``}</style>
       </div>
     );
   }

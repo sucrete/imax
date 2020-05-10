@@ -188,7 +188,10 @@ function Main() {
           height: 100vh;
         }
         h2 {
-          color: #a8b293;
+          font-size: 2em;
+          font-family: "Criteria Demi", sans-serif;
+          padding-bottom: 0.5em;
+          color: #322b2a;
         }
       `}</style>
     </div>

@@ -275,7 +275,7 @@ function Video() {
 
         <div className="c-tab is-active">
           <div className="c-tab__content">
-            <h3 className="selectWorks">select work ↓</h3>
+            <h3 className="selectWorks">Select work</h3>
             <div className="firstVideo">
               <a
                 href="https://www.youtube.com/watch?v=c3dukvXxtsc"
@@ -383,10 +383,11 @@ function Video() {
       </div>
       <style jsx>{`
         .selectWorks {
-          margin-block-end: 0.2em;
-          font-size: 1.1em;
-          color: #a8b293;
-          font-family: "Bossa Expanded Regular", sans-serif;
+          // margin-block-end: 0.5em;
+          font-size: 1.5em;
+          color: #322b2a;
+          font-family: "Criteria Demi", sans-serif;
+          padding-left: 0.2em;
         }
         .mask,
         .playButton-lrg {
@@ -512,6 +513,7 @@ function Video() {
           opacity: 0.7;
           margin: 0px 10px 0px 10px;
           padding: 10px 15px;
+          font-family: "Criteria Medium", sans-serif;
         }
 
         .c-tabs-nav__link.is-active {
@@ -537,19 +539,21 @@ function Video() {
           margin-top: 3em;
         }
         .c-tab__content p {
-          font-family: "Criteria Regular", sans-serif;
+          font-family: "Work Sans", sans-serif;
           color: #a39c97;
-          font-size: 0.95em;
           line-height: 120%;
-          letter-spacing: 0.04em;
           text-align: justify;
+          
         }
         @keyframes showTab {
-          from {
+          0% {
             opacity: 0;
-            top: 5px;
           }
-          to {
+          50% {
+            opacity: 0;
+            top: 15px;
+          }
+          100% {
             opacity: 1;
             top: 0;
           }
@@ -557,20 +561,25 @@ function Video() {
 
         .c-tab-nav-marker {
           min-height: 4px;
-          background-color: #e3cbba;
+          background-color: #dbe0d3;
           position: absolute;
           bottom: -10px;
           transition: all 0.3s ease-out;
         }
         .videoDescription,
         .videoDescriptionSmaller {
-          top: -10px;
+          top: -8px;
           position: relative;
           text-align: left !important;
           line-height: 90%;
           margin-block-start: 0.9em;
           margin-block-end: 1.1em;
+          font-family; "Work Sans";
+          font-weight: 400;
+          left: 3px;
+          font-size: .9em;
         }
+
       `}</style>
     </section>
   );

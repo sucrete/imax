@@ -16,25 +16,27 @@ html {
   background: #fefefa !important;
 }
 .contentBody {
-  font-size: 0.95em;
-  line-height: 150%;
-  letter-spacing: 0.04em;
-  text-align: justify;
 }
 .hidden {
   display: none;
 }
-section.mainContent div p,
 .videoDescription {
   color: #74655a;
-  font-size: 1em;
+  font-size: 0.5em;
 }
+section.mainContent div p {
+  color: #928a85;
+}
+
 p {
-  font-family: "Criteria Medium", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 .contentBody {
-  font-family: "Criteria Regular", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.1em;
+  line-height: 145%;
+  text-align: justify;
+  font-family: "Work Sans", "Criteria Regular", sans-serif;
 }
 .App {
   display: flex;
@@ -46,31 +48,11 @@ p {
     section.topNavigation {
       z-index: 9;
       display: flex;
-      position: sticky;
-      position: -webkit-sticky;
       background-color: #fbeeee;
       width: inherit;
-      padding: 2.5em 5.5em 2.2em 5.8em;
+      padding: 2.5em 6em 2.2em 6.2em;
       justify-content: space-between;
-      &:after {
-        content: "";
-        position: absolute;
-        // border-bottom: 1px solid #663d206b;
-        // background: url(../assets/navbackground.png) no-repeat;
-        background-size: 100% 100%;
-        top: 0;
-        left: 0px;
-        bottom: -1px;
-        width: 100%;
-        height: auto;
-        visibility: hidden;
-        animation: 450ms showBottomBorder;
-        animation-delay: 800ms;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-direction: normal !important;
-        z-index: 8;
-      }
+
       .logo {
         display: inline-flex;
         -webkit-font-smoothing: antialiased;
@@ -122,13 +104,13 @@ p {
           div {
             .navLink {
               text-decoration: none;
-              color: #322b2a;
+              color: #786f7e;
               font-family: "Criteria Medium", sans-serif;
               font-size: 0.9em;
               // text-transform: uppercase;
               transition: color 250ms ease;
               &:hover {
-                color: #786f7e;
+                color: #322b2a;
               }
               &:last-child {
                 padding-bottom: 0.7em;
@@ -141,7 +123,7 @@ p {
     section.mainContent {
       z-index: 98;
       margin-bottom: 10em;
-      width: 85%;
+      width: 75%;
       margin: 0 auto;
       div {
         .videoSubRoutesContainer {
@@ -159,7 +141,7 @@ p {
           a.subRoute {
             letter-spacing: 0.03em;
             display: inline-block;
-            font-family: "Criteria Medium", sans-serif;
+            font-family: "Criteria Demi", sans-serif;
             text-decoration: none;
             color: rgb(60, 52, 61);
             position: relative;
@@ -192,7 +174,6 @@ p {
             }
             p {
               font-family: "Work Sans", sans-serif;
-              font-size: 1em;
               padding-bottom: 2em;
             }
           }
@@ -213,7 +194,7 @@ p {
                 }
               }
               .videoDescriptionSmaller {
-                font-size: 1em;
+                font-size: 0.7em;
                 text-align: left;
               }
             }

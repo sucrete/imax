@@ -5,6 +5,17 @@ class Collage extends React.Component {
     return (
       <div>
         <div className="topBlock">
+          <div className="contentBlock">
+            <h2>Your Boy</h2>
+            <p className="contentBody">
+              O my friend -- but it is too much for my strength -- I sink under
+              the weight of the splendour of these visions! A wonderful serenity
+              has taken possession of my entire soul, like these sweet mornings
+              of spring which I enjoy with my whole heart. I am alone, and feel
+              the charm of existence in this spot, which was created for the
+              bliss of souls like mine.
+            </p>
+          </div>
           <div className="frameContainer">
             <div className="frame__outside">
               <div className="frame__inside">
@@ -18,24 +29,25 @@ class Collage extends React.Component {
             </div>
           </div>
         </div>
-        <h2>Your Boy</h2>
-        <p className="contentBody" style={{ width: "55%" }}>
-          O my friend -- but it is too much for my strength -- I sink under the
-          weight of the splendour of these visions! A wonderful serenity has
-          taken possession of my entire soul, like these sweet mornings of
-          spring which I enjoy with my whole heart. I am alone, and feel the
-          charm of existence in this spot, which was created for the bliss of
-          souls like mine.
-        </p>
+
         <style jsx>{`
-          h2 {
-            font-size: 2em;
-            font-family: "Criteria Regular", sans-serif;
-            padding-bottom: 0.5em;
+          .topBlock {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+          .contentBlock {
+            margin: 0 auto;
+            width: 500px;
+          }
+          .contentBody {
+          }
+          .frameContainer {
+            margin: 0 auto;
+            // flex: 1;
           }
           .frame__outside {
-            position: absolute;
-            right: 3em;
+            position: relative;
             background: #333;
             box-shadow: inset -0.5rem -0.5rem 1rem black;
             padding: 0.75rem;
