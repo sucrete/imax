@@ -27,6 +27,11 @@ section.mainContent div p {
   color: #928a85;
 }
 
+.innerLink {
+  text-decoration: none;
+  color: #64320f;
+}
+
 p {
   font-family: "Work Sans", sans-serif;
 }
@@ -58,7 +63,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #fbeeee;
+  background-color: #fcf9f3;
   width: inherit;
   padding: 2.5em 6em 2.2em 6.2em;
   -webkit-box-pack: justify;
@@ -308,10 +313,10 @@ p {
     right: 15px;
     cursor: pointer;
     display: block !important;
-    top: 15px !important;
+    top: 30px !important;
     border: 1px solid transparent;
     z-index: 7;
-    background-color: rgba(248, 164, 108, 0);
+    background-color: #fdfcf7;
   }
   .inner .svg-1 {
     float: right;
@@ -330,8 +335,8 @@ p {
   .inner:hover {
     -webkit-clip-path: circle(85%);
             clip-path: circle(85%);
-    background: #f8f0e8;
-    border: 1px solid #e6dcd4;
+    background: #fdfcf7;
+    border: 1px solid #f8f0e8;
   }
   .inner:hover .svg-1 path {
     stroke: #d3c9c0;
@@ -343,7 +348,7 @@ p {
     d: path("M10,34 L35,11");
   }
   .inner:hover #navigationContainer {
-    border-top: 1px solid #e6dcd4;
+    border-top: 1px solid #f8f0e8;
     transform: translate(0%, 0%);
     opacity: 1;
     -webkit-transform: translate(0%, 0%);
@@ -373,7 +378,7 @@ p {
     padding-bottom: 0.8em;
   }
   .inner #navigationContainer div .navLink {
-    font-size: 0.7em !important;
+    font-size: 0.9em !important;
   }
 }
 

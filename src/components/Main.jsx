@@ -84,7 +84,9 @@ function Main() {
                   }}
                 >
                   <span style={{ height }} className={"main" + mainMax[index]}>
-                    {mainMax[index]}
+                    <a class="innerLink" href="/">
+                      {mainMax[index]}
+                    </a>
                   </span>
                 </animated.div>
               ))}

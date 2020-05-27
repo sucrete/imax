@@ -38,7 +38,8 @@ class Collage extends React.Component {
           }
           .contentBlock {
             margin: 0 auto;
-            width: 500px;
+            max-width: 450px;
+            min-width: 400px;
           }
           .contentBody {
           }
