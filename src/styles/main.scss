@@ -53,69 +53,74 @@ p {
       display: flex;
       background-color: #fcf9f3;
       width: inherit;
-      padding: 2.5em 6em 2.2em 6.2em;
+      padding: 2.5em 7em 2.2em 6em;
       justify-content: space-between;
-
-      .logo {
-        display: inline-flex;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-decoration: none;
-        z-index: 10;
-        .mainMax {
-          position: relative;
-          font-size: 2.3em;
-          line-height: 60%;
-          font-family: "RosenFont ExtraBlack";
-          display: inline;
-          top: 1px;
-          text-transform: capitalize;
-          letter-spacing: -0.009em;
-          color: $rosenBrown;
-          padding-left: 15px;
-          background-position: center;
-        }
-        .mainRosen {
-          font-weight: default;
-          font-size: 2.3em;
-          font-family: "RosenFont", "Arial", sans-serif;
-          padding-left: 0.2em;
-          text-transform: uppercase;
-          display: inline;
-          line-height: 60%;
-          top: 1px;
-          position: relative;
-          letter-spacing: -0.05em;
-          color: $rosenBrown;
-        }
-      }
-      .inner {
-        position: relative;
-        width: 400px;
+      .centralizedNavigation {
         display: flex;
-        top: 4px;
-        right: 15px;
-        z-index: 11;
-        .svg-1 {
-          display: none;
+        justify-content: space-between;
+        width: 100%;
+        .logo {
+          display: inline-flex;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-decoration: none;
+          z-index: 10;
+
+          margin: 0;
+          padding: 0;
+          .mainMax {
+            position: relative;
+            font-size: 2.3em;
+            line-height: 60%;
+            font-family: "RosenFont ExtraBlack";
+            display: inline;
+            top: 1px;
+            text-transform: capitalize;
+            letter-spacing: -0.009em;
+            color: $rosenBrown;
+            padding-left: 15px;
+            background-position: center;
+          }
+          .mainRosen {
+            font-weight: default;
+            font-size: 2.3em;
+            font-family: "RosenFont", "Arial", sans-serif;
+            padding-left: 0.2em;
+            text-transform: uppercase;
+            display: inline;
+            line-height: 60%;
+            top: 1px;
+            position: relative;
+            letter-spacing: -0.05em;
+            color: $rosenBrown;
+          }
         }
-        #navigationContainer {
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-          div {
-            .navLink {
-              text-decoration: none;
-              color: #786f7e;
-              font-family: "Criteria Medium", sans-serif;
-              font-size: 0.9em;
-              // text-transform: uppercase;
-              transition: color 250ms ease;
-              &:hover {
-                color: #322b2a;
-              }
-              &:last-child {
-                padding-bottom: 0.7em;
+        .inner {
+          position: relative;
+          width: 40%;
+          top: 5px;
+          right: 0px;
+
+          .svg-1 {
+            display: none;
+          }
+          #navigationContainer {
+            div {
+              display: flex;
+              justify-content: space-between;
+              .navLink {
+                text-decoration: none;
+                color: #786f7e;
+                font-family: "Criteria Medium", sans-serif;
+                font-size: 0.9em;
+                // text-transform: uppercase;
+                transition: color 250ms ease;
+                &:hover {
+                  color: #322b2a;
+                }
+                &:last-child {
+                  padding-bottom: 0.7em;
+                }
               }
             }
           }
@@ -238,25 +243,37 @@ p {
     transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out,
       border 0.1s ease-in-out;
     position: absolute !important;
-    right: 15px;
+    right: 5em !important;
     cursor: pointer;
     display: block !important;
     top: 30px !important;
     border: 1px solid transparent;
     z-index: 7;
     background-color: #fcf9f3;
-    .svg-1 {
-      float: right;
-      display: block !important;
-      z-index: 8;
-      transform: scale(0.8);
-      path {
-        fill: none;
-        stroke: rgb(99, 88, 86);
-        transition: 0.25s ease;
-        stroke-width: 2px;
+    // nav#navigationContainer {
+    //   div {
+    //     display: block !important;
+    //     a.navLink {
+    //       display: block !important;
+    //     }
+    //   }
+    // }
+    div {
+      height: 10px;
+      .svg-1 {
+        float: right;
+        display: block !important;
+        z-index: 8;
+        transform: scale(0.8);
+        path {
+          fill: none;
+          stroke: rgb(99, 88, 86);
+          transition: 0.25s ease;
+          stroke-width: 2px;
+        }
       }
     }
+
     &:hover {
       clip-path: circle(85%);
       background: #fdfcf7;
@@ -273,14 +290,17 @@ p {
           d: path("M10,34 L35,11");
         }
       }
-      #navigationContainer {
-        border-top: 1px solid #f8f0e8;
+      nav#navigationContainer {
+        div {
+          border-top: 1px solid #f8f0e8;
+        }
+
         transform: translate(0%, 0%);
         opacity: 1;
         -webkit-transform: translate(0%, 0%);
       }
     }
-    #navigationContainer {
+    nav#navigationContainer {
       z-index: 9;
       padding-top: 2em;
       position: relative;
@@ -291,13 +311,16 @@ p {
       opacity: 0;
       transform: translate(-3%, 0%);
       -webkit-transform: translate(-3%, 0%);
-      flex-direction: column !important;
+      // flex-direction: column !important;
+      display: block !important;
       div {
+        display: block !important;
         padding-right: 1em;
         &:last-child {
           padding-bottom: 0.8em;
         }
         .navLink {
+          display: !important;
           font-size: 0.9em !important;
         }
       }

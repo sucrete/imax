@@ -88,7 +88,6 @@ function Video() {
 
     m.init();
   });
-  const numberLeft = new Array(3);
   const allExtraVideos = {
     docVideos: [
       {

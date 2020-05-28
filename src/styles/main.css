@@ -65,13 +65,23 @@ p {
   display: flex;
   background-color: #fcf9f3;
   width: inherit;
-  padding: 2.5em 6em 2.2em 6.2em;
+  padding: 2.5em 7em 2.2em 6em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.App .innerContainer section.topNavigation .logo {
+.App .innerContainer section.topNavigation .centralizedNavigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.App .innerContainer section.topNavigation .centralizedNavigation .logo {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -79,9 +89,11 @@ p {
   -moz-osx-font-smoothing: grayscale;
   text-decoration: none;
   z-index: 10;
+  margin: 0;
+  padding: 0;
 }
 
-.App .innerContainer section.topNavigation .logo .mainMax {
+.App .innerContainer section.topNavigation .centralizedNavigation .logo .mainMax {
   position: relative;
   font-size: 2.3em;
   line-height: 60%;
@@ -95,7 +107,7 @@ p {
   background-position: center;
 }
 
-.App .innerContainer section.topNavigation .logo .mainRosen {
+.App .innerContainer section.topNavigation .centralizedNavigation .logo .mainRosen {
   font-weight: default;
   font-size: 2.3em;
   font-family: "RosenFont", "Arial", sans-serif;
@@ -109,32 +121,27 @@ p {
   color: #64320f;
 }
 
-.App .innerContainer section.topNavigation .inner {
+.App .innerContainer section.topNavigation .centralizedNavigation .inner {
   position: relative;
-  width: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 4px;
-  right: 15px;
-  z-index: 11;
+  width: 40%;
+  top: 5px;
+  right: 0px;
 }
 
-.App .innerContainer section.topNavigation .inner .svg-1 {
+.App .innerContainer section.topNavigation .centralizedNavigation .inner .svg-1 {
   display: none;
 }
 
-.App .innerContainer section.topNavigation .inner #navigationContainer {
+.App .innerContainer section.topNavigation .centralizedNavigation .inner #navigationContainer div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
 }
 
-.App .innerContainer section.topNavigation .inner #navigationContainer div .navLink {
+.App .innerContainer section.topNavigation .centralizedNavigation .inner #navigationContainer div .navLink {
   text-decoration: none;
   color: #786f7e;
   font-family: "Criteria Medium", sans-serif;
@@ -143,11 +150,11 @@ p {
   transition: color 250ms ease;
 }
 
-.App .innerContainer section.topNavigation .inner #navigationContainer div .navLink:hover {
+.App .innerContainer section.topNavigation .centralizedNavigation .inner #navigationContainer div .navLink:hover {
   color: #322b2a;
 }
 
-.App .innerContainer section.topNavigation .inner #navigationContainer div .navLink:last-child {
+.App .innerContainer section.topNavigation .centralizedNavigation .inner #navigationContainer div .navLink:last-child {
   padding-bottom: 0.7em;
 }
 
@@ -310,7 +317,7 @@ p {
     transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out;
     transition: clip-path 0.2s ease-in-out, background-color 0.1s ease-in-out, border 0.1s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
     position: absolute !important;
-    right: 15px;
+    right: 5em !important;
     cursor: pointer;
     display: block !important;
     top: 30px !important;
@@ -318,14 +325,17 @@ p {
     z-index: 7;
     background-color: #fcf9f3;
   }
-  .inner .svg-1 {
+  .inner div {
+    height: 10px;
+  }
+  .inner div .svg-1 {
     float: right;
     display: block !important;
     z-index: 8;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
-  .inner .svg-1 path {
+  .inner div .svg-1 path {
     fill: none;
     stroke: #635856;
     -webkit-transition: 0.25s ease;
@@ -347,13 +357,15 @@ p {
   .inner:hover .svg-1 #bottom {
     d: path("M10,34 L35,11");
   }
-  .inner:hover #navigationContainer {
-    border-top: 1px solid #f8f0e8;
+  .inner:hover nav#navigationContainer {
     transform: translate(0%, 0%);
     opacity: 1;
     -webkit-transform: translate(0%, 0%);
   }
-  .inner #navigationContainer {
+  .inner:hover nav#navigationContainer div {
+    border-top: 1px solid #f8f0e8;
+  }
+  .inner nav#navigationContainer {
     z-index: 9;
     padding-top: 2em;
     position: relative;
@@ -366,18 +378,17 @@ p {
     opacity: 0;
     transform: translate(-3%, 0%);
     -webkit-transform: translate(-3%, 0%);
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    display: block !important;
   }
-  .inner #navigationContainer div {
+  .inner nav#navigationContainer div {
+    display: block !important;
     padding-right: 1em;
   }
-  .inner #navigationContainer div:last-child {
+  .inner nav#navigationContainer div:last-child {
     padding-bottom: 0.8em;
   }
-  .inner #navigationContainer div .navLink {
+  .inner nav#navigationContainer div .navLink {
+    display: !important;
     font-size: 0.9em !important;
   }
 }

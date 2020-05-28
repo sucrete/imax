@@ -39,7 +39,7 @@ function Main() {
     opacity: 1,
     from: { yy: 25, height: 70, opacity: 0 }
   });
-  const trail2 = useTrail(routes.length, {
+  const trail2 = useTrail(bodyMovin.length, {
     config,
     delay: 2100,
     yy: 0,
@@ -70,44 +70,20 @@ function Main() {
       mainElement.classList.toggle("hidden");
     }, 1500);
   });
+
+  const allYrRoutes = routes.map(route => (
+    <Link key={`/${routes}`} className="navLink" to={`${match.url}/${route}`}>
+      {route}
+    </Link>
+  ));
   return (
     <div class="main">
       <div className="innerContainer hidden">
         <Router>
           <section className="topNavigation">
-            <div className="logo">
-              {trail1.map(({ yy, height, ...rest }, index) => (
-                <animated.div
-                  style={{
-                    ...rest,
-                    transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
-                  }}
-                >
-                  <span style={{ height }} className={"main" + mainMax[index]}>
-                    <a class="innerLink" href="/">
-                      {mainMax[index]}
-                    </a>
-                  </span>
-                </animated.div>
-              ))}
-            </div>
-
-            <div class="inner">
-              {trail3.map(({ yy, height, ...rest }, index) => (
-                <animated.div
-                  style={{
-                    ...rest,
-                    transform: yy.interpolate(yy => `translate3d(0,${yy}px,0)`)
-                  }}
-                >
-                  <svg height="45" width="45" className="svg-1">
-                    <path id="top" d="M7,17 L38,17" />
-                    <path id="bottom" d="M7,27 L38,27" />
-                  </svg>
-                </animated.div>
-              ))}
-              <nav role="navigation" id="navigationContainer">
-                {trail2.map(({ yy, height, ...rest }, index) => (
+            <div className="centralizedNavigation">
+              <div className="logo">
+                {trail1.map(({ yy, height, ...rest }, index) => (
                   <animated.div
                     style={{
                       ...rest,
@@ -116,18 +92,49 @@ function Main() {
                       )
                     }}
                   >
-                    <Link
-                      as={NavLink}
+                    <span
                       style={{ height }}
-                      key={`/${routes[index]}`}
-                      className="navLink"
-                      to={`${match.url}/${routes[index]}`}
+                      className={"main" + mainMax[index]}
                     >
-                      {routes[index]}
-                    </Link>
+                      <a class="innerLink" href="/">
+                        {mainMax[index]}
+                      </a>
+                    </span>
                   </animated.div>
                 ))}
-              </nav>
+              </div>
+
+              <div class="inner">
+                {trail3.map(({ yy, height, ...rest }, index) => (
+                  <animated.div
+                    style={{
+                      ...rest,
+                      transform: yy.interpolate(
+                        yy => `translate3d(0,${yy}px,0)`
+                      )
+                    }}
+                  >
+                    <svg height="45" width="45" className="svg-1">
+                      <path id="top" d="M7,17 L38,17" />
+                      <path id="bottom" d="M7,27 L38,27" />
+                    </svg>
+                  </animated.div>
+                ))}
+                <nav role="navigation" id="navigationContainer">
+                  {trail2.map(({ yy, height, ...rest }, index) => (
+                    <animated.div
+                      style={{
+                        ...rest,
+                        transform: yy.interpolate(
+                          yy => `translate3d(0,${yy}px,0)`
+                        )
+                      }}
+                    >
+                      {allYrRoutes}
+                    </animated.div>
+                  ))}
+                </nav>
+              </div>
             </div>
           </section>
           <section className="mainContent">
