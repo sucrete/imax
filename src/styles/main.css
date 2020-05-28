@@ -123,7 +123,7 @@ p {
 
 .App .innerContainer section.topNavigation .centralizedNavigation .inner {
   position: relative;
-  width: 40%;
+  width: 450px;
   top: 5px;
   right: 0px;
 }
@@ -324,6 +324,7 @@ p {
     border: 1px solid transparent;
     z-index: 7;
     background-color: #fcf9f3;
+    padding-bottom: 0.5em;
   }
   .inner div {
     height: 10px;
@@ -363,7 +364,9 @@ p {
     -webkit-transform: translate(0%, 0%);
   }
   .inner:hover nav#navigationContainer div {
+    padding-top: 10px;
     border-top: 1px solid #f8f0e8;
+    height: 100px;
   }
   .inner nav#navigationContainer {
     z-index: 9;
@@ -383,25 +386,33 @@ p {
   .inner nav#navigationContainer div {
     display: block !important;
     padding-right: 1em;
+    padding-top: 10px;
   }
   .inner nav#navigationContainer div:last-child {
     padding-bottom: 0.8em;
   }
   .inner nav#navigationContainer div .navLink {
-    display: !important;
+    display: block !important;
     font-size: 0.9em !important;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 800px) {
+  section.topNavigation {
+    padding: 2.5em 2em 2.2em 2em !important;
+  }
   .inner {
-    top: 15px !important;
+    right: 2em !important;
   }
 }
 
-@media (max-width: 800px) {
-  .main {
-    width: 95vw !important;
+@media (max-width: 575px) {
+  section.topNavigation {
+    padding: 1.5em 1em 1.2em 1em !important;
+  }
+  .inner {
+    top: 15px !important;
+    right: 1em !important;
   }
 }
 

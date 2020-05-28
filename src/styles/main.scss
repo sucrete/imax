@@ -15,8 +15,6 @@ body,
 html {
   background: #fefefa !important;
 }
-.contentBody {
-}
 .hidden {
   display: none;
 }
@@ -97,7 +95,7 @@ p {
         }
         .inner {
           position: relative;
-          width: 40%;
+          width: 450px;
           top: 5px;
           right: 0px;
 
@@ -250,14 +248,7 @@ p {
     border: 1px solid transparent;
     z-index: 7;
     background-color: #fcf9f3;
-    // nav#navigationContainer {
-    //   div {
-    //     display: block !important;
-    //     a.navLink {
-    //       display: block !important;
-    //     }
-    //   }
-    // }
+    padding-bottom: 0.5em;
     div {
       height: 10px;
       .svg-1 {
@@ -277,7 +268,6 @@ p {
     &:hover {
       clip-path: circle(85%);
       background: #fdfcf7;
-      // background: #f8f0e8;
       border: 1px solid #f8f0e8;
       .svg-1 {
         path {
@@ -292,9 +282,10 @@ p {
       }
       nav#navigationContainer {
         div {
+          padding-top: 10px;
           border-top: 1px solid #f8f0e8;
+          height: 100px;
         }
-
         transform: translate(0%, 0%);
         opacity: 1;
         -webkit-transform: translate(0%, 0%);
@@ -316,28 +307,36 @@ p {
       div {
         display: block !important;
         padding-right: 1em;
+        padding-top: 10px;
         &:last-child {
           padding-bottom: 0.8em;
         }
         .navLink {
-          display: !important;
+          display: block !important;
           font-size: 0.9em !important;
         }
       }
     }
   }
 }
+
+@media (max-width: 800px) {
+  section.topNavigation {
+    padding: 2.5em 2em 2.2em 2em !important;
+  }
+  .inner {
+    right: 2em !important;
+  }
+}
 @media (max-width: 575px) {
+  section.topNavigation {
+    padding: 1.5em 1em 1.2em 1em !important;
+  }
   .inner {
     top: 15px !important;
+    right: 1em !important;
   }
 }
-@media (max-width: 800px) {
-  .main {
-    width: 95vw !important;
-  }
-}
-
 .mainRoute {
   position: absolute;
   padding: 2em 2em 0em 2em;
