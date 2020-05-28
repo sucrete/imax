@@ -1,12 +1,10 @@
 # Max Rosen Portfolio v2
 
-Demo: [⬤](https://sucrete.github.io/imax/)
+[Demo](https://imax.now.sh/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![bpa free](https://66.media.tumblr.com/b932daf86f29f12926140d3e52ab174f/tumblr_n0x97cjXvc1trrgzfo1_250.gif "bpa free")
-
---- bpa free ---
+![Max Rosen](https://66.media.tumblr.com/de6a1a836f7705f2532094dd676dd568/tumblr_phlrv9awYv1qjh6m8o1_500.jpg "Max Rosen")
 
 ### for my purposes:
 
