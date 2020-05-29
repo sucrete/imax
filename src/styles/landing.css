@@ -6,21 +6,21 @@
 }
 
 .card .collageImage {
-  width: 500px;
+  width: 475px;
   top: calc(20% + 24vh);
-  right: calc(15% + 18vw);
+  right: calc(15% + 20vw);
 }
 
 .card .designVid {
   width: 410px;
   top: calc(5% + 6vh);
-  right: calc(8% + 15vw);
+  left: calc(8%);
 }
 
 .card .vidVid {
   width: 420px;
-  top: calc(20% + 30vh);
-  left: calc(25% + 12vw);
+  top: calc(20% + 25vh);
+  left: calc(10% + 12vw);
 }
 
 .card .photog {
