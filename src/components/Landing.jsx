@@ -125,7 +125,9 @@ function Landing() {
                           )
                         }}
                       >
-                        <div style={{ height }}>Max</div>
+                        <div style={{ height }}>
+                          <Link to="/m/about">Max</Link>
+                        </div>
                       </animated.div>
                     ))}
                     {trail2.map(({ yy, height, ...rest }) => (

@@ -154,6 +154,12 @@ $darkBackground: rgb(34, 34, 34);
         &:hover {
           -webkit-text-fill-color: transparent;
         }
+        a {
+          text-decoration: none;
+          color: $rosenBrown;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
       }
     }
     .landingRosen {

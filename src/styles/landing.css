@@ -163,6 +163,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.headerWrapper .landingHeader .landingMax div a {
+  text-decoration: none;
+  color: #64320f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .headerWrapper .landingHeader .landingRosen div {
   color: #64320f;
   font-weight: default;
