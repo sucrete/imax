@@ -6,7 +6,6 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  NavLink,
   useRouteMatch,
   withRouter
 } from "react-router-dom";

@@ -145,8 +145,17 @@ $darkBackground: rgb(34, 34, 34);
       display: inline;
       text-transform: capitalize;
       letter-spacing: -0.009em;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: $rosenBrown;
+      background-image: url("../assets/fieldOfColor.jpg");
+      background-size: cover;
+      background-position: center;
+      &:hover {
+        -webkit-text-fill-color: transparent;
+      }
     }
     .landingrosen {
+      color: $rosenBrown;
       font-weight: default;
       font-family: RosenFont, "Arial", sans-serif;
       padding-left: 0.2em;

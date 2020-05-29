@@ -152,9 +152,19 @@
   display: inline;
   text-transform: capitalize;
   letter-spacing: -0.009em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #64320f;
+  background-image: url("../assets/fieldOfColor.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.headerWrapper .landingHeader .landingmax:hover {
+  -webkit-text-fill-color: transparent;
 }
 
 .headerWrapper .landingHeader .landingrosen {
+  color: #64320f;
   font-weight: default;
   font-family: RosenFont, "Arial", sans-serif;
   padding-left: 0.2em;

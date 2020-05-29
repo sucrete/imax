@@ -69,6 +69,18 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-animation-name: delayedBGColor;
+          animation-name: delayedBGColor;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 5000ms;
+          animation-delay: 5000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .App .innerContainer section.topNavigation .centralizedNavigation {
@@ -286,27 +298,7 @@ p {
   }
 }
 
-@-webkit-keyframes showBottomBorder {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes showBottomBorder {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@media (max-width: 1000px) {
+@media screen and (min-width: 600px) and (max-width: 1000px) {
   .inner {
     border-radius: 3px;
     width: 190px !important;
@@ -397,7 +389,7 @@ p {
   }
 }
 
-@media (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
   section.topNavigation {
     padding: 2.5em 2em 2.2em 2em !important;
   }
@@ -406,7 +398,7 @@ p {
   }
 }
 
-@media (max-width: 575px) {
+@media screen and (min-width: 600px) and (max-width: 575px) {
   section.topNavigation {
     padding: 1.5em 1em 1.2em 1em !important;
   }
@@ -416,48 +408,63 @@ p {
   }
 }
 
-.mainRoute {
-  position: absolute;
-  padding: 2em 2em 0em 2em;
-  left: 15px;
-  right: 15px;
+@media screen and (min-width: 600px) {
+  .mainRoute {
+    position: absolute;
+    padding: 2em 2em 0em 2em;
+    left: 15px;
+    right: 15px;
+  }
+  .mainRoute-enter {
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  .mainRoute-enter-active {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: opacity 400ms, -webkit-transform 400ms;
+    transition: opacity 400ms, -webkit-transform 400ms;
+    transition: opacity 400ms, transform 400ms;
+    transition: opacity 400ms, transform 400ms, -webkit-transform 400ms;
+  }
+  .mainRoute-exit {
+    opacity: 1;
+  }
+  .mainRoute-exit-active {
+    opacity: 0;
+    -webkit-transition: opacity 100ms, -webkit-transform 300ms;
+    transition: opacity 100ms, -webkit-transform 300ms;
+    transition: opacity 100ms, transform 300ms;
+    transition: opacity 100ms, transform 300ms, -webkit-transform 300ms;
+  }
+  .topBlock {
+    padding: 3em 0em 1.5em 0.5em;
+  }
 }
 
-.mainRoute-enter {
-  opacity: 0;
-  -webkit-transform: translateY(5px);
-          transform: translateY(5px);
-}
-
-.mainRoute-enter-active {
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-  -webkit-transition: opacity 400ms, -webkit-transform 400ms;
-  transition: opacity 400ms, -webkit-transform 400ms;
-  transition: opacity 400ms, transform 400ms;
-  transition: opacity 400ms, transform 400ms, -webkit-transform 400ms;
-}
-
-.mainRoute-exit {
-  opacity: 1;
-}
-
-.mainRoute-exit-active {
-  opacity: 0;
-  -webkit-transition: opacity 100ms, -webkit-transform 300ms;
-  transition: opacity 100ms, -webkit-transform 300ms;
-  transition: opacity 100ms, transform 300ms;
-  transition: opacity 100ms, transform 300ms, -webkit-transform 300ms;
-}
-
-.topBlock {
-  padding: 3em 0em 1.5em 0.5em;
-}
-
-@media (max-width: 685px) {
+@media screen and (min-width: 600px) and (max-width: 685px) {
   .mainRoute {
     padding: 2em 0em 0em 0em;
+  }
+}
+
+@-webkit-keyframes delayedBGColor {
+  from {
+    background-color: #fefefa;
+  }
+  to {
+    background-color: yellow !important;
+  }
+}
+
+@keyframes delayedBGColor {
+  from {
+    background-color: #fefefa;
+  }
+  to {
+    background-color: yellow !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
