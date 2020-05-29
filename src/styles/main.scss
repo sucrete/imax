@@ -48,15 +48,17 @@ p {
     section.topNavigation {
       z-index: 9;
       display: flex;
-      background-color: rgb(252, 249, 243);
       width: inherit;
       padding: 2.5em 7em 2.2em 6em;
       justify-content: space-between;
-      animation-name: delayedBGColor;
-      animation-duration: 1000ms;
-      animation-iteration-count: 1;
-      animation-timing-function: ease;
-      animation-delay: 5000ms;
+      animation: fadeIn 1s;
+      -moz-animation: fadeIn 1s; /* Firefox */
+      -webkit-animation: fadeIn 1s; /* Safari and Chrome */
+      -o-animation: fadeIn 1s; /* Opera */
+      animation-timing-function: ease-in;
+      animation-delay: 1700ms;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
       .centralizedNavigation {
         display: flex;
@@ -370,11 +372,13 @@ p {
     }
   }
 }
-@keyframes delayedBGColor {
+@keyframes fadeIn {
   from {
-    background-color: rgb(254, 254, 250);
+    background-color: rgba(252, 249, 243, 0);
+    // background-color: green;
   }
   to {
-    background-color: rgb(255, 255, 0) !important;
+    background-color: rgba(252, 249, 243, 1);
+    // background-color: blue;
   }
 }

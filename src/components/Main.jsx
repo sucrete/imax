@@ -63,12 +63,12 @@ function Main() {
   });
 
   let match = useRouteMatch();
-  useEffect(() => {
-    setTimeout(() => {
-      const mainElement = document.getElementsByClassName("innerContainer")[0];
-      mainElement.classList.toggle("hidden");
-    }, 1500);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const mainElement = document.getElementsByClassName("innerContainer")[0];
+  //     mainElement.classList.toggle("hidden");
+  //   }, 1550);
+  // });
 
   const allYrRoutes = routes.map(route => (
     <Link key={`/${routes}`} className="navLink" to={`${match.url}/${route}`}>
@@ -77,7 +77,7 @@ function Main() {
   ));
   return (
     <div class="main">
-      <div className="innerContainer hidden">
+      <div className="innerContainer">
         <Router>
           <section className="topNavigation">
             <div className="centralizedNavigation">

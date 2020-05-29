@@ -63,24 +63,24 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #fcf9f3;
   width: inherit;
   padding: 2.5em 7em 2.2em 6em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-animation-name: delayedBGColor;
-          animation-name: delayedBGColor;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 5000ms;
-          animation-delay: 5000ms;
+  animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  /* Firefox */
+  -webkit-animation: fadeIn 1s;
+  /* Safari and Chrome */
+  -o-animation: fadeIn 1s;
+  /* Opera */
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-delay: 1700ms;
+          animation-delay: 1700ms;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .App .innerContainer section.topNavigation .centralizedNavigation {
@@ -450,21 +450,21 @@ p {
   }
 }
 
-@-webkit-keyframes delayedBGColor {
+@-webkit-keyframes fadeIn {
   from {
-    background-color: #fefefa;
+    background-color: rgba(252, 249, 243, 0);
   }
   to {
-    background-color: yellow !important;
+    background-color: #fcf9f3;
   }
 }
 
-@keyframes delayedBGColor {
+@keyframes fadeIn {
   from {
-    background-color: #fefefa;
+    background-color: rgba(252, 249, 243, 0);
   }
   to {
-    background-color: yellow !important;
+    background-color: #fcf9f3;
   }
 }
 /*# sourceMappingURL=main.css.map */
