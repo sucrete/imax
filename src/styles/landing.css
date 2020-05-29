@@ -147,7 +147,7 @@
           justify-content: center;
 }
 
-.headerWrapper .landingHeader .landingmax {
+.headerWrapper .landingHeader .landingMax div {
   font-family: "RosenFont ExtraBlack";
   display: inline;
   text-transform: capitalize;
@@ -159,11 +159,11 @@
   background-position: center;
 }
 
-.headerWrapper .landingHeader .landingmax:hover {
+.headerWrapper .landingHeader .landingMax div:hover {
   -webkit-text-fill-color: transparent;
 }
 
-.headerWrapper .landingHeader .landingrosen {
+.headerWrapper .landingHeader .landingRosen div {
   color: #64320f;
   font-weight: default;
   font-family: RosenFont, "Arial", sans-serif;

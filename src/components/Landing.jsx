@@ -43,14 +43,21 @@ function Landing() {
       nay: () => setIsShownGooftown(false)
     }
   };
-  const trail = useTrail(items.length, {
+  const trail = useTrail(1, {
     config,
     delay: 1000,
     yy: 0,
     height: 100,
     from: { yy: 90, height: 0 }
   });
-  const trail2 = useTrail(whereTo.length, {
+  const trail2 = useTrail(1, {
+    config,
+    delay: 1100,
+    yy: 0,
+    height: 100,
+    from: { yy: 90, height: 0 }
+  });
+  const trail3 = useTrail(whereTo.length, {
     config,
     delay: 1650,
     yy: 0,
@@ -107,10 +114,10 @@ function Landing() {
               <div className="secondCard">
                 <div className="headerWrapper">
                   <header className="landingHeader">
-                    {trail.map(({ yy, height, ...rest }, index) => (
+                    {trail.map(({ yy, height, ...rest }) => (
                       <animated.div
-                        key={items[index]}
-                        className={"landing" + items[index]}
+                        key="Max"
+                        className="landingMax"
                         style={{
                           ...rest,
                           transform: yy.interpolate(
@@ -118,14 +125,28 @@ function Landing() {
                           )
                         }}
                       >
-                        <div style={{ height }}>{items[index]}</div>
+                        <div style={{ height }}>Max</div>
+                      </animated.div>
+                    ))}
+                    {trail2.map(({ yy, height, ...rest }) => (
+                      <animated.div
+                        key="Rosen"
+                        className="landingRosen"
+                        style={{
+                          ...rest,
+                          transform: yy.interpolate(
+                            yy => `translate3d(0,${yy}%,0)`
+                          )
+                        }}
+                      >
+                        <div style={{ height }}>Rosen</div>
                       </animated.div>
                     ))}
                   </header>
                   <div className="informationalContainer">
                     <div className="centerContainer">
                       <div className="whereToContainer">
-                        {trail2.map(({ yy, height, ...rest }, index) => (
+                        {trail3.map(({ yy, height, ...rest }, index) => (
                           <animated.div
                             className="whereTo"
                             style={{

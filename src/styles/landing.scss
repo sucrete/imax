@@ -140,29 +140,33 @@ $darkBackground: rgb(34, 34, 34);
     color: $rosenBrown;
     align-items: center;
     justify-content: center;
-    .landingmax {
-      font-family: "RosenFont ExtraBlack";
-      display: inline;
-      text-transform: capitalize;
-      letter-spacing: -0.009em;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: $rosenBrown;
-      background-image: url("../assets/fieldOfColor.jpg");
-      background-size: cover;
-      background-position: center;
-      &:hover {
-        -webkit-text-fill-color: transparent;
+    .landingMax {
+      div {
+        font-family: "RosenFont ExtraBlack";
+        display: inline;
+        text-transform: capitalize;
+        letter-spacing: -0.009em;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: $rosenBrown;
+        background-image: url("../assets/fieldOfColor.jpg");
+        background-size: cover;
+        background-position: center;
+        &:hover {
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
-    .landingrosen {
-      color: $rosenBrown;
-      font-weight: default;
-      font-family: RosenFont, "Arial", sans-serif;
-      padding-left: 0.2em;
-      text-transform: uppercase;
-      position: relative;
-      bottom: -3px;
-      letter-spacing: -0.05em;
+    .landingRosen {
+      div {
+        color: $rosenBrown;
+        font-weight: default;
+        font-family: RosenFont, "Arial", sans-serif;
+        padding-left: 0.2em;
+        text-transform: uppercase;
+        position: relative;
+        bottom: -3px;
+        letter-spacing: -0.05em;
+      }
     }
   }
 
