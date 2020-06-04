@@ -314,6 +314,7 @@
     width: 90%;
     overflow: hidden;
     font-size: 14.7em;
+    height: 463px;
   }
   .headerWrapper .landingHeader .partition {
     opacity: 1;
@@ -338,7 +339,7 @@
   }
   .headerWrapper .landingHeader .landingRosen {
     position: relative;
-    height: 1em;
+    height: 1.5em;
     z-index: 888;
   }
   .headerWrapper .landingHeader .landingRosen div {
@@ -358,6 +359,28 @@
   }
   .headerWrapper .informationalContainer .centerContainer .whereToContainer {
     right: 0px;
+  }
+}
+
+@media (max-width: 420px) {
+  .headerWrapper {
+    top: 52% !important;
+  }
+  .headerWrapper .landingHeader {
+    font-size: 7.6em !important;
+    height: 2.4em;
+  }
+  .headerWrapper .landingHeader .partition {
+    bottom: 160px;
+  }
+  .headerWrapper .landingHeader .landingRosen div {
+    top: -5px;
+  }
+  .headerWrapper .informationalContainer {
+    font-size: 1.1em;
+  }
+  .headerWrapper .informationalContainer .centerContainer {
+    width: 315px;
   }
 }
 /*# sourceMappingURL=landing.css.map */
