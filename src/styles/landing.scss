@@ -42,8 +42,8 @@ $darkBackground: rgb(34, 34, 34);
     position: absolute;
     min-width: 100vw;
     min-height: 100vh;
-    background: url(../assets/drawing3.svg) no-repeat;
-    background-color: rgb(246, 231, 248);
+    // background: url(../assets/drawing3.svg) no-repeat;
+    background-color: #fefefa;
     top: 50%;
     background-size: cover;
     left: 50%;
@@ -140,25 +140,35 @@ $darkBackground: rgb(34, 34, 34);
     color: $rosenBrown;
     align-items: center;
     justify-content: center;
+    .partition {
+      opacity: 0;
+      position: absolute;
+      height: 1em;
+      width: 3em;
+      position: absolute;
+      background-color: #fefefa;
+      left: 5px;
+      bottom: 120px;
+    }
     .landingMax {
       div {
-        font-family: "RosenFont ExtraBlack";
-        display: inline;
-        text-transform: capitalize;
-        letter-spacing: -0.009em;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: $rosenBrown;
-        background-image: url("../assets/fieldOfColor.jpg");
-        background-size: cover;
-        background-position: center;
-        &:hover {
-          -webkit-text-fill-color: transparent;
-        }
         a {
+          font-family: "RosenFont ExtraBlack";
+          display: inline;
+          text-transform: capitalize;
+          letter-spacing: -0.009em;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: $rosenBrown;
+          background-image: url("../assets/fieldOfColor.jpg");
+          background-size: cover;
+          background-position: center;
           text-decoration: none;
           color: $rosenBrown;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
+          &:hover {
+            -webkit-text-fill-color: transparent;
+          }
         }
       }
     }
@@ -178,20 +188,26 @@ $darkBackground: rgb(34, 34, 34);
 
   .informationalContainer {
     .centerContainer {
+      position: relative;
       display: flex;
       flex-direction: row;
       margin: 0 auto;
       justify-content: flex-end;
       width: 900px;
+      z-index: 888;
     }
 
     .whereToContainer {
       position: relative;
-      // right: -2px;
       top: -10px;
       right: -24px;
+      z-index: 999;
       div.whereTo {
         text-align: right;
+        &:first-of-type {
+          position: relative;
+          z-index: 999;
+        }
         .underlined {
           font-size: 1.1em;
           float: right;
@@ -236,5 +252,80 @@ $darkBackground: rgb(34, 34, 34);
   }
   to {
     box-shadow: 0 15px 38px rgba(0, 0, 0, 0.02), 0 10px 12px rgba(0, 0, 0, 0.02);
+  }
+}
+@media (max-width: 1000px) {
+  .headerWrapper {
+    .landingHeader {
+      font-size: 9em;
+    }
+    .informationalContainer {
+      .centerContainer {
+        width: 740px;
+        .whereToContainer {
+          right: 0px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .headerWrapper {
+    min-width: unset;
+    width: 99vw;
+    top: 45%;
+    left: 53%;
+    .landingHeader {
+      display: block;
+      width: 90%;
+      overflow: hidden;
+      font-size: 14.7em;
+      .partition {
+        opacity: 1;
+        z-index: 55;
+      }
+      .landingMax {
+        overflow: hidden;
+        height: 1em;
+        position: relative;
+        div {
+          a {
+            z-index: 54;
+            position: relative;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            background-image: unset;
+            color: $rosenBrown;
+            &:hover {
+              -webkit-text-fill-color: unset;
+              color: $rosenBrown;
+            }
+          }
+        }
+      }
+      .landingRosen {
+        position: relative;
+        height: 1em;
+        z-index: 888;
+        div {
+          padding-left: 0px;
+          top: -40px;
+          left: -7px;
+          height: inherit;
+          z-index: 56;
+        }
+      }
+    }
+    .informationalContainer {
+      position: relative;
+      top: -20px;
+      font-size: 1.2em;
+      .centerContainer {
+        width: 625px;
+        .whereToContainer {
+          right: 0px;
+        }
+      }
+    }
   }
 }

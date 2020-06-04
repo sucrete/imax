@@ -114,6 +114,7 @@ function Landing() {
               <div className="secondCard">
                 <div className="headerWrapper">
                   <header className="landingHeader">
+                    <div className="partition"></div>
                     {trail.map(({ yy, height, ...rest }) => (
                       <animated.div
                         key="Max"
