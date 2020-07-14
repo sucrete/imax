@@ -3,9 +3,9 @@ import LesserVideos from "./LesserVideos";
 
 //   import { useTrail, animated } from "react-spring";
 import "../styles/main.css";
-import allYouNeedIsLikes from "../assets/AllYouNeedIsLikes.jpg";
-import clickBait from "../assets/ClickBait.jpg";
-import oneDayAtDisney from "../assets/OneDayAtDisney2.jpg";
+import allYouNeedIsLikes from "../assets/AllYouNeedIsLikes.png";
+import clickBait from "../assets/ClickBait.png";
+import oneDayAtDisney from "../assets/OneDayAtDisney.png";
 import playButton from "../assets/playButton.svg";
 
 function Video() {
@@ -37,7 +37,7 @@ function Video() {
       }
 
       function clickHandlerSetup(link, index) {
-        link.addEventListener("click", function(e) {
+        link.addEventListener("click", function (e) {
           e.preventDefault();
           goToTab(index);
         });
@@ -431,7 +431,6 @@ function Video() {
             hsla(0, 0%, 0%, 0.005) 84.1%,
             hsla(0, 0%, 0%, 0) 100%
           );
-          // backdrop-filter: blur(2px);
           transition: opacity 200ms ease;
           opacity: 0;
           width: 100%;
