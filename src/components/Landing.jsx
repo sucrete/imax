@@ -48,14 +48,16 @@ function Landing() {
     delay: 1000,
     yy: 0,
     height: 100,
-    from: { yy: 90, height: 0 }
+    opacity: 1,
+    from: { yy: 20, height: 0, opacity: 0 }
   });
   const trail2 = useTrail(1, {
     config,
     delay: 1100,
     yy: 0,
     height: 100,
-    from: { yy: 90, height: 0 }
+    opacity: 1,
+    from: { yy: 20, height: 0, opacity: 0 }
   });
   const trail3 = useTrail(whereTo.length, {
     config,
